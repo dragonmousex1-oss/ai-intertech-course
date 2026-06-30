@@ -520,6 +520,16 @@ ul, ol { list-style: none; }
   to { opacity: 1; }
 }
 /* 23. No scroll animations - content always visible */
+.unit-card,
+.feature-card,
+.content-block,
+.review-card,
+.comparison-card,
+.example-card {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
 .hover-lift { transition: transform var(--transition), box-shadow var(--transition); }
 .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
