@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ---- 4. Smooth Scroll for Anchor Links ----
+    // ---- 3. Smooth Scroll for Anchor Links ----
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
@@ -65,39 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ---- 5. Scroll Animation with IntersectionObserver ----
-    const animatedElements = document.querySelectorAll(
-        '.unit-card, .feature-card, .content-block, .review-card, .comparison-card, .example-card'
-    );
-
-    // Add data-animate attribute to target elements
-    animatedElements.forEach(function (el, index) {
-        el.setAttribute('data-animate', '');
-        // Add stagger delay for items in same group
-        el.style.transitionDelay = (index % 6) * 0.05 + 's';
-    });
-
-    const observerOptions = {
-        threshold: 0.05,
-        rootMargin: '0px 0px -20px 0px'
-    };
-
-    const scrollObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                // Add animate-in class to make element visible permanently
-                entry.target.classList.add('animate-in');
-                // Stop observing once animated (it stays visible forever)
-                scrollObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('[data-animate]').forEach(function (el) {
-        scrollObserver.observe(el);
-    });
-
-    // ---- 6. Active Navigation Highlighting ----
+    // ---- 4. Active Navigation Highlighting ----
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     document.querySelectorAll('.nav-links a').forEach(function (link) {
@@ -109,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// ---- 3. Toggle Answer Function (Global) ----
+// ---- 5. Toggle Answer Function (Global) ----
 function toggleAnswer(btn) {
     const answerDiv = btn.nextElementSibling;
     if (!answerDiv) return;
