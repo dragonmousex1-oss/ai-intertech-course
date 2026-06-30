@@ -207,6 +207,7 @@ ul, ol { list-style: none; }
   background: var(--bg-primary); border: 1px solid var(--border);
   border-left: 4px solid var(--primary); border-radius: var(--radius-md);
   padding: 1.5rem 2rem; transition: all var(--transition); text-decoration: none;
+  color: var(--text-primary);
 }
 .unit-card:hover {
   transform: translateY(-3px); box-shadow: var(--shadow-md); border-left-color: #8b5cf6;
@@ -218,8 +219,9 @@ ul, ol { list-style: none; }
 }
 .unit-card-icon svg { width: 28px; height: 28px; color: var(--primary); }
 .unit-card-content { flex: 1; }
-.unit-card-content h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
-.unit-card-content p { font-size: 0.9rem; color: var(--text-secondary); }
+.unit-card-content .unit-badge { margin-bottom: 0.25rem; }
+.unit-card-content h3 { font-size: 1.1rem; margin-bottom: 0.25rem; color: var(--text-primary); }
+.unit-card-content p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; }
 .unit-card-arrow { flex-shrink: 0; color: var(--text-muted); transition: transform var(--transition); }
 .unit-card:hover .unit-card-arrow { transform: translateX(4px); color: var(--primary); }
 
@@ -240,8 +242,9 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-md); background: rgba(99,102,241,0.08);
   display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
 }
-.feature-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+.feature-card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text-primary); }
 .feature-card p { font-size: 0.9rem; color: var(--text-secondary); }
+.feature-icon i { color: var(--primary); }
 
 /* 11. CTA Section */
 .cta-section {
