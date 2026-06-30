@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน่วยที่ 5: สร้างสรรค์ผลงานด้วย AI - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html">หน่วย 1</a></li>
+                <li><a href="unit2.html">หน่วย 2</a></li>
+                <li><a href="unit3.html">หน่วย 3</a></li>
+                <li><a href="unit4.html">หน่วย 4</a></li>
+                <li><a href="unit5.html" class="active">หน่วย 5</a></li>
+                <li><a href="unit6.html">หน่วย 6</a></li>
+                <li><a href="review.html">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">หน่วยที่ 5: สร้างสรรค์ผลงานด้วย AI (AI Creative Project)</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">หน่วยที่ 5</span>
+                <h1 class="page-title">สร้างสรรค์ผลงานด้วย AI (AI Creative Project)</h1>
+                <p class="page-subtitle">เรียนรู้ขั้นตอนการทำโครงงาน AI ตั้งแต่การคิดไอเดีย วางแผน ผลิตผลงาน ไปจนถึงการนำเสนออย่างมืออาชีพ พร้อมเทคนิคสร้างผลงานที่โดดเด่นและเกณฑ์การประเมิน</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Palette shape -->
+                    <ellipse cx="140" cy="160" rx="70" ry="60" stroke="url(#heroGrad5a)" stroke-width="2.5" fill="url(#heroGrad5b)" opacity="0.12"/>
+                    <!-- Paint dots on palette -->
+                    <circle cx="110" cy="140" r="8" fill="#ef4444" opacity="0.7"/>
+                    <circle cx="130" cy="125" r="7" fill="#f59e0b" opacity="0.7"/>
+                    <circle cx="155" cy="125" r="7" fill="#34d399" opacity="0.7"/>
+                    <circle cx="175" cy="135" r="6" fill="#6366f1" opacity="0.7"/>
+                    <circle cx="120" cy="165" r="6" fill="#ec4899" opacity="0.7"/>
+
+                    <!-- Rocket icon -->
+                    <g transform="translate(200, 60)">
+                        <path d="M20 60 L20 30 Q20 10 30 5 Q40 10 40 30 L40 60 Z" stroke="#8b5cf6" stroke-width="2" fill="#8b5cf6" opacity="0.15"/>
+                        <path d="M15 55 L20 45 L20 60 Z" fill="#f59e0b" opacity="0.6"/>
+                        <path d="M45 55 L40 45 L40 60 Z" fill="#f59e0b" opacity="0.6"/>
+                        <path d="M25 65 L30 80 L35 65" stroke="#ef4444" stroke-width="2" fill="#ef4444" opacity="0.4"/>
+                        <circle cx="30" cy="25" r="4" fill="#6366f1" opacity="0.5"/>
+                    </g>
+                    <!-- Film strip -->
+                    <g transform="translate(50, 200)">
+                        <rect x="0" y="0" width="60" height="40" rx="4" stroke="#34d399" stroke-width="1.5" fill="#34d399" opacity="0.1"/>
+                        <rect x="5" y="3" width="8" height="6" rx="1" fill="#34d399" opacity="0.4"/>
+                        <rect x="5" y="31" width="8" height="6" rx="1" fill="#34d399" opacity="0.4"/>
+                        <rect x="47" y="3" width="8" height="6" rx="1" fill="#34d399" opacity="0.4"/>
+                        <rect x="47" y="31" width="8" height="6" rx="1" fill="#34d399" opacity="0.4"/>
+                        <rect x="16" y="10" width="28" height="20" rx="2" fill="#34d399" opacity="0.2"/>
+                    </g>
+                    <!-- Lightbulb/idea -->
+                    <g transform="translate(210, 180)">
+                        <path d="M25 10 Q15 10 15 25 Q15 35 20 38 L20 45 L30 45 L30 38 Q35 35 35 25 Q35 10 25 10 Z" stroke="#f59e0b" stroke-width="1.5" fill="#f59e0b" opacity="0.15"/>
+                        <line x1="20" y1="48" x2="30" y2="48" stroke="#f59e0b" stroke-width="1.5" opacity="0.5"/>
+                        <line x1="21" y1="51" x2="29" y2="51" stroke="#f59e0b" stroke-width="1.5" opacity="0.5"/>
+                        <line x1="25" y1="0" x2="25" y2="5" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+                        <line x1="12" y1="5" x2="15" y2="9" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+                        <line x1="38" y1="5" x2="35" y2="9" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+                    </g>
+
+                    <!-- Stars/sparkles -->
+                    <circle cx="80" cy="80" r="3" fill="#818cf8" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="250" cy="140" r="4" fill="#34d399" opacity="0.6">
+                        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="170" cy="250" r="3" fill="#f59e0b" opacity="0.5">
+                        <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="60" cy="150" r="2.5" fill="#ec4899" opacity="0.5">
+                        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Pulsing ring -->
+                    <circle cx="150" cy="155" r="90" stroke="#6366f1" stroke-width="1" opacity="0.15">
+                        <animate attributeName="r" values="90;100;90" dur="4s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.15;0.05;0.15" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="heroGrad5a" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#ec4899"/>
+                        </linearGradient>
+                        <linearGradient id="heroGrad5b" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#ec4899"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Section 5.1: ทำไมต้องทำโครงงาน AI? -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">5.1</span> ทำไมต้องทำโครงงาน AI?</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การทำโครงงาน AI ไม่ใช่แค่การ "ส่งงาน" แต่เป็นกระบวนการเรียนรู้ที่จะช่วยพัฒนาทักษะหลากหลายด้านที่จำเป็นในศตวรรษที่ 21 การลงมือทำจริงจะทำให้เราเข้าใจศักยภาพและข้อจำกัดของ AI อย่างแท้จริง รวมถึงฝึกการคิดอย่างเป็นระบบและสร้างสรรค์</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-trophy" style="color: #f59e0b;"></i> 7 ประโยชน์ของการทำโครงงาน AI</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;">1. ฝึกคิดอย่างเป็นระบบ (Systematic Thinking)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">การทำโครงงานต้องวางแผนเป็นขั้นตอน ตั้งแต่ตั้งคำถาม กำหนดเป้าหมาย วางแผนการทำงาน ไปจนถึงประเมินผล ฝึกให้คิดเป็นลำดับและมีเหตุผล</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔧</div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.5rem;">2. ฝึกแก้ปัญหา (Problem Solving)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ระหว่างทำโครงงานจะเจอปัญหาหลายอย่าง เช่น AI ให้ผลลัพธ์ไม่ตรงใจ เครื่องมือไม่ทำงาน เวลาไม่พอ ต้องหาวิธีแก้ไขและปรับแผน</p>
+                    </div>
+
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛠️</div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">3. เชี่ยวชาญเครื่องมือ AI (Tool Mastery)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ได้ลงมือใช้เครื่องมือ AI หลากหลายตัวจริงๆ ไม่ใช่แค่รู้จักชื่อ แต่เข้าใจจุดแข็ง จุดอ่อน และวิธีใช้งานอย่างมีประสิทธิภาพ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">4. พัฒนาความคิดสร้างสรรค์ (Creativity)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">การนำ AI มาสร้างผลงานต้องใช้จินตนาการ ตั้งแต่การคิดไอเดีย ออกแบบ Prompt ไปจนถึงการตกแต่งและปรับปรุงผลงานให้สมบูรณ์</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem;">5. ฝึกทำงานเป็นทีม (Teamwork)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">การทำโครงงานกลุ่มฝึกการแบ่งงาน สื่อสาร ประสานงาน รับฟังความคิดเห็น และรับผิดชอบหน้าที่ของตัวเอง ทักษะที่จำเป็นในทุกอาชีพ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎤</div>
+                        <h4 style="color: #06b6d4; margin-bottom: 0.5rem;">6. ฝึกนำเสนอ (Presentation Skills)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">การนำเสนอโครงงานฝึกทักษะการพูดในที่สาธารณะ การจัดระเบียบความคิด การสื่อสารให้ผู้อื่นเข้าใจ และการตอบคำถามอย่างมั่นใจ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📁</div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;">7. สร้าง Portfolio (แฟ้มผลงาน)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ผลงานที่ทำสามารถนำไปใส่ Portfolio เพื่อใช้สมัครเรียนต่อ สมัครทุน หรือสมัครงานในอนาคต แสดงให้เห็นว่าเรามีทักษะ AI จริงๆ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 5.2: ขั้นตอนการทำโครงงาน AI -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">5.2</span> ขั้นตอนการทำโครงงาน AI (5 ระยะ)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การทำโครงงาน AI ที่ดีต้องผ่านกระบวนการ 5 ระยะ ตั้งแต่การคิดไอเดียไปจนถึงการนำเสนอ แต่ละระยะมีเป้าหมายและกิจกรรมที่ชัดเจน ช่วยให้การทำงานเป็นระบบและได้ผลงานที่มีคุณภาพ</p>
+                </div>
+            </div>
+
+            <!-- 5 Phases SVG Timeline Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 750 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 750px; width: 100%;">
+                    <!-- Connection line -->
+                    <line x1="75" y1="80" x2="675" y2="80" stroke="#e2e8f0" stroke-width="3"/>
+                    <!-- Arrows between phases -->
+                    <path d="M140 80 L155 80" stroke="#6366f1" stroke-width="2" marker-end="url(#phaseArrow)"/>
+                    <path d="M290 80 L305 80" stroke="#8b5cf6" stroke-width="2" marker-end="url(#phaseArrow)"/>
+                    <path d="M440 80 L455 80" stroke="#34d399" stroke-width="2" marker-end="url(#phaseArrow)"/>
+                    <path d="M590 80 L605 80" stroke="#f59e0b" stroke-width="2" marker-end="url(#phaseArrow)"/>
+                    
+                    <!-- Phase 1: Ideation -->
+                    <circle cx="75" cy="80" r="28" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2.5"/>
+                    <text x="75" y="75" text-anchor="middle" font-size="16">💡</text>
+                    <text x="75" y="95" text-anchor="middle" font-size="8" font-weight="bold" fill="#6366f1">1</text>
+                    <text x="75" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366f1">Ideation</text>
+                    <text x="75" y="140" text-anchor="middle" font-size="8" fill="#64748b">คิดไอเดีย</text>
+                    
+                    <!-- Phase 2: Planning & Design -->
+                    <circle cx="225" cy="80" r="28" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <text x="225" y="75" text-anchor="middle" font-size="16">📋</text>
+                    <text x="225" y="95" text-anchor="middle" font-size="8" font-weight="bold" fill="#8b5cf6">2</text>
+                    <text x="225" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#8b5cf6">Planning</text>
+                    <text x="225" y="140" text-anchor="middle" font-size="8" fill="#64748b">วางแผน & ออกแบบ</text>
+                    
+                    <!-- Phase 3: Production -->
+                    <circle cx="375" cy="80" r="28" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-width="2.5"/>
+                    <text x="375" y="75" text-anchor="middle" font-size="16">🎬</text>
+                    <text x="375" y="95" text-anchor="middle" font-size="8" font-weight="bold" fill="#34d399">3</text>
+                    <text x="375" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#34d399">Production</text>
+                    <text x="375" y="140" text-anchor="middle" font-size="8" fill="#64748b">ลงมือผลิต</text>
+                    
+                    <!-- Phase 4: Iteration -->
+                    <circle cx="525" cy="80" r="28" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2.5"/>
+                    <text x="525" y="75" text-anchor="middle" font-size="16">🔄</text>
+                    <text x="525" y="95" text-anchor="middle" font-size="8" font-weight="bold" fill="#f59e0b">4</text>
+                    <text x="525" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#f59e0b">Iteration</text>
+                    <text x="525" y="140" text-anchor="middle" font-size="8" fill="#64748b">ปรับปรุง</text>
+                    
+                    <!-- Phase 5: Presentation -->
+                    <circle cx="675" cy="80" r="28" fill="#ec4899" opacity="0.1" stroke="#ec4899" stroke-width="2.5"/>
+                    <text x="675" y="75" text-anchor="middle" font-size="16">🎤</text>
+                    <text x="675" y="95" text-anchor="middle" font-size="8" font-weight="bold" fill="#ec4899">5</text>
+                    <text x="675" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#ec4899">Presentation</text>
+                    <text x="675" y="140" text-anchor="middle" font-size="8" fill="#64748b">นำเสนอ</text>
+                    
+                    <!-- Title -->
+                    <text x="375" y="185" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">5 ระยะของการทำโครงงาน AI</text>
+                    
+                    <defs>
+                        <marker id="phaseArrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+
+            <!-- Phase Details as Timeline -->
+            <div class="timeline" style="margin-top: 2rem;">
+                <div class="timeline-item">
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(99, 102, 241, 0.05); border: 2px solid rgba(99, 102, 241, 0.2);">
+                        <h3 style="color: #6366f1; margin-bottom: 0.75rem;"><i class="fas fa-lightbulb"></i> ระยะที่ 1: คิดไอเดีย (Ideation) — 1-2 วัน</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">ระยะเริ่มต้นที่สำคัญที่สุด ต้องหาหัวข้อที่ทั้งน่าสนใจและเป็นไปได้จริง</p>
+                        <ul style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>ระดมความคิด (Brainstorm)</strong> — คิดหัวข้อให้ได้อย่างน้อย 5-10 ไอเดีย อย่าตัดสินก่อน</li>
+                            <li><strong>ตรวจสอบความเป็นไปได้</strong> — มีเครื่องมือ AI ที่ทำได้จริงหรือไม่? ทำทันเวลาไหม?</li>
+                            <li><strong>กำหนดกลุ่มเป้าหมาย</strong> — ผลงานนี้ทำให้ใครดู? เพื่อนๆ? ครู? ชุมชน?</li>
+                            <li><strong>เลือกหัวข้อที่ดีที่สุด</strong> — คัดเหลือ 1 หัวข้อที่ตอบโจทย์ทั้งความสนใจและความเป็นไปได้</li>
+                            <li><strong>เขียน Concept Statement</strong> — สรุปสั้นๆ 2-3 ประโยคว่าจะทำอะไร ทำไม และทำให้ใคร</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(139, 92, 246, 0.05); border: 2px solid rgba(139, 92, 246, 0.2);">
+                        <h3 style="color: #8b5cf6; margin-bottom: 0.75rem;"><i class="fas fa-drafting-compass"></i> ระยะที่ 2: วางแผนและออกแบบ (Planning & Design) — 2-3 วัน</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">วางโครงสร้างและแผนงานให้ชัดเจนก่อนลงมือทำจริง</p>
+                        <ul style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>เลือกเครื่องมือ AI</strong> — ระบุว่าจะใช้ AI ตัวไหนในขั้นตอนไหน (เช่น ChatGPT เขียนบท, Midjourney วาดภาพ)</li>
+                            <li><strong>ออกแบบ Storyboard/โครงร่าง</strong> — วาดโครงร่างผลงานคร่าวๆ กำหนดลำดับเนื้อหา</li>
+                            <li><strong>แบ่งงานในทีม</strong> — ใครรับผิดชอบส่วนไหน กำหนดเดดไลน์แต่ละส่วน</li>
+                            <li><strong>เตรียม Prompt</strong> — เขียน Prompt เบื้องต้นสำหรับแต่ละชิ้นงาน</li>
+                            <li><strong>ทดลอง AI เบื้องต้น</strong> — ทดสอบว่าเครื่องมือที่เลือกให้ผลลัพธ์ตามที่คาดหวังหรือไม่</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 2px solid rgba(52, 211, 153, 0.2);">
+                        <h3 style="color: #34d399; margin-bottom: 0.75rem;"><i class="fas fa-hammer"></i> ระยะที่ 3: ลงมือผลิตผลงาน (Production) — 5-7 วัน</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">ระยะที่ใช้เวลามากที่สุด ลงมือสร้างผลงานจริงตามแผนที่วางไว้</p>
+                        <ul style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>สร้างเนื้อหาด้วย AI</strong> — ใช้ Prompt ที่เตรียมไว้สร้างผลงานแต่ละส่วน</li>
+                            <li><strong>ปรับแต่ง Prompt</strong> — ถ้าผลลัพธ์ยังไม่ดี ปรับ Prompt ให้ละเอียดขึ้น ลองหลายๆ แบบ</li>
+                            <li><strong>เพิ่มคุณค่าด้วยตัวเอง</strong> — ไม่ใช้ผลงาน AI ดิบๆ ต้องเพิ่มความคิดสร้างสรรค์ของตัวเอง</li>
+                            <li><strong>รวมชิ้นงานเข้าด้วยกัน</strong> — นำแต่ละส่วนมาประกอบเป็นผลงานเดียว</li>
+                            <li><strong>บันทึกกระบวนการ</strong> — จด Prompt ที่ใช้ เครื่องมือที่เลือก ปัญหาที่เจอ วิธีแก้ไข</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 2px solid rgba(245, 158, 11, 0.2);">
+                        <h3 style="color: #f59e0b; margin-bottom: 0.75rem;"><i class="fas fa-sync-alt"></i> ระยะที่ 4: ปรับปรุงและพัฒนา (Iteration) — 2-3 วัน</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">ตรวจสอบ ทดสอบ และปรับปรุงผลงานให้สมบูรณ์ที่สุด</p>
+                        <ul style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>ทบทวนผลงานทั้งหมด</strong> — ดูภาพรวมว่าเนื้อหาครบถ้วน สอดคล้อง และน่าสนใจหรือไม่</li>
+                            <li><strong>ขอ Feedback จากคนอื่น</strong> — ให้เพื่อน ครู หรือคนในครอบครัวดูผลงานแล้วให้ความเห็น</li>
+                            <li><strong>แก้ไขตาม Feedback</strong> — ปรับปรุงจุดที่ได้รับคำแนะนำ ไม่ต้องแก้ทุกอย่างแต่เลือกสิ่งที่สำคัญ</li>
+                            <li><strong>ตรวจสอบความถูกต้อง</strong> — ข้อมูลที่ AI สร้างถูกต้องหรือไม่ ต้อง Fact-check</li>
+                            <li><strong>ขัดเกลาผลงาน</strong> — ปรับรายละเอียดเล็กๆ น้อยๆ ให้สมบูรณ์ (ตัวสะกด, การจัดวาง, สีสัน)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 2px solid rgba(236, 72, 153, 0.2);">
+                        <h3 style="color: #ec4899; margin-bottom: 0.75rem;"><i class="fas fa-presentation"></i> ระยะที่ 5: นำเสนอผลงาน (Presentation) — 1-2 วัน</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">เตรียมการนำเสนอและแสดงผลงานให้ผู้อื่นได้เห็นคุณค่า</p>
+                        <ul style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>สร้างสไลด์นำเสนอ</strong> — ออกแบบ Presentation ที่กระชับ สวยงาม เข้าใจง่าย</li>
+                            <li><strong>เตรียมบทพูด</strong> — ซ้อมพูดให้คล่อง จับเวลา ไม่อ่านจากสไลด์ทั้งหมด</li>
+                            <li><strong>เตรียมตอบคำถาม</strong> — คิดคำถามที่อาจถูกถาม เตรียมคำตอบไว้ล่วงหน้า</li>
+                            <li><strong>ซ้อมนำเสนอ</strong> — ซ้อมหน้ากระจก ซ้อมกับเพื่อน ซ้อมจับเวลา</li>
+                            <li><strong>เตรียม Demo</strong> — ถ้าเป็นผลงานแบบ interactive ต้องเตรียมการสาธิตให้ราบรื่น</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 5.3: ตัวอย่างโครงงาน -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">5.3</span> ตัวอย่างโครงงาน AI (แบ่งตามระดับความยาก)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>ตัวอย่างโครงงาน AI ที่สามารถทำได้จริง แบ่งเป็น 3 ระดับ ตั้งแต่ง่ายไปจนถึงท้าทาย เลือกตามความสนใจและทักษะของกลุ่ม</p>
+                </div>
+            </div>
+
+            <!-- Beginner Level -->
+            <div class="content-block">
+                <h3 style="margin-bottom: 1.5rem;"><span style="background: #34d399; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; margin-right: 0.5rem;">⭐ Beginner</span> ระดับเริ่มต้น</h3>
+                <div class="example-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 2px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📖</div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">หนังสือนิทาน AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">สร้างหนังสือนิทานสำหรับเด็กที่เนื้อเรื่องและภาพประกอบสร้างด้วย AI</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (เขียนเรื่อง) + Midjourney/DALL-E (วาดภาพ) + Canva (จัดหน้า)</p>
+                            <p><strong>ระยะเวลา:</strong> 1-2 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 2px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🖼️</div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">โปสเตอร์รณรงค์ AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">ออกแบบโปสเตอร์รณรงค์ (สิ่งแวดล้อม, สุขภาพ, ความปลอดภัย) โดยใช้ AI สร้างภาพและข้อความ</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> DALL-E/Midjourney (ภาพ) + ChatGPT (สโลแกน) + Canva (ออกแบบ)</p>
+                            <p><strong>ระยะเวลา:</strong> 3-5 วัน</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 2px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎵</div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">เพลง AI สร้างสรรค์</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">แต่งเพลง (เนื้อร้อง + ทำนอง) ในหัวข้อที่สนใจ โดยใช้ AI ช่วยสร้างทั้งเนื้อเพลงและดนตรี</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (เนื้อเพลง) + Suno AI/Udio (ทำนอง) + Canva (ปกอัลบั้ม)</p>
+                            <p><strong>ระยะเวลา:</strong> 3-5 วัน</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 2px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📝</div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">แปลบทกวี/สุภาษิตด้วย AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">แปลบทกวีไทยเป็นภาษาอื่น หรือแปลบทกวีต่างประเทศเป็นไทย โดยรักษาความงามทางภาษา</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT/Claude (แปล) + DALL-E (ภาพประกอบ) + Canva (จัดหน้า)</p>
+                            <p><strong>ระยะเวลา:</strong> 3-5 วัน</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Intermediate Level -->
+            <div class="content-block">
+                <h3 style="margin-bottom: 1.5rem;"><span style="background: #f59e0b; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; margin-right: 0.5rem;">⭐⭐ Intermediate</span> ระดับกลาง</h3>
+                <div class="example-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 2px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎬</div>
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">สารคดีสั้น AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">ผลิตสารคดีสั้น 3-5 นาที ในหัวข้อที่น่าสนใจ ใช้ AI ช่วยเขียนบท สร้างภาพ และพากย์เสียง</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (บท) + Runway/Pika (วิดีโอ) + ElevenLabs (เสียงพากย์) + CapCut (ตัดต่อ)</p>
+                            <p><strong>ระยะเวลา:</strong> 2-3 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 2px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤖</div>
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">Chatbot ให้ความรู้</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">สร้าง Chatbot ที่ตอบคำถามเฉพาะเรื่อง เช่น ประวัติศาสตร์ท้องถิ่น สัตว์ป่า หรือวิทยาศาสตร์</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT API/CustomGPT + ข้อมูลจากแหล่งที่เชื่อถือได้</p>
+                            <p><strong>ระยะเวลา:</strong> 2 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 2px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🗺️</div>
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">คู่มือท่องเที่ยว AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">สร้างคู่มือท่องเที่ยวจังหวัดหรือชุมชนของตัวเอง ทั้งข้อมูล ภาพ แผนที่ และคำแนะนำ</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (เขียนเนื้อหา) + Midjourney (ภาพ) + Canva (ออกแบบ) + Google Maps</p>
+                            <p><strong>ระยะเวลา:</strong> 2 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 2px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📰</div>
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">นิตยสารดิจิทัล AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">ผลิตนิตยสารดิจิทัลฉบับพิเศษ มีบทความ สัมภาษณ์ ภาพถ่าย และกราฟิกที่ AI ช่วยสร้าง</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (บทความ) + DALL-E (ภาพ) + Canva (Layout) + Issuu (เผยแพร่)</p>
+                            <p><strong>ระยะเวลา:</strong> 2-3 สัปดาห์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Advanced Level -->
+            <div class="content-block">
+                <h3 style="margin-bottom: 1.5rem;"><span style="background: #ec4899; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; margin-right: 0.5rem;">⭐⭐⭐ Advanced</span> ระดับท้าทาย</h3>
+                <div class="example-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 2px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎥</div>
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem;">หนังสั้น AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">ผลิตหนังสั้น 5-10 นาที ใช้ AI ช่วยทุกขั้นตอน ตั้งแต่บท ภาพ เสียง ดนตรี จนถึงตัดต่อ</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (บท) + Runway Gen-2 (วิดีโอ) + ElevenLabs (เสียง) + Suno (เพลง) + Premiere/DaVinci</p>
+                            <p><strong>ระยะเวลา:</strong> 3-4 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 2px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎓</div>
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem;">เว็บไซต์ AI Tutor</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">สร้างเว็บไซต์สอนเนื้อหาวิชาใดวิชาหนึ่ง มี AI ตอบคำถาม แบบฝึกหัด และสื่อการสอน</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (เนื้อหา) + Claude (โค้ด) + DALL-E (ภาพ) + Vercel/GitHub Pages (เผยแพร่)</p>
+                            <p><strong>ระยะเวลา:</strong> 3-4 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 2px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏢</div>
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem;">AI Branding ธุรกิจจำลอง</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">สร้าง Brand Identity ครบวงจร: โลโก้ ชื่อแบรนด์ สีประจำ แพ็กเกจ โปสเตอร์ และแผนการตลาด</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (แผน) + Midjourney (โลโก้/ภาพ) + Canva (Mockup) + Gamma (Pitch Deck)</p>
+                            <p><strong>ระยะเวลา:</strong> 2-3 สัปดาห์</p>
+                        </div>
+                    </div>
+                    <div class="example-card" style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 2px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📊</div>
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem;">วิเคราะห์ความรู้สึก (Sentiment Analysis)</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">วิเคราะห์ความคิดเห็นในโซเชียลมีเดียเกี่ยวกับประเด็นที่สนใจ แล้วนำเสนอผลลัพธ์เป็น Infographic</p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <p><strong>เครื่องมือ:</strong> ChatGPT (วิเคราะห์) + Python/Google Sheets (จัดข้อมูล) + Canva (Infographic)</p>
+                            <p><strong>ระยะเวลา:</strong> 2-3 สัปดาห์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 5.4: เทคนิคสร้างผลงาน -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">5.4</span> เทคนิคสร้างผลงานที่โดดเด่น</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การใช้ AI สร้างผลงานไม่ได้หมายความว่าจะได้ผลงานที่ดีเสมอไป ต้องมีเทคนิคและหลักการที่จะทำให้ผลงานของเราโดดเด่นและแตกต่างจากคนอื่น นี่คือ 6 เทคนิคสำคัญ</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 1px solid rgba(99, 102, 241, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #6366f1; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">1</span>
+                            <h4 style="color: #6366f1; margin: 0;">ไม่ใช้ผลงาน AI ดิบๆ (Don't Use Raw Output)</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">อย่า Copy-Paste ผลงานจาก AI มาใช้ตรงๆ ต้องปรับแต่ง แก้ไข เรียบเรียง และเพิ่มสัมผัสส่วนตัวลงไป ผลงานที่ดีคือผลงานที่มี "ตัวตนของเรา" ผสมอยู่ด้วย</p>
+                        <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>ตัวอย่าง:</strong> ให้ AI เขียนเนื้อเรื่องนิทาน → นำมาเรียบเรียงใหม่ด้วยภาษาของเรา เพิ่มรายละเอียดท้องถิ่น เปลี่ยนฉากให้เป็นบ้านเรา
+                        </div>
+                    </div>
+
+                    <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 1px solid rgba(139, 92, 246, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #8b5cf6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">2</span>
+                            <h4 style="color: #8b5cf6; margin: 0;">ผสมหลายเครื่องมือ (Mix Multiple Tools)</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ไม่ต้องยึดติดกับ AI ตัวเดียว ใช้จุดแข็งของแต่ละตัวรวมกัน เช่น ChatGPT เขียนเนื้อหา + Midjourney วาดภาพ + Suno ทำเพลง + Canva ออกแบบ</p>
+                        <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>ตัวอย่าง:</strong> ทำวิดีโอรณรงค์ → ใช้ ChatGPT เขียนสคริปต์ + ElevenLabs พากย์เสียง + Runway สร้างภาพเคลื่อนไหว + CapCut ตัดต่อ
+                        </div>
+                    </div>
+
+
+                    <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 1px solid rgba(52, 211, 153, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #34d399; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">3</span>
+                            <h4 style="color: #34d399; margin: 0;">เล่าเรื่องให้น่าสนใจ (Storytelling)</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ผลงานที่ดีต้องมี "เรื่องราว" ที่ดึงดูดผู้ชม ไม่ใช่แค่รวมข้อมูลมากองกัน ต้องมีจุดเริ่มต้น ปม ไคลแมกซ์ และบทสรุปที่ทำให้คนอยากดูต่อ</p>
+                        <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>ตัวอย่าง:</strong> แทนที่จะเริ่มด้วย "AI คือ..." ให้เริ่มด้วย "วันนึง น้องมะนาวลืมทำการบ้าน..." แล้วค่อยเชื่อมโยงเข้ากับ AI
+                        </div>
+                    </div>
+
+                    <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 1px solid rgba(245, 158, 11, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #f59e0b; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">4</span>
+                            <h4 style="color: #f59e0b; margin: 0;">ใส่ใจรายละเอียด (Attention to Detail)</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">รายละเอียดเล็กๆ สร้างความแตกต่างใหญ่ ตรวจสอบตัวสะกด ความสม่ำเสมอของสี ฟอนต์ ระยะห่าง การจัดวาง และความต่อเนื่องของเนื้อหา</p>
+                        <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(245, 158, 11, 0.05); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>ตัวอย่าง:</strong> ใช้โทนสีเดียวกันทั้งผลงาน ฟอนต์ไม่เกิน 2-3 แบบ ภาพทุกภาพมีสไตล์เดียวกัน
+                        </div>
+                    </div>
+
+                    <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 1px solid rgba(236, 72, 153, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #ec4899; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">5</span>
+                            <h4 style="color: #ec4899; margin: 0;">คิดถึงผู้ใช้ (Think of Users)</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ออกแบบผลงานโดยคิดถึงคนที่จะมาดูหรือใช้งาน ภาษาเหมาะกับกลุ่มเป้าหมายหรือไม่ เข้าใจง่ายหรือเปล่า ใช้งานสะดวกไหม</p>
+                        <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(236, 72, 153, 0.05); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>ตัวอย่าง:</strong> ถ้าทำนิทานให้เด็ก ต้องใช้ภาษาง่าย ภาพสดใส ตัวอักษรใหญ่ ประโยคสั้น
+                        </div>
+                    </div>
+
+                    <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 1px solid rgba(6, 182, 212, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #06b6d4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">6</span>
+                            <h4 style="color: #06b6d4; margin: 0;">บันทึกกระบวนการ (Document Process)</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">จดบันทึกทุกขั้นตอนของการทำงาน: Prompt ที่ใช้ ผลลัพธ์ที่ได้ ปัญหาที่เจอ วิธีแก้ไข สิ่งที่เรียนรู้ การบันทึกนี้จะใช้ประกอบการนำเสนอได้ดีมาก</p>
+                        <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(6, 182, 212, 0.05); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>ตัวอย่าง:</strong> ทำ "บันทึกการเดินทาง" ของโปรเจกต์ มีภาพ Screenshot, Prompt ที่ใช้, Before-After ของผลงาน
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 5.5: การนำเสนออย่างมืออาชีพ -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">5.5</span> การนำเสนออย่างมืออาชีพ (Professional Presentation)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การนำเสนอที่ดีสามารถทำให้ผลงานดีขึ้นอีก 50%! แม้ผลงานจะยอดเยี่ยม แต่ถ้านำเสนอไม่ดี คนอื่นอาจไม่เห็นคุณค่าของงาน เทคนิคต่อไปนี้จะช่วยให้คุณนำเสนอได้อย่างมืออาชีพ</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-file-powerpoint" style="color: #6366f1;"></i> โครงสร้างสไลด์ 9 หน้า (Recommended Slide Structure)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #6366f1;">1</div>
+                        <h4 style="font-size: 0.85rem; color: #6366f1; margin: 0.3rem 0;">ปกโครงงาน</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">ชื่อโครงงาน + ชื่อสมาชิก + วันที่</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #8b5cf6;">2</div>
+                        <h4 style="font-size: 0.85rem; color: #8b5cf6; margin: 0.3rem 0;">ที่มาและปัญหา</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">ทำไมถึงเลือกหัวข้อนี้?</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #34d399;">3</div>
+                        <h4 style="font-size: 0.85rem; color: #34d399; margin: 0.3rem 0;">วัตถุประสงค์</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">ต้องการบรรลุอะไร?</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #f59e0b;">4</div>
+                        <h4 style="font-size: 0.85rem; color: #f59e0b; margin: 0.3rem 0;">เครื่องมือ AI ที่ใช้</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">ใช้ AI อะไรบ้าง ทำไม?</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #ec4899;">5</div>
+                        <h4 style="font-size: 0.85rem; color: #ec4899; margin: 0.3rem 0;">ขั้นตอนการทำงาน</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">ทำอย่างไร ขั้นตอนไหน?</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #06b6d4;">6</div>
+                        <h4 style="font-size: 0.85rem; color: #06b6d4; margin: 0.3rem 0;">ผลงาน / Demo</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">แสดงผลงานจริง</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #6366f1;">7</div>
+                        <h4 style="font-size: 0.85rem; color: #6366f1; margin: 0.3rem 0;">ปัญหาและวิธีแก้</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">เจอปัญหาอะไร แก้ยังไง?</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #8b5cf6;">8</div>
+                        <h4 style="font-size: 0.85rem; color: #8b5cf6; margin: 0.3rem 0;">สิ่งที่ได้เรียนรู้</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">บทเรียนสำคัญคืออะไร?</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15); text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #34d399;">9</div>
+                        <h4 style="font-size: 0.85rem; color: #34d399; margin: 0.3rem 0;">ขอบคุณ / Q&A</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">สรุปและเปิดรับคำถาม</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-block">
+                <h3><i class="fas fa-magic" style="color: #8b5cf6;"></i> กฎ 10-20-30 ของ Guy Kawasaki</h3>
+                <div class="info-box" style="border-left: 4px solid #8b5cf6;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="font-size: 2.5rem; font-weight: 800; color: #6366f1;">10</div>
+                            <p style="font-weight: 600; color: #6366f1;">สไลด์</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">ไม่เกิน 10 หน้า เพื่อไม่ให้คนดูเบื่อ เลือกเฉพาะเนื้อหาที่สำคัญจริงๆ</p>
+                        </div>
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="font-size: 2.5rem; font-weight: 800; color: #8b5cf6;">20</div>
+                            <p style="font-weight: 600; color: #8b5cf6;">นาที</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">พูดไม่เกิน 20 นาที แม้จะมีเวลามากกว่านั้น เหลือเวลาให้ถาม-ตอบ</p>
+                        </div>
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="font-size: 2.5rem; font-weight: 800; color: #34d399;">30</div>
+                            <p style="font-weight: 600; color: #34d399;">พอยต์</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">ตัวอักษรไม่เล็กกว่า 30 point ทำให้คนนั่งหลังห้องยังอ่านได้</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-star" style="color: #f59e0b;"></i> 5 เคล็ดลับการนำเสนอ</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;"><i class="fas fa-eye"></i> 1. สบตาผู้ฟัง</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">มองไปที่ผู้ฟัง ไม่ใช่สไลด์หรือพื้น หมุนมองทั่วห้อง สร้างความเชื่อมต่อกับคนดู ทำให้ดูมั่นใจและน่าเชื่อถือ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;"><i class="fas fa-volume-up"></i> 2. พูดชัด ไม่เร็วเกินไป</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">พูดช้าลงกว่าปกติ ออกเสียงชัดเจน เว้นจังหวะเพื่อให้ผู้ฟังซึมซับ ไม่ต้องรีบ ความเงียบเล็กน้อยดึงความสนใจได้ดี</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;"><i class="fas fa-comment-dots"></i> 3. เริ่มด้วยสิ่งน่าสนใจ</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">เริ่มด้วยคำถาม เรื่องเล่า สถิติที่น่าตกใจ หรือ Demo สั้นๆ เพื่อดึงความสนใจตั้งแต่วินาทีแรก อย่าเริ่มด้วย "สวัสดีครับ วันนี้จะนำเสนอเรื่อง..."</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;"><i class="fas fa-images"></i> 4. ใช้ภาพมากกว่าตัวอักษร</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">สไลด์ที่ดีมีภาพเยอะ ตัวอักษรน้อย ใช้ภาพประกอบ, กราฟ, Diagram แทนข้อความยาวๆ คนจำภาพได้ดีกว่าตัวอักษร</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;"><i class="fas fa-redo"></i> 5. ซ้อม ซ้อม ซ้อม</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ซ้อมอย่างน้อย 3 รอบก่อนนำเสนอจริง ซ้อมจับเวลา ซ้อมหน้ากระจก อัดวิดีโอตัวเองแล้วดูกลับ จะเห็นจุดที่ต้องปรับปรุง</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 5.6: เกณฑ์การประเมิน -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">5.6</span> เกณฑ์การประเมินโครงงาน AI</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>โครงงาน AI จะถูกประเมินจาก 4 เกณฑ์หลัก น้ำหนักเท่ากันเกณฑ์ละ 25% รวม 100% เข้าใจเกณฑ์เหล่านี้จะช่วยให้วางแผนและสร้างผลงานได้ตรงเป้าหมาย</p>
+                </div>
+            </div>
+
+            <!-- Evaluation Criteria SVG Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%;">
+                    <!-- Pie chart representation -->
+                    <!-- Quarter 1 -->
+                    <path d="M250 100 L250 20 A80 80 0 0 1 330 100 Z" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="2"/>
+                    <!-- Quarter 2 -->
+                    <path d="M250 100 L330 100 A80 80 0 0 1 250 180 Z" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+                    <!-- Quarter 3 -->
+                    <path d="M250 100 L250 180 A80 80 0 0 1 170 100 Z" fill="#34d399" opacity="0.2" stroke="#34d399" stroke-width="2"/>
+                    <!-- Quarter 4 -->
+                    <path d="M250 100 L170 100 A80 80 0 0 1 250 20 Z" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+                    <!-- Center circle -->
+                    <circle cx="250" cy="100" r="25" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+                    <text x="250" y="97" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366f1">100%</text>
+                    <text x="250" y="110" text-anchor="middle" font-size="7" fill="#64748b">คะแนนรวม</text>
+                    <!-- Labels -->
+                    <text x="310" y="55" font-size="9" font-weight="bold" fill="#6366f1">ความคิดสร้างสรรค์</text>
+                    <text x="310" y="68" font-size="8" fill="#64748b">25%</text>
+                    <text x="320" y="145" font-size="9" font-weight="bold" fill="#8b5cf6">การใช้เครื่องมือ AI</text>
+                    <text x="320" y="158" font-size="8" fill="#64748b">25%</text>
+                    <text x="80" y="145" font-size="9" font-weight="bold" fill="#34d399">คุณภาพผลงาน</text>
+                    <text x="80" y="158" font-size="8" fill="#64748b">25%</text>
+                    <text x="100" y="55" font-size="9" font-weight="bold" fill="#f59e0b">การนำเสนอ</text>
+                    <text x="100" y="68" font-size="8" fill="#64748b">25%</text>
+                </svg>
+            </div>
+
+            <div class="content-block">
+                <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <!-- Criteria 1: Creativity -->
+                    <div class="comparison-card" style="padding: 1.5rem; border-radius: 16px; background: white; border: 2px solid rgba(99, 102, 241, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(99, 102, 241, 0.1); display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-lightbulb" style="color: #6366f1;"></i>
+                            </div>
+                            <h4 style="color: #6366f1; margin-top: 0.75rem;">ความคิดสร้างสรรค์</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Creativity — 25%</p>
+                        </div>
+                        <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>ไอเดียแปลกใหม่ไม่ซ้ำใคร</li>
+                            <li>มีมุมมองที่น่าสนใจ</li>
+                            <li>ประยุกต์ใช้ AI อย่างสร้างสรรค์</li>
+                            <li>มีความเป็นต้นฉบับ (Originality)</li>
+                            <li>แก้ปัญหาด้วยวิธีที่ไม่ธรรมดา</li>
+                        </ul>
+                    </div>
+
+
+                    <!-- Criteria 2: AI Tool Usage -->
+                    <div class="comparison-card" style="padding: 1.5rem; border-radius: 16px; background: white; border: 2px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(139, 92, 246, 0.1); display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-robot" style="color: #8b5cf6;"></i>
+                            </div>
+                            <h4 style="color: #8b5cf6; margin-top: 0.75rem;">การใช้เครื่องมือ AI</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">AI Tool Usage — 25%</p>
+                        </div>
+                        <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>เลือกเครื่องมือ AI ที่เหมาะสม</li>
+                            <li>เขียน Prompt ได้มีประสิทธิภาพ</li>
+                            <li>ใช้ AI หลายตัวร่วมกันได้ดี</li>
+                            <li>ไม่พึ่งพา AI 100% มีส่วนร่วมของตัวเอง</li>
+                            <li>บันทึกและอธิบายกระบวนการใช้ AI ได้</li>
+                        </ul>
+                    </div>
+
+                    <!-- Criteria 3: Quality -->
+                    <div class="comparison-card" style="padding: 1.5rem; border-radius: 16px; background: white; border: 2px solid rgba(52, 211, 153, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(52, 211, 153, 0.1); display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-gem" style="color: #34d399;"></i>
+                            </div>
+                            <h4 style="color: #34d399; margin-top: 0.75rem;">คุณภาพผลงาน</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Quality — 25%</p>
+                        </div>
+                        <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>ผลงานเสร็จสมบูรณ์ครบถ้วน</li>
+                            <li>ข้อมูลถูกต้อง ผ่านการ Fact-check</li>
+                            <li>การออกแบบสวยงามเป็นระเบียบ</li>
+                            <li>ไม่มีข้อผิดพลาดด้านตัวสะกด</li>
+                            <li>เนื้อหาสอดคล้องกันทั้งหมด</li>
+                        </ul>
+                    </div>
+
+                    <!-- Criteria 4: Presentation -->
+                    <div class="comparison-card" style="padding: 1.5rem; border-radius: 16px; background: white; border: 2px solid rgba(245, 158, 11, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(245, 158, 11, 0.1); display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-chalkboard-teacher" style="color: #f59e0b;"></i>
+                            </div>
+                            <h4 style="color: #f59e0b; margin-top: 0.75rem;">การนำเสนอ</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Presentation — 25%</p>
+                        </div>
+                        <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>พูดชัดเจน มั่นใจ น่าสนใจ</li>
+                            <li>สไลด์สวยงาม อ่านง่าย</li>
+                            <li>จัดสรรเวลาได้ดี ไม่เกินเวลา</li>
+                            <li>ตอบคำถามได้ดี มีความเข้าใจลึก</li>
+                            <li>สมาชิกทุกคนมีส่วนร่วมในการนำเสนอ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Knowledge Summary -->
+    <section class="content-section">
+        <div class="container">
+            <div class="knowledge-summary">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f59e0b;"></i>
+                    <h2 style="margin-top: 0.5rem; color: var(--text-primary);">สรุปความรู้ประจำหน่วย</h2>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> สิ่งที่ควรจำ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>การทำโครงงาน AI มีประโยชน์ 7 ด้าน: คิดเป็นระบบ, แก้ปัญหา, เชี่ยวชาญเครื่องมือ, ความคิดสร้างสรรค์, ทำงานทีม, นำเสนอ, สร้าง Portfolio</li>
+                            <li>5 ระยะการทำโครงงาน: Ideation → Planning → Production → Iteration → Presentation</li>
+                            <li>เลือกโครงงานให้เหมาะกับทักษะ: Beginner, Intermediate, Advanced</li>
+                            <li>อย่าใช้ผลงาน AI ดิบๆ ต้องเพิ่มคุณค่าด้วยตัวเอง</li>
+                            <li>กฎ 10-20-30: ไม่เกิน 10 สไลด์, 20 นาที, ตัวอักษร 30 point</li>
+                            <li>เกณฑ์ประเมิน 4 ด้าน ด้านละ 25%: สร้างสรรค์, ใช้ AI, คุณภาพ, นำเสนอ</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> เคล็ดลับสำคัญ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>ผสมเครื่องมือ AI หลายตัว ใช้จุดแข็งของแต่ละตัว</li>
+                            <li>เล่าเรื่องให้น่าสนใจ (Storytelling) ไม่ใช่แค่รวมข้อมูล</li>
+                            <li>บันทึกกระบวนการทุกขั้นตอน ใช้ประกอบการนำเสนอ</li>
+                            <li>ขอ Feedback แล้วปรับปรุงก่อนส่งงานจริง</li>
+                            <li>ซ้อมนำเสนออย่างน้อย 3 รอบ จับเวลาทุกครั้ง</li>
+                            <li>เริ่มนำเสนอด้วยสิ่งที่น่าสนใจ ดึงดูดตั้งแต่วินาทีแรก</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 12px; border-left: 4px solid #6366f1;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-quote-left" style="color: #6366f1;"></i> <strong>คำถามชวนคิด:</strong> ถ้าคุณมีเวลา 3 สัปดาห์ และสมาชิกในกลุ่ม 4 คน คุณจะเลือกทำโครงงาน AI หัวข้ออะไร? ทำไมจึงเลือกหัวข้อนั้น? จะแบ่งงานกันอย่างไร? และจะใช้เครื่องมือ AI ตัวไหนบ้าง?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Page Navigation -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="page-nav">
+                <a href="unit4.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> หน่วยก่อนหน้า
+                </a>
+                <a href="unit6.html" class="btn btn-primary">
+                    หน่วยถัดไป <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

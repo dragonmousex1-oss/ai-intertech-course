@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน่วยที่ 4: การใช้ AI อย่างปลอดภัยและมีจริยธรรม - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html">หน่วย 1</a></li>
+                <li><a href="unit2.html">หน่วย 2</a></li>
+                <li><a href="unit3.html">หน่วย 3</a></li>
+                <li><a href="unit4.html" class="active">หน่วย 4</a></li>
+                <li><a href="unit5.html">หน่วย 5</a></li>
+                <li><a href="unit6.html">หน่วย 6</a></li>
+                <li><a href="review.html">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">หน่วยที่ 4: การใช้ AI อย่างปลอดภัยและมีจริยธรรม</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">หน่วยที่ 4</span>
+                <h1 class="page-title">การใช้ AI อย่างปลอดภัยและมีจริยธรรม</h1>
+                <p class="page-subtitle">เรียนรู้หลักจริยธรรม AI รู้เท่าทัน Deepfake เข้าใจลิขสิทธิ์ผลงาน AI ปกป้องความเป็นส่วนตัว ตรวจสอบข่าวปลอม และใช้ AI ในห้องเรียนอย่างเหมาะสม</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Shield shape -->
+                    <path d="M150 40L60 80v80c0 66 40 110 90 130 50-20 90-64 90-130V80L150 40z" stroke="url(#heroGrad4a)" stroke-width="2.5" fill="url(#heroGrad4b)" opacity="0.15"/>
+                    <path d="M150 60L80 92v68c0 54 32 90 70 108 38-18 70-54 70-108V92L150 60z" stroke="url(#heroGrad4a)" stroke-width="1.5" opacity="0.3"/>
+                    <!-- Checkmark inside shield -->
+                    <path d="M120 155l20 20 40-40" stroke="#34d399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+                    <!-- Lock icon at top -->
+                    <rect x="138" y="85" width="24" height="18" rx="3" stroke="#6366f1" stroke-width="2" opacity="0.7"/>
+                    <path d="M143 85v-8a7 7 0 0114 0v8" stroke="#6366f1" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+                    <circle cx="150" cy="95" r="2.5" fill="#6366f1" opacity="0.7"/>
+                    <!-- Eye icon (surveillance) -->
+                    <ellipse cx="90" cy="120" rx="15" ry="10" stroke="#f59e0b" stroke-width="1.5" opacity="0.5"/>
+                    <circle cx="90" cy="120" r="5" fill="#f59e0b" opacity="0.4"/>
+                    <!-- Warning triangle -->
+                    <path d="M220 110l10 18H210z" stroke="#ec4899" stroke-width="1.5" fill="#ec4899" opacity="0.2"/>
+                    <text x="220" y="125" text-anchor="middle" font-size="10" fill="#ec4899" opacity="0.7">!</text>
+                    <!-- Orbiting dots -->
+                    <circle cx="70" cy="200" r="5" fill="#818cf8" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="230" cy="200" r="5" fill="#34d399" opacity="0.6">
+                        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="150" cy="250" r="4" fill="#f59e0b" opacity="0.5">
+                        <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Pulsing ring around shield -->
+                    <circle cx="150" cy="155" r="85" stroke="#6366f1" stroke-width="1" opacity="0.2">
+                        <animate attributeName="r" values="85;95;85" dur="4s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.2;0.05;0.2" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="heroGrad4a" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="heroGrad4b" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#34d399"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Section 4.1: จริยธรรม AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">4.1</span> จริยธรรม AI (AI Ethics)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>จริยธรรม AI (AI Ethics)</strong> คือ หลักการและแนวทางที่กำหนดว่า AI ควรถูกพัฒนาและใช้งานอย่างไรให้เป็นประโยชน์ต่อมนุษย์และสังคม โดยไม่ก่อให้เกิดผลกระทบเชิงลบ ปัจจุบันเทคโนโลยี AI มีพลังมากขึ้นเรื่อยๆ จึงจำเป็นต้องมีกรอบจริยธรรมเพื่อควบคุมและกำกับดูแลการใช้งานให้เหมาะสม</p>
+                    <p>เมื่อ AI สามารถตัดสินใจแทนมนุษย์ในหลายเรื่อง ตั้งแต่การอนุมัติสินเชื่อ การคัดเลือกพนักงาน ไปจนถึงการวินิจฉัยโรค คำถามสำคัญคือ: <em>"AI ตัดสินใจอย่างยุติธรรมหรือไม่?" "ใครรับผิดชอบเมื่อ AI ทำผิดพลาด?"</em></p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-balance-scale" style="color: #6366f1;"></i> หลักจริยธรรม AI 6 ประการ</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;">1. ความโปร่งใส (Transparency)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">AI ต้องสามารถอธิบายได้ว่าตัดสินใจอย่างไรและทำไม ผู้ใช้ควรรู้ว่ากำลังโต้ตอบกับ AI และเข้าใจกระบวนการทำงานเบื้องหลัง</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>ตัวอย่าง: ธนาคารต้องอธิบายได้ว่าทำไม AI ถึงปฏิเสธสินเชื่อ</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚖️</div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.5rem;">2. ความยุติธรรม (Fairness)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">AI ต้องไม่เลือกปฏิบัติหรือมีอคติต่อกลุ่มใดกลุ่มหนึ่ง ไม่ว่าจะเป็นเชื้อชาติ เพศ ศาสนา อายุ หรือสถานะทางสังคม</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>ตัวอย่าง: AI คัดเลือกพนักงานต้องไม่เลือกปฏิบัติตามเพศ</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">👤</div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">3. ความรับผิดชอบ (Accountability)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ต้องมีผู้รับผิดชอบเมื่อ AI ทำผิดพลาดหรือก่อให้เกิดความเสียหาย ไม่สามารถอ้างว่า "AI ทำเอง" เพื่อหลีกเลี่ยงความรับผิดชอบ</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>ตัวอย่าง: บริษัทรถยนต์ต้องรับผิดชอบหากรถ AI ขับเกิดอุบัติเหตุ</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">4. ความเป็นส่วนตัว (Privacy)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">AI ต้องเคารพข้อมูลส่วนบุคคล ไม่เก็บรวบรวมข้อมูลมากเกินความจำเป็น และต้องได้รับความยินยอมจากเจ้าของข้อมูลก่อน</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>ตัวอย่าง: แอปต้องขออนุญาตก่อนเข้าถึงกล้องหรือไมค์</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛡️</div>
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem;">5. ความปลอดภัย (Safety)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">AI ต้องถูกออกแบบให้ปลอดภัย ทำงานตามที่คาดหวัง ไม่ก่อให้เกิดอันตรายต่อผู้ใช้ทั้งทางกายภาพและจิตใจ</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>ตัวอย่าง: AI ในรถยนต์ต้องหยุดทำงานอย่างปลอดภัยเมื่อเกิดข้อผิดพลาด</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚫</div>
+                        <h4 style="color: #06b6d4; margin-bottom: 0.5rem;">6. การไม่ทำร้าย (Non-maleficence)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">AI ต้องไม่ถูกใช้เพื่อทำร้ายผู้อื่น ไม่ว่าจะเป็นการสร้างอาวุธอัตโนมัติ การเผยแพร่ข้อมูลเท็จ หรือการละเมิดสิทธิมนุษยชน</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>ตัวอย่าง: ห้ามใช้ AI สร้าง Deepfake เพื่อทำลายชื่อเสียงผู้อื่น</em></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- AI Ethics SVG Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 600 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; width: 100%;">
+                    <!-- Center circle -->
+                    <circle cx="300" cy="140" r="45" fill="url(#ethicsGrad)" opacity="0.15" stroke="url(#ethicsGrad)" stroke-width="2"/>
+                    <text x="300" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#6366f1">AI</text>
+                    <text x="300" y="152" text-anchor="middle" font-size="10" fill="#64748b">Ethics</text>
+                    <!-- 6 surrounding principles -->
+                    <circle cx="300" cy="40" r="28" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="1.5"/>
+                    <text x="300" y="37" text-anchor="middle" font-size="9" font-weight="bold" fill="#6366f1">Transparency</text>
+                    <text x="300" y="50" text-anchor="middle" font-size="8" fill="#64748b">โปร่งใส</text>
+                    <line x1="300" y1="68" x2="300" y2="95" stroke="#6366f1" stroke-width="1" opacity="0.4"/>
+                    
+                    <circle cx="440" cy="80" r="28" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1.5"/>
+                    <text x="440" y="77" text-anchor="middle" font-size="9" font-weight="bold" fill="#8b5cf6">Fairness</text>
+                    <text x="440" y="90" text-anchor="middle" font-size="8" fill="#64748b">ยุติธรรม</text>
+                    <line x1="418" y1="98" x2="340" y2="120" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
+                    
+                    <circle cx="440" cy="200" r="28" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="440" y="197" text-anchor="middle" font-size="9" font-weight="bold" fill="#34d399">Accountability</text>
+                    <text x="440" y="210" text-anchor="middle" font-size="8" fill="#64748b">รับผิดชอบ</text>
+                    <line x1="418" y1="182" x2="340" y2="160" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+                    
+                    <circle cx="300" cy="240" r="28" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="1.5"/>
+                    <text x="300" y="237" text-anchor="middle" font-size="9" font-weight="bold" fill="#f59e0b">Privacy</text>
+                    <text x="300" y="250" text-anchor="middle" font-size="8" fill="#64748b">ส่วนตัว</text>
+                    <line x1="300" y1="212" x2="300" y2="185" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+                    
+                    <circle cx="160" cy="200" r="28" fill="#ec4899" opacity="0.08" stroke="#ec4899" stroke-width="1.5"/>
+                    <text x="160" y="197" text-anchor="middle" font-size="9" font-weight="bold" fill="#ec4899">Safety</text>
+                    <text x="160" y="210" text-anchor="middle" font-size="8" fill="#64748b">ปลอดภัย</text>
+                    <line x1="182" y1="182" x2="260" y2="160" stroke="#ec4899" stroke-width="1" opacity="0.4"/>
+                    
+                    <circle cx="160" cy="80" r="28" fill="#06b6d4" opacity="0.08" stroke="#06b6d4" stroke-width="1.5"/>
+                    <text x="160" y="77" text-anchor="middle" font-size="9" font-weight="bold" fill="#06b6d4">Non-maleficence</text>
+                    <text x="160" y="90" text-anchor="middle" font-size="8" fill="#64748b">ไม่ทำร้าย</text>
+                    <line x1="182" y1="98" x2="260" y2="120" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+                    
+                    <defs>
+                        <linearGradient id="ethicsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> AI Bias (อคติของ AI) - ปัญหาที่ต้องระวัง</h3>
+                <div class="content-text">
+                    <p><strong>AI Bias</strong> เกิดขึ้นเมื่อ AI ตัดสินใจไม่ยุติธรรม เนื่องจากข้อมูลที่ใช้ฝึกมีอคติอยู่ หรือผู้พัฒนามีอคติโดยไม่รู้ตัว ผลคือ AI จะขยายความไม่เท่าเทียมที่มีอยู่ในสังคมให้รุนแรงขึ้น</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15);">
+                        <h4 style="color: #ef4444; margin-bottom: 0.75rem;"><i class="fas fa-briefcase"></i> กรณี: AI คัดเลือกพนักงาน</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Amazon เคยใช้ AI คัดเลือกพนักงาน แต่พบว่าระบบลดคะแนนผู้สมัครหญิงโดยอัตโนมัติ เพราะข้อมูลในอดีตส่วนใหญ่เป็นพนักงานชาย ทำให้ AI "เรียนรู้" ว่าผู้ชายเหมาะสมกว่า</p>
+                        <p style="font-size: 0.8rem; color: #ef4444; margin-top: 0.5rem;"><strong>ผลกระทบ:</strong> ผู้หญิงถูกเลือกปฏิบัติอย่างเป็นระบบ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15);">
+                        <h4 style="color: #ef4444; margin-bottom: 0.75rem;"><i class="fas fa-camera"></i> กรณี: AI จดจำใบหน้า</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ระบบจดจำใบหน้าหลายตัวมีความแม่นยำต่ำกับคนผิวสี เพราะข้อมูลฝึกส่วนใหญ่เป็นใบหน้าคนผิวขาว ทำให้เกิดการจับผิดตัวและถูกดำเนินคดีอย่างไม่เป็นธรรม</p>
+                        <p style="font-size: 0.8rem; color: #ef4444; margin-top: 0.5rem;"><strong>ผลกระทบ:</strong> คนผิวสีถูกจับกุมผิดตัวหลายกรณี</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15);">
+                        <h4 style="color: #ef4444; margin-bottom: 0.75rem;"><i class="fas fa-credit-card"></i> กรณี: AI อนุมัติสินเชื่อ</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ระบบ AI ของบริษัทการเงินบางแห่งให้วงเงินสินเชื่อผู้หญิงน้อยกว่าผู้ชาย แม้จะมีรายได้และเครดิตเท่ากัน เพราะข้อมูลประวัติศาสตร์สะท้อนอคติทางเพศในระบบการเงิน</p>
+                        <p style="font-size: 0.8rem; color: #ef4444; margin-top: 0.5rem;"><strong>ผลกระทบ:</strong> ความเหลื่อมล้ำทางเพศในการเข้าถึงบริการทางการเงิน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4.2: Deepfake -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">4.2</span> Deepfake - เทคโนโลยีปลอมแปลงที่ต้องรู้เท่าทัน</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Deepfake</strong> คือ สื่อที่ถูกปลอมแปลงด้วยเทคโนโลยี AI ขั้นสูง ชื่อมาจากคำว่า <strong>"Deep Learning"</strong> (การเรียนรู้เชิงลึก) + <strong>"Fake"</strong> (ปลอม) ทำให้สามารถสร้างวิดีโอ ภาพ หรือเสียงที่ดูเหมือนจริงมากจนแยกแทบไม่ออก</p>
+                    <p>Deepfake ใช้เทคนิค Neural Network ที่เรียกว่า <strong>GAN (Generative Adversarial Network)</strong> ซึ่งทำงานโดยมี AI สองตัวแข่งกัน: ตัวหนึ่งสร้างภาพปลอม อีกตัวพยายามจับผิด จนในที่สุดภาพปลอมสมจริงจนแยกไม่ออก</p>
+                </div>
+
+                <!-- Deepfake SVG Diagram -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 600 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; width: 100%;">
+                        <!-- Deep Learning box -->
+                        <rect x="30" y="50" width="200" height="60" rx="12" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+                        <text x="130" y="77" text-anchor="middle" font-size="14" font-weight="bold" fill="#8b5cf6">Deep Learning</text>
+                        <text x="130" y="97" text-anchor="middle" font-size="11" fill="#64748b">การเรียนรู้เชิงลึก</text>
+                        <!-- Plus sign -->
+                        <text x="270" y="88" text-anchor="middle" font-size="28" fill="#94a3b8">+</text>
+                        <!-- Fake box -->
+                        <rect x="310" y="50" width="120" height="60" rx="12" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2"/>
+                        <text x="370" y="77" text-anchor="middle" font-size="14" font-weight="bold" fill="#ef4444">Fake</text>
+                        <text x="370" y="97" text-anchor="middle" font-size="11" fill="#64748b">ปลอม</text>
+                        <!-- Equals sign -->
+                        <text x="465" y="88" text-anchor="middle" font-size="28" fill="#94a3b8">=</text>
+                        <!-- Deepfake result -->
+                        <rect x="495" y="45" width="90" height="70" rx="12" fill="#ec4899" opacity="0.1" stroke="#ec4899" stroke-width="2"/>
+                        <text x="540" y="77" text-anchor="middle" font-size="13" font-weight="bold" fill="#ec4899">Deepfake</text>
+                        <text x="540" y="97" text-anchor="middle" font-size="10" fill="#64748b">สื่อปลอมเชิงลึก</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-layer-group" style="color: #8b5cf6;"></i> ประเภทของ Deepfake (5 ประเภท)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-user-secret" style="color: #6366f1;"></i></div>
+                        <h4 style="color: #6366f1;">1. Face Swap (สลับใบหน้า)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">นำใบหน้าของคนหนึ่งไปวางบนร่างของอีกคน สมจริงมากจนดูเหมือนเป็นคนนั้นจริงๆ ใช้ในการสร้างวิดีโอปลอมของบุคคลที่มีชื่อเสียง</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-theater-masks" style="color: #8b5cf6;"></i></div>
+                        <h4 style="color: #8b5cf6;">2. Face Reenactment (ควบคุมใบหน้า)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">ควบคุมการแสดงออกทางสีหน้าของคนอื่นได้ ทำให้พูด ยิ้ม หรือแสดงอารมณ์ตามต้องการ ราวกับเป็นหุ่นเชิด</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-microphone" style="color: #34d399;"></i></div>
+                        <h4 style="color: #34d399;">3. Voice Cloning (โคลนเสียง)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">สร้างเสียงพูดเลียนแบบคนจริงได้เหมือนมาก ใช้ตัวอย่างเสียงเพียงไม่กี่นาทีก็สามารถสร้างเสียงปลอมที่พูดอะไรก็ได้</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-person" style="color: #f59e0b;"></i></div>
+                        <h4 style="color: #f59e0b;">4. Full Body (ปลอมทั้งตัว)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">สร้างวิดีโอปลอมทั้งร่างกาย ไม่ใช่แค่ใบหน้า สามารถทำให้คนเต้น เดิน หรือทำท่าทางที่ไม่เคยทำจริง</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-file-alt" style="color: #ec4899;"></i></div>
+                        <h4 style="color: #ec4899;">5. Text Deepfake (ข้อความปลอม)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">AI สร้างข้อความที่เลียนแบบสไตล์การเขียนของคนจริง สามารถเขียนบทความ อีเมล หรือโพสต์ปลอมที่ดูเหมือนเขียนโดยบุคคลนั้น</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-block">
+                <h3><i class="fas fa-skull-crossbones" style="color: #ef4444;"></i> อันตรายของ Deepfake</h3>
+                <div class="info-box" style="border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.03);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div>
+                            <p><strong><i class="fas fa-newspaper" style="color: #ef4444;"></i> ข่าวปลอม / Propaganda</strong></p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">สร้างวิดีโอผู้นำประเทศพูดสิ่งที่ไม่เคยพูด เพื่อสร้างความแตกแยกหรือชี้นำสังคม</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-money-bill-wave" style="color: #ef4444;"></i> หลอกลวงทางการเงิน</strong></p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">ปลอมเสียงผู้บริหารสั่งโอนเงิน หรือสร้างวิดีโอ Call ปลอมเพื่อหลอกพนักงาน</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-user-slash" style="color: #ef4444;"></i> ทำลายชื่อเสียง</strong></p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">สร้างวิดีโอหรือภาพลามกปลอมของบุคคลเพื่อข่มขู่ แบล็คเมล์ หรือกลั่นแกล้ง</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-gavel" style="color: #ef4444;"></i> ปลอมหลักฐาน</strong></p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">สร้างหลักฐานเท็จในศาล ปลอมแปลงวิดีโอกล้องวงจรปิด หรือเสียงบันทึก</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-search" style="color: #34d399;"></i> วิธีตรวจจับ Deepfake (7 วิธี)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">1. สังเกตการกะพริบตา</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">Deepfake มักกะพริบตาน้อยผิดปกติหรือไม่กะพริบเลย เพราะ AI สร้างตาเปิดง่ายกว่าตาปิด</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">2. ดูขอบใบหน้า</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">ขอบใบหน้ามักไม่เนียน มีรอยเบลอ สีผิวไม่สม่ำเสมอ หรือแสงเงาไม่ตรงกับร่างกาย</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">3. สังเกตปากกับเสียง</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">การขยับปากไม่ตรงกับเสียงพูด (lip-sync ผิด) หรือเสียงมีโทนไม่เป็นธรรมชาติ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">4. ตรวจเครื่องประดับ</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">ต่างหู แว่นตา ผม มักมีปัญหา เช่น ต่างหูสองข้างไม่เหมือนกัน หรือแว่นสะท้อนแสงผิดปกติ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">5. ดูพื้นหลัง</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">พื้นหลังมีความผิดปกติ เช่น บิดเบี้ยว เบลอไม่สม่ำเสมอ หรือมีวัตถุที่ดูแปลกๆ ปรากฏขึ้น</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">6. ใช้เครื่องมือตรวจจับ</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">ใช้เว็บไซต์หรือแอปตรวจจับ Deepfake เช่น Microsoft Video Authenticator, Sensity AI, Deepware Scanner</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <strong style="color: #34d399;">7. ตรวจสอบแหล่งที่มา</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">ตรวจสอบว่าวิดีโอมาจากแหล่งที่น่าเชื่อถือหรือไม่ ค้นหาวิดีโอต้นฉบับ เทียบกับแหล่งข่าวอื่น</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4.3: ลิขสิทธิ์ผลงาน AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">4.3</span> ลิขสิทธิ์ผลงาน AI (AI Copyright)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>เมื่อ AI สามารถสร้างผลงานได้ เช่น ภาพวาด เพลง บทความ หรือโค้ด คำถามสำคัญที่เกิดขึ้นคือ: <strong>"ผลงานที่ AI สร้างขึ้นเป็นของใคร? ใครเป็นเจ้าของลิขสิทธิ์?"</strong> นี่คือปัญหาทางกฎหมายที่ทั่วโลกกำลังถกเถียงกันอยู่</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-question-circle" style="color: #6366f1;"></i> คำถามสำคัญเรื่องลิขสิทธิ์ AI</h3>
+                <div class="info-box">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        <div style="padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                            <p style="font-weight: 600; color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-palette"></i> ผลงาน AI เป็นของใคร?</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">คนที่สั่ง AI (Prompt)? บริษัทที่สร้าง AI? หรือไม่มีเจ้าของ?</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px;">
+                            <p style="font-weight: 600; color: #8b5cf6; margin-bottom: 0.5rem;"><i class="fas fa-database"></i> AI เรียนรู้จากผลงานคนอื่นได้หรือไม่?</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">การใช้ภาพ/เพลงของศิลปินมาฝึก AI ถือว่าละเมิดลิขสิทธิ์หรือไม่?</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                            <p style="font-weight: 600; color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-copy"></i> ผลงาน AI ซ้ำกับงานคนอื่นได้ไหม?</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">ถ้า AI สร้างงานที่คล้ายกับผลงานที่มีอยู่แล้ว ถือเป็นการลอกหรือไม่?</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(245, 158, 11, 0.05); border-radius: 8px;">
+                            <p style="font-weight: 600; color: #f59e0b; margin-bottom: 0.5rem;"><i class="fas fa-store"></i> ใช้ผลงาน AI เชิงพาณิชย์ได้ไหม?</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">สามารถนำผลงาน AI ไปขายหรือใช้เชิงธุรกิจได้หรือไม่? มีเงื่อนไขอะไร?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-globe" style="color: #8b5cf6;"></i> กฎหมายลิขสิทธิ์ AI ในแต่ละประเทศ</h3>
+                <div style="overflow-x: auto; margin-top: 1rem;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: rgba(99, 102, 241, 0.08);">
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;">ประเทศ/ภูมิภาค</th>
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;">จุดยืน</th>
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;">รายละเอียด</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>🇺🇸 สหรัฐอเมริกา</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><span style="color: #ef4444; font-weight: 600;">ไม่คุ้มครอง</span></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">สำนักงานลิขสิทธิ์สหรัฐฯ ระบุว่า "ผลงานที่สร้างโดย AI ทั้งหมดโดยไม่มีมนุษย์มีส่วนร่วมสร้างสรรค์ ไม่สามารถจดลิขสิทธิ์ได้" แต่หากมนุษย์มีส่วนร่วมในกระบวนการสร้างสรรค์อย่างมีนัยสำคัญ อาจได้รับความคุ้มครองบางส่วน</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>🇪🇺 สหภาพยุโรป</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><span style="color: #f59e0b; font-weight: 600;">กำลังพัฒนากฎหมาย</span></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">EU AI Act กำหนดให้ AI ที่สร้างเนื้อหาต้องเปิดเผยว่าเป็นผลงาน AI (AI-generated labeling) และกำลังพัฒนากฎหมายเฉพาะเรื่องลิขสิทธิ์ AI เพิ่มเติม</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem;"><strong>🇹🇭 ประเทศไทย</strong></td>
+                                <td style="padding: 0.75rem 1rem;"><span style="color: #f59e0b; font-weight: 600;">ยังไม่ชัดเจน</span></td>
+                                <td style="padding: 0.75rem 1rem;">พ.ร.บ.ลิขสิทธิ์ไทยกำหนดว่าลิขสิทธิ์เป็นของ "ผู้สร้างสรรค์" ซึ่งต้องเป็นบุคคลธรรมดา ดังนั้น AI ไม่สามารถเป็นเจ้าของลิขสิทธิ์ได้ แต่ยังไม่มีกฎหมายเฉพาะเรื่อง AI โดยตรง</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-check-circle" style="color: #34d399;"></i> แนวทางการใช้ผลงาน AI อย่างถูกต้อง</h3>
+                <div class="info-box" style="border-left: 4px solid #34d399;">
+                    <ul style="padding-left: 1.5rem; font-size: 0.9rem; line-height: 2;">
+                        <li><strong>ระบุว่าเป็นผลงาน AI เสมอ</strong> - บอกให้ชัดเจนว่าผลงานถูกสร้างด้วย AI ตัวใด ไม่อ้างเป็นผลงานของตัวเอง</li>
+                        <li><strong>อ่านเงื่อนไขการใช้งาน (Terms of Service)</strong> - แต่ละเครื่องมือ AI มีเงื่อนไขการใช้งานที่แตกต่างกัน เช่น Midjourney, DALL-E มีข้อกำหนดเรื่องการนำไปใช้เชิงพาณิชย์</li>
+                        <li><strong>ไม่ใช้เลียนแบบสไตล์ศิลปิน</strong> - ไม่ควรสั่ง AI ให้สร้างผลงาน "ในสไตล์ของ [ศิลปินที่ยังมีชีวิต]" เพราะอาจละเมิดสิทธิ์</li>
+                        <li><strong>ตรวจสอบก่อนใช้เชิงพาณิชย์</strong> - หากจะนำผลงาน AI ไปขายหรือใช้ในธุรกิจ ต้องตรวจสอบสิทธิ์ให้ชัดเจน</li>
+                        <li><strong>เพิ่มคุณค่าด้วยความคิดสร้างสรรค์</strong> - ใช้ AI เป็นจุดเริ่มต้น แล้วเพิ่มความคิดสร้างสรรค์ของตัวเองลงไป</li>
+                        <li><strong>อ้างอิงแหล่งที่มา</strong> - ระบุว่าใช้ AI ตัวใดในการสร้างผลงาน เพื่อความโปร่งใส</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4.4: ความเป็นส่วนตัว -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">4.4</span> ความเป็นส่วนตัวในยุค AI (Privacy in the AI Era)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>ในยุคดิจิทัล ข้อมูลส่วนตัวของเรากลายเป็น "ทรัพยากร" ที่มีค่ามหาศาล AI ต้องการข้อมูลจำนวนมากในการเรียนรู้ และบริษัทเทคโนโลยีเก็บรวบรวมข้อมูลของเราทุกวัน ทุกนาที โดยเราอาจไม่รู้ตัว คำถามสำคัญคือ: <em>"เรายินยอมให้เก็บข้อมูลจริงๆ หรือแค่กดยอมรับโดยไม่ได้อ่าน?"</em></p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-database" style="color: #ef4444;"></i> ข้อมูลที่ถูกเก็บรวบรวม (6 ประเภท)</h3>
+
+                <!-- SVG Data Collection Diagram -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 650 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 650px; width: 100%;">
+                        <!-- Central phone/device -->
+                        <rect x="280" y="100" width="90" height="140" rx="12" stroke="#6366f1" stroke-width="2" fill="#6366f1" opacity="0.05"/>
+                        <circle cx="325" cy="225" r="6" stroke="#6366f1" stroke-width="1.5"/>
+                        <rect x="300" y="112" width="50" height="5" rx="2" fill="#6366f1" opacity="0.3"/>
+                        <text x="325" y="170" text-anchor="middle" font-size="10" fill="#6366f1" font-weight="bold">อุปกรณ์</text>
+                        <text x="325" y="185" text-anchor="middle" font-size="10" fill="#6366f1" font-weight="bold">ของคุณ</text>
+                        
+                        <!-- Data types radiating out -->
+                        <!-- Location -->
+                        <line x1="280" y1="140" x2="160" y2="70" stroke="#ef4444" stroke-width="1" opacity="0.4"/>
+                        <circle cx="140" cy="60" r="30" fill="#ef4444" opacity="0.06" stroke="#ef4444" stroke-width="1.5"/>
+                        <text x="140" y="55" text-anchor="middle" font-size="16">📍</text>
+                        <text x="140" y="75" text-anchor="middle" font-size="8" fill="#ef4444" font-weight="bold">ตำแหน่ง</text>
+                        
+                        <!-- Search -->
+                        <line x1="370" y1="140" x2="490" y2="70" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
+                        <circle cx="510" cy="60" r="30" fill="#8b5cf6" opacity="0.06" stroke="#8b5cf6" stroke-width="1.5"/>
+                        <text x="510" y="55" text-anchor="middle" font-size="16">🔍</text>
+                        <text x="510" y="75" text-anchor="middle" font-size="8" fill="#8b5cf6" font-weight="bold">การค้นหา</text>
+                        
+                        <!-- Messages -->
+                        <line x1="280" y1="180" x2="130" y2="180" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+                        <circle cx="110" cy="180" r="30" fill="#34d399" opacity="0.06" stroke="#34d399" stroke-width="1.5"/>
+                        <text x="110" y="175" text-anchor="middle" font-size="16">💬</text>
+                        <text x="110" y="195" text-anchor="middle" font-size="8" fill="#34d399" font-weight="bold">ข้อความ</text>
+                        
+                        <!-- Photos -->
+                        <line x1="370" y1="180" x2="520" y2="180" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+                        <circle cx="540" cy="180" r="30" fill="#f59e0b" opacity="0.06" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text x="540" y="175" text-anchor="middle" font-size="16">📸</text>
+                        <text x="540" y="195" text-anchor="middle" font-size="8" fill="#f59e0b" font-weight="bold">รูปภาพ</text>
+                        
+                        <!-- Voice -->
+                        <line x1="280" y1="220" x2="160" y2="270" stroke="#ec4899" stroke-width="1" opacity="0.4"/>
+                        <circle cx="140" cy="275" r="30" fill="#ec4899" opacity="0.06" stroke="#ec4899" stroke-width="1.5"/>
+                        <text x="140" y="270" text-anchor="middle" font-size="16">🎤</text>
+                        <text x="140" y="290" text-anchor="middle" font-size="8" fill="#ec4899" font-weight="bold">เสียง</text>
+                        
+                        <!-- Health -->
+                        <line x1="370" y1="220" x2="490" y2="270" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+                        <circle cx="510" cy="275" r="30" fill="#06b6d4" opacity="0.06" stroke="#06b6d4" stroke-width="1.5"/>
+                        <text x="510" y="270" text-anchor="middle" font-size="16">❤️</text>
+                        <text x="510" y="290" text-anchor="middle" font-size="8" fill="#06b6d4" font-weight="bold">สุขภาพ</text>
+                    </svg>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.1);">
+                        <i class="fas fa-map-marker-alt" style="color: #ef4444; font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>1. ข้อมูลตำแหน่ง (Location)</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">สถานที่ที่คุณไป เส้นทางที่ใช้ ร้านค้าที่เข้า ทุกที่ที่เปิด GPS จะถูกบันทึก</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <i class="fas fa-search" style="color: #8b5cf6; font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>2. ประวัติการค้นหา (Search History)</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">ทุกอย่างที่คุณค้นหาใน Google, YouTube, TikTok สะท้อนความสนใจและปัญหาของคุณ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <i class="fas fa-comments" style="color: #34d399; font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>3. ข้อความและการสนทนา (Messages)</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">แชท อีเมล ข้อความที่พิมพ์ใน Social Media บางแอปอ่านข้อความเพื่อแสดงโฆษณาที่ตรงใจ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.1);">
+                        <i class="fas fa-camera" style="color: #f59e0b; font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>4. รูปภาพและวิดีโอ (Photos)</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">รูปที่ถ่าย สแกนใบหน้า ข้อมูล EXIF (เวลา สถานที่ถ่าย) ใช้ AI วิเคราะห์เนื้อหาในภาพ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.1);">
+                        <i class="fas fa-microphone" style="color: #ec4899; font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>5. ข้อมูลเสียง (Voice Data)</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">คำสั่งเสียงที่พูดกับ Siri, Google Assistant, Alexa อาจถูกบันทึกและวิเคราะห์โดยมนุษย์</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.1);">
+                        <i class="fas fa-heartbeat" style="color: #06b6d4; font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>6. ข้อมูลสุขภาพ (Health Data)</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">อัตราการเต้นหัวใจ การนอน จำนวนก้าวเดิน น้ำหนัก จาก Smart Watch หรือแอปสุขภาพ</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-block">
+                <h3><i class="fas fa-shield-alt" style="color: #34d399;"></i> 7 วิธีปกป้องความเป็นส่วนตัว</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">1</span>
+                            <h4 style="color: #34d399; margin: 0;">ตรวจสอบสิทธิ์แอป</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ตรวจสอบว่าแอปขอเข้าถึงอะไรบ้าง (กล้อง, ไมค์, ตำแหน่ง) ปิดสิทธิ์ที่ไม่จำเป็น เช่น แอปเกมไม่จำเป็นต้องเข้าถึงรายชื่อผู้ติดต่อ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">2</span>
+                            <h4 style="color: #34d399; margin: 0;">ใช้รหัสผ่านที่แข็งแรง</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ใช้รหัสผ่านยาว ผสมตัวเลข อักษร สัญลักษณ์ ไม่ใช้รหัสเดียวกันทุกเว็บ ใช้ Two-Factor Authentication (2FA) เสมอ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">3</span>
+                            <h4 style="color: #34d399; margin: 0;">ระวังการแชร์ข้อมูล</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ไม่โพสต์ข้อมูลส่วนตัวมากเกินไป เช่น ที่อยู่ เบอร์โทร ตารางเรียน ภาพถ่ายที่เห็นบ้าน โรงเรียน หรือป้ายทะเบียนรถ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">4</span>
+                            <h4 style="color: #34d399; margin: 0;">อ่านนโยบายความเป็นส่วนตัว</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">อ่าน Privacy Policy ก่อนสมัครใช้งาน ดูว่าแอปเก็บข้อมูลอะไร แชร์กับใคร และลบข้อมูลได้อย่างไร</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">5</span>
+                            <h4 style="color: #34d399; margin: 0;">ปิด GPS เมื่อไม่จำเป็น</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">เปิดตำแหน่ง (Location) เฉพาะเมื่อต้องใช้งานจริง เช่น ใช้แผนที่นำทาง ไม่เปิดค้างตลอดเวลา</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">6</span>
+                            <h4 style="color: #34d399; margin: 0;">ไม่ใส่ข้อมูลสำคัญใน AI</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ไม่พิมพ์ข้อมูลส่วนตัว รหัสผ่าน ข้อมูลบัตรเครดิต หรือความลับในแชท AI เพราะอาจถูกนำไปฝึก AI ต่อ</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <span style="background: #34d399; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">7</span>
+                            <h4 style="color: #34d399; margin: 0;">อัปเดตซอฟต์แวร์สม่ำเสมอ</h4>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">อัปเดตระบบปฏิบัติการและแอปเป็นประจำ เพราะมักมีการแก้ไขช่องโหว่ด้านความปลอดภัยที่อาจถูกแฮกเกอร์โจมตี</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4.5: ข่าวปลอม -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">4.5</span> ข่าวปลอม (Misinformation & Disinformation)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>ในยุคที่ AI สามารถสร้างข้อความ รูปภาพ และวิดีโอปลอมได้ง่ายขึ้น <strong>ข่าวปลอม (Fake News)</strong> กลายเป็นปัญหาร้ายแรงที่ส่งผลกระทบต่อสังคม ทั้งทำให้คนตื่นตระหนก สร้างความเกลียดชัง ปั่นราคาหุ้น หรือแม้แต่ชี้นำผลเลือกตั้ง</p>
+                    <p>ต้องแยกความแตกต่างระหว่าง:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li><strong>Misinformation</strong> = ข้อมูลเท็จที่แชร์โดยไม่ตั้งใจ (คนแชร์ไม่รู้ว่าเป็นข่าวปลอม)</li>
+                        <li><strong>Disinformation</strong> = ข้อมูลเท็จที่สร้างขึ้นและเผยแพร่โดยตั้งใจ (มีจุดประสงค์หลอกลวง)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-filter" style="color: #6366f1;"></i> SIFT Method - วิธีตรวจสอบข่าว 4 ขั้นตอน</h3>
+                <div class="content-text">
+                    <p>SIFT เป็นวิธีตรวจสอบข้อมูลที่ง่ายและรวดเร็ว พัฒนาโดย Mike Caulfield ใช้ได้กับทุกเนื้อหาที่เห็นออนไลน์</p>
+                </div>
+
+                <!-- SIFT SVG Diagram -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 700 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                        <!-- S -->
+                        <rect x="30" y="30" width="140" height="140" rx="16" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="2"/>
+                        <text x="100" y="75" text-anchor="middle" font-size="32" font-weight="bold" fill="#6366f1">S</text>
+                        <text x="100" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">STOP</text>
+                        <text x="100" y="118" text-anchor="middle" font-size="9" fill="#64748b">หยุด!</text>
+                        <text x="100" y="133" text-anchor="middle" font-size="8" fill="#94a3b8">อย่ารีบแชร์</text>
+                        <text x="100" y="148" text-anchor="middle" font-size="8" fill="#94a3b8">ตั้งสติก่อน</text>
+                        
+                        <!-- Arrow -->
+                        <path d="M175 100 L195 100" stroke="#94a3b8" stroke-width="2" marker-end="url(#siftArrow)"/>
+                        
+                        <!-- I -->
+                        <rect x="200" y="30" width="140" height="140" rx="16" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="2"/>
+                        <text x="270" y="75" text-anchor="middle" font-size="32" font-weight="bold" fill="#8b5cf6">I</text>
+                        <text x="270" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">INVESTIGATE</text>
+                        <text x="270" y="118" text-anchor="middle" font-size="9" fill="#64748b">ตรวจสอบแหล่งข่าว</text>
+                        <text x="270" y="133" text-anchor="middle" font-size="8" fill="#94a3b8">ใครเป็นคนเขียน?</text>
+                        <text x="270" y="148" text-anchor="middle" font-size="8" fill="#94a3b8">น่าเชื่อถือหรือไม่?</text>
+                        
+                        <!-- Arrow -->
+                        <path d="M345 100 L365 100" stroke="#94a3b8" stroke-width="2" marker-end="url(#siftArrow)"/>
+                        
+                        <!-- F -->
+                        <rect x="370" y="30" width="140" height="140" rx="16" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="2"/>
+                        <text x="440" y="75" text-anchor="middle" font-size="32" font-weight="bold" fill="#34d399">F</text>
+                        <text x="440" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#34d399">FIND</text>
+                        <text x="440" y="118" text-anchor="middle" font-size="9" fill="#64748b">หาแหล่งอ้างอิงอื่น</text>
+                        <text x="440" y="133" text-anchor="middle" font-size="8" fill="#94a3b8">มีสำนักข่าวอื่น</text>
+                        <text x="440" y="148" text-anchor="middle" font-size="8" fill="#94a3b8">รายงานเหมือนกัน?</text>
+                        
+                        <!-- Arrow -->
+                        <path d="M515 100 L535 100" stroke="#94a3b8" stroke-width="2" marker-end="url(#siftArrow)"/>
+                        
+                        <!-- T -->
+                        <rect x="540" y="30" width="140" height="140" rx="16" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="610" y="75" text-anchor="middle" font-size="32" font-weight="bold" fill="#f59e0b">T</text>
+                        <text x="610" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#f59e0b">TRACE</text>
+                        <text x="610" y="118" text-anchor="middle" font-size="9" fill="#64748b">ตามรอยต้นตอ</text>
+                        <text x="610" y="133" text-anchor="middle" font-size="8" fill="#94a3b8">ข้อมูลมาจากไหน?</text>
+                        <text x="610" y="148" text-anchor="middle" font-size="8" fill="#94a3b8">ต้นฉบับคืออะไร?</text>
+                        
+                        <defs>
+                            <marker id="siftArrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;">S - Stop (หยุด!)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">เมื่อเห็นข่าวที่ทำให้ตกใจ โกรธ หรือดีใจมากๆ ให้หยุดก่อน! อย่ารีบแชร์ทันที อารมณ์รุนแรงคือสัญญาณว่าอาจถูกหลอก เพราะข่าวปลอมมักถูกออกแบบมาให้กระตุ้นอารมณ์</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.5rem;">I - Investigate the Source (ตรวจสอบแหล่งข่าว)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ดูว่าใครเป็นคนเผยแพร่ เป็นสำนักข่าวที่น่าเชื่อถือหรือไม่ บัญชีนั้นสร้างมานานแค่ไหน มีผู้ติดตามจริงหรือเป็นบอท</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">F - Find Better Coverage (หาแหล่งอื่นยืนยัน)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ค้นหาว่ามีสำนักข่าวที่น่าเชื่อถืออื่นๆ รายงานเรื่องเดียวกันหรือไม่ ถ้ามีแค่แหล่งเดียว ควรสงสัยไว้ก่อน</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">T - Trace (ตามรอยต้นตอ)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ตามรอยกลับไปหาต้นตอของข้อมูล ภาพหรือวิดีโอมาจากไหน ถูกตัดต่อหรือใช้นอกบริบทหรือไม่ ข้อมูลถูกบิดเบือนตรงไหน</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-block">
+                <h3><i class="fas fa-tools" style="color: #8b5cf6;"></i> เครื่องมือตรวจสอบข่าวปลอม</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-image" style="color: #6366f1;"></i></div>
+                        <h4 style="color: #6366f1;">Google Reverse Image Search</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">ค้นหาภาพย้อนกลับ (Reverse Image Search) เพื่อดูว่ารูปภาพถูกใช้ที่ไหนมาก่อน ช่วยจับภาพที่ถูกนำมาใช้ผิดบริบทหรือเป็นภาพเก่า</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">🔗 images.google.com</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-search-plus" style="color: #8b5cf6;"></i></div>
+                        <h4 style="color: #8b5cf6;">TinEye</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">เครื่องมือค้นหาภาพย้อนกลับที่แสดงประวัติการใช้ภาพ สามารถดูได้ว่าภาพปรากฏครั้งแรกเมื่อไร และถูกแก้ไขอย่างไร</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">🔗 tineye.com</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-check-double" style="color: #34d399;"></i></div>
+                        <h4 style="color: #34d399;">Snopes</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">เว็บไซต์ตรวจสอบข้อเท็จจริง (Fact-checking) ที่เก่าแก่ที่สุด ตรวจสอบข่าวลือ ข้อมูลเท็จ และเรื่องที่ถูกแชร์ในโซเชียลมีเดีย</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">🔗 snopes.com</p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-video" style="color: #f59e0b;"></i></div>
+                        <h4 style="color: #f59e0b;">InVID / WeVerify</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">ปลั๊กอินสำหรับเบราว์เซอร์ที่ช่วยตรวจสอบวิดีโอ สามารถแยกเฟรม ตรวจสอบ Metadata และค้นหาวิดีโอต้นฉบับ</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">🔗 weverify.eu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4.6: การใช้ AI ในห้องเรียน -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">4.6</span> การใช้ AI ในห้องเรียนอย่างเหมาะสม</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>AI เป็นเครื่องมือที่มีประโยชน์มากในการเรียนรู้ แต่การใช้ที่ไม่เหมาะสมอาจทำลายกระบวนการเรียนรู้ของเราเอง สิ่งสำคัญคือต้องแยกให้ออกระหว่าง <strong>"ใช้ AI เป็นผู้ช่วย"</strong> กับ <strong>"ให้ AI ทำแทนทั้งหมด"</strong></p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-balance-scale" style="color: #6366f1;"></i> เปรียบเทียบ: การใช้ AI ที่เหมาะสม vs ไม่เหมาะสม</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                    <!-- Appropriate Use -->
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 2px solid rgba(52, 211, 153, 0.2);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle" style="font-size: 2.5rem; color: #34d399;"></i>
+                            <h4 style="color: #34d399; margin-top: 0.5rem;">การใช้ที่เหมาะสม ✓</h4>
+                        </div>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>ใช้ AI อธิบายเนื้อหาที่ไม่เข้าใจ</strong> - ถาม AI ให้อธิบายแนวคิดด้วยภาษาง่ายๆ</li>
+                            <li><strong>ใช้เป็นผู้ช่วยระดมความคิด</strong> - ขอไอเดียเพื่อเป็นจุดเริ่มต้น แล้วพัฒนาต่อเอง</li>
+                            <li><strong>ใช้ตรวจสอบงานที่ทำเสร็จแล้ว</strong> - ให้ AI ช่วยตรวจไวยากรณ์หรือหาข้อผิดพลาด</li>
+                            <li><strong>ใช้ช่วยสรุปข้อมูลจำนวนมาก</strong> - สรุปบทความยาวๆ เพื่อเข้าใจภาพรวม</li>
+                            <li><strong>ใช้สร้างตัวอย่าง/แบบฝึกหัด</strong> - ขอ AI สร้างโจทย์ฝึกทำเพิ่มเติม</li>
+                            <li><strong>ใช้แปลภาษาเพื่อช่วยเข้าใจ</strong> - แปลเอกสารภาษาอื่นเพื่อประกอบการเรียน</li>
+                            <li><strong>ระบุว่าใช้ AI ช่วยเสมอ</strong> - บอกครูตรงๆ ว่าใช้ AI ในส่วนไหน</li>
+                        </ul>
+                    </div>
+
+                    <!-- Inappropriate Use -->
+                    <div style="padding: 1.5rem; border-radius: 16px; background: rgba(239, 68, 68, 0.05); border: 2px solid rgba(239, 68, 68, 0.2);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-times-circle" style="font-size: 2.5rem; color: #ef4444;"></i>
+                            <h4 style="color: #ef4444; margin-top: 0.5rem;">การใช้ที่ไม่เหมาะสม ✗</h4>
+                        </div>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong>ก็อปปี้งานจาก AI ส่งเป็นของตัวเอง</strong> - คัดลอกคำตอบ AI ทั้งหมดโดยไม่แก้ไข</li>
+                            <li><strong>ให้ AI ทำการบ้านแทนทั้งหมด</strong> - ไม่ได้เรียนรู้อะไรเลย เสียโอกาสพัฒนา</li>
+                            <li><strong>ใช้ AI ในการสอบ (โดยไม่ได้รับอนุญาต)</strong> - ถือเป็นการโกงสอบ</li>
+                            <li><strong>ไม่ตรวจสอบความถูกต้อง</strong> - เชื่อคำตอบ AI 100% โดยไม่เช็ค (AI ผิดได้!)</li>
+                            <li><strong>ใช้ AI สร้างงานวิจัยปลอม</strong> - อ้างอิงแหล่งข้อมูลที่ AI แต่งขึ้นมาเอง</li>
+                            <li><strong>ใช้ AI เขียนรายงานทั้งฉบับ</strong> - ส่งงานที่ไม่ได้ผ่านความคิดของตัวเอง</li>
+                            <li><strong>ปกปิดว่าใช้ AI</strong> - อ้างว่าทำเองทั้งหมดทั้งที่ใช้ AI ช่วย</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Usage Guidelines SVG -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 600 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; width: 100%;">
+                    <!-- Scale visualization -->
+                    <!-- Fulcrum -->
+                    <polygon points="300,160 285,180 315,180" fill="#6366f1" opacity="0.3"/>
+                    <line x1="300" y1="100" x2="300" y2="160" stroke="#6366f1" stroke-width="2"/>
+                    <!-- Balance beam -->
+                    <line x1="100" y1="100" x2="500" y2="100" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+                    <!-- Left side - AI as Tool -->
+                    <circle cx="150" cy="70" r="35" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-width="2"/>
+                    <text x="150" y="62" text-anchor="middle" font-size="18">🛠️</text>
+                    <text x="150" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="#34d399">AI เป็นเครื่องมือ</text>
+                    <text x="150" y="120" text-anchor="middle" font-size="9" fill="#34d399" font-weight="bold">เราคิด + AI ช่วย</text>
+                    <text x="150" y="135" text-anchor="middle" font-size="8" fill="#64748b">= เรียนรู้จริง ✓</text>
+                    <!-- Right side - AI as Replacement -->
+                    <circle cx="450" cy="70" r="35" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2"/>
+                    <text x="450" y="62" text-anchor="middle" font-size="18">🤖</text>
+                    <text x="450" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="#ef4444">AI ทำแทนทั้งหมด</text>
+                    <text x="450" y="120" text-anchor="middle" font-size="9" fill="#ef4444" font-weight="bold">AI คิด + เราส่ง</text>
+                    <text x="450" y="135" text-anchor="middle" font-size="8" fill="#64748b">= ไม่ได้เรียนรู้ ✗</text>
+                    <!-- Center label -->
+                    <text x="300" y="30" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">หลักการใช้ AI ในห้องเรียน</text>
+                    <text x="300" y="48" text-anchor="middle" font-size="9" fill="#64748b">"ใช้ AI เป็นผู้ช่วย ไม่ใช่ผู้ทำแทน"</text>
+                </svg>
+            </div>
+
+            <div class="content-block">
+                <div class="info-box" style="border-left: 4px solid #6366f1;">
+                    <h4 style="color: #6366f1; margin-bottom: 0.75rem;"><i class="fas fa-lightbulb"></i> หลักคิดสำคัญ: "70-30 Rule"</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">ในการทำงานชิ้นหนึ่ง ควรใช้ความคิดและแรงงานของตัวเองอย่างน้อย 70% และใช้ AI ช่วยได้ไม่เกิน 30% เช่น:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        <li>คิดโครงร่างรายงานเอง → ใช้ AI ช่วยหาข้อมูลเพิ่มเติม</li>
+                        <li>เขียนเนื้อหาเอง → ใช้ AI ช่วยตรวจไวยากรณ์</li>
+                        <li>แก้โจทย์คณิตศาสตร์เอง → ใช้ AI อธิบายขั้นตอนที่ไม่เข้าใจ</li>
+                        <li>ออกแบบโปรเจกต์เอง → ใช้ AI ช่วยสร้างภาพประกอบ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Knowledge Summary -->
+    <section class="content-section">
+        <div class="container">
+            <div class="knowledge-summary">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f59e0b;"></i>
+                    <h2 style="margin-top: 0.5rem; color: var(--text-primary);">สรุปความรู้ประจำหน่วย</h2>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> สิ่งที่ควรจำ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>จริยธรรม AI มี 6 หลักการ: โปร่งใส, ยุติธรรม, รับผิดชอบ, เป็นส่วนตัว, ปลอดภัย, ไม่ทำร้าย</li>
+                            <li>AI Bias เกิดจากข้อมูลที่มีอคติ ส่งผลให้ AI ตัดสินใจไม่เป็นธรรม</li>
+                            <li>Deepfake = Deep Learning + Fake สร้างสื่อปลอมที่ดูเหมือนจริง</li>
+                            <li>Deepfake มี 5 ประเภท: Face Swap, Face Reenactment, Voice Cloning, Full Body, Text</li>
+                            <li>ผลงาน AI ยังไม่มีกฎหมายลิขสิทธิ์ที่ชัดเจนในหลายประเทศ</li>
+                            <li>SIFT Method: Stop, Investigate, Find, Trace ใช้ตรวจสอบข่าวปลอม</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> ประเด็นสำคัญ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>ข้อมูลส่วนตัว 6 ประเภทถูกเก็บ: ตำแหน่ง, การค้นหา, ข้อความ, รูปภาพ, เสียง, สุขภาพ</li>
+                            <li>ปกป้องตัวเองด้วย: ตรวจสิทธิ์แอป, รหัสผ่านแข็งแรง, ระวังการแชร์, 2FA</li>
+                            <li>ใช้ AI ในห้องเรียนเป็น "ผู้ช่วย" ไม่ใช่ "ผู้ทำแทน"</li>
+                            <li>หลัก 70-30: ใช้ความคิดตัวเอง 70% + AI ช่วย 30%</li>
+                            <li>ระบุเสมอว่าใช้ AI ช่วยในผลงาน เพื่อความโปร่งใส</li>
+                            <li>เครื่องมือตรวจสอบ: Google Reverse Image, TinEye, Snopes, InVID</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 12px; border-left: 4px solid #6366f1;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-quote-left" style="color: #6366f1;"></i> <strong>คำถามชวนคิด:</strong> ถ้า AI สร้างภาพวาดที่สวยงาม แต่เรียนรู้มาจากภาพวาดของศิลปินหลายพันคนโดยไม่ได้ขออนุญาต คุณคิดว่ายุติธรรมหรือไม่? และถ้าเห็นวิดีโอผู้นำประเทศพูดสิ่งแปลกๆ คุณจะตรวจสอบอย่างไรก่อนเชื่อ?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Navigation -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="page-nav">
+                <a href="unit3.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> หน่วยก่อนหน้า
+                </a>
+                <a href="unit5.html" class="btn btn-primary">
+                    หน่วยถัดไป <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

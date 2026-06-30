@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน่วยที่ 3: การคิดเชิงคำนวณและตรรกะของ AI - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html">หน่วย 1</a></li>
+                <li><a href="unit2.html">หน่วย 2</a></li>
+                <li><a href="unit3.html" class="active">หน่วย 3</a></li>
+                <li><a href="unit4.html">หน่วย 4</a></li>
+                <li><a href="unit5.html">หน่วย 5</a></li>
+                <li><a href="unit6.html">หน่วย 6</a></li>
+                <li><a href="review.html">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">หน่วยที่ 3: การคิดเชิงคำนวณและตรรกะของ AI</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">หน่วยที่ 3</span>
+                <h1 class="page-title">การคิดเชิงคำนวณและตรรกะของ AI</h1>
+                <p class="page-subtitle">เรียนรู้วิธีคิดแบบนักวิทยาการคอมพิวเตอร์ ทำความเข้าใจอัลกอริทึม Machine Learning Neural Network และกระบวนการฝึก AI ให้ฉลาด</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Computational Thinking Brain with Gears -->
+                    <circle cx="150" cy="150" r="110" stroke="url(#heroGrad1)" stroke-width="2" opacity="0.2"/>
+                    <circle cx="150" cy="150" r="80" stroke="url(#heroGrad1)" stroke-width="1.5" opacity="0.15"/>
+                    <!-- Brain outline -->
+                    <path d="M150 80c-30 0-50 18-55 40-18 6-28 22-28 42 0 22 14 40 34 45 6 20 25 33 49 33s43-13 49-33c20-5 34-23 34-45 0-20-10-36-28-42-5-22-25-40-55-40z" fill="url(#heroGrad2)" opacity="0.4"/>
+                    <!-- Gear 1 -->
+                    <circle cx="130" cy="140" r="18" stroke="#06b6d4" stroke-width="2" opacity="0.7"/>
+                    <circle cx="130" cy="140" r="8" fill="#06b6d4" opacity="0.3"/>
+                    <path d="M130 120v4M130 156v4M110 140h4M152 140h-4M115 125l3 3M142 152l3 3M115 155l3-3M142 128l3-3" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Gear 2 -->
+                    <circle cx="175" cy="155" r="14" stroke="#8b5cf6" stroke-width="2" opacity="0.7"/>
+                    <circle cx="175" cy="155" r="6" fill="#8b5cf6" opacity="0.3"/>
+                    <path d="M175 139v3M175 168v3M159 155h3M188 155h3" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Binary code floating -->
+                    <text x="70" y="100" font-size="10" fill="#6366f1" opacity="0.5">1010</text>
+                    <text x="210" y="95" font-size="10" fill="#6366f1" opacity="0.5">0110</text>
+                    <text x="60" y="200" font-size="10" fill="#34d399" opacity="0.5">1101</text>
+                    <text x="220" y="210" font-size="10" fill="#34d399" opacity="0.5">0011</text>
+                    <!-- Algorithm flow arrows -->
+                    <path d="M90 240 L120 240 L120 260 L150 260" stroke="#f59e0b" stroke-width="1.5" opacity="0.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowH)"/>
+                    <path d="M160 260 L190 260 L190 240 L220 240" stroke="#f59e0b" stroke-width="1.5" opacity="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Pulsing ring -->
+                    <circle cx="150" cy="150" r="40" stroke="#06b6d4" stroke-width="1" opacity="0.3">
+                        <animate attributeName="r" values="40;55;40" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#06b6d4"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#06b6d4"/>
+                            <stop offset="50%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <marker id="arrowH" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="#f59e0b" opacity="0.6"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Section 3.1: Computational Thinking -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">3.1</span> Computational Thinking (การคิดเชิงคำนวณ)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Computational Thinking (การคิดเชิงคำนวณ)</strong> คือ กระบวนการคิดอย่างเป็นระบบเพื่อแก้ปัญหาที่ซับซ้อน โดยใช้แนวคิดเดียวกับที่นักวิทยาการคอมพิวเตอร์ใช้ในการออกแบบโปรแกรมและระบบ AI ไม่ใช่แค่การเขียนโค้ด แต่เป็น <em>วิธีคิด</em> ที่ทุกคนสามารถนำไปใช้ในชีวิตประจำวันได้</p>
+                    <p>การคิดเชิงคำนวณประกอบด้วย 4 ขั้นตอนหลัก:</p>
+                </div>
+            </div>
+
+            <!-- Computational Thinking SVG Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 750 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 750px; width: 100%;">
+                    <!-- Step 1 -->
+                    <rect x="20" y="40" width="150" height="120" rx="14" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="2"/>
+                    <text x="95" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">1. Decomposition</text>
+                    <text x="95" y="95" text-anchor="middle" font-size="10" fill="#64748b">แบ่งปัญหาย่อย</text>
+                    <text x="95" y="125" text-anchor="middle" font-size="22">🧩</text>
+                    <!-- Arrow -->
+                    <path d="M175 100 L195 100" stroke="#6366f1" stroke-width="2" marker-end="url(#ctArrow1)"/>
+                    <!-- Step 2 -->
+                    <rect x="200" y="40" width="150" height="120" rx="14" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="2"/>
+                    <text x="275" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">2. Pattern Recognition</text>
+                    <text x="275" y="95" text-anchor="middle" font-size="10" fill="#64748b">หารูปแบบ</text>
+                    <text x="275" y="125" text-anchor="middle" font-size="22">🔍</text>
+                    <!-- Arrow -->
+                    <path d="M355 100 L375 100" stroke="#8b5cf6" stroke-width="2" marker-end="url(#ctArrow2)"/>
+                    <!-- Step 3 -->
+                    <rect x="380" y="40" width="150" height="120" rx="14" fill="#06b6d4" opacity="0.08" stroke="#06b6d4" stroke-width="2"/>
+                    <text x="455" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#06b6d4">3. Abstraction</text>
+                    <text x="455" y="95" text-anchor="middle" font-size="10" fill="#64748b">สรุปหลักการ</text>
+                    <text x="455" y="125" text-anchor="middle" font-size="22">🎯</text>
+                    <!-- Arrow -->
+                    <path d="M535 100 L555 100" stroke="#06b6d4" stroke-width="2" marker-end="url(#ctArrow3)"/>
+                    <!-- Step 4 -->
+                    <rect x="560" y="40" width="160" height="120" rx="14" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="2"/>
+                    <text x="640" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#34d399">4. Algorithm Design</text>
+                    <text x="640" y="95" text-anchor="middle" font-size="10" fill="#64748b">ออกแบบขั้นตอน</text>
+                    <text x="640" y="125" text-anchor="middle" font-size="22">📋</text>
+                    <defs>
+                        <marker id="ctArrow1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6366f1"/></marker>
+                        <marker id="ctArrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#8b5cf6"/></marker>
+                        <marker id="ctArrow3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#06b6d4"/></marker>
+                    </defs>
+                </svg>
+            </div>
+
+
+            <!-- Step 1: Decomposition -->
+            <div class="content-block">
+                <h3><i class="fas fa-puzzle-piece" style="color: #6366f1;"></i> ขั้นที่ 1: Decomposition (การแบ่งย่อยปัญหา)</h3>
+                <div class="content-text">
+                    <p>คือการนำปัญหาใหญ่ที่ซับซ้อนมาแบ่งออกเป็นปัญหาย่อยๆ ที่จัดการได้ง่ายขึ้น เหมือนกับการตัดเค้กเป็นชิ้นเล็กๆ เพื่อให้กินได้สะดวก</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>🏠 ตัวอย่างในชีวิตจริง: การทำความสะอาดบ้าน</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">ปัญหาใหญ่: "ทำความสะอาดบ้านทั้งหลัง" → แบ่งย่อยเป็น:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        <li>กวาดพื้นห้องนอน</li>
+                        <li>ถูพื้นห้องนั่งเล่น</li>
+                        <li>ล้างจานในครัว</li>
+                        <li>เช็ดกระจกห้องน้ำ</li>
+                        <li>จัดของบนโต๊ะทำงาน</li>
+                    </ul>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);"><strong>🤖 ตัวอย่างใน AI:</strong> การสร้างระบบแนะนำภาพยนตร์ → แบ่งเป็น: เก็บข้อมูลผู้ใช้, วิเคราะห์รสนิยม, จัดหมวดหมู่หนัง, คำนวณความคล้าย, แสดงผลแนะนำ</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Pattern Recognition -->
+            <div class="content-block">
+                <h3><i class="fas fa-search" style="color: #8b5cf6;"></i> ขั้นที่ 2: Pattern Recognition (การจดจำรูปแบบ)</h3>
+                <div class="content-text">
+                    <p>คือการสังเกตหา "รูปแบบ" หรือ "ความคล้ายคลึง" ในปัญหาย่อยต่างๆ ถ้าเราเจอรูปแบบที่ซ้ำกัน เราสามารถใช้วิธีแก้ปัญหาเดียวกันได้ ทำให้ประหยัดเวลาและทรัพยากร</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>🌤️ ตัวอย่างในชีวิตจริง: การพยากรณ์อากาศ</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">สังเกตรูปแบบ: "ทุกครั้งที่เมฆมืดครึ้ม + ลมพัดแรง + อากาศอบอ้าว = มักจะมีฝนตก" → เราจำรูปแบบนี้ได้และทำนายได้ว่าจะต้องพกร่มวันนี้</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);"><strong>🤖 ตัวอย่างใน AI:</strong> AI วิเคราะห์อีเมลนับล้าน พบรูปแบบว่าอีเมลสแปมมักมี: หัวข้อตัวพิมพ์ใหญ่ทั้งหมด, มีลิงก์แปลก, ใช้คำว่า "ฟรี" หรือ "รางวัล" บ่อย → ใช้รูปแบบนี้กรองสแปม</p>
+                </div>
+            </div>
+
+
+            <!-- Step 3: Abstraction -->
+            <div class="content-block">
+                <h3><i class="fas fa-filter" style="color: #06b6d4;"></i> ขั้นที่ 3: Abstraction (การคิดเชิงนามธรรม)</h3>
+                <div class="content-text">
+                    <p>คือการตัดรายละเอียดที่ไม่จำเป็นออก เหลือเฉพาะสิ่งที่สำคัญ เพื่อให้เห็นภาพรวมของปัญหาชัดเจนขึ้น เหมือนการดูแผนที่ ที่แสดงเฉพาะถนนหลักโดยไม่แสดงต้นไม้ทุกต้น</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>🗺️ ตัวอย่างในชีวิตจริง: แผนที่รถไฟฟ้า</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">แผนที่รถไฟฟ้า BTS/MRT ไม่ได้แสดงระยะทางจริง ไม่มีตึก ไม่มีถนน มีเพียง "สถานี" และ "เส้นทาง" → นี่คือ Abstraction ที่เอาเฉพาะข้อมูลที่จำเป็นสำหรับการเดินทาง</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);"><strong>🤖 ตัวอย่างใน AI:</strong> ในการจำแนกแมวกับสุนัข AI ไม่สนใจสีพื้นหลัง แสงแดด หรือมุมกล้อง (ตัดออก) แต่สนใจเฉพาะ: รูปร่างหู, ความยาวจมูก, รูปร่างลำตัว (เก็บไว้)</p>
+                </div>
+            </div>
+
+            <!-- Step 4: Algorithm Design -->
+            <div class="content-block">
+                <h3><i class="fas fa-list-ol" style="color: #34d399;"></i> ขั้นที่ 4: Algorithm Design (การออกแบบอัลกอริทึม)</h3>
+                <div class="content-text">
+                    <p>คือการสร้างชุดขั้นตอนที่ชัดเจนและเป็นลำดับ เพื่อแก้ปัญหานั้นอย่างเป็นระบบ สามารถทำซ้ำได้ทุกครั้งแล้วได้ผลเหมือนเดิม เหมือนสูตรอาหารที่ใครทำตามก็ได้ผลลัพธ์เดียวกัน</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>🍳 ตัวอย่างในชีวิตจริง: สูตรทำไข่เจียว</strong></p>
+                    <ol style="padding-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        <li>ตอกไข่ 2 ฟอง ใส่ชาม</li>
+                        <li>เติมน้ำปลา 1 ช้อนชา</li>
+                        <li>ตีไข่ให้เข้ากัน</li>
+                        <li>ตั้งกระทะ ใส่น้ำมัน รอให้ร้อน</li>
+                        <li>เทไข่ลงกระทะ</li>
+                        <li>รอจนไข่สุกด้านล่าง แล้วพลิก</li>
+                        <li>ตักใส่จาน เสิร์ฟ</li>
+                    </ol>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);"><strong>🤖 ตัวอย่างใน AI:</strong> อัลกอริทึมการค้นหาเส้นทางใน Google Maps: 1) รับจุดเริ่มต้นและปลายทาง 2) หาเส้นทางทั้งหมดที่เป็นไปได้ 3) คำนวณระยะทาง/เวลาแต่ละเส้นทาง 4) เลือกเส้นทางที่เร็วที่สุด 5) แสดงผลบนแผนที่</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3.2: อัลกอริทึม -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">3.2</span> อัลกอริทึม (Algorithm)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>อัลกอริทึม (Algorithm)</strong> คือ ชุดคำสั่งหรือขั้นตอนที่ชัดเจน มีลำดับแน่นอน สำหรับแก้ปัญหาหรือทำงานให้สำเร็จ เปรียบเสมือน "สูตรอาหาร" ของคอมพิวเตอร์ ที่บอกทีละขั้นตอนว่าต้องทำอะไรบ้างเพื่อให้ได้ผลลัพธ์ที่ต้องการ</p>
+                    <p>อัลกอริทึมเป็นหัวใจสำคัญของ AI เพราะ AI ทำงานตามอัลกอริทึมที่มนุษย์ออกแบบไว้ทั้งหมด</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>คุณสมบัติ 5 ประการ ของอัลกอริทึมที่ดี</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15); text-align: center;">
+                        <i class="fas fa-bullseye" style="font-size: 1.5rem; color: #6366f1; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong style="color: #6366f1;">1. ความชัดเจน</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.4rem; color: var(--text-secondary);">แต่ละขั้นตอนต้องชัดเจน ไม่คลุมเครือ ใครอ่านก็เข้าใจตรงกัน</p>
+                    </div>
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); text-align: center;">
+                        <i class="fas fa-sign-in-alt" style="font-size: 1.5rem; color: #8b5cf6; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong style="color: #8b5cf6;">2. มี Input</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.4rem; color: var(--text-secondary);">ต้องรับข้อมูลนำเข้า อย่างน้อย 0 ค่าขึ้นไป</p>
+                    </div>
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15); text-align: center;">
+                        <i class="fas fa-sign-out-alt" style="font-size: 1.5rem; color: #06b6d4; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong style="color: #06b6d4;">3. มี Output</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.4rem; color: var(--text-secondary);">ต้องให้ผลลัพธ์ออกมา อย่างน้อย 1 ค่า</p>
+                    </div>
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15); text-align: center;">
+                        <i class="fas fa-hourglass-end" style="font-size: 1.5rem; color: #f59e0b; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong style="color: #f59e0b;">4. มีจุดสิ้นสุด</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.4rem; color: var(--text-secondary);">ต้องหยุดทำงานได้ ไม่ทำงานวนไปเรื่อยๆ ไม่มีวันจบ</p>
+                    </div>
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15); text-align: center;">
+                        <i class="fas fa-bolt" style="font-size: 1.5rem; color: #34d399; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong style="color: #34d399;">5. มีประสิทธิภาพ</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.4rem; color: var(--text-secondary);">ทำงานเสร็จภายในเวลาที่เหมาะสม ไม่ช้าเกินไป</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bubble Sort Example -->
+            <div class="content-block">
+                <h3><i class="fas fa-sort-amount-down" style="color: #ec4899;"></i> ตัวอย่าง: Bubble Sort (การเรียงลำดับแบบฟองสบู่)</h3>
+                <div class="content-text">
+                    <p>Bubble Sort เป็นอัลกอริทึมการเรียงลำดับที่เข้าใจง่ายที่สุด ทำงานโดยการเปรียบเทียบข้อมูลทีละคู่ที่อยู่ติดกัน แล้วสลับที่ถ้าเรียงผิดลำดับ ทำซ้ำไปเรื่อยๆ จนข้อมูลเรียงเสร็จ</p>
+                </div>
+
+                <!-- Sorting Visualization SVG -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                        <!-- Title -->
+                        <text x="350" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">Bubble Sort: เรียงจากน้อยไปมาก</text>
+                        <!-- Original -->
+                        <text x="80" y="60" text-anchor="middle" font-size="11" fill="#94a3b8">ข้อมูลเริ่มต้น:</text>
+                        <rect x="140" y="45" width="45" height="30" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+                        <text x="162" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">5</text>
+                        <rect x="195" y="45" width="45" height="30" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text x="217" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">3</text>
+                        <rect x="250" y="45" width="45" height="30" rx="6" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="1.5"/>
+                        <text x="272" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#6366f1">8</text>
+                        <rect x="305" y="45" width="45" height="30" rx="6" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="1.5"/>
+                        <text x="327" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#06b6d4">1</text>
+                        <rect x="360" y="45" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="1.5"/>
+                        <text x="382" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">4</text>
+                        <!-- Round 1 -->
+                        <text x="80" y="110" text-anchor="middle" font-size="11" fill="#6366f1">รอบที่ 1:</text>
+                        <rect x="140" y="95" width="45" height="30" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text x="162" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">3</text>
+                        <rect x="195" y="95" width="45" height="30" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+                        <text x="217" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">5</text>
+                        <rect x="250" y="95" width="45" height="30" rx="6" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="1.5"/>
+                        <text x="272" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#06b6d4">1</text>
+                        <rect x="305" y="95" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="1.5"/>
+                        <text x="327" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">4</text>
+                        <rect x="360" y="95" width="45" height="30" rx="6" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
+                        <text x="382" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#6366f1">8</text>
+                        <text x="450" y="115" font-size="10" fill="#94a3b8">← 8 ลอยขึ้นไปท้ายสุด</text>
+                        <!-- Round 2 -->
+                        <text x="80" y="160" text-anchor="middle" font-size="11" fill="#8b5cf6">รอบที่ 2:</text>
+                        <rect x="140" y="145" width="45" height="30" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text x="162" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">3</text>
+                        <rect x="195" y="145" width="45" height="30" rx="6" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="1.5"/>
+                        <text x="217" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#06b6d4">1</text>
+                        <rect x="250" y="145" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="1.5"/>
+                        <text x="272" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">4</text>
+                        <rect x="305" y="145" width="45" height="30" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2"/>
+                        <text x="327" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">5</text>
+                        <rect x="360" y="145" width="45" height="30" rx="6" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="1.5"/>
+                        <text x="382" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#6366f1">8</text>
+                        <text x="450" y="165" font-size="10" fill="#94a3b8">← 5 ลอยขึ้นตำแหน่งถูก</text>
+                        <!-- Final -->
+                        <text x="80" y="220" text-anchor="middle" font-size="11" fill="#34d399" font-weight="bold">ผลลัพธ์:</text>
+                        <rect x="140" y="205" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                        <text x="162" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">1</text>
+                        <rect x="195" y="205" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                        <text x="217" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">3</text>
+                        <rect x="250" y="205" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                        <text x="272" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">4</text>
+                        <rect x="305" y="205" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                        <text x="327" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">5</text>
+                        <rect x="360" y="205" width="45" height="30" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                        <text x="382" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">8</text>
+                        <text x="450" y="225" font-size="10" fill="#34d399">✓ เรียงเสร็จแล้ว!</text>
+                    </svg>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>📝 ขั้นตอนของ Bubble Sort:</strong></p>
+                    <ol style="padding-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        <li>เริ่มจากข้อมูลตัวแรก เปรียบเทียบกับตัวถัดไป</li>
+                        <li>ถ้าตัวแรกมากกว่าตัวถัดไป → สลับที่กัน</li>
+                        <li>เลื่อนไปเปรียบเทียบคู่ถัดไป ทำจนครบทุกคู่</li>
+                        <li>เมื่อผ่านรอบแรก ตัวที่มากที่สุดจะ "ลอย" ไปอยู่ท้ายสุด (เหมือนฟองสบู่ลอยขึ้น)</li>
+                        <li>ทำซ้ำจนกว่าจะไม่มีการสลับที่เลย = เรียงเสร็จ</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <!-- Binary Search Example -->
+            <div class="content-block">
+                <h3><i class="fas fa-search-location" style="color: #06b6d4;"></i> ตัวอย่าง: Binary Search (การค้นหาแบบทวิภาค)</h3>
+                <div class="content-text">
+                    <p>Binary Search เป็นอัลกอริทึมการค้นหาที่เร็วมาก ใช้หลักการ "แบ่งครึ่ง" ข้อมูลที่เรียงแล้ว ทุกครั้งที่เปรียบเทียบจะตัดข้อมูลออกครึ่งหนึ่ง ทำให้หาคำตอบได้เร็วมาก</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>📖 เปรียบเทียบกับชีวิตจริง: การเปิดพจนานุกรม</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">ถ้าเราต้องการหาคำว่า "mango" ในพจนานุกรม:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        <li>เปิดตรงกลางเล่ม → เจอตัว "L" → "M" อยู่หลังจากนี้ → ตัดครึ่งแรกออก</li>
+                        <li>เปิดตรงกลางครึ่งหลัง → เจอตัว "P" → "M" อยู่ก่อนหน้า → ตัดครึ่งหลังออก</li>
+                        <li>เปิดตรงกลางส่วนที่เหลือ → เจอตัว "M" → ค้นหาต่อจนเจอ "mango"!</li>
+                    </ul>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);"><strong>⚡ ประสิทธิภาพ:</strong> ในข้อมูล 1,000,000 ตัว ค้นหาแบบธรรมดาอาจต้องเทียบ 1,000,000 ครั้ง แต่ Binary Search ใช้เพียง ~20 ครั้ง!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3.3: Machine Learning -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">3.3</span> Machine Learning (การเรียนรู้ของเครื่อง)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Machine Learning (ML)</strong> คือ สาขาย่อยของ AI ที่ทำให้คอมพิวเตอร์สามารถ "เรียนรู้" จากข้อมูลและปรับปรุงตัวเองได้ โดยไม่ต้องเขียนโปรแกรมบอกทุกขั้นตอนอย่างชัดเจน แตกต่างจากการเขียนโปรแกรมแบบดั้งเดิมที่ต้องบอกคอมพิวเตอร์ทุกอย่างว่าต้องทำอะไร</p>
+                </div>
+            </div>
+
+            <!-- Traditional vs ML Comparison -->
+            <div class="content-block">
+                <h3>เปรียบเทียบ: การเขียนโปรแกรมแบบดั้งเดิม vs Machine Learning</h3>
+                <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-code" style="font-size: 2.5rem; color: #6366f1;"></i>
+                        </div>
+                        <h3 style="color: #6366f1; text-align: center;">โปรแกรมแบบดั้งเดิม</h3>
+                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.9rem; text-align: center; color: var(--text-secondary);">
+                                <strong>กฎ + ข้อมูล → ผลลัพธ์</strong>
+                            </p>
+                            <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">มนุษย์เขียนกฎเองทุกข้อ คอมพิวเตอร์ทำตามกฎเท่านั้น</p>
+                        </div>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; margin-top: 1rem; color: var(--text-secondary);">
+                            <li>ต้องรู้คำตอบล่วงหน้า</li>
+                            <li>เขียนเงื่อนไข if-else ทุกกรณี</li>
+                            <li>แก้ไขยากเมื่อมีกรณีใหม่</li>
+                            <li>เหมาะกับปัญหาที่ชัดเจน</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);"><strong>ตัวอย่าง:</strong> "ถ้าอุณหภูมิ > 38°C → แจ้งว่ามีไข้"</p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-brain" style="font-size: 2.5rem; color: #34d399;"></i>
+                        </div>
+                        <h3 style="color: #34d399; text-align: center;">Machine Learning</h3>
+                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.9rem; text-align: center; color: var(--text-secondary);">
+                                <strong>ข้อมูล + ผลลัพธ์ → กฎ</strong>
+                            </p>
+                            <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">ป้อนข้อมูลพร้อมคำตอบ ให้ ML หากฎเอง</p>
+                        </div>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; margin-top: 1rem; color: var(--text-secondary);">
+                            <li>เรียนรู้จากตัวอย่างได้เอง</li>
+                            <li>จัดการกับข้อมูลซับซ้อนได้</li>
+                            <li>ปรับตัวเมื่อมีข้อมูลใหม่</li>
+                            <li>เหมาะกับปัญหาที่ซับซ้อน</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);"><strong>ตัวอย่าง:</strong> "ให้ข้อมูลคนไข้ 10,000 คน ML จะหาเองว่าอาการแบบไหนเป็นโรคอะไร"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 3 Types of ML -->
+            <div class="content-block">
+                <h3>Machine Learning 3 ประเภท</h3>
+                <div class="comparison-grid">
+                    <!-- Supervised Learning -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <svg viewBox="0 0 80 80" fill="none" style="width: 70px; height: 70px;">
+                                <circle cx="40" cy="40" r="35" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2"/>
+                                <path d="M25 40h10l5-10 10 20 5-10h10" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <text x="40" y="60" text-anchor="middle" font-size="8" fill="#6366f1">label</text>
+                            </svg>
+                        </div>
+                        <h3 style="color: #6366f1;">1. Supervised Learning</h3>
+                        <p style="font-weight: 600; color: #6366f1; font-size: 0.85rem;">การเรียนรู้แบบมีผู้สอน</p>
+                        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">ป้อนข้อมูลพร้อม "คำตอบที่ถูกต้อง" (Label) ให้ AI เรียนรู้ เหมือนครูให้โจทย์พร้อมเฉลย AI จะเรียนรู้ความสัมพันธ์ระหว่างข้อมูลกับคำตอบ แล้วนำไปทำนายข้อมูลใหม่ได้</p>
+                        <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">ตัวอย่างการใช้งาน:</p>
+                            <ul style="font-size: 0.82rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li><strong>กรองอีเมลสแปม</strong> - สอนว่าอีเมลไหนเป็นสแปม/ไม่ใช่</li>
+                                <li><strong>ทำนายราคาบ้าน</strong> - ให้ข้อมูลบ้าน+ราคาจริง แล้วทำนายราคาบ้านใหม่</li>
+                                <li><strong>วินิจฉัยโรค</strong> - ให้ภาพ X-ray + ผลวินิจฉัย AI เรียนรู้จำแนกโรค</li>
+                                <li><strong>จดจำใบหน้า</strong> - สอนว่ารูปนี้เป็นใคร</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Unsupervised Learning -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <svg viewBox="0 0 80 80" fill="none" style="width: 70px; height: 70px;">
+                                <circle cx="40" cy="40" r="35" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+                                <circle cx="25" cy="30" r="4" fill="#8b5cf6" opacity="0.6"/>
+                                <circle cx="30" cy="35" r="4" fill="#8b5cf6" opacity="0.6"/>
+                                <circle cx="22" cy="38" r="4" fill="#8b5cf6" opacity="0.6"/>
+                                <circle cx="55" cy="45" r="4" fill="#f59e0b" opacity="0.6"/>
+                                <circle cx="58" cy="50" r="4" fill="#f59e0b" opacity="0.6"/>
+                                <circle cx="52" cy="52" r="4" fill="#f59e0b" opacity="0.6"/>
+                                <circle cx="40" cy="60" r="4" fill="#34d399" opacity="0.6"/>
+                                <circle cx="35" cy="55" r="4" fill="#34d399" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3 style="color: #8b5cf6;">2. Unsupervised Learning</h3>
+                        <p style="font-weight: 600; color: #8b5cf6; font-size: 0.85rem;">การเรียนรู้แบบไม่มีผู้สอน</p>
+                        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">ป้อนข้อมูลโดยไม่บอกคำตอบ ให้ AI ค้นหา "รูปแบบ" และจัดกลุ่มข้อมูลเอง เหมือนให้เด็กจัดของเล่นเป็นกลุ่มโดยไม่บอกว่าต้องจัดอย่างไร เด็กจะหาวิธีจัดเอง</p>
+                        <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">ตัวอย่างการใช้งาน:</p>
+                            <ul style="font-size: 0.82rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li><strong>จัดกลุ่มลูกค้า</strong> - แบ่งลูกค้าตามพฤติกรรมการซื้อ โดยไม่ต้องกำหนดกลุ่มล่วงหน้า</li>
+                                <li><strong>หาความผิดปกติ</strong> - ตรวจจับธุรกรรมทางการเงินที่ผิดปกติ (Fraud Detection)</li>
+                                <li><strong>แนะนำสินค้า</strong> - จัดกลุ่มสินค้าที่มักถูกซื้อด้วยกัน</li>
+                                <li><strong>บีบอัดข้อมูล</strong> - หาข้อมูลที่ซ้ำซ้อนและลดขนาด</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Reinforcement Learning -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <svg viewBox="0 0 80 80" fill="none" style="width: 70px; height: 70px;">
+                                <circle cx="40" cy="40" r="35" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-width="2"/>
+                                <circle cx="40" cy="35" r="10" stroke="#34d399" stroke-width="2"/>
+                                <path d="M35 32l5 3-5 3z" fill="#34d399"/>
+                                <path d="M25 55h30" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+                                <text x="30" y="52" font-size="8" fill="#34d399">+1</text>
+                                <text x="50" y="52" font-size="8" fill="#ef4444">-1</text>
+                            </svg>
+                        </div>
+                        <h3 style="color: #34d399;">3. Reinforcement Learning</h3>
+                        <p style="font-weight: 600; color: #34d399; font-size: 0.85rem;">การเรียนรู้แบบเสริมแรง</p>
+                        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">AI เรียนรู้จากการ "ลองทำ" ถ้าทำถูกได้รางวัล (+reward) ถ้าทำผิดถูกลงโทษ (-penalty) ค่อยๆ ปรับพฤติกรรมจนเก่งขึ้น เหมือนฝึกสุนัขด้วยขนม</p>
+                        <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                            <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">ตัวอย่างการใช้งาน:</p>
+                            <ul style="font-size: 0.82rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li><strong>AlphaGo</strong> - เรียนรู้เล่นเกมโกะจนชนะแชมป์โลก</li>
+                                <li><strong>รถยนต์ไร้คนขับ</strong> - เรียนรู้ขับรถจากการจำลอง ได้รางวัลเมื่อขับปลอดภัย</li>
+                                <li><strong>หุ่นยนต์</strong> - เรียนรู้เดิน จับของ จากการลองผิดลองถูก</li>
+                                <li><strong>ChatGPT (RLHF)</strong> - ปรับปรุงคำตอบจาก feedback ของมนุษย์</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3.4: Neural Network -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">3.4</span> Neural Network (โครงข่ายประสาทเทียม)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Neural Network (โครงข่ายประสาทเทียม)</strong> คือ โมเดลทางคณิตศาสตร์ที่ได้แรงบันดาลใจจากการทำงานของสมองมนุษย์ ประกอบด้วย "เซลล์ประสาทเทียม" (Neurons) จำนวนมากที่เชื่อมต่อกันเป็นชั้นๆ (Layers) เพื่อประมวลผลข้อมูลที่ซับซ้อน</p>
+                </div>
+            </div>
+
+            <!-- Neural Network Structure SVG -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 700 350" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                    <text x="350" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#64748b">โครงสร้าง Neural Network</text>
+                    <!-- Input Layer -->
+                    <text x="120" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">Input Layer</text>
+                    <text x="120" y="70" text-anchor="middle" font-size="9" fill="#94a3b8">ชั้นรับข้อมูล</text>
+                    <circle cx="120" cy="110" r="18" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
+                    <text x="120" y="115" text-anchor="middle" font-size="9" fill="#6366f1">x₁</text>
+                    <circle cx="120" cy="175" r="18" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
+                    <text x="120" y="180" text-anchor="middle" font-size="9" fill="#6366f1">x₂</text>
+                    <circle cx="120" cy="240" r="18" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
+                    <text x="120" y="245" text-anchor="middle" font-size="9" fill="#6366f1">x₃</text>
+                    <circle cx="120" cy="305" r="18" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
+                    <text x="120" y="310" text-anchor="middle" font-size="9" fill="#6366f1">x₄</text>
+
+                    <!-- Hidden Layer 1 -->
+                    <text x="300" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">Hidden Layer</text>
+                    <text x="300" y="70" text-anchor="middle" font-size="9" fill="#94a3b8">ชั้นซ่อน (ประมวลผล)</text>
+                    <circle cx="300" cy="120" r="18" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2"/>
+                    <circle cx="300" cy="185" r="18" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2"/>
+                    <circle cx="300" cy="250" r="18" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2"/>
+                    <circle cx="300" cy="315" r="18" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2"/>
+
+                    <!-- Hidden Layer 2 -->
+                    <circle cx="430" cy="140" r="18" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="2"/>
+                    <circle cx="430" cy="210" r="18" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="2"/>
+                    <circle cx="430" cy="280" r="18" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="2"/>
+
+                    <!-- Output Layer -->
+                    <text x="580" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#34d399">Output Layer</text>
+                    <text x="580" y="70" text-anchor="middle" font-size="9" fill="#94a3b8">ชั้นแสดงผล</text>
+                    <circle cx="580" cy="175" r="18" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                    <text x="580" y="180" text-anchor="middle" font-size="9" fill="#34d399">y₁</text>
+                    <circle cx="580" cy="245" r="18" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="2"/>
+                    <text x="580" y="250" text-anchor="middle" font-size="9" fill="#34d399">y₂</text>
+
+                    <!-- Connections Input to Hidden1 -->
+                    <line x1="138" y1="110" x2="282" y2="120" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="110" x2="282" y2="185" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="110" x2="282" y2="250" stroke="#6366f1" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="138" y1="175" x2="282" y2="120" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="175" x2="282" y2="185" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="175" x2="282" y2="250" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="175" x2="282" y2="315" stroke="#6366f1" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="138" y1="240" x2="282" y2="185" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="240" x2="282" y2="250" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="240" x2="282" y2="315" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="305" x2="282" y2="250" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="138" y1="305" x2="282" y2="315" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+
+                    <!-- Connections Hidden1 to Hidden2 -->
+                    <line x1="318" y1="120" x2="412" y2="140" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="318" y1="120" x2="412" y2="210" stroke="#8b5cf6" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="318" y1="185" x2="412" y2="140" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="318" y1="185" x2="412" y2="210" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="318" y1="185" x2="412" y2="280" stroke="#8b5cf6" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="318" y1="250" x2="412" y2="140" stroke="#8b5cf6" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="318" y1="250" x2="412" y2="210" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="318" y1="250" x2="412" y2="280" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="318" y1="315" x2="412" y2="210" stroke="#8b5cf6" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="318" y1="315" x2="412" y2="280" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+
+                    <!-- Connections Hidden2 to Output -->
+                    <line x1="448" y1="140" x2="562" y2="175" stroke="#06b6d4" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="448" y1="140" x2="562" y2="245" stroke="#06b6d4" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="448" y1="210" x2="562" y2="175" stroke="#06b6d4" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="448" y1="210" x2="562" y2="245" stroke="#06b6d4" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="448" y1="280" x2="562" y2="175" stroke="#06b6d4" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="448" y1="280" x2="562" y2="245" stroke="#06b6d4" stroke-width="0.8" opacity="0.3"/>
+                </svg>
+            </div>
+
+
+            <div class="content-block">
+                <h3>โครงสร้าง 3 ชั้นหลัก</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <h4 style="color: #6366f1;"><i class="fas fa-sign-in-alt"></i> Input Layer</h4>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">ชั้นรับข้อมูลเข้า เช่น ค่าสีของแต่ละพิกเซลในรูปภาพ ค่าความถี่ของเสียง หรือตัวเลขต่างๆ แต่ละ neuron รับข้อมูลเข้า 1 ค่า</p>
+                    </div>
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <h4 style="color: #8b5cf6;"><i class="fas fa-cogs"></i> Hidden Layer(s)</h4>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">ชั้นประมวลผลที่ซ่อนอยู่ ทำหน้าที่วิเคราะห์ หาความสัมพันธ์ และแปลงข้อมูล ยิ่งมีหลายชั้น (Deep) ยิ่งเรียนรู้สิ่งซับซ้อนได้</p>
+                    </div>
+                    <div style="padding: 1.2rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <h4 style="color: #34d399;"><i class="fas fa-sign-out-alt"></i> Output Layer</h4>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">ชั้นแสดงผลลัพธ์ เช่น ผลการจำแนก (แมว/สุนัข) ค่าทำนาย (ราคา) หรือข้อความที่สร้างขึ้น แต่ละ neuron คือ 1 คำตอบที่เป็นไปได้</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Learning -->
+            <div class="content-block">
+                <h3><i class="fas fa-layer-group" style="color: #8b5cf6;"></i> Deep Learning คืออะไร?</h3>
+                <div class="content-text">
+                    <p><strong>Deep Learning (การเรียนรู้เชิงลึก)</strong> คือ Neural Network ที่มี Hidden Layer จำนวนมาก (ตั้งแต่ 3 ชั้นขึ้นไป จนถึงหลายร้อยชั้น) คำว่า "Deep" มาจากความ "ลึก" ของจำนวนชั้น ทำให้สามารถเรียนรู้รูปแบบที่ซับซ้อนมากๆ ได้</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>🧠 เปรียบเทียบกับสมองมนุษย์:</strong></p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.75rem;">
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                            <p><strong>สมองมนุษย์:</strong></p>
+                            <ul style="padding-left: 1.2rem; margin-top: 0.3rem;">
+                                <li>เซลล์ประสาท ~86,000 ล้านเซลล์</li>
+                                <li>จุดเชื่อมต่อ ~100 ล้านล้านจุด</li>
+                                <li>ใช้พลังงานเพียง ~20 วัตต์</li>
+                                <li>เรียนรู้ได้ตลอดชีวิต</li>
+                            </ul>
+                        </div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                            <p><strong>GPT-4 (ใหญ่ที่สุด 2024):</strong></p>
+                            <ul style="padding-left: 1.2rem; margin-top: 0.3rem;">
+                                <li>พารามิเตอร์ ~1.76 ล้านล้านค่า</li>
+                                <li>ใช้พลังงาน ~หลายเมกะวัตต์</li>
+                                <li>เรียนรู้จากข้อมูลบนอินเทอร์เน็ต</li>
+                                <li>ฝึกครั้งเดียว ไม่เรียนรู้เพิ่มเอง</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-secondary);"><em>💡 แม้ AI จะใหญ่มาก แต่ยังซับซ้อนน้อยกว่าสมองมนุษย์มาก และไม่มีจิตสำนึก ไม่ "เข้าใจ" สิ่งที่ทำจริงๆ</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3.5: การฝึกโมเดล AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">3.5</span> การฝึกโมเดล AI (AI Training Pipeline)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การสร้าง AI ที่ใช้งานได้จริง ไม่ใช่แค่เขียนโค้ดแล้วจบ แต่ต้องผ่านกระบวนการฝึกฝน (Training) ที่เป็นระบบ เหมือนการฝึกนักกีฬา ที่ต้องมีโค้ช มีแผนฝึก มีการทดสอบ กว่าจะแข่งขันได้ AI ก็ต้องผ่าน 5 ขั้นตอนสำคัญ</p>
+                </div>
+            </div>
+
+            <!-- Training Pipeline SVG -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 750 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 750px; width: 100%;">
+                    <!-- Step 1 -->
+                    <rect x="10" y="30" width="120" height="90" rx="12" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2"/>
+                    <text x="70" y="60" text-anchor="middle" font-size="16">📊</text>
+                    <text x="70" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#6366f1">1. เตรียมข้อมูล</text>
+                    <text x="70" y="95" text-anchor="middle" font-size="8" fill="#94a3b8">Data Prep</text>
+                    <!-- Arrow -->
+                    <path d="M135 75 L155 75" stroke="#6366f1" stroke-width="2" marker-end="url(#pipeArrow1)"/>
+                    <!-- Step 2 -->
+                    <rect x="160" y="30" width="120" height="90" rx="12" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+                    <text x="220" y="60" text-anchor="middle" font-size="16">🧠</text>
+                    <text x="220" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#8b5cf6">2. เลือกโมเดล</text>
+                    <text x="220" y="95" text-anchor="middle" font-size="8" fill="#94a3b8">Model Selection</text>
+                    <!-- Arrow -->
+                    <path d="M285 75 L305 75" stroke="#8b5cf6" stroke-width="2" marker-end="url(#pipeArrow2)"/>
+                    <!-- Step 3 -->
+                    <rect x="310" y="30" width="120" height="90" rx="12" fill="#06b6d4" opacity="0.1" stroke="#06b6d4" stroke-width="2"/>
+                    <text x="370" y="60" text-anchor="middle" font-size="16">⚡</text>
+                    <text x="370" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#06b6d4">3. ฝึกสอน</text>
+                    <text x="370" y="95" text-anchor="middle" font-size="8" fill="#94a3b8">Training</text>
+                    <!-- Arrow -->
+                    <path d="M435 75 L455 75" stroke="#06b6d4" stroke-width="2" marker-end="url(#pipeArrow3)"/>
+                    <!-- Step 4 -->
+                    <rect x="460" y="30" width="120" height="90" rx="12" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="520" y="60" text-anchor="middle" font-size="16">🧪</text>
+                    <text x="520" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#f59e0b">4. ทดสอบ</text>
+                    <text x="520" y="95" text-anchor="middle" font-size="8" fill="#94a3b8">Testing</text>
+                    <!-- Arrow -->
+                    <path d="M585 75 L605 75" stroke="#f59e0b" stroke-width="2" marker-end="url(#pipeArrow4)"/>
+                    <!-- Step 5 -->
+                    <rect x="610" y="30" width="120" height="90" rx="12" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-width="2"/>
+                    <text x="670" y="60" text-anchor="middle" font-size="16">🚀</text>
+                    <text x="670" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#34d399">5. ใช้งานจริง</text>
+                    <text x="670" y="95" text-anchor="middle" font-size="8" fill="#94a3b8">Deployment</text>
+                    <!-- Feedback loop -->
+                    <path d="M670 125 L670 145 L70 145 L70 125" stroke="#ec4899" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.5"/>
+                    <text x="370" y="157" text-anchor="middle" font-size="8" fill="#ec4899">🔄 ปรับปรุงต่อเนื่อง (Continuous Improvement)</text>
+                    <defs>
+                        <marker id="pipeArrow1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6366f1"/></marker>
+                        <marker id="pipeArrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#8b5cf6"/></marker>
+                        <marker id="pipeArrow3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#06b6d4"/></marker>
+                        <marker id="pipeArrow4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#f59e0b"/></marker>
+                    </defs>
+                </svg>
+            </div>
+
+
+            <!-- Timeline steps detail -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #6366f1;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #6366f1; font-weight: 700;">ขั้นที่ 1</span>
+                        <h4>เตรียมข้อมูล (Data Preparation)</h4>
+                        <p>รวบรวมข้อมูลที่เกี่ยวข้อง ทำความสะอาดข้อมูล (ลบข้อมูลผิดพลาด ข้อมูลซ้ำ ข้อมูลไม่ครบ) แบ่งข้อมูลเป็น 3 ส่วน: Training Set (70-80%) สำหรับฝึก, Validation Set (10-15%) สำหรับปรับจูน, Test Set (10-15%) สำหรับทดสอบสุดท้าย</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>⚠️ ข้อมูลคุณภาพดี = AI คุณภาพดี (Garbage In, Garbage Out)</em></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #8b5cf6;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #8b5cf6; font-weight: 700;">ขั้นที่ 2</span>
+                        <h4>เลือกโมเดล (Model Selection)</h4>
+                        <p>เลือกสถาปัตยกรรม AI ที่เหมาะกับงาน เช่น CNN สำหรับรูปภาพ, RNN/Transformer สำหรับภาษา, Random Forest สำหรับข้อมูลตาราง ต้องพิจารณาความซับซ้อนของปัญหา ปริมาณข้อมูล และทรัพยากรที่มี</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #06b6d4;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #06b6d4; font-weight: 700;">ขั้นที่ 3</span>
+                        <h4>ฝึกสอน (Training)</h4>
+                        <p>ป้อนข้อมูล Training Set ให้โมเดล ให้โมเดลทำนาย แล้วเปรียบเทียบกับคำตอบจริง คำนวณค่าผิดพลาด (Loss) แล้วปรับค่าน้ำหนัก (Weights) ทำซ้ำหลายรอบ (Epochs) จนค่าผิดพลาดลดลงต่ำที่สุด อาจใช้เวลาหลายชั่วโมงถึงหลายสัปดาห์</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #f59e0b;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #f59e0b; font-weight: 700;">ขั้นที่ 4</span>
+                        <h4>ทดสอบ (Testing & Evaluation)</h4>
+                        <p>ทดสอบโมเดลด้วย Test Set ที่ไม่เคยเห็นมาก่อน เพื่อดูว่าโมเดลทำงานได้ดีแค่ไหนกับข้อมูลใหม่ วัดค่าความแม่นยำ (Accuracy) ค่า Precision, Recall ถ้าผลไม่ดีพอ ต้องกลับไปปรับขั้นตอนก่อนหน้า</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #34d399;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #34d399; font-weight: 700;">ขั้นที่ 5</span>
+                        <h4>นำไปใช้งานจริง (Deployment)</h4>
+                        <p>นำโมเดลที่ผ่านการทดสอบแล้วไปติดตั้งในระบบจริง เช่น ทำเป็น API, ใส่ในแอป, หรือฝังในอุปกรณ์ ต้องมีการตรวจสอบประสิทธิภาพอย่างต่อเนื่อง และปรับปรุงเมื่อมีข้อมูลใหม่ (MLOps)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3.6: Overfitting vs Underfitting -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">3.6</span> Overfitting vs Underfitting</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>ในการฝึก AI มีปัญหาสำคัญ 2 อย่างที่พบบ่อย คือ <strong>Overfitting</strong> (เรียนมากเกินไป) และ <strong>Underfitting</strong> (เรียนน้อยเกินไป) ทั้งสองอย่างทำให้ AI ทำงานได้ไม่ดี เปรียบเทียบง่ายๆ กับนักเรียนที่เตรียมสอบ:</p>
+                </div>
+            </div>
+
+            <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Overfitting -->
+                <div class="comparison-card" style="border-top: 4px solid #ef4444;">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 100 80" fill="none" style="width: 100px; height: 80px;">
+                            <!-- Complex curve (overfitting) -->
+                            <circle cx="15" cy="55" r="4" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="25" cy="35" r="4" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="40" cy="50" r="4" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="55" cy="25" r="4" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="70" cy="45" r="4" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="85" cy="30" r="4" fill="#ef4444" opacity="0.6"/>
+                            <path d="M15 55 Q20 20 25 35 Q30 50 40 50 Q48 50 55 25 Q62 5 70 45 Q75 60 85 30" stroke="#ef4444" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #ef4444;">🔴 Overfitting (เรียนมากเกินไป)</h3>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">AI จำข้อมูลฝึกได้หมดทุกรายละเอียด รวมทั้ง "สัญญาณรบกวน" (noise) ทำให้ทำงานดีมากกับข้อมูลฝึก แต่ล้มเหลวเมื่อเจอข้อมูลใหม่</p>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.85rem; font-weight: 600; color: #ef4444;">📚 เปรียบเทียบ: นักเรียนที่ท่องจำ</p>
+                        <p style="font-size: 0.82rem; margin-top: 0.5rem; color: var(--text-secondary);">เหมือนนักเรียนที่ท่องจำข้อสอบเก่าทุกข้อ ทุกตัวเลือก โดยไม่เข้าใจหลักการ → เมื่อเจอข้อสอบใหม่ที่โจทย์ต่างไปนิดเดียว ก็ตอบไม่ได้เลย</p>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <p style="font-size: 0.85rem; font-weight: 600;">🔧 วิธีแก้:</p>
+                        <ul style="font-size: 0.82rem; padding-left: 1.2rem; margin-top: 0.3rem; color: var(--text-secondary);">
+                            <li>เพิ่มข้อมูลฝึกให้หลากหลายขึ้น</li>
+                            <li>ลดความซับซ้อนของโมเดล</li>
+                            <li>ใช้เทคนิค Regularization</li>
+                            <li>ใช้ Dropout (สุ่มปิด neuron บางตัว)</li>
+                            <li>หยุดฝึกเมื่อเหมาะสม (Early Stopping)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Underfitting -->
+                <div class="comparison-card" style="border-top: 4px solid #f59e0b;">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 100 80" fill="none" style="width: 100px; height: 80px;">
+                            <!-- Simple line (underfitting) -->
+                            <circle cx="15" cy="55" r="4" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="25" cy="35" r="4" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="40" cy="50" r="4" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="55" cy="25" r="4" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="70" cy="45" r="4" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="85" cy="30" r="4" fill="#f59e0b" opacity="0.6"/>
+                            <line x1="10" y1="55" x2="90" y2="30" stroke="#f59e0b" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #f59e0b;">🟡 Underfitting (เรียนน้อยเกินไป)</h3>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">AI เรียนรู้ไม่เพียงพอ ไม่สามารถจับรูปแบบที่แท้จริงในข้อมูลได้ ทำให้ทำงานได้ไม่ดีทั้งข้อมูลฝึกและข้อมูลใหม่</p>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(245, 158, 11, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.85rem; font-weight: 600; color: #f59e0b;">📚 เปรียบเทียบ: นักเรียนที่ไม่อ่านหนังสือ</p>
+                        <p style="font-size: 0.82rem; margin-top: 0.5rem; color: var(--text-secondary);">เหมือนนักเรียนที่อ่านหนังสือแค่ผ่านๆ ไม่ได้ทำความเข้าใจ → ตอบไม่ได้ทั้งข้อสอบเก่าและข้อสอบใหม่ เพราะไม่เข้าใจเนื้อหาเลย</p>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <p style="font-size: 0.85rem; font-weight: 600;">🔧 วิธีแก้:</p>
+                        <ul style="font-size: 0.82rem; padding-left: 1.2rem; margin-top: 0.3rem; color: var(--text-secondary);">
+                            <li>เพิ่มความซับซ้อนของโมเดล (เพิ่ม layers/neurons)</li>
+                            <li>ฝึกนานขึ้น (เพิ่ม epochs)</li>
+                            <li>เพิ่ม features ที่เกี่ยวข้อง</li>
+                            <li>ลด regularization ลง</li>
+                            <li>เปลี่ยนไปใช้โมเดลที่เหมาะสมกว่า</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Good fit explanation -->
+            <div class="content-block" style="margin-top: 2rem;">
+                <div class="info-box" style="border-left: 4px solid #34d399;">
+                    <p><strong style="color: #34d399;">🟢 Good Fit (พอดี) - เป้าหมายที่ต้องการ</strong></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-secondary);">AI เรียนรู้ "หลักการ" ที่แท้จริงจากข้อมูล ไม่จำมากเกินไป ไม่น้อยเกินไป → ทำงานได้ดีทั้งข้อมูลฝึกและข้อมูลใหม่ เหมือนนักเรียนที่เข้าใจหลักการ จึงทำข้อสอบได้ทุกรูปแบบ ไม่ว่าโจทย์จะเปลี่ยนอย่างไร</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Knowledge Summary -->
+    <section class="content-section">
+        <div class="container">
+            <div class="knowledge-summary">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f59e0b;"></i>
+                    <h2 style="margin-top: 0.5rem; color: var(--text-primary);">สรุปความรู้ประจำหน่วย</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> สิ่งที่ควรจำ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>Computational Thinking มี 4 ขั้นตอน: Decomposition, Pattern Recognition, Abstraction, Algorithm Design</li>
+                            <li>อัลกอริทึมที่ดีต้อง: ชัดเจน, มี Input/Output, มีจุดสิ้นสุด, มีประสิทธิภาพ</li>
+                            <li>Machine Learning มี 3 ประเภท: Supervised, Unsupervised, Reinforcement Learning</li>
+                            <li>Neural Network ประกอบด้วย: Input Layer, Hidden Layer(s), Output Layer</li>
+                            <li>Deep Learning = Neural Network ที่มีหลายชั้น (Deep = ลึก)</li>
+                            <li>การฝึก AI มี 5 ขั้นตอน: เตรียมข้อมูล → เลือกโมเดล → ฝึก → ทดสอบ → ใช้งานจริง</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> ประเด็นสำคัญ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>Computational Thinking ไม่ใช่แค่เรื่องคอมพิวเตอร์ แต่เป็นทักษะชีวิตที่ใช้ได้ทุกสถานการณ์</li>
+                            <li>ML ต่างจากโปรแกรมทั่วไป ตรงที่ "เรียนรู้กฎจากข้อมูล" แทนที่จะ "ถูกบอกกฎ"</li>
+                            <li>ข้อมูลคือหัวใจของ AI - ข้อมูลดี AI เก่ง, ข้อมูลแย่ AI แย่</li>
+                            <li>Overfitting = จำมากเกินไป (ท่องจำ), Underfitting = เรียนน้อยเกินไป (ไม่เข้าใจ)</li>
+                            <li>AI ไม่ได้ "คิดเป็น" แต่ใช้คณิตศาสตร์หารูปแบบจากข้อมูล</li>
+                            <li>GPT-4 มีพารามิเตอร์ล้านล้าน แต่ยังซับซ้อนน้อยกว่าสมองมนุษย์</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(6, 182, 212, 0.05); border-radius: 12px; border-left: 4px solid #06b6d4;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-quote-left" style="color: #06b6d4;"></i> <strong>คำถามชวนคิด:</strong> ลองใช้ Computational Thinking กับปัญหาในชีวิตประจำวัน เช่น "จะเตรียมตัวสอบอย่างไรให้ได้คะแนนดี?" → แบ่งย่อยเป็นวิชา → หารูปแบบข้อสอบ → สรุปเฉพาะหัวข้อสำคัญ → วางแผนอ่านหนังสือ นี่คือ Computational Thinking!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Page Navigation -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="page-nav">
+                <a href="unit2.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> หน่วยที่ 2: เครื่องมือ AI
+                </a>
+                <a href="unit4.html" class="btn btn-primary">
+                    หน่วยที่ 4: จริยธรรม AI <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน่วยที่ 1: รู้จักโลกของ AI - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html" class="active">หน่วย 1</a></li>
+                <li><a href="unit2.html">หน่วย 2</a></li>
+                <li><a href="unit3.html">หน่วย 3</a></li>
+                <li><a href="unit4.html">หน่วย 4</a></li>
+                <li><a href="unit5.html">หน่วย 5</a></li>
+                <li><a href="unit6.html">หน่วย 6</a></li>
+                <li><a href="review.html">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">หน่วยที่ 1: รู้จักโลกของ AI</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">หน่วยที่ 1</span>
+                <h1 class="page-title">รู้จักโลกของ AI และเทคโนโลยีอัจฉริยะ</h1>
+                <p class="page-subtitle">ทำความเข้าใจว่า AI คืออะไร มีกี่ประเภท มีประวัติความเป็นมาอย่างไร พร้อมสำรวจตัวอย่าง AI ที่อยู่รอบตัวเราในชีวิตประจำวัน</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- AI Brain Network -->
+                    <circle cx="150" cy="150" r="100" stroke="url(#heroGrad1)" stroke-width="2" opacity="0.3"/>
+                    <circle cx="150" cy="150" r="70" stroke="url(#heroGrad1)" stroke-width="1.5" opacity="0.2"/>
+                    <!-- Central brain -->
+                    <path d="M150 100c-20 0-36 12-40 28-12 4-20 16-20 30 0 16 10 29 24 32 4 14 18 24 36 24s32-10 36-24c14-3 24-16 24-32 0-14-8-26-20-30-4-16-20-28-40-28z" fill="url(#heroGrad2)" opacity="0.5"/>
+                    <!-- Neural connections -->
+                    <circle cx="90" cy="110" r="6" fill="#818cf8" opacity="0.8"/>
+                    <circle cx="210" cy="110" r="6" fill="#818cf8" opacity="0.8"/>
+                    <circle cx="80" cy="190" r="6" fill="#34d399" opacity="0.8"/>
+                    <circle cx="220" cy="190" r="6" fill="#34d399" opacity="0.8"/>
+                    <circle cx="150" cy="60" r="5" fill="#f59e0b" opacity="0.8"/>
+                    <circle cx="150" cy="240" r="5" fill="#f59e0b" opacity="0.8"/>
+                    <circle cx="60" cy="150" r="5" fill="#ec4899" opacity="0.8"/>
+                    <circle cx="240" cy="150" r="5" fill="#ec4899" opacity="0.8"/>
+                    <!-- Connection lines -->
+                    <line x1="90" y1="110" x2="150" y2="150" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                    <line x1="210" y1="110" x2="150" y2="150" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                    <line x1="80" y1="190" x2="150" y2="150" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+                    <line x1="220" y1="190" x2="150" y2="150" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+                    <line x1="150" y1="60" x2="150" y2="150" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+                    <line x1="150" y1="240" x2="150" y2="150" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+                    <line x1="60" y1="150" x2="150" y2="150" stroke="#ec4899" stroke-width="1" opacity="0.3"/>
+                    <line x1="240" y1="150" x2="150" y2="150" stroke="#ec4899" stroke-width="1" opacity="0.3"/>
+                    <!-- Pulsing rings -->
+                    <circle cx="150" cy="150" r="30" stroke="#818cf8" stroke-width="1" opacity="0.3">
+                        <animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#34d399"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Section 1.1: ความหมายของ AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">1.1</span> ความหมายของ AI (Artificial Intelligence)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>ปัญญาประดิษฐ์ (Artificial Intelligence - AI)</strong> คือ สาขาหนึ่งของวิทยาการคอมพิวเตอร์ที่มุ่งเน้นการพัฒนาระบบคอมพิวเตอร์ให้สามารถทำงานที่ปกติต้องอาศัยสติปัญญาของมนุษย์ เช่น การเรียนรู้ การตัดสินใจ การแก้ปัญหา การเข้าใจภาษา และการรับรู้สิ่งต่างๆ</p>
+                    
+                    <p>คำว่า "Artificial" หมายถึง "สิ่งที่สร้างขึ้น" หรือ "ประดิษฐ์ขึ้น" และ "Intelligence" หมายถึง "ความฉลาด" หรือ "สติปัญญา" เมื่อรวมกันจึงหมายถึง <em>"ความฉลาดที่ถูกสร้างขึ้น"</em> โดยมนุษย์ผ่านระบบคอมพิวเตอร์</p>
+                </div>
+
+                <!-- SVG Diagram: AI Definition -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; width: 100%;">
+                        <!-- Artificial box -->
+                        <rect x="20" y="60" width="180" height="80" rx="12" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2"/>
+                        <text x="110" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#6366f1">Artificial</text>
+                        <text x="110" y="120" text-anchor="middle" font-size="13" fill="#64748b">สิ่งที่สร้างขึ้น</text>
+                        <!-- Plus sign -->
+                        <text x="240" y="110" text-anchor="middle" font-size="30" fill="#94a3b8">+</text>
+                        <!-- Intelligence box -->
+                        <rect x="280" y="60" width="180" height="80" rx="12" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+                        <text x="370" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#8b5cf6">Intelligence</text>
+                        <text x="370" y="120" text-anchor="middle" font-size="13" fill="#64748b">ความฉลาด/สติปัญญา</text>
+                        <!-- Equals sign -->
+                        <text x="500" y="110" text-anchor="middle" font-size="30" fill="#94a3b8">=</text>
+                        <!-- Result -->
+                        <text x="560" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#34d399">AI</text>
+                        <text x="560" y="120" text-anchor="middle" font-size="11" fill="#64748b">ปัญญาประดิษฐ์</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>คำศัพท์สำคัญที่ควรรู้</h3>
+                <div class="info-box">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div>
+                            <p><strong><i class="fas fa-microchip" style="color: #6366f1;"></i> Machine Learning (ML)</strong></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">การเรียนรู้ของเครื่อง - ระบบที่สามารถเรียนรู้และปรับปรุงตัวเองจากข้อมูลโดยไม่ต้องเขียนโปรแกรมใหม่</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-brain" style="color: #8b5cf6;"></i> Deep Learning (DL)</strong></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">การเรียนรู้เชิงลึก - สาขาย่อยของ ML ที่ใช้โครงข่ายประสาทเทียมหลายชั้นในการเรียนรู้</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-project-diagram" style="color: #34d399;"></i> Neural Network</strong></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">โครงข่ายประสาทเทียม - ระบบที่จำลองการทำงานของสมองมนุษย์</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-database" style="color: #f59e0b;"></i> Big Data</strong></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">ข้อมูลขนาดใหญ่ - ข้อมูลจำนวนมหาศาลที่ AI ใช้ในการเรียนรู้และวิเคราะห์</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-cogs" style="color: #ec4899;"></i> Algorithm</strong></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">อัลกอริทึม - ชุดคำสั่งหรือขั้นตอนที่กำหนดให้คอมพิวเตอร์ทำงาน</p>
+                        </div>
+                        <div>
+                            <p><strong><i class="fas fa-language" style="color: #06b6d4;"></i> NLP (Natural Language Processing)</strong></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">การประมวลผลภาษาธรรมชาติ - ความสามารถในการเข้าใจและสร้างภาษามนุษย์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>AI ทำอะไรได้บ้าง?</h3>
+                <div class="content-text">
+                    <p>AI ในปัจจุบันมีความสามารถหลากหลาย ครอบคลุมงานที่ซับซ้อนหลายด้าน:</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.1);">
+                        <i class="fas fa-eye" style="color: #6366f1; font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>มองเห็น</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">จำแนกภาพ ตรวจจับวัตถุ อ่านตัวอักษร</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <i class="fas fa-ear-listen" style="color: #8b5cf6; font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>ฟังเข้าใจ</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">แปลงเสียงเป็นข้อความ เข้าใจคำสั่งเสียง</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <i class="fas fa-comments" style="color: #34d399; font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>สนทนา</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">ตอบคำถาม สร้างข้อความ แปลภาษา</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.1);">
+                        <i class="fas fa-lightbulb" style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>ตัดสินใจ</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">วิเคราะห์ข้อมูล ทำนายผล แนะนำสิ่งที่เหมาะ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.1);">
+                        <i class="fas fa-palette" style="color: #ec4899; font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>สร้างสรรค์</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">วาดรูป แต่งเพลง เขียนบทความ สร้างวิดีโอ</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.1);">
+                        <i class="fas fa-gamepad" style="color: #06b6d4; font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>เล่นเกม</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">เล่นหมากรุก, Go, วิดีโอเกม ชนะแชมป์โลก</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 1.2: ประเภทของ AI -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">1.2</span> ประเภทของ AI</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>นักวิทยาศาสตร์แบ่ง AI ออกเป็น 3 ระดับ ตามความสามารถและขอบเขตการทำงาน โดยแต่ละระดับมีความซับซ้อนและความฉลาดที่แตกต่างกัน</p>
+                </div>
+            </div>
+
+            <div class="comparison-grid">
+                <!-- Narrow AI -->
+                <div class="comparison-card">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 80 80" fill="none" style="width: 80px; height: 80px;">
+                            <circle cx="40" cy="40" r="35" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2"/>
+                            <rect x="25" y="28" width="30" height="24" rx="4" stroke="#6366f1" stroke-width="2"/>
+                            <circle cx="35" cy="38" r="3" fill="#6366f1"/>
+                            <circle cx="45" cy="38" r="3" fill="#6366f1"/>
+                            <path d="M33 46h14" stroke="#6366f1" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #6366f1;">Narrow AI (AI แบบแคบ)</h3>
+                    <span style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; background: #dcfce7; color: #16a34a; margin-bottom: 0.75rem;">
+                        <i class="fas fa-check-circle"></i> มีอยู่จริงแล้วในปัจจุบัน
+                    </span>
+                    <p>AI ที่ถูกออกแบบมาให้เก่งเฉพาะงานใดงานหนึ่ง ไม่สามารถทำงานนอกขอบเขตที่กำหนดได้ เป็น AI ที่เราใช้งานอยู่ทุกวันนี้</p>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">ตัวอย่าง:</p>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                            <li>Siri, Google Assistant (ผู้ช่วยเสียง)</li>
+                            <li>ChatGPT (ตอบคำถาม สร้างข้อความ)</li>
+                            <li>Face ID (จดจำใบหน้า)</li>
+                            <li>YouTube/Netflix (แนะนำวิดีโอ)</li>
+                            <li>Google Translate (แปลภาษา)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- General AI -->
+                <div class="comparison-card">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 80 80" fill="none" style="width: 80px; height: 80px;">
+                            <circle cx="40" cy="40" r="35" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+                            <circle cx="40" cy="32" r="10" stroke="#f59e0b" stroke-width="2"/>
+                            <path d="M28 52c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#f59e0b" stroke-width="2"/>
+                            <circle cx="26" cy="36" r="4" stroke="#f59e0b" stroke-width="1.5" opacity="0.5"/>
+                            <circle cx="54" cy="36" r="4" stroke="#f59e0b" stroke-width="1.5" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #f59e0b;">General AI (AGI - AI ทั่วไป)</h3>
+                    <span style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; background: #fef3c7; color: #d97706; margin-bottom: 0.75rem;">
+                        <i class="fas fa-flask"></i> กำลังวิจัยพัฒนา
+                    </span>
+                    <p>AI ที่มีความฉลาดเทียบเท่ามนุษย์ สามารถคิด เรียนรู้ เข้าใจ และแก้ปัญหาได้หลากหลายเหมือนคนจริงๆ สามารถถ่ายโอนความรู้ข้ามศาสตร์ได้</p>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(245, 158, 11, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">ลักษณะสำคัญ:</p>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                            <li>คิดและเข้าใจเหมือนมนุษย์</li>
+                            <li>เรียนรู้งานใหม่ได้ด้วยตัวเอง</li>
+                            <li>มีสามัญสำนึกและการรับรู้อารมณ์</li>
+                            <li>แก้ปัญหาที่ไม่เคยพบมาก่อน</li>
+                            <li>ยังไม่มีอยู่จริง (คาดว่าอีก 20-50 ปี)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Super AI -->
+                <div class="comparison-card">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 80 80" fill="none" style="width: 80px; height: 80px;">
+                            <circle cx="40" cy="40" r="35" fill="#ec4899" opacity="0.1" stroke="#ec4899" stroke-width="2"/>
+                            <path d="M40 20l5 10h10l-8 6 3 10-10-7-10 7 3-10-8-6h10z" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="1.5"/>
+                            <circle cx="40" cy="50" r="8" stroke="#ec4899" stroke-width="2"/>
+                            <path d="M36 50h8M40 46v8" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #ec4899;">Super AI (ASI - AI เหนือมนุษย์)</h3>
+                    <span style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; background: #fce7f3; color: #db2777; margin-bottom: 0.75rem;">
+                        <i class="fas fa-crystal-ball"></i> ยังเป็นทฤษฎี
+                    </span>
+                    <p>AI ที่มีความฉลาดเหนือมนุษย์ในทุกด้าน สามารถคิดค้นสิ่งใหม่ที่มนุษย์ไม่สามารถทำได้ เป็นแนวคิดในอนาคตไกล</p>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(236, 72, 153, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">ลักษณะสำคัญ (ทฤษฎี):</p>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                            <li>ฉลาดกว่ามนุษย์ที่เก่งที่สุดในทุกด้าน</li>
+                            <li>พัฒนาตัวเองได้ไม่จำกัด</li>
+                            <li>คิดค้นสิ่งที่มนุษย์คิดไม่ถึง</li>
+                            <li>มีจิตสำนึกและอารมณ์ของตัวเอง</li>
+                            <li>ยังเป็นเพียงจินตนาการในภาพยนตร์</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Level Comparison SVG -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <svg viewBox="0 0 700 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                    <!-- Level bar -->
+                    <rect x="50" y="50" width="600" height="20" rx="10" fill="#e2e8f0"/>
+                    <!-- Narrow AI progress -->
+                    <rect x="50" y="50" width="200" height="20" rx="10" fill="url(#lvlGrad1)"/>
+                    <!-- Labels -->
+                    <text x="150" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#6366f1">Narrow AI</text>
+                    <text x="150" y="90" text-anchor="middle" font-size="10" fill="#64748b">ปัจจุบัน</text>
+                    <text x="370" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">General AI</text>
+                    <text x="370" y="90" text-anchor="middle" font-size="10" fill="#64748b">กำลังวิจัย</text>
+                    <text x="570" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#ec4899">Super AI</text>
+                    <text x="570" y="90" text-anchor="middle" font-size="10" fill="#64748b">ทฤษฎี</text>
+                    <!-- Markers -->
+                    <circle cx="250" cy="60" r="6" fill="#f59e0b" opacity="0.5"/>
+                    <circle cx="450" cy="60" r="6" fill="#ec4899" opacity="0.3"/>
+                    <defs>
+                        <linearGradient id="lvlGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#818cf8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 1.3: วิวัฒนาการของ AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">1.3</span> วิวัฒนาการของ AI</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>AI ไม่ได้เกิดขึ้นชั่วข้ามคืน แต่มีพัฒนาการมายาวนานกว่า 70 ปี ผ่านทั้งช่วงรุ่งเรืองและช่วงตกต่ำ (AI Winter) จนมาถึงยุคทองในปัจจุบัน มาดูเหตุการณ์สำคัญกัน</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <!-- 1950 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #6366f1;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #6366f1; font-weight: 700;">1950</span>
+                        <h4>Turing Test - จุดเริ่มต้นของแนวคิด AI</h4>
+                        <p>Alan Turing นักคณิตศาสตร์ชาวอังกฤษ เสนอคำถามว่า "เครื่องจักรสามารถคิดได้หรือไม่?" และสร้าง "Turing Test" เพื่อทดสอบว่าเครื่องจักรสามารถแสดงพฤติกรรมที่ฉลาดเทียบเท่ามนุษย์ได้หรือไม่ โดยถ้ามนุษย์ไม่สามารถแยกได้ว่ากำลังคุยกับคนหรือเครื่อง ถือว่าเครื่องนั้นผ่านการทดสอบ</p>
+                    </div>
+                </div>
+
+                <!-- 1956 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #8b5cf6;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #8b5cf6; font-weight: 700;">1956</span>
+                        <h4>Dartmouth Conference - การกำเนิดของ AI อย่างเป็นทางการ</h4>
+                        <p>การประชุมที่ Dartmouth College ประเทศสหรัฐอเมริกา ถือเป็นจุดกำเนิดอย่างเป็นทางการของสาขา AI โดย John McCarthy เป็นผู้บัญญัติคำว่า "Artificial Intelligence" ขึ้นเป็นครั้งแรก นักวิจัยกลุ่มนี้เชื่อว่า "ทุกแง่มุมของการเรียนรู้สามารถอธิบายได้อย่างแม่นยำ จนสามารถสร้างเครื่องจักรเลียนแบบได้"</p>
+                    </div>
+                </div>
+
+                <!-- 1966-1974 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #94a3b8;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #94a3b8; font-weight: 700;">1966-1974</span>
+                        <h4>AI Winter ครั้งที่ 1 - ยุคมืดของ AI</h4>
+                        <p>ช่วงเวลาที่ AI ไม่สามารถทำตามที่สัญญาไว้ได้ คอมพิวเตอร์ในยุคนั้นมีประสิทธิภาพต่ำเกินไป งบวิจัยถูกตัด ความสนใจลดลง เรียกว่า "ฤดูหนาวของ AI" เพราะการพัฒนาหยุดชะงัก นักวิจัยหลายคนหันไปทำอย่างอื่น</p>
+                    </div>
+                </div>
+
+                <!-- 1980-1990 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #f59e0b;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #f59e0b; font-weight: 700;">1980-1990</span>
+                        <h4>ยุค Expert Systems - ระบบผู้เชี่ยวชาญ</h4>
+                        <p>AI ฟื้นคืนชีพด้วยแนวคิด "ระบบผู้เชี่ยวชาญ" (Expert Systems) ที่รวบรวมความรู้ของผู้เชี่ยวชาญมาใส่ในโปรแกรม เพื่อช่วยตัดสินใจในด้านต่างๆ เช่น การวินิจฉัยโรค การวิเคราะห์ทางการเงิน บริษัทต่างๆ ลงทุนมหาศาลในเทคโนโลยีนี้</p>
+                    </div>
+                </div>
+
+                <!-- 1997 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #34d399;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #34d399; font-weight: 700;">1997</span>
+                        <h4>Deep Blue ชนะแชมป์หมากรุกโลก</h4>
+                        <p>คอมพิวเตอร์ Deep Blue ของ IBM เอาชนะ Garry Kasparov แชมป์หมากรุกโลก เป็นครั้งแรกที่เครื่องจักรเอาชนะมนุษย์ที่เก่งที่สุดในเกมที่ต้องใช้สติปัญญาสูง สร้างความตื่นตะลึงไปทั่วโลก และพิสูจน์ว่า AI มีศักยภาพมากกว่าที่หลายคนคิด</p>
+                    </div>
+                </div>
+
+                <!-- 2010s -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #06b6d4;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #06b6d4; font-weight: 700;">2010s</span>
+                        <h4>ยุค Deep Learning - การปฏิวัติ AI</h4>
+                        <p>การพัฒนา Deep Learning และ Neural Network ก้าวกระโดด ด้วยพลังการประมวลผลของ GPU และข้อมูลมหาศาลจากอินเทอร์เน็ต AI สามารถจำแนกภาพ แปลภาษา และเข้าใจเสียงได้แม่นยำมาก ในปี 2016 AlphaGo ของ Google เอาชนะแชมป์โลกเกมโกะ สร้างประวัติศาสตร์อีกครั้ง</p>
+                    </div>
+                </div>
+
+                <!-- 2022+ -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #ec4899;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #ec4899; font-weight: 700;">2022+</span>
+                        <h4>ยุค Generative AI - AI สร้างสรรค์</h4>
+                        <p>การมาถึงของ ChatGPT (พ.ย. 2022) เปลี่ยนโลกอย่างสิ้นเชิง AI สามารถสร้างข้อความ รูปภาพ เสียง วิดีโอ และโค้ดได้อย่างน่าทึ่ง เครื่องมือ AI เช่น DALL-E, Midjourney, Stable Diffusion, Suno AI กลายเป็นที่นิยมไปทั่วโลก ทำให้ทุกคนสามารถเข้าถึงและใช้ AI ได้ง่ายขึ้น</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline SVG Summary -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <svg viewBox="0 0 800 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 800px; width: 100%;">
+                    <line x1="40" y1="40" x2="760" y2="40" stroke="#e2e8f0" stroke-width="3"/>
+                    <!-- Dots -->
+                    <circle cx="80" cy="40" r="8" fill="#6366f1"/>
+                    <text x="80" y="65" text-anchor="middle" font-size="9" fill="#64748b">1950</text>
+                    <circle cx="180" cy="40" r="8" fill="#8b5cf6"/>
+                    <text x="180" y="65" text-anchor="middle" font-size="9" fill="#64748b">1956</text>
+                    <circle cx="300" cy="40" r="8" fill="#94a3b8"/>
+                    <text x="300" y="65" text-anchor="middle" font-size="9" fill="#64748b">1966-74</text>
+                    <circle cx="420" cy="40" r="8" fill="#f59e0b"/>
+                    <text x="420" y="65" text-anchor="middle" font-size="9" fill="#64748b">1980-90</text>
+                    <circle cx="530" cy="40" r="8" fill="#34d399"/>
+                    <text x="530" y="65" text-anchor="middle" font-size="9" fill="#64748b">1997</text>
+                    <circle cx="640" cy="40" r="8" fill="#06b6d4"/>
+                    <text x="640" y="65" text-anchor="middle" font-size="9" fill="#64748b">2010s</text>
+                    <circle cx="730" cy="40" r="10" fill="#ec4899"/>
+                    <text x="730" y="65" text-anchor="middle" font-size="9" fill="#64748b">2022+</text>
+                    <!-- Labels on top -->
+                    <text x="80" y="20" text-anchor="middle" font-size="8" fill="#6366f1">Turing</text>
+                    <text x="180" y="20" text-anchor="middle" font-size="8" fill="#8b5cf6">Dartmouth</text>
+                    <text x="300" y="20" text-anchor="middle" font-size="8" fill="#94a3b8">AI Winter</text>
+                    <text x="420" y="20" text-anchor="middle" font-size="8" fill="#f59e0b">Expert Sys</text>
+                    <text x="530" y="20" text-anchor="middle" font-size="8" fill="#34d399">Deep Blue</text>
+                    <text x="640" y="20" text-anchor="middle" font-size="8" fill="#06b6d4">Deep Learn</text>
+                    <text x="730" y="20" text-anchor="middle" font-size="8" fill="#ec4899">Gen AI</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 1.4: ตัวอย่าง AI รอบตัว -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">1.4</span> ตัวอย่าง AI รอบตัว</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>AI ไม่ได้อยู่แค่ในห้องทดลองหรือบริษัทเทคโนโลยียักษ์ใหญ่เท่านั้น แต่แทรกซึมอยู่ในชีวิตประจำวันของเราทุกคนมากกว่าที่คิด มาดูกันว่า AI ซ่อนอยู่ตรงไหนบ้างในชีวิตของเรา</p>
+                </div>
+            </div>
+
+            <div class="example-grid">
+                <!-- Smartphones -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-mobile-alt" style="font-size: 2rem; color: #6366f1;"></i>
+                    </div>
+                    <h4>สมาร์ทโฟน</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                        <li><strong>Face ID / สแกนใบหน้า</strong> - ใช้ AI จดจำใบหน้าเพื่อปลดล็อค</li>
+                        <li><strong>ผู้ช่วยเสียง</strong> - Siri, Google Assistant เข้าใจคำพูดของเรา</li>
+                        <li><strong>กล้องถ่ายรูป</strong> - AI ปรับแสง โฟกัส ลบพื้นหลังอัตโนมัติ</li>
+                        <li><strong>คีย์บอร์ดอัจฉริยะ</strong> - ทำนายคำที่จะพิมพ์ต่อไป</li>
+                        <li><strong>แอป Photos</strong> - จัดหมวดหมู่รูป ค้นหาคน สถานที่อัตโนมัติ</li>
+                    </ul>
+                </div>
+
+                <!-- Entertainment -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-film" style="font-size: 2rem; color: #8b5cf6;"></i>
+                    </div>
+                    <h4>ความบันเทิง</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                        <li><strong>Netflix / YouTube</strong> - แนะนำหนัง คลิปที่เราน่าจะชอบ</li>
+                        <li><strong>Spotify / Apple Music</strong> - สร้างเพลย์ลิสต์ตามรสนิยม</li>
+                        <li><strong>TikTok</strong> - อัลกอริทึมเลือกวิดีโอที่เราจะสนใจ</li>
+                        <li><strong>เกมออนไลน์</strong> - AI ควบคุม NPC (ตัวละครที่ไม่ใช่ผู้เล่น)</li>
+                        <li><strong>ฟิลเตอร์หน้า</strong> - AR + AI เปลี่ยนหน้าแบบเรียลไทม์</li>
+                    </ul>
+                </div>
+
+                <!-- Shopping -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-shopping-cart" style="font-size: 2rem; color: #34d399;"></i>
+                    </div>
+                    <h4>การช้อปปิ้ง</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                        <li><strong>Shopee / Lazada</strong> - แนะนำสินค้าจากพฤติกรรมการดู</li>
+                        <li><strong>Chatbot</strong> - ตอบคำถามลูกค้าอัตโนมัติ 24 ชม.</li>
+                        <li><strong>การตั้งราคา</strong> - AI ปรับราคาตามอุปสงค์แบบเรียลไทม์</li>
+                        <li><strong>ค้นหาด้วยรูป</strong> - ถ่ายรูปสินค้าเพื่อหาร้านที่ขาย</li>
+                        <li><strong>รีวิวปลอม</strong> - AI ตรวจจับรีวิวที่ไม่จริง</li>
+                    </ul>
+                </div>
+
+                <!-- Transportation -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-car" style="font-size: 2rem; color: #f59e0b;"></i>
+                    </div>
+                    <h4>การเดินทาง</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                        <li><strong>Google Maps</strong> - คำนวณเส้นทาง หลีกเลี่ยงรถติด</li>
+                        <li><strong>Grab / Uber</strong> - จับคู่คนขับ คำนวณราคา เวลา</li>
+                        <li><strong>รถยนต์ไร้คนขับ</strong> - Tesla Autopilot ขับเองได้</li>
+                        <li><strong>จราจรอัจฉริยะ</strong> - ไฟเขียว-แดงปรับตามปริมาณรถ</li>
+                        <li><strong>ที่จอดรถ</strong> - ระบบหาที่จอดว่างอัตโนมัติ</li>
+                    </ul>
+                </div>
+
+                <!-- Health -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-heartbeat" style="font-size: 2rem; color: #ec4899;"></i>
+                    </div>
+                    <h4>สุขภาพ</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                        <li><strong>Smart Watch</strong> - วัดชีพจร ตรวจจับการล้ม คลื่นหัวใจ</li>
+                        <li><strong>วินิจฉัยโรค</strong> - AI อ่านผล X-ray, MRI แม่นยำ</li>
+                        <li><strong>ค้นหายา</strong> - AI ช่วยออกแบบยาใหม่เร็วขึ้น</li>
+                        <li><strong>แอปออกกำลังกาย</strong> - วิเคราะห์ท่าทาง แนะนำโปรแกรม</li>
+                        <li><strong>สุขภาพจิต</strong> - Chatbot ให้คำปรึกษาเบื้องต้น</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #06b6d4;"></i>
+                    </div>
+                    <h4>การศึกษา</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                        <li><strong>ChatGPT</strong> - ช่วยอธิบายเนื้อหา ตอบคำถาม ติวสอบ</li>
+                        <li><strong>Duolingo</strong> - AI ปรับระดับบทเรียนตามความสามารถ</li>
+                        <li><strong>Google Lens</strong> - สแกนโจทย์คณิตศาสตร์ อธิบายวิธีทำ</li>
+                        <li><strong>Grammarly</strong> - ตรวจไวยากรณ์ แนะนำการเขียน</li>
+                        <li><strong>ระบบตรวจข้อสอบ</strong> - ตรวจข้อสอบอัตนัยด้วย AI</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Infographic SVG -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <svg viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%;">
+                    <!-- Center person -->
+                    <circle cx="250" cy="90" r="25" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
+                    <circle cx="250" cy="82" r="8" fill="#6366f1" opacity="0.5"/>
+                    <path d="M238 100c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#6366f1" stroke-width="2"/>
+                    <!-- Surrounding icons with lines -->
+                    <line x1="225" y1="75" x2="140" y2="45" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
+                    <circle cx="130" cy="40" r="18" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="1"/>
+                    <text x="130" y="44" text-anchor="middle" font-size="12">📱</text>
+                    
+                    <line x1="275" y1="75" x2="360" y2="45" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
+                    <circle cx="370" cy="40" r="18" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1"/>
+                    <text x="370" y="44" text-anchor="middle" font-size="12">🎬</text>
+                    
+                    <line x1="225" y1="100" x2="120" y2="130" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+                    <circle cx="110" cy="135" r="18" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="1"/>
+                    <text x="110" y="139" text-anchor="middle" font-size="12">🛒</text>
+                    
+                    <line x1="275" y1="100" x2="380" y2="130" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+                    <circle cx="390" cy="135" r="18" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="1"/>
+                    <text x="390" y="139" text-anchor="middle" font-size="12">🚗</text>
+                    
+                    <line x1="250" y1="115" x2="250" y2="155" stroke="#ec4899" stroke-width="1" opacity="0.3"/>
+                    <circle cx="250" cy="160" r="18" fill="#ec4899" opacity="0.08" stroke="#ec4899" stroke-width="1"/>
+                    <text x="250" y="164" text-anchor="middle" font-size="12">💊</text>
+
+                    <text x="250" y="15" text-anchor="middle" font-size="11" fill="#64748b" font-weight="bold">AI อยู่รอบตัวเรา</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 1.5: AI ทำงานอย่างไร -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">1.5</span> AI ทำงานอย่างไร (ภาพรวม)</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>แม้ว่า AI จะดูซับซ้อน แต่หลักการทำงานพื้นฐานสามารถอธิบายง่ายๆ ได้ด้วยกระบวนการ 3 ขั้นตอนหลัก คล้ายกับวิธีที่สมองมนุษย์ทำงาน นั่นคือ: รับข้อมูลเข้า → ประมวลผล → แสดงผลลัพธ์</p>
+                </div>
+            </div>
+
+            <!-- Input-Process-Output Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 700 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                    <!-- Input Box -->
+                    <rect x="30" y="50" width="170" height="120" rx="16" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="2"/>
+                    <text x="115" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#6366f1">INPUT</text>
+                    <text x="115" y="105" text-anchor="middle" font-size="11" fill="#64748b">ข้อมูลนำเข้า</text>
+                    <text x="115" y="128" text-anchor="middle" font-size="10" fill="#94a3b8">📷 รูปภาพ</text>
+                    <text x="115" y="143" text-anchor="middle" font-size="10" fill="#94a3b8">🎤 เสียง</text>
+                    <text x="115" y="158" text-anchor="middle" font-size="10" fill="#94a3b8">📝 ข้อความ</text>
+                    
+                    <!-- Arrow 1 -->
+                    <path d="M210 110 L250 110" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- Processing Box -->
+                    <rect x="260" y="50" width="180" height="120" rx="16" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="2"/>
+                    <text x="350" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#8b5cf6">PROCESSING</text>
+                    <text x="350" y="105" text-anchor="middle" font-size="11" fill="#64748b">ประมวลผล</text>
+                    <text x="350" y="128" text-anchor="middle" font-size="10" fill="#94a3b8">🧠 โมเดล AI</text>
+                    <text x="350" y="143" text-anchor="middle" font-size="10" fill="#94a3b8">⚙️ อัลกอริทึม</text>
+                    <text x="350" y="158" text-anchor="middle" font-size="10" fill="#94a3b8">📊 การเรียนรู้</text>
+                    
+                    <!-- Arrow 2 -->
+                    <path d="M450 110 L490 110" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead2)"/>
+                    
+                    <!-- Output Box -->
+                    <rect x="500" y="50" width="170" height="120" rx="16" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="2"/>
+                    <text x="585" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#34d399">OUTPUT</text>
+                    <text x="585" y="105" text-anchor="middle" font-size="11" fill="#64748b">ผลลัพธ์</text>
+                    <text x="585" y="128" text-anchor="middle" font-size="10" fill="#94a3b8">✅ คำตอบ</text>
+                    <text x="585" y="143" text-anchor="middle" font-size="10" fill="#94a3b8">🎨 รูปภาพ</text>
+                    <text x="585" y="158" text-anchor="middle" font-size="10" fill="#94a3b8">📋 การตัดสินใจ</text>
+
+                    <!-- Feedback loop -->
+                    <path d="M585 175 L585 200 L115 200 L115 175" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5"/>
+                    <text x="350" y="215" text-anchor="middle" font-size="10" fill="#f59e0b">🔄 Feedback Loop (เรียนรู้และปรับปรุง)</text>
+
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+                        </marker>
+                        <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-database" style="color: #6366f1;"></i> บทบาทของข้อมูล (Data)</h3>
+                <div class="content-text">
+                    <p>ข้อมูลคือ "อาหาร" ของ AI หากไม่มีข้อมูล AI ก็ไม่สามารถเรียนรู้อะไรได้เลย ยิ่ง AI ได้รับข้อมูลที่ดีและมากเพียงพอ ก็ยิ่งทำงานได้แม่นยำมากขึ้น</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>ตัวอย่าง:</strong> ถ้าเราต้องการให้ AI แยกรูป "แมว" กับ "สุนัข" ได้</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>เราต้องให้ AI ดูรูปแมวหลายพันรูป และบอกว่า "นี่คือแมว"</li>
+                        <li>ให้ AI ดูรูปสุนัขหลายพันรูป และบอกว่า "นี่คือสุนัข"</li>
+                        <li>AI จะค่อยๆ จดจำลักษณะที่แตกต่าง (หู หาง ขนาด สีขน ฯลฯ)</li>
+                        <li>เมื่อเห็นรูปใหม่ AI จะใช้สิ่งที่เรียนรู้มาตัดสินใจ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-brain" style="color: #8b5cf6;"></i> แนวคิดเรื่อง "การเรียนรู้" ของ AI</h3>
+                <div class="content-text">
+                    <p>AI เรียนรู้แตกต่างจากมนุษย์ตรงที่ไม่ได้ "เข้าใจ" แบบที่เราเข้าใจ แต่ใช้คณิตศาสตร์และสถิติในการหา "รูปแบบ" (Pattern) จากข้อมูลจำนวนมาก</p>
+                </div>
+
+                <!-- Learning types comparison -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                        <h4 style="color: #6366f1; margin-bottom: 0.75rem;"><i class="fas fa-chalkboard-teacher"></i> Supervised Learning</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">"เรียนรู้แบบมีครูสอน" - ป้อนข้อมูลพร้อมคำตอบ ให้ AI เรียนรู้ความสัมพันธ์ เหมือนครูให้โจทย์พร้อมเฉลย</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>เช่น: สอนให้แยกอีเมลปกติกับสแปม</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem;"><i class="fas fa-search"></i> Unsupervised Learning</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">"เรียนรู้ด้วยตัวเอง" - ป้อนข้อมูลโดยไม่บอกคำตอบ ให้ AI หารูปแบบและจัดกลุ่มเอง เหมือนค้นพบสิ่งใหม่ด้วยตัวเอง</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>เช่น: จัดกลุ่มลูกค้าตามพฤติกรรม</em></p>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                        <h4 style="color: #34d399; margin-bottom: 0.75rem;"><i class="fas fa-gamepad"></i> Reinforcement Learning</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">"เรียนรู้จากรางวัลและบทลงโทษ" - AI ลองทำ ถ้าทำถูกได้รางวัล ถ้าทำผิดถูกลงโทษ เหมือนฝึกสุนัข</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;"><em>เช่น: AI เรียนรู้เล่นเกม AlphaGo</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Human vs AI comparison -->
+            <div class="content-block">
+                <h3><i class="fas fa-balance-scale" style="color: #f59e0b;"></i> เปรียบเทียบการเรียนรู้: มนุษย์ vs AI</h3>
+                <div style="overflow-x: auto; margin-top: 1rem;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: rgba(99, 102, 241, 0.08);">
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;">หัวข้อ</th>
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;"><i class="fas fa-user"></i> มนุษย์</th>
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;"><i class="fas fa-robot"></i> AI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>วิธีเรียนรู้</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">ประสบการณ์ ครูสอน ลองผิดลองถูก</td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">วิเคราะห์ข้อมูลจำนวนมหาศาล</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>ข้อมูลที่ต้องการ</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">ตัวอย่างไม่กี่ตัวอย่างก็เข้าใจ</td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">ต้องการข้อมูลนับล้านตัวอย่าง</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>ความเร็ว</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">ช้า ต้องใช้เวลาหลายปี</td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">เร็วมาก ประมวลผลในวินาที</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>ความคิดสร้างสรรค์</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">สูงมาก คิดนอกกรอบได้</td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">จำกัด ทำได้เฉพาะสิ่งที่เรียนรู้มา</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>ความเหนื่อยล้า</strong></td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">เหนื่อย ต้องพัก ทำผิดพลาดได้</td>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;">ไม่เหนื่อย ทำงาน 24 ชม. สม่ำเสมอ</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem;"><strong>ความเข้าใจบริบท</strong></td>
+                                <td style="padding: 0.75rem 1rem;">เข้าใจอารมณ์ นัยยะ บริบทได้ดี</td>
+                                <td style="padding: 0.75rem 1rem;">เข้าใจบริบทได้จำกัด</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Knowledge Summary -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="knowledge-summary">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f59e0b;"></i>
+                    <h2 style="margin-top: 0.5rem; color: var(--text-primary);">สรุปความรู้ประจำหน่วย</h2>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> สิ่งที่ควรจำ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>AI = ปัญญาประดิษฐ์ (Artificial Intelligence) คือการทำให้คอมพิวเตอร์ทำงานที่ต้องใช้ความฉลาดแบบมนุษย์</li>
+                            <li>AI แบ่งเป็น 3 ระดับ: Narrow AI (มีจริง), General AI (กำลังวิจัย), Super AI (ทฤษฎี)</li>
+                            <li>AI เริ่มต้นจากแนวคิดของ Alan Turing ในปี 1950</li>
+                            <li>คำว่า "AI" ถูกใช้ครั้งแรกในปี 1956 ที่ Dartmouth Conference</li>
+                            <li>AI ทำงานด้วยหลักการ Input → Processing → Output</li>
+                            <li>ข้อมูล (Data) คือหัวใจสำคัญของ AI - ยิ่งมีข้อมูลดี AI ยิ่งเก่ง</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> ประเด็นสำคัญ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>AI ที่เราใช้ทุกวันเป็น Narrow AI ทั้งหมด - เก่งเฉพาะงาน</li>
+                            <li>AI ไม่ได้ "คิด" เหมือนมนุษย์ แต่ใช้สถิติหารูปแบบจากข้อมูล</li>
+                            <li>AI มีทั้งข้อดีและข้อจำกัด ไม่ใช่สิ่งวิเศษที่ทำได้ทุกอย่าง</li>
+                            <li>การพัฒนา AI ผ่านทั้งช่วงรุ่งเรืองและช่วงตกต่ำ (AI Winter)</li>
+                            <li>ปี 2022+ เป็นยุคทองของ Generative AI ที่ทุกคนเข้าถึงได้</li>
+                            <li>AI มีบทบาทในทุกวงการ: สุขภาพ การศึกษา บันเทิง การเงิน</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 12px; border-left: 4px solid #6366f1;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-quote-left" style="color: #6366f1;"></i> <strong>คำถามชวนคิด:</strong> ลองนับดูว่าในวันนี้คุณใช้ AI กี่ครั้ง? ตั้งแต่ปลดล็อคโทรศัพท์ด้วยใบหน้า ดูวิดีโอที่ถูกแนะนำ ใช้แอปนำทาง ไปจนถึงพิมพ์ข้อความที่มีการทำนายคำ ทั้งหมดนี้ล้วนเป็น AI ทั้งสิ้น!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Navigation -->
+    <section class="content-section">
+        <div class="container">
+            <div class="page-nav">
+                <a href="../index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i> หน้าแรก
+                </a>
+                <a href="unit2.html" class="btn btn-primary">
+                    หน่วยถัดไป <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -5,1651 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ปอเนาะ Intertech - วิชา AI และเทคโนโลยีอัจฉริยะ</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">
-            <i class="fas fa-robot"></i>
-            <span>ปอเนาะ Intertech</span>
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">หน้าแรก</a></li>
+                <li><a href="pages/unit1.html">บทเรียน</a></li>
+                <li><a href="pages/review.html">ทบทวน</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">หน้าแรก</a></li>
-            <li><a href="#units">บทเรียน</a></li>
-            <li><a href="#review">ทบทวน</a></li>
-        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1><i class="fas fa-brain"></i> วิชา AI และเทคโนโลยีอัจฉริยะ</h1>
-            <p class="hero-subtitle">เรียนรู้โลกของปัญญาประดิษฐ์ ตั้งแต่พื้นฐานจนถึงการสร้างสรรค์ผลงาน</p>
-            <p class="hero-desc">หลักสูตรนี้ครอบคลุม 6 หน่วยการเรียนรู้ ตั้งแต่ความรู้พื้นฐานเกี่ยวกับ AI, เครื่องมือ AI สมัยใหม่, หลักการทำงานเบื้องหลัง, จริยธรรมและความปลอดภัย, การสร้างโครงงาน ไปจนถึงการเตรียมตัวสู่อาชีพในอนาคต</p>
-            <a href="#units" class="btn-primary">เริ่มเรียนรู้ <i class="fas fa-arrow-right"></i></a>
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
         </div>
-        <div class="hero-decoration">
-            <div class="floating-icon"><i class="fas fa-microchip"></i></div>
-            <div class="floating-icon"><i class="fas fa-network-wired"></i></div>
-            <div class="floating-icon"><i class="fas fa-cogs"></i></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-graduation-cap"></i> หลักสูตรปอเนาะ Intertech
+            </div>
+            <h1 class="hero-title">เรียนรู้ <span class="gradient-text">AI</span> และเทคโนโลยีอัจฉริยะ</h1>
+            <p class="hero-subtitle">หลักสูตรครบวงจร 6 หน่วยการเรียนรู้ ตั้งแต่พื้นฐานจนถึงการสร้างสรรค์ผลงานจริง พร้อมเตรียมตัวสู่อาชีพแห่งอนาคต</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">หน่วยการเรียนรู้</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">หัวข้อเนื้อหา</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">คำถามทบทวน</div>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="pages/unit1.html" class="btn btn-primary"><i class="fas fa-play"></i> เริ่มเรียนรู้</a>
+                <a href="pages/review.html" class="btn btn-outline"><i class="fas fa-clipboard-check"></i> ทบทวนเนื้อหา</a>
+            </div>
+        </div>
+        <div class="hero-illustration">
+            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="150" stroke="url(#grad1)" stroke-width="2" opacity="0.3"/>
+                <circle cx="200" cy="200" r="120" stroke="url(#grad1)" stroke-width="1.5" opacity="0.2"/>
+                <circle cx="200" cy="200" r="90" stroke="url(#grad1)" stroke-width="1" opacity="0.15"/>
+                <!-- Brain icon -->
+                <path d="M200 120c-25 0-45 15-50 35-15 5-25 20-25 37 0 20 13 36 30 40 5 18 22 30 45 30s40-12 45-30c17-4 30-20 30-40 0-17-10-32-25-37-5-20-25-35-50-35z" fill="url(#grad2)" opacity="0.6"/>
+                <!-- Connection nodes -->
+                <circle cx="140" cy="150" r="8" fill="#818cf8" opacity="0.8"/>
+                <circle cx="260" cy="150" r="8" fill="#818cf8" opacity="0.8"/>
+                <circle cx="140" cy="250" r="8" fill="#34d399" opacity="0.8"/>
+                <circle cx="260" cy="250" r="8" fill="#34d399" opacity="0.8"/>
+                <circle cx="200" cy="100" r="6" fill="#f59e0b" opacity="0.8"/>
+                <circle cx="200" cy="300" r="6" fill="#f59e0b" opacity="0.8"/>
+                <!-- Connection lines -->
+                <line x1="140" y1="150" x2="200" y2="200" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                <line x1="260" y1="150" x2="200" y2="200" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                <line x1="140" y1="250" x2="200" y2="200" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+                <line x1="260" y1="250" x2="200" y2="200" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#6366f1"/>
+                        <stop offset="100%" style="stop-color:#8b5cf6"/>
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#6366f1"/>
+                        <stop offset="50%" style="stop-color:#8b5cf6"/>
+                        <stop offset="100%" style="stop-color:#34d399"/>
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
     </header>
 
     <!-- Units Section -->
-    <section id="units" class="units-section">
-        <h2 class="section-title"><i class="fas fa-book-open"></i> บทเรียนทั้งหมด</h2>
-        <p class="section-desc">คลิกที่แต่ละหน่วยเพื่อดูเนื้อหาบทเรียนโดยละเอียด</p>
-
-        <div class="units-grid">
-
-
-            <!-- ==================== UNIT 1 ==================== -->
-            <div class="unit-card" data-unit="1">
-                <div class="unit-header">
-                    <div class="unit-number">1</div>
-                    <h3>รู้จักโลกของ AI และเทคโนโลยีอัจฉริยะ</h3>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
-                </div>
-                <div class="unit-body">
-                    <p class="unit-objective"><strong>สาระสำคัญ:</strong> ทำความเข้าใจพื้นฐาน AI ความหมาย ประวัติความเป็นมา ประเภทของ AI และการประยุกต์ใช้ในชีวิตประจำวัน</p>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 1.1 ความหมายของ AI (Artificial Intelligence)</h4>
-                        <p><strong>AI (Artificial Intelligence)</strong> หรือ <strong>ปัญญาประดิษฐ์</strong> คือสาขาหนึ่งของวิทยาการคอมพิวเตอร์ (Computer Science) ที่มุ่งเน้นการสร้างระบบหรือโปรแกรมที่สามารถทำงานที่ปกติต้องอาศัยสติปัญญาของมนุษย์ เช่น การเรียนรู้ (Learning), การให้เหตุผล (Reasoning), การแก้ปัญหา (Problem Solving), การรับรู้ (Perception), และการเข้าใจภาษา (Language Understanding)</p>
-                        <p>พูดง่ายๆ คือ AI เป็นการทำให้คอมพิวเตอร์ "ฉลาด" ขึ้น สามารถคิด วิเคราะห์ และตัดสินใจได้คล้ายกับมนุษย์ แต่ทำงานได้เร็วกว่าและแม่นยำกว่าในบางด้าน</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> คำสำคัญที่ควรรู้</h5>
-                            <ul>
-                                <li><strong>Artificial</strong> = สิ่งที่มนุษย์สร้างขึ้น (ไม่ใช่ธรรมชาติ)</li>
-                                <li><strong>Intelligence</strong> = ความฉลาด สติปัญญา ความสามารถในการคิดและเรียนรู้</li>
-                                <li><strong>Algorithm</strong> = ชุดคำสั่งหรือขั้นตอนที่ใช้แก้ปัญหา</li>
-                                <li><strong>Data</strong> = ข้อมูลที่ AI ใช้ในการเรียนรู้</li>
-                                <li><strong>Model</strong> = โมเดลหรือแบบจำลองที่ AI สร้างขึ้นจากการเรียนรู้</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 1.2 ประเภทของ AI</h4>
-                        <p>AI สามารถแบ่งออกเป็นประเภทต่างๆ ตามความสามารถและขอบเขตการทำงาน:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-robot"></i> Narrow AI (AI แบบเฉพาะทาง)</h5>
-                                <p>AI ที่ถูกออกแบบให้ทำงานเฉพาะอย่างหนึ่งได้ดีมาก แต่ไม่สามารถทำงานอื่นนอกเหนือจากที่ถูกฝึกมาได้ เช่น ระบบจดจำใบหน้า, ผู้ช่วยเสียง Siri, ระบบแนะนำหนังบน Netflix</p>
-                                <p class="tag">สถานะ: มีอยู่จริงในปัจจุบัน</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-brain"></i> General AI (AI ทั่วไป / AGI)</h5>
-                                <p>AI ที่มีความสามารถเทียบเท่ามนุษย์ สามารถเรียนรู้และทำงานได้หลากหลายเหมือนมนุษย์ คิดเอง เข้าใจบริบท มีอารมณ์และจิตสำนึก</p>
-                                <p class="tag">สถานะ: ยังไม่มีจริง อยู่ในขั้นวิจัย</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-bolt"></i> Super AI (AI เหนือมนุษย์ / ASI)</h5>
-                                <p>AI ที่มีความฉลาดเหนือกว่ามนุษย์ในทุกด้าน สามารถคิดค้นสิ่งใหม่ๆ ที่มนุษย์ทำไม่ได้ เป็นแนวคิดในอนาคตที่ยังห่างไกล</p>
-                                <p class="tag">สถานะ: เป็นทฤษฎี ยังไม่มีจริง</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 1.3 วิวัฒนาการของ AI</h4>
-                        <p>ประวัติศาสตร์ของ AI มีการพัฒนามายาวนานหลายทศวรรษ:</p>
-
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year">1950</div>
-                                <div class="timeline-content">
-                                    <h5>Alan Turing เสนอ "Turing Test"</h5>
-                                    <p>Alan Turing นักคณิตศาสตร์ชาวอังกฤษ เสนอคำถาม "เครื่องจักรสามารถคิดได้หรือไม่?" และเสนอแนวทดสอบที่เรียกว่า Turing Test เพื่อทดสอบว่า AI สามารถหลอกให้มนุษย์คิดว่ากำลังสนทนากับมนุษย์ด้วยกันได้หรือไม่</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">1956</div>
-                                <div class="timeline-content">
-                                    <h5>กำเนิดคำว่า "Artificial Intelligence"</h5>
-                                    <p>John McCarthy จัดการประชุมที่ Dartmouth College ประเทศสหรัฐอเมริกา และบัญญัติคำว่า "Artificial Intelligence" ขึ้นเป็นครั้งแรก ถือเป็นจุดเริ่มต้นอย่างเป็นทางการของสาขา AI</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">1966-1974</div>
-                                <div class="timeline-content">
-                                    <h5>ยุคแรกของ AI และ "AI Winter" ครั้งที่ 1</h5>
-                                    <p>มีการพัฒนา AI แบบกฎ (Rule-based) แต่เทคโนโลยียังมีข้อจำกัดมาก ทำให้เงินทุนวิจัยลดลง เกิดภาวะ "AI Winter" คือช่วงที่ความสนใจใน AI ลดลงอย่างมาก</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">1980-1990</div>
-                                <div class="timeline-content">
-                                    <h5>ยุค Expert Systems</h5>
-                                    <p>ระบบผู้เชี่ยวชาญ (Expert Systems) ได้รับความนิยม โดยเป็นโปรแกรมที่เก็บความรู้ของผู้เชี่ยวชาญไว้ในรูปกฎ if-then แล้วใช้ตัดสินใจ เช่น ระบบวินิจฉัยโรค</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">1997</div>
-                                <div class="timeline-content">
-                                    <h5>Deep Blue ชนะแชมป์หมากรุกโลก</h5>
-                                    <p>คอมพิวเตอร์ Deep Blue ของ IBM เอาชนะ Garry Kasparov แชมป์หมากรุกโลก เป็นครั้งแรกที่ AI ชนะมนุษย์ในเกมที่ต้องใช้กลยุทธ์ขั้นสูง</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">2010s</div>
-                                <div class="timeline-content">
-                                    <h5>ยุค Deep Learning</h5>
-                                    <p>การพัฒนา Neural Networks หลายชั้น (Deep Learning) ทำให้ AI ก้าวกระโดด สามารถจดจำภาพ เข้าใจเสียงพูด และแปลภาษาได้ดีขึ้นมาก เช่น Google Translate, Face Recognition</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">2022-ปัจจุบัน</div>
-                                <div class="timeline-content">
-                                    <h5>ยุค Generative AI</h5>
-                                    <p>ChatGPT, DALL-E, Midjourney, Gemini และ AI สร้างสรรค์อื่นๆ เปลี่ยนโลก ทำให้ทุกคนสามารถใช้ AI สร้างข้อความ รูปภาพ เพลง และวิดีโอได้ง่ายดาย</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 1.4 ตัวอย่าง AI รอบตัวในชีวิตประจำวัน</h4>
-                        <p>AI อยู่รอบตัวเรามากกว่าที่คิด ลองดูตัวอย่างเหล่านี้:</p>
-
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-mobile-alt"></i>
-                                <h5>สมาร์ทโฟน</h5>
-                                <p>Face ID ปลดล็อกหน้าจอ, ผู้ช่วยเสียง (Siri, Google Assistant), การพิมพ์คำแนะนำอัตโนมัติ, การจัดระเบียบรูปภาพอัตโนมัติ</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-film"></i>
-                                <h5>ความบันเทิง</h5>
-                                <p>Netflix/YouTube แนะนำหนังที่คุณน่าจะชอบ, Spotify แนะนำเพลง, TikTok จัดเรียง feed ตามความสนใจ</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-shopping-cart"></i>
-                                <h5>การซื้อของออนไลน์</h5>
-                                <p>Shopee/Lazada แนะนำสินค้า, Chatbot ตอบคำถามลูกค้า, ระบบตรวจสอบการฉ้อโกงบัตรเครดิต</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-car"></i>
-                                <h5>การเดินทาง</h5>
-                                <p>Google Maps แนะนำเส้นทาง, Grab/Bolt จับคู่ผู้โดยสารกับคนขับ, รถยนต์ Tesla ขับเคลื่อนอัตโนมัติ</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-heartbeat"></i>
-                                <h5>สุขภาพ</h5>
-                                <p>AI วิเคราะห์ภาพ X-ray, นาฬิกาอัจฉริยะตรวจจับหัวใจเต้นผิดปกติ, AI ช่วยค้นหาตัวยาใหม่</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <h5>การศึกษา</h5>
-                                <p>Duolingo ปรับบทเรียนตามผู้เรียน, AI ตรวจการบ้าน, ChatGPT ช่วยอธิบายเนื้อหาที่ยาก, ระบบ Adaptive Learning</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="knowledge-box">
-                        <h4><i class="fas fa-lightbulb"></i> สรุปความรู้หน่วยที่ 1</h4>
-                        <p>AI คือระบบคอมพิวเตอร์ที่เลียนแบบสติปัญญามนุษย์ มีมาตั้งแต่ปี 1950 และพัฒนาอย่างก้าวกระโดดในยุคปัจจุบัน AI ที่เราใช้ทุกวันเป็นแบบ Narrow AI ซึ่งเก่งเฉพาะทาง ส่วน General AI และ Super AI ยังเป็นเรื่องของอนาคต สิ่งสำคัญคือเราควรเข้าใจว่า AI ทำงานอย่างไร เพื่อจะได้ใช้ประโยชน์จากมันได้อย่างเต็มที่</p>
-                    </div>
-                </div>
+    <section class="section units-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-book-open"></i> หลักสูตร</span>
+                <h2 class="section-title">6 หน่วยการเรียนรู้</h2>
+                <p class="section-desc">เนื้อหาครบถ้วนตั้งแต่พื้นฐานจนถึงการประยุกต์ใช้จริง</p>
             </div>
 
-
-            <!-- ==================== UNIT 2 ==================== -->
-            <div class="unit-card" data-unit="2">
-                <div class="unit-header">
-                    <div class="unit-number">2</div>
-                    <h3>เครื่องมือ AI เพื่อการเรียนรู้และการทำงาน</h3>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
-                </div>
-                <div class="unit-body">
-                    <p class="unit-objective"><strong>สาระสำคัญ:</strong> รู้จักเครื่องมือ AI ที่หลากหลาย เรียนรู้วิธีใช้งาน และฝึกเขียน Prompt เพื่อสร้างสรรค์ผลงานได้อย่างมีประสิทธิภาพ</p>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 2.1 Generative AI คืออะไร?</h4>
-                        <p><strong>Generative AI</strong> คือ AI ที่สามารถ "สร้าง" เนื้อหาใหม่ได้ ไม่ว่าจะเป็นข้อความ รูปภาพ เสียง เพลง หรือวิดีโอ โดยเรียนรู้จากข้อมูลมหาศาลที่ถูกป้อนเข้าไป แล้วสร้างผลลัพธ์ใหม่ที่ไม่เคยมีมาก่อน</p>
-                        <p>Generative AI ทำงานบนพื้นฐานของ <strong>Large Language Model (LLM)</strong> ซึ่งเป็นโมเดล AI ขนาดใหญ่ที่ถูกฝึกด้วยข้อมูลข้อความจำนวนมหาศาลจากอินเทอร์เน็ต หนังสือ และแหล่งข้อมูลต่างๆ ทำให้สามารถเข้าใจและสร้างภาษาได้อย่างเป็นธรรมชาติ</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> ประเภทของ Generative AI</h5>
-                            <ul>
-                                <li><strong>Text Generation</strong> = สร้างข้อความ (ChatGPT, Gemini, Claude)</li>
-                                <li><strong>Image Generation</strong> = สร้างรูปภาพ (DALL-E, Midjourney, Recraft)</li>
-                                <li><strong>Audio Generation</strong> = สร้างเสียง/เพลง (Suno, Udio)</li>
-                                <li><strong>Video Generation</strong> = สร้างวิดีโอ (Sora, Runway, Kling)</li>
-                                <li><strong>Code Generation</strong> = สร้างโค้ด (GitHub Copilot, Cursor)</li>
-                            </ul>
-                        </div>
+            <div class="units-grid">
+                <!-- Unit 1 -->
+                <a href="pages/unit1.html" class="unit-card">
+                    <div class="unit-card-icon" style="--accent: #6366f1;">
+                        <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="8" fill="currentColor" opacity="0.3"/><circle cx="32" cy="14" r="4" fill="currentColor"/><circle cx="32" cy="50" r="4" fill="currentColor"/><circle cx="14" cy="32" r="4" fill="currentColor"/><circle cx="50" cy="32" r="4" fill="currentColor"/><line x1="32" y1="18" x2="32" y2="24" stroke="currentColor" stroke-width="1.5"/><line x1="32" y1="40" x2="32" y2="46" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="32" x2="24" y2="32" stroke="currentColor" stroke-width="1.5"/><line x1="40" y1="32" x2="46" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 2.2 ChatGPT และ Gemini - AI สนทนาอัจฉริยะ</h4>
-                        <p><strong>ChatGPT</strong> (สร้างโดย OpenAI) และ <strong>Gemini</strong> (สร้างโดย Google) เป็น AI สำหรับการสนทนาที่สามารถ:</p>
-                        <ul class="detail-list">
-                            <li>ตอบคำถามเกี่ยวกับทุกเรื่อง ตั้งแต่วิทยาศาสตร์ ประวัติศาสตร์ ไปจนถึงคำแนะนำในชีวิตประจำวัน</li>
-                            <li>เขียนบทความ เรียงความ จดหมาย อีเมล หรือเนื้อหาต่างๆ</li>
-                            <li>สรุปเนื้อหาจากข้อความยาวๆ ให้สั้นกระชับ</li>
-                            <li>แปลภาษาระหว่างภาษาต่างๆ ได้หลายสิบภาษา</li>
-                            <li>ช่วยระดมความคิด (Brainstorm) หาไอเดียใหม่ๆ</li>
-                            <li>เขียนโค้ดโปรแกรม อธิบายโค้ด และช่วยแก้ Bug</li>
-                            <li>วิเคราะห์ข้อมูล สร้างตาราง และจัดระเบียบข้อมูล</li>
-                        </ul>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-comment-dots"></i> ChatGPT</h5>
-                                <p><strong>ผู้พัฒนา:</strong> OpenAI</p>
-                                <p><strong>จุดเด่น:</strong> เขียนเนื้อหาคุณภาพสูง, สร้างสรรค์, มีหลายเวอร์ชัน (GPT-4o, GPT-4), ใช้ได้ฟรีบางส่วน</p>
-                                <p><strong>ข้อจำกัด:</strong> ข้อมูลอาจไม่อัปเดตล่าสุดในเวอร์ชันฟรี</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-sparkles"></i> Gemini</h5>
-                                <p><strong>ผู้พัฒนา:</strong> Google DeepMind</p>
-                                <p><strong>จุดเด่น:</strong> เชื่อมต่อกับ Google Search ได้ข้อมูลอัปเดต, วิเคราะห์รูปภาพได้, ทำงานร่วมกับ Google Workspace</p>
-                                <p><strong>ข้อจำกัด:</strong> บางครั้งคำตอบอาจไม่ลึกซึ้งเท่า ChatGPT ในงานสร้างสรรค์</p>
-                            </div>
-                        </div>
+                    <div class="unit-card-content">
+                        <span class="unit-badge">หน่วยที่ 1</span>
+                        <h3>รู้จักโลกของ AI</h3>
+                        <p>ทำความเข้าใจ AI คืออะไร ประวัติความเป็นมา ประเภทของ AI และตัวอย่างในชีวิตประจำวัน</p>
                     </div>
+                    <div class="unit-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
 
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 2.3 Canva Magic และ Recraft - AI สร้างงานกราฟิก</h4>
-                        <p>เครื่องมือ AI สำหรับงานออกแบบที่ช่วยให้ทุกคนสร้างงานกราฟิกสวยงามได้โดยไม่ต้องเป็นนักออกแบบมืออาชีพ:</p>
-
-                        <div class="tool-detail">
-                            <h5><i class="fas fa-palette"></i> Canva Magic Studio</h5>
-                            <p>Canva เพิ่มฟีเจอร์ AI หลายอย่างที่เรียกรวมว่า "Magic Studio":</p>
-                            <ul class="detail-list">
-                                <li><strong>Magic Design:</strong> ใส่ Prompt แล้ว AI จะสร้างดีไซน์ให้ทั้งชิ้น เช่น โปสเตอร์ สไลด์ โพสต์ Social Media</li>
-                                <li><strong>Magic Write:</strong> AI ช่วยเขียนข้อความในงานออกแบบ เช่น caption, หัวข้อ, คำอธิบาย</li>
-                                <li><strong>Magic Eraser:</strong> ลบวัตถุที่ไม่ต้องการออกจากรูปภาพ</li>
-                                <li><strong>Magic Expand:</strong> ขยายพื้นที่ของภาพให้กว้างขึ้นโดย AI เติมส่วนที่ขาดให้</li>
-                                <li><strong>Background Remover:</strong> ลบพื้นหลังของภาพอัตโนมัติ</li>
-                                <li><strong>Text to Image:</strong> พิมพ์คำอธิบายแล้ว AI จะสร้างรูปภาพให้</li>
-                            </ul>
-                        </div>
-
-                        <div class="tool-detail">
-                            <h5><i class="fas fa-vector-square"></i> Recraft</h5>
-                            <p>Recraft เป็นเครื่องมือ AI สร้างภาพที่เน้นงานออกแบบแบบมืออาชีพ:</p>
-                            <ul class="detail-list">
-                                <li>สร้างภาพ Vector, Illustration, Icon ที่มีคุณภาพสูง</li>
-                                <li>สร้างภาพแบบ Realistic ที่ดูเหมือนถ่ายจริง</li>
-                                <li>ออกแบบ Mockup, Branding, Logo ได้</li>
-                                <li>ควบคุมสไตล์ภาพได้ละเอียด เช่น สีวรรณร้อน วรรณเย็น</li>
-                                <li>แก้ไขภาพบางส่วน (Inpainting) ได้</li>
-                            </ul>
-                        </div>
+                <!-- Unit 2 -->
+                <a href="pages/unit2.html" class="unit-card">
+                    <div class="unit-card-icon" style="--accent: #8b5cf6;">
+                        <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="16" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M20 28h8M20 34h12M20 40h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="44" cy="34" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M42 32l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 2.4 Suno และ Meta AI - AI สร้างเพลงและมัลติมีเดีย</h4>
-
-                        <div class="tool-detail">
-                            <h5><i class="fas fa-music"></i> Suno AI</h5>
-                            <p>Suno เป็น AI สร้างเพลงที่น่าทึ่ง สามารถ:</p>
-                            <ul class="detail-list">
-                                <li>สร้างเพลงเต็มเพลงจากข้อความสั้นๆ เช่น "เพลงป๊อปสนุกๆ เกี่ยวกับวันหยุด"</li>
-                                <li>เลือกแนวเพลงได้ เช่น Pop, Rock, R&B, Jazz, Hip-Hop, ลูกทุ่ง</li>
-                                <li>มีเสียงร้องที่ฟังดูเป็นธรรมชาติ ทั้งภาษาอังกฤษและไทย</li>
-                                <li>เขียนเนื้อเพลงเองแล้วให้ AI แต่งทำนองให้ หรือให้ AI เขียนเนื้อเพลงให้ทั้งหมด</li>
-                                <li>สร้างเพลงได้ยาว 2-4 นาทีต่อเพลง</li>
-                            </ul>
-                        </div>
-
-                        <div class="tool-detail">
-                            <h5><i class="fas fa-meta"></i> Meta AI</h5>
-                            <p>Meta AI (สร้างโดย Meta/Facebook) มีความสามารถหลากหลาย:</p>
-                            <ul class="detail-list">
-                                <li>สร้างรูปภาพจากข้อความ (Text-to-Image) ใช้โมเดล Imagine</li>
-                                <li>สนทนาตอบคำถามเหมือน ChatGPT</li>
-                                <li>ใช้ได้บน Facebook, Instagram, WhatsApp, Messenger</li>
-                                <li>ช่วยเขียน Caption สำหรับโพสต์ Social Media</li>
-                                <li>แนะนำสถานที่ ร้านอาหาร กิจกรรมต่างๆ</li>
-                            </ul>
-                        </div>
+                    <div class="unit-card-content">
+                        <span class="unit-badge">หน่วยที่ 2</span>
+                        <h3>เครื่องมือ AI</h3>
+                        <p>เรียนรู้ ChatGPT, Gemini, Canva Magic, Recraft, Suno และวิธีเขียน Prompt อย่างมืออาชีพ</p>
                     </div>
+                    <div class="unit-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
 
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 2.5 ศิลปะการเขียน Prompt</h4>
-                        <p><strong>Prompt</strong> คือข้อความหรือคำสั่งที่เราพิมพ์ให้ AI เพื่อบอกว่าต้องการให้ทำอะไร Prompt ที่ดีจะให้ผลลัพธ์ที่ดี Prompt ที่ไม่ชัดเจนจะให้ผลลัพธ์ที่ไม่ตรงใจ</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> สูตร RACE สำหรับเขียน Prompt ที่ดี</h5>
-                            <ul>
-                                <li><strong>R - Role (บทบาท):</strong> กำหนดบทบาทให้ AI เช่น "สมมติว่าคุณเป็นครูสอนวิทยาศาสตร์"</li>
-                                <li><strong>A - Action (การกระทำ):</strong> บอกว่าต้องการให้ทำอะไร เช่น "อธิบาย" "เขียน" "สรุป" "เปรียบเทียบ"</li>
-                                <li><strong>C - Context (บริบท):</strong> ให้ข้อมูลเพิ่มเติม เช่น "สำหรับนักเรียน ม.3" "ความยาว 200 คำ"</li>
-                                <li><strong>E - Example (ตัวอย่าง):</strong> ให้ตัวอย่างผลลัพธ์ที่ต้องการ เพื่อให้ AI เข้าใจรูปแบบ</li>
-                            </ul>
-                        </div>
-
-                        <div class="prompt-examples">
-                            <h5><i class="fas fa-pencil-alt"></i> ตัวอย่าง Prompt ที่ดี vs ไม่ดี</h5>
-                            <div class="prompt-bad">
-                                <span class="prompt-label bad">Prompt ไม่ดี:</span>
-                                <p>"เขียนเรื่องเกี่ยวกับหมา"</p>
-                            </div>
-                            <div class="prompt-good">
-                                <span class="prompt-label good">Prompt ที่ดี:</span>
-                                <p>"เขียนเรื่องสั้นสำหรับเด็กอายุ 10 ปี เกี่ยวกับสุนัขพันธุ์ชิบะอินูที่ช่วยเจ้าของหาแมวที่หายไป ความยาวประมาณ 300 คำ ใช้ภาษาง่ายๆ สนุกสนาน มีบทสนทนาผสม"</p>
-                            </div>
-                            <div class="prompt-bad">
-                                <span class="prompt-label bad">Prompt ไม่ดี:</span>
-                                <p>"สร้างรูปแมว"</p>
-                            </div>
-                            <div class="prompt-good">
-                                <span class="prompt-label good">Prompt ที่ดี:</span>
-                                <p>"สร้างภาพวาดสีน้ำของแมวเปอร์เซียสีขาว กำลังนั่งอยู่บนหน้าต่างโบราณ มีดอกไม้สีชมพูอยู่ข้างๆ แสงอาทิตย์ส่องเข้ามาอุ่นๆ สไตล์ Studio Ghibli"</p>
-                            </div>
-                        </div>
+                <!-- Unit 3 -->
+                <a href="pages/unit3.html" class="unit-card">
+                    <div class="unit-card-icon" style="--accent: #06b6d4;">
+                        <svg viewBox="0 0 64 64" fill="none"><path d="M16 48V16l16 16 16-16v32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="48" r="4" fill="currentColor" opacity="0.3"/><circle cx="48" cy="48" r="4" fill="currentColor" opacity="0.3"/></svg>
                     </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 2.6 เครื่องมือ AI อื่นๆ ที่น่าสนใจ</h4>
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-language"></i>
-                                <h5>Google Translate / DeepL</h5>
-                                <p>AI แปลภาษาที่แม่นยำ รองรับมากกว่า 100 ภาษา สามารถแปลเอกสาร รูปภาพ และเสียงพูดได้</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-camera"></i>
-                                <h5>Google Lens</h5>
-                                <p>ใช้กล้องถ่ายรูปเพื่อค้นหาข้อมูล แปลข้อความในภาพ จดจำพืช สัตว์ สินค้า และแก้โจทย์คณิตศาสตร์</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-pen-nib"></i>
-                                <h5>Grammarly</h5>
-                                <p>AI ตรวจแก้ไขภาษาอังกฤษ ทั้งไวยากรณ์ การสะกดคำ น้ำเสียง และแนะนำการเขียนที่ดีขึ้น</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-video"></i>
-                                <h5>CapCut AI</h5>
-                                <p>ตัดต่อวิดีโอด้วย AI ใส่ subtitle อัตโนมัติ ลบพื้นหลัง เพิ่ม effect และสร้าง Avatar พูด</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-file-powerpoint"></i>
-                                <h5>Gamma / Beautiful.ai</h5>
-                                <p>AI สร้างสไลด์นำเสนอ (Presentation) อัตโนมัติ แค่ใส่หัวข้อก็ได้สไลด์สวยงามพร้อมเนื้อหา</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-microphone"></i>
-                                <h5>ElevenLabs</h5>
-                                <p>AI สร้างเสียงพูดที่เหมือนจริงมาก สามารถ Clone เสียง พากย์เสียง และแปลงข้อความเป็นเสียง</p>
-                            </div>
-                        </div>
+                    <div class="unit-card-content">
+                        <span class="unit-badge">หน่วยที่ 3</span>
+                        <h3>ตรรกะของ AI</h3>
+                        <p>Computational Thinking, อัลกอริทึม, Machine Learning, Neural Network และ Deep Learning</p>
                     </div>
+                    <div class="unit-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
 
-                    <div class="knowledge-box">
-                        <h4><i class="fas fa-lightbulb"></i> สรุปความรู้หน่วยที่ 2</h4>
-                        <p>เครื่องมือ AI ในปัจจุบันครอบคลุมทุกด้านของการสร้างสรรค์ผลงาน ตั้งแต่ข้อความ รูปภาพ เสียง ไปจนถึงวิดีโอ กุญแจสำคัญในการใช้ AI ให้ได้ผลดีคือ "การเขียน Prompt ที่ดี" ใช้สูตร RACE (Role, Action, Context, Example) เพื่อสื่อสารกับ AI ให้ชัดเจน จะช่วยให้ได้ผลลัพธ์ตรงตามต้องการมากที่สุด</p>
+                <!-- Unit 4 -->
+                <a href="pages/unit4.html" class="unit-card">
+                    <div class="unit-card-icon" style="--accent: #f59e0b;">
+                        <svg viewBox="0 0 64 64" fill="none"><path d="M32 12l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="36" width="32" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M24 44h16M24 48h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     </div>
-                </div>
+                    <div class="unit-card-content">
+                        <span class="unit-badge">หน่วยที่ 4</span>
+                        <h3>จริยธรรม AI</h3>
+                        <p>Deepfake, ลิขสิทธิ์ผลงาน AI, ความเป็นส่วนตัว, ข่าวปลอม และการใช้ AI อย่างรับผิดชอบ</p>
+                    </div>
+                    <div class="unit-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <!-- Unit 5 -->
+                <a href="pages/unit5.html" class="unit-card">
+                    <div class="unit-card-icon" style="--accent: #ec4899;">
+                        <svg viewBox="0 0 64 64" fill="none"><path d="M20 44l-4 8h32l-4-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="16" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2"/><path d="M26 28l6 4-6 4z" fill="currentColor" opacity="0.5"/><path d="M36 24h4M36 30h4M36 36h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="unit-card-content">
+                        <span class="unit-badge">หน่วยที่ 5</span>
+                        <h3>โครงงาน AI</h3>
+                        <p>ลงมือสร้างผลงานจริง ตั้งแต่เลือกหัวข้อ วางแผน สร้างสื่อ ไปจนถึงนำเสนอ</p>
+                    </div>
+                    <div class="unit-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <!-- Unit 6 -->
+                <a href="pages/unit6.html" class="unit-card">
+                    <div class="unit-card-icon" style="--accent: #34d399;">
+                        <svg viewBox="0 0 64 64" fill="none"><path d="M32 12v8M24 16l8 4 8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="24" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M28 32h8M28 38h8M28 44h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="44" cy="44" r="8" stroke="currentColor" stroke-width="2"/><path d="M42 44l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="unit-card-content">
+                        <span class="unit-badge">หน่วยที่ 6</span>
+                        <h3>อาชีพด้าน AI</h3>
+                        <p>สรุปความรู้ สำรวจอาชีพ AI ทักษะแห่งอนาคต และเส้นทางการเตรียมตัว</p>
+                    </div>
+                    <div class="unit-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
             </div>
+        </div>
+    </section>
 
-
-            <!-- ==================== UNIT 3 ==================== -->
-            <div class="unit-card" data-unit="3">
-                <div class="unit-header">
-                    <div class="unit-number">3</div>
-                    <h3>การคิดเชิงคำนวณและตรรกะของ AI</h3>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
-                </div>
-                <div class="unit-body">
-                    <p class="unit-objective"><strong>สาระสำคัญ:</strong> เข้าใจหลักการคิดเชิงคำนวณ (Computational Thinking), อัลกอริทึม, หลักการทำงานของ Machine Learning และกระบวนการฝึกโมเดล AI</p>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 3.1 การคิดเชิงคำนวณ (Computational Thinking)</h4>
-                        <p><strong>Computational Thinking</strong> คือวิธีคิดอย่างเป็นระบบเพื่อแก้ปัญหา ไม่จำเป็นต้องเกี่ยวข้องกับคอมพิวเตอร์เสมอไป แต่เป็นทักษะการคิดที่ช่วยให้เราจัดการปัญหาที่ซับซ้อนได้อย่างมีประสิทธิภาพ ประกอบด้วย 4 ขั้นตอนหลัก:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-puzzle-piece"></i> 1. Decomposition (การแบ่งย่อย)</h5>
-                                <p>แบ่งปัญหาใหญ่ออกเป็นปัญหาเล็กๆ ที่จัดการได้ง่ายกว่า</p>
-                                <p><strong>ตัวอย่าง:</strong> ถ้าต้องจัดงานวันเกิด → แบ่งเป็น: 1) เลือกสถานที่ 2) ทำรายชื่อแขก 3) สั่งเค้ก 4) ตกแต่งสถานที่ 5) เตรียมอาหาร</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-search"></i> 2. Pattern Recognition (การหารูปแบบ)</h5>
-                                <p>มองหาความเหมือนหรือรูปแบบที่ซ้ำกันในปัญหา</p>
-                                <p><strong>ตัวอย่าง:</strong> สังเกตว่าทุกครั้งที่ฝนตก รถจะติดมาก → รู้รูปแบบ = ถ้าฝนตก ควรออกจากบ้านเร็วขึ้น</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-filter"></i> 3. Abstraction (การคัดกรอง)</h5>
-                                <p>เลือกเฉพาะข้อมูลที่สำคัญ ตัดสิ่งที่ไม่จำเป็นออก</p>
-                                <p><strong>ตัวอย่าง:</strong> ถ้าจะวาดแผนที่จากบ้านไปโรงเรียน → ไม่ต้องวาดทุกต้นไม้ ทุกบ้าน แค่วาดถนนหลัก จุดเลี้ยว และจุดสังเกตสำคัญ</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-code"></i> 4. Algorithm Design (การออกแบบอัลกอริทึม)</h5>
-                                <p>เขียนขั้นตอนที่ชัดเจนในการแก้ปัญหา เพื่อให้ใครก็ตามทำตามได้</p>
-                                <p><strong>ตัวอย่าง:</strong> สูตรทำไข่เจียว → 1) ตอกไข่ใส่ชาม 2) ปรุงรส 3) ตีให้เข้ากัน 4) ตั้งกระทะใส่น้ำมัน 5) เทไข่ลงกระทะ 6) รอจนสุก 7) ตักใส่จาน</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 3.2 อัลกอริทึม (Algorithm) - หัวใจของ AI</h4>
-                        <p><strong>อัลกอริทึม</strong> คือชุดของคำสั่งหรือขั้นตอนที่ชัดเจน เรียงลำดับอย่างเป็นระบบ เพื่อใช้แก้ปัญหาหรือทำงานให้สำเร็จ อัลกอริทึมเป็นหัวใจหลักของ AI เพราะทุกอย่างที่ AI ทำ ล้วนมาจากอัลกอริทึม</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> คุณสมบัติของอัลกอริทึมที่ดี</h5>
-                            <ul>
-                                <li><strong>ชัดเจน (Precise):</strong> ทุกขั้นตอนต้องไม่คลุมเครือ เข้าใจได้ทันที</li>
-                                <li><strong>มีจุดเริ่มต้นและสิ้นสุด (Finite):</strong> ต้องมีจุดจบ ไม่วนลูปไม่รู้จบ</li>
-                                <li><strong>มีผลลัพธ์ (Output):</strong> ต้องได้คำตอบหรือผลลัพธ์เมื่อทำเสร็จ</li>
-                                <li><strong>มีประสิทธิภาพ (Effective):</strong> ทำงานได้จริง ไม่มีขั้นตอนที่เป็นไปไม่ได้</li>
-                                <li><strong>รับข้อมูลเข้า (Input):</strong> สามารถรับข้อมูลตั้งต้นได้</li>
-                            </ul>
-                        </div>
-
-                        <div class="content-section inner">
-                            <h5><i class="fas fa-sort-amount-down"></i> ตัวอย่างอัลกอริทึม: การเรียงลำดับ (Sorting)</h5>
-                            <p>สมมติมีเลข: 5, 2, 8, 1, 9 ต้องเรียงจากน้อยไปมาก</p>
-                            <div class="algorithm-box">
-                                <p><strong>Bubble Sort (การเรียงแบบฟองสบู่):</strong></p>
-                                <ol>
-                                    <li>เปรียบเทียบเลขที่อยู่ติดกันทีละคู่</li>
-                                    <li>ถ้าเลขซ้ายมากกว่าเลขขวา → สลับที่</li>
-                                    <li>ทำซ้ำจนกว่าจะไม่มีการสลับเกิดขึ้น</li>
-                                </ol>
-                                <p><strong>รอบที่ 1:</strong> [5,2,8,1,9] → [2,5,8,1,9] → [2,5,8,1,9] → [2,5,1,8,9] → [2,5,1,8,9]</p>
-                                <p><strong>รอบที่ 2:</strong> [2,5,1,8,9] → [2,5,1,8,9] → [2,1,5,8,9] → [2,1,5,8,9]</p>
-                                <p><strong>รอบที่ 3:</strong> [2,1,5,8,9] → [1,2,5,8,9] ✓ เสร็จแล้ว!</p>
-                            </div>
-                        </div>
-
-                        <div class="content-section inner">
-                            <h5><i class="fas fa-search"></i> ตัวอย่างอัลกอริทึม: การค้นหา (Searching)</h5>
-                            <p>สมมติต้องหาเลข 7 จากชุดเลขที่เรียงแล้ว: 1, 3, 5, 7, 9, 11, 13</p>
-                            <div class="algorithm-box">
-                                <p><strong>Binary Search (การค้นหาแบบแบ่งครึ่ง):</strong></p>
-                                <ol>
-                                    <li>ดูเลขตรงกลาง → 7 (ตำแหน่งที่ 4)</li>
-                                    <li>7 = 7 → เจอแล้ว!</li>
-                                </ol>
-                                <p>ถ้าหาเลข 11:</p>
-                                <ol>
-                                    <li>ดูเลขตรงกลาง → 7 (ตำแหน่งที่ 4)</li>
-                                    <li>11 > 7 → ค้นหาในครึ่งขวา [9, 11, 13]</li>
-                                    <li>ดูเลขตรงกลาง → 11 → เจอแล้ว!</li>
-                                </ol>
-                                <p><em>Binary Search เร็วกว่าการค้นหาทีละตัวมาก เพราะแบ่งครึ่งข้อมูลทุกรอบ</em></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 3.3 Machine Learning (ML) - การเรียนรู้ของเครื่อง</h4>
-                        <p><strong>Machine Learning</strong> คือสาขาย่อยของ AI ที่ทำให้คอมพิวเตอร์สามารถ "เรียนรู้" จากข้อมูล โดยไม่ต้องเขียนโปรแกรมกำหนดทุกกฎเกณฑ์ล่วงหน้า ระบบจะวิเคราะห์รูปแบบ (Pattern) จากข้อมูลจำนวนมาก แล้วสร้างโมเดลที่ใช้ทำนายหรือตัดสินใจกับข้อมูลใหม่ได้</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> เปรียบเทียบ: การเขียนโปรแกรมแบบดั้งเดิม vs Machine Learning</h5>
-                            <ul>
-                                <li><strong>แบบดั้งเดิม:</strong> โปรแกรมเมอร์เขียนกฎ → ป้อนข้อมูล → ได้คำตอบ (เช่น ถ้าอุณหภูมิ > 38°C แสดงว่า "มีไข้")</li>
-                                <li><strong>Machine Learning:</strong> ป้อนข้อมูล + คำตอบ → AI หากฎเอง → ใช้กฎนั้นทำนายข้อมูลใหม่</li>
-                            </ul>
-                        </div>
-
-                        <h5><i class="fas fa-sitemap"></i> ประเภทของ Machine Learning</h5>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-chalkboard-teacher"></i> Supervised Learning (การเรียนรู้แบบมีผู้สอน)</h5>
-                                <p>ป้อนข้อมูลพร้อม "คำตอบที่ถูกต้อง" (Label) ให้ AI เรียนรู้ เหมือนครูสอนนักเรียนโดยมีเฉลย</p>
-                                <p><strong>ตัวอย่าง:</strong></p>
-                                <ul>
-                                    <li>ให้รูปแมว 1000 รูป ติดป้าย "แมว" + รูปหมา 1000 รูป ติดป้าย "หมา" → AI เรียนรู้แยกแมวกับหมาได้</li>
-                                    <li>ให้ข้อมูลอีเมล spam 5000 ฉบับ + อีเมลปกติ 5000 ฉบับ → AI เรียนรู้แยก spam ได้</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-child"></i> Unsupervised Learning (การเรียนรู้แบบไม่มีผู้สอน)</h5>
-                                <p>ป้อนข้อมูลโดยไม่บอกคำตอบ ให้ AI หาโครงสร้างหรือกลุ่มในข้อมูลเอง เหมือนเด็กที่เรียนรู้ด้วยตัวเอง</p>
-                                <p><strong>ตัวอย่าง:</strong></p>
-                                <ul>
-                                    <li>ให้ข้อมูลลูกค้า → AI จัดกลุ่มลูกค้าที่มีพฤติกรรมคล้ายกัน (Customer Segmentation)</li>
-                                    <li>ให้ข้อมูลข่าว → AI จัดหมวดหมู่ข่าวอัตโนมัติ</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-gamepad"></i> Reinforcement Learning (การเรียนรู้แบบเสริมแรง)</h5>
-                                <p>AI เรียนรู้จากการลองทำแล้วได้รับ "รางวัล" หรือ "บทลงโทษ" เหมือนการฝึกสัตว์เลี้ยง ทำถูกได้ขนม ทำผิดถูกดุ</p>
-                                <p><strong>ตัวอย่าง:</strong></p>
-                                <ul>
-                                    <li>AI เล่นเกมหมากรุก: ชนะ = +1 คะแนน, แพ้ = -1 คะแนน → เล่นหลายล้านรอบจนเก่ง</li>
-                                    <li>หุ่นยนต์เรียนเดิน: เดินได้ = ดี, ล้ม = ไม่ดี → ค่อยๆ เรียนรู้วิธีทรงตัว</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 3.4 Neural Network - เครือข่ายประสาทเทียม</h4>
-                        <p><strong>Neural Network</strong> (โครงข่ายประสาทเทียม) เป็นโครงสร้างของ AI ที่ได้แรงบันดาลใจจากสมองมนุษย์ ประกอบด้วย "โหนด" (Node/Neuron) จำนวนมากที่เชื่อมต่อกันเป็นชั้นๆ:</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> โครงสร้างของ Neural Network</h5>
-                            <ul>
-                                <li><strong>Input Layer (ชั้นรับข้อมูล):</strong> รับข้อมูลเข้ามา เช่น pixel ของรูปภาพ, ตัวอักษร, ตัวเลข</li>
-                                <li><strong>Hidden Layer (ชั้นซ่อน):</strong> ประมวลผลข้อมูล หารูปแบบ ยิ่งมีหลายชั้น (Deep) ยิ่งเรียนรู้ได้ซับซ้อน</li>
-                                <li><strong>Output Layer (ชั้นผลลัพธ์):</strong> ให้คำตอบออกมา เช่น "แมว" หรือ "หมา", "spam" หรือ "ไม่ spam"</li>
-                            </ul>
-                        </div>
-
-                        <p><strong>Deep Learning</strong> คือ Neural Network ที่มี Hidden Layer หลายชั้น (ลึก) ทำให้สามารถเรียนรู้สิ่งที่ซับซ้อนมากๆ ได้ เช่น จดจำใบหน้า เข้าใจภาษา สร้างรูปภาพ</p>
-
-                        <div class="algorithm-box">
-                            <p><strong>เปรียบเทียบง่ายๆ:</strong></p>
-                            <p>🧠 สมองมนุษย์ → เซลล์ประสาท (Neuron) ~86,000 ล้านเซลล์ เชื่อมต่อกัน</p>
-                            <p>🤖 Neural Network → โหนดเทียม (Artificial Neuron) เชื่อมต่อกันเป็นชั้นๆ</p>
-                            <p>📊 GPT-4 → มีพารามิเตอร์ (การเชื่อมต่อ) มากกว่า 1 ล้านล้านตัว!</p>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 3.5 การฝึกโมเดล AI (Training)</h4>
-                        <p>การฝึกโมเดล AI เปรียบเหมือนการสอนเด็กนักเรียน แต่แทนที่จะใช้หนังสือ ใช้ "ข้อมูล" จำนวนมหาศาลแทน:</p>
-
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year">ขั้น 1</div>
-                                <div class="timeline-content">
-                                    <h5>เตรียมข้อมูล (Data Preparation)</h5>
-                                    <p>รวบรวมข้อมูลจำนวนมาก ทำความสะอาดข้อมูล (ลบข้อมูลผิดพลาด ข้อมูลซ้ำ) จัดรูปแบบให้เหมาะสม แบ่งข้อมูลเป็น Training Set (70-80%) และ Test Set (20-30%)</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ขั้น 2</div>
-                                <div class="timeline-content">
-                                    <h5>เลือกโมเดล (Model Selection)</h5>
-                                    <p>เลือกประเภทของโมเดลที่เหมาะกับปัญหา เช่น ถ้าต้องการจำแนกรูปภาพ ใช้ CNN (Convolutional Neural Network) ถ้าต้องการสร้างข้อความ ใช้ Transformer</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ขั้น 3</div>
-                                <div class="timeline-content">
-                                    <h5>ฝึกสอน (Training)</h5>
-                                    <p>ป้อนข้อมูล Training Set ให้โมเดลเรียนรู้ซ้ำแล้วซ้ำอีกหลายพันหลายหมื่นรอบ (Epoch) โมเดลจะค่อยๆ ปรับปรุงตัวเองให้ทำนายได้แม่นยำมากขึ้น</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ขั้น 4</div>
-                                <div class="timeline-content">
-                                    <h5>ทดสอบ (Testing/Evaluation)</h5>
-                                    <p>นำ Test Set ที่โมเดลไม่เคยเห็นมาทดสอบ วัดความแม่นยำ (Accuracy) ถ้ายังไม่ดีพอก็กลับไปปรับปรุง</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ขั้น 5</div>
-                                <div class="timeline-content">
-                                    <h5>นำไปใช้งาน (Deployment)</h5>
-                                    <p>เมื่อโมเดลมีความแม่นยำเพียงพอ นำไปใช้งานจริง เช่น ติดตั้งบนเว็บไซต์ แอปพลิเคชัน หรือหุ่นยนต์</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 3.6 Overfitting vs Underfitting</h4>
-                        <p>ปัญหาที่พบบ่อยในการฝึกโมเดล AI:</p>
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-exclamation-triangle"></i> Overfitting (จำมากเกินไป)</h5>
-                                <p>โมเดลจำข้อมูล Training Set ได้ดีมาก แต่ทำนายข้อมูลใหม่ได้ไม่ดี เหมือนนักเรียนที่ท่องจำเฉลย แต่ทำข้อสอบที่เปลี่ยนโจทย์ไม่ได้</p>
-                                <p><strong>แก้ไข:</strong> เพิ่มข้อมูลให้หลากหลาย, ใช้เทคนิค Regularization, ลดความซับซ้อนของโมเดล</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-exclamation-triangle"></i> Underfitting (เรียนน้อยเกินไป)</h5>
-                                <p>โมเดลเรียนรู้ไม่เพียงพอ ทำนายได้ไม่ดีทั้งข้อมูลเก่าและใหม่ เหมือนนักเรียนที่ไม่ตั้งใจเรียน ทำข้อสอบไม่ได้เลย</p>
-                                <p><strong>แก้ไข:</strong> ฝึกนานขึ้น, เพิ่มความซับซ้อนของโมเดล, เพิ่มฟีเจอร์ข้อมูล</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="knowledge-box">
-                        <h4><i class="fas fa-lightbulb"></i> สรุปความรู้หน่วยที่ 3</h4>
-                        <p>การคิดเชิงคำนวณ (Computational Thinking) เป็นพื้นฐานของการแก้ปัญหาอย่างเป็นระบบ ประกอบด้วย 4 ขั้นตอน: แบ่งย่อย, หารูปแบบ, คัดกรอง, และออกแบบอัลกอริทึม Machine Learning ทำให้ AI เรียนรู้จากข้อมูลได้เอง โดยมี 3 ประเภทหลัก: Supervised, Unsupervised และ Reinforcement Learning ส่วน Deep Learning คือ Neural Network ที่มีหลายชั้น ทำให้ AI มีความสามารถสูงในปัจจุบัน การฝึกโมเดลต้องผ่านขั้นตอนเตรียมข้อมูล เลือกโมเดล ฝึก ทดสอบ แล้วจึงนำไปใช้งานจริง</p>
-                    </div>
-                </div>
+    <!-- Features Section -->
+    <section class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-star"></i> จุดเด่น</span>
+                <h2 class="section-title">ทำไมต้องหลักสูตรนี้?</h2>
             </div>
-
-
-            <!-- ==================== UNIT 4 ==================== -->
-            <div class="unit-card" data-unit="4">
-                <div class="unit-header">
-                    <div class="unit-number">4</div>
-                    <h3>การใช้ AI อย่างปลอดภัยและมีจริยธรรม</h3>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>เนื้อหาครบถ้วน</h3>
+                    <p>ตั้งแต่พื้นฐาน AI จนถึงการสร้างโครงงานและเตรียมตัวสู่อาชีพ</p>
                 </div>
-                <div class="unit-body">
-                    <p class="unit-objective"><strong>สาระสำคัญ:</strong> เข้าใจความเสี่ยงจากการใช้ AI รู้เท่าทัน Deepfake เข้าใจเรื่องลิขสิทธิ์ผลงาน AI และปกป้องความเป็นส่วนตัวของตัวเองในโลกดิจิทัล</p>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 4.1 จริยธรรม AI (AI Ethics) คืออะไร?</h4>
-                        <p><strong>จริยธรรม AI</strong> คือหลักการและแนวทางในการพัฒนาและใช้งาน AI อย่างถูกต้อง เป็นธรรม และไม่เป็นอันตรายต่อสังคม เนื่องจาก AI มีพลังมหาศาล หากใช้อย่างไม่ระมัดระวังอาจก่อให้เกิดผลเสียร้ายแรงได้</p>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> หลักจริยธรรม AI ที่สำคัญ</h5>
-                            <ul>
-                                <li><strong>ความโปร่งใส (Transparency):</strong> ผู้ใช้ควรรู้ว่ากำลังโต้ตอบกับ AI และ AI ตัดสินใจอย่างไร</li>
-                                <li><strong>ความเป็นธรรม (Fairness):</strong> AI ต้องไม่เลือกปฏิบัติหรือมีอคติต่อกลุ่มใดกลุ่มหนึ่ง</li>
-                                <li><strong>ความรับผิดชอบ (Accountability):</strong> ต้องมีผู้รับผิดชอบเมื่อ AI ทำผิดพลาด</li>
-                                <li><strong>ความเป็นส่วนตัว (Privacy):</strong> AI ต้องเคารพข้อมูลส่วนบุคคลของผู้ใช้</li>
-                                <li><strong>ความปลอดภัย (Safety):</strong> AI ต้องไม่เป็นอันตรายต่อผู้ใช้หรือสังคม</li>
-                                <li><strong>ไม่ทำร้าย (Non-maleficence):</strong> AI ต้องไม่ถูกใช้เพื่อทำร้ายผู้อื่น</li>
-                            </ul>
-                        </div>
-
-                        <div class="content-section inner">
-                            <h5><i class="fas fa-balance-scale"></i> ตัวอย่าง AI ที่มีอคติ (AI Bias)</h5>
-                            <p>AI Bias เกิดขึ้นเมื่อข้อมูลที่ใช้ฝึก AI มีความลำเอียง ทำให้ AI ตัดสินใจอย่างไม่เป็นธรรม:</p>
-                            <ul class="detail-list">
-                                <li><strong>ระบบคัดกรองประวัติงาน:</strong> บริษัทหนึ่งใช้ AI คัดเลือกผู้สมัครงาน แต่พบว่า AI ให้คะแนนผู้หญิงต่ำกว่าผู้ชาย เพราะข้อมูลในอดีตส่วนใหญ่เป็นพนักงานผู้ชาย</li>
-                                <li><strong>ระบบจดจำใบหน้า:</strong> AI บางตัวจดจำใบหน้าคนผิวขาวได้แม่นยำกว่าคนผิวสี เพราะข้อมูลฝึกส่วนใหญ่เป็นคนผิวขาว</li>
-                                <li><strong>ระบบอนุมัติสินเชื่อ:</strong> AI ปฏิเสธสินเชื่อคนจากบางพื้นที่ เพราะข้อมูลเก่าแสดงว่าคนในพื้นที่นั้นมีประวัติไม่ดี ทั้งที่แต่ละคนไม่เหมือนกัน</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 4.2 Deepfake - การปลอมแปลงด้วย AI</h4>
-                        <p><strong>Deepfake</strong> คือเทคโนโลยี AI ที่ใช้ Deep Learning สร้างภาพ เสียง หรือวิดีโอปลอมที่ดูเหมือนจริงมาก จนแยกแทบไม่ออกว่าเป็นของจริงหรือของปลอม คำว่า Deepfake มาจาก "Deep Learning" + "Fake"</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-video"></i> ประเภทของ Deepfake</h5>
-                                <ul>
-                                    <li><strong>Face Swap:</strong> สลับใบหน้าคนหนึ่งไปไว้บนวิดีโอของอีกคน</li>
-                                    <li><strong>Face Reenactment:</strong> ควบคุมใบหน้าคนอื่นให้ขยับปากพูดตามที่ต้องการ</li>
-                                    <li><strong>Voice Cloning:</strong> เลียนเสียงพูดของคนจริงๆ ให้พูดอะไรก็ได้</li>
-                                    <li><strong>Full Body Deepfake:</strong> สร้างวิดีโอคนทั้งตัวทำท่าทางที่ไม่เคยทำจริง</li>
-                                    <li><strong>Text Deepfake:</strong> AI เขียนข้อความเลียนแบบสไตล์ของคนจริง</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-exclamation-triangle"></i> อันตรายจาก Deepfake</h5>
-                                <ul>
-                                    <li><strong>ข่าวปลอม:</strong> สร้างวิดีโอปลอมนักการเมืองพูดสิ่งที่ไม่เคยพูด</li>
-                                    <li><strong>การหลอกลวง:</strong> ใช้เสียงปลอมโทรหาญาติเพื่อขอเงิน</li>
-                                    <li><strong>การกลั่นแกล้ง:</strong> สร้างรูปหรือวิดีโอที่ทำให้ผู้อื่นเสียชื่อเสียง</li>
-                                    <li><strong>การแอบอ้าง:</strong> ปลอมเป็นคนอื่นเพื่อหลอกลวง</li>
-                                    <li><strong>ทำลายความน่าเชื่อถือ:</strong> ทำให้คนไม่มั่นใจในหลักฐานวิดีโอ/ภาพอีกต่อไป</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> วิธีสังเกต Deepfake</h5>
-                            <ul>
-                                <li><strong>ดูการกระพริบตา:</strong> Deepfake มักจะกระพริบตาไม่เป็นธรรมชาติ น้อยเกินไปหรือถี่เกินไป</li>
-                                <li><strong>ดูขอบใบหน้า:</strong> บริเวณรอบใบหน้า ผม หู อาจเบลอหรือไม่ชัดเจน</li>
-                                <li><strong>ดูแสงเงา:</strong> แสงบนใบหน้าอาจไม่สัมพันธ์กับแสงในฉากหลัง</li>
-                                <li><strong>ดูเครื่องประดับ:</strong> แว่นตา ต่างหู อาจบิดเบี้ยวหรือหายไปบางเฟรม</li>
-                                <li><strong>ฟังเสียง:</strong> เสียงอาจไม่ตรงกับการขยับปาก หรือมีโทนเสียงที่ผิดปกติ</li>
-                                <li><strong>ตรวจสอบแหล่งที่มา:</strong> วิดีโอมาจากที่ไหน? มีแหล่งข่าวอื่นยืนยันหรือไม่?</li>
-                                <li><strong>ใช้เครื่องมือตรวจสอบ:</strong> มีเว็บไซต์และแอปที่ช่วยตรวจสอบ Deepfake เช่น Deepware, Microsoft Video Authenticator</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 4.3 ลิขสิทธิ์ผลงาน AI (AI Copyright)</h4>
-                        <p>เมื่อ AI สร้างผลงาน เช่น ภาพวาด บทเพลง บทความ เกิดคำถามสำคัญว่า <strong>"ใครเป็นเจ้าของผลงาน?"</strong> นี่เป็นเรื่องที่ยังถกเถียงกันอยู่ทั่วโลก:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-question-circle"></i> คำถามที่ยังไม่มีคำตอบชัดเจน</h5>
-                                <ul>
-                                    <li>ถ้าเราใช้ AI วาดรูป เราเป็นเจ้าของรูปนั้นหรือไม่?</li>
-                                    <li>บริษัทที่สร้าง AI เป็นเจ้าของหรือเปล่า?</li>
-                                    <li>AI เรียนรู้จากผลงานของศิลปินจริง ศิลปินควรได้ค่าตอบแทนไหม?</li>
-                                    <li>ถ้า AI สร้างเพลงที่คล้ายเพลงที่มีอยู่แล้ว ถือว่าละเมิดลิขสิทธิ์ไหม?</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-gavel"></i> กฎหมายในปัจจุบัน (2024-2025)</h5>
-                                <ul>
-                                    <li><strong>สหรัฐอเมริกา:</strong> ผลงานที่สร้างโดย AI ล้วนๆ ไม่ได้รับลิขสิทธิ์ แต่ถ้ามนุษย์มีส่วนร่วมสร้างสรรค์ อาจได้รับการคุ้มครอง</li>
-                                    <li><strong>สหภาพยุโรป:</strong> กำลังออก AI Act ที่กำหนดให้ระบุชัดเจนว่าเนื้อหาใดสร้างโดย AI</li>
-                                    <li><strong>ประเทศไทย:</strong> ยังไม่มีกฎหมายเฉพาะเกี่ยวกับลิขสิทธิ์ AI ต้องพิจารณาเป็นกรณีไป</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> แนวทางใช้ผลงาน AI อย่างเหมาะสม</h5>
-                            <ul>
-                                <li>อ่าน Terms of Service ของเครื่องมือ AI ก่อนใช้งาน</li>
-                                <li>ระบุให้ชัดเจนว่าผลงานชิ้นไหนสร้างด้วย AI</li>
-                                <li>ไม่ใช้ AI สร้างผลงานเลียนแบบศิลปินคนจริง</li>
-                                <li>ไม่นำผลงาน AI ไปอ้างว่าเป็นผลงานตัวเอง 100%</li>
-                                <li>ใช้ AI เป็น "ตัวช่วย" ไม่ใช่ "ตัวแทน" ในการสร้างผลงาน</li>
-                                <li>ตรวจสอบว่าผลงานที่ AI สร้างไม่ไปซ้ำกับผลงานที่มีลิขสิทธิ์อยู่แล้ว</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 4.4 ความเป็นส่วนตัวในยุค AI (Privacy)</h4>
-                        <p>AI ต้องการ "ข้อมูล" เพื่อเรียนรู้และทำงาน ข้อมูลของเราถูกเก็บรวบรวมอยู่ตลอดเวลา ทั้งที่เรารู้ตัวและไม่รู้ตัว:</p>
-
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <h5>ข้อมูลตำแหน่ง</h5>
-                                <p>มือถือบันทึกว่าเราไปไหนบ้าง ร้านค้าใช้ข้อมูลนี้ส่งโฆษณาให้เราเมื่ออยู่ใกล้ร้าน</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-search"></i>
-                                <h5>ประวัติการค้นหา</h5>
-                                <p>ทุกอย่างที่เราค้นหาบน Google หรือดูบน YouTube ถูกบันทึกไว้เพื่อแนะนำเนื้อหาและโฆษณา</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-comments"></i>
-                                <h5>ข้อความและบทสนทนา</h5>
-                                <p>สิ่งที่เราพิมพ์ใน AI Chatbot อาจถูกนำไปใช้ฝึกโมเดล AI รุ่นถัดไป</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-camera"></i>
-                                <h5>รูปภาพใบหน้า</h5>
-                                <p>รูปที่เราโพสต์ลง Social Media อาจถูกนำไปใช้ฝึก AI จดจำใบหน้า</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-microphone"></i>
-                                <h5>เสียงพูด</h5>
-                                <p>ผู้ช่วยเสียง (Siri, Google) อาจบันทึกเสียงเราเพื่อปรับปรุงระบบ</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-heartbeat"></i>
-                                <h5>ข้อมูลสุขภาพ</h5>
-                                <p>นาฬิกาอัจฉริยะเก็บข้อมูลการนอน อัตราหัวใจ การออกกำลังกาย</p>
-                            </div>
-                        </div>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-shield-alt"></i> วิธีปกป้องความเป็นส่วนตัว</h5>
-                            <ul>
-                                <li><strong>อ่านนโยบายความเป็นส่วนตัว:</strong> ก่อนใช้แอปหรือเว็บไซต์ ดูว่าเขาเก็บข้อมูลอะไรบ้าง</li>
-                                <li><strong>ไม่ให้ข้อมูลส่วนตัวกับ AI:</strong> อย่าพิมพ์รหัสผ่าน เลขบัตรประชาชน ข้อมูลธนาคารใน Chatbot</li>
-                                <li><strong>ตั้งค่าความเป็นส่วนตัว:</strong> ปิดการเข้าถึงตำแหน่ง กล้อง ไมโครโฟน ที่ไม่จำเป็น</li>
-                                <li><strong>ใช้โหมดไม่บันทึก:</strong> หลาย AI มีตัวเลือกไม่เก็บประวัติการสนทนา เปิดใช้เมื่อพูดเรื่องส่วนตัว</li>
-                                <li><strong>ระวังการแชร์รูป:</strong> รูปที่โพสต์ออนไลน์อาจถูกนำไปใช้โดยไม่ได้รับอนุญาต</li>
-                                <li><strong>ใช้รหัสผ่านแข็งแรง:</strong> ตั้งรหัสผ่านยาว ไม่ซ้ำกัน และเปิด 2FA (Two-Factor Authentication)</li>
-                                <li><strong>อัปเดตซอฟต์แวร์:</strong> อัปเดตแอปและระบบปฏิบัติการเสมอ เพื่อปิดช่องโหว่ด้านความปลอดภัย</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 4.5 ข่าวปลอม (Misinformation) ที่สร้างด้วย AI</h4>
-                        <p>AI ทำให้การสร้างข่าวปลอมง่ายขึ้นมาก ทั้งข้อความ รูปภาพ และวิดีโอ เราต้องรู้วิธีตรวจสอบข้อมูลก่อนเชื่อหรือแชร์:</p>
-
-                        <div class="algorithm-box">
-                            <p><strong>หลัก SIFT สำหรับตรวจสอบข้อมูล:</strong></p>
-                            <ol>
-                                <li><strong>S - Stop (หยุด):</strong> อย่ารีบเชื่อหรือแชร์ทันที หยุดคิดก่อน</li>
-                                <li><strong>I - Investigate (ตรวจสอบ):</strong> ดูว่าแหล่งข่าวนี้น่าเชื่อถือหรือไม่ ใครเป็นคนเขียน/สร้าง</li>
-                                <li><strong>F - Find (ค้นหา):</strong> หาข่าวเดียวกันจากแหล่งอื่น มีสำนักข่าวอื่นรายงานเรื่องเดียวกันไหม</li>
-                                <li><strong>T - Trace (สืบค้น):</strong> หาต้นตอของข้อมูล ภาพหรือวิดีโอนี้มาจากไหนกันแน่</li>
-                            </ol>
-                        </div>
-
-                        <div class="content-section inner">
-                            <h5><i class="fas fa-tools"></i> เครื่องมือตรวจสอบข้อมูล</h5>
-                            <ul class="detail-list">
-                                <li><strong>Google Reverse Image Search:</strong> ค้นหารูปภาพย้อนกลับ ดูว่ารูปนี้ถูกใช้ที่ไหนบ้าง</li>
-                                <li><strong>TinEye:</strong> ค้นหาต้นตอของรูปภาพ</li>
-                                <li><strong>Snopes / Cofact:</strong> เว็บไซต์ตรวจสอบข้อเท็จจริง</li>
-                                <li><strong>InVID / WeVerify:</strong> เครื่องมือตรวจสอบวิดีโอปลอม</li>
-                                <li><strong>AI Text Detector:</strong> เครื่องมือตรวจสอบว่าข้อความเขียนโดย AI หรือมนุษย์</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 4.6 การใช้ AI ในห้องเรียนอย่างมีจริยธรรม</h4>
-                        <p>การใช้ AI ช่วยในการเรียนเป็นเรื่องดี แต่ต้องใช้อย่างถูกต้อง:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-check-circle" style="color: #34d399;"></i> ใช้ AI อย่างเหมาะสม</h5>
-                                <ul>
-                                    <li>ใช้ AI อธิบายเนื้อหาที่ไม่เข้าใจ</li>
-                                    <li>ใช้ AI ช่วยระดมความคิด หาไอเดีย</li>
-                                    <li>ใช้ AI ตรวจสอบข้อมูลที่หาเจอ</li>
-                                    <li>ใช้ AI เป็นติวเตอร์ส่วนตัว ถาม-ตอบ</li>
-                                    <li>ใช้ AI ช่วยสรุปเนื้อหาที่อ่านแล้ว</li>
-                                    <li>ระบุว่าใช้ AI ช่วยส่วนไหน</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-times-circle" style="color: #f87171;"></i> ใช้ AI อย่างไม่เหมาะสม</h5>
-                                <ul>
-                                    <li>ให้ AI ทำการบ้านทั้งหมดแล้วส่งเป็นผลงานตัวเอง</li>
-                                    <li>คัดลอกคำตอบจาก AI โดยไม่อ่านหรือทำความเข้าใจ</li>
-                                    <li>ใช้ AI เขียนรายงานทั้งเล่มโดยไม่มีส่วนร่วม</li>
-                                    <li>ไม่ตรวจสอบความถูกต้องของข้อมูลจาก AI</li>
-                                    <li>ใช้ AI สร้างเนื้อหาหลอกลวง โกง หรือกลั่นแกล้งผู้อื่น</li>
-                                    <li>ปกปิดว่าใช้ AI ช่วยทำงาน</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="knowledge-box">
-                        <h4><i class="fas fa-lightbulb"></i> สรุปความรู้หน่วยที่ 4</h4>
-                        <p>การใช้ AI อย่างมีจริยธรรมเป็นสิ่งสำคัญ เราต้องรู้เท่าทัน Deepfake โดยสังเกตความผิดปกติของภาพ/เสียง และตรวจสอบแหล่งที่มาเสมอ ลิขสิทธิ์ผลงาน AI ยังเป็นประเด็นที่กำลังพัฒนากฎหมาย ควรใช้ AI อย่างโปร่งใส ระบุว่าใช้ AI ช่วยส่วนไหน ส่วนเรื่องความเป็นส่วนตัว อย่าให้ข้อมูลส่วนตัวกับ AI และตั้งค่าความเป็นส่วนตัวให้เหมาะสม ใช้หลัก SIFT ในการตรวจสอบข่าวปลอม: Stop, Investigate, Find, Trace</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>ลงมือปฏิบัติจริง</h3>
+                    <p>ใช้เครื่องมือ AI จริงๆ เช่น ChatGPT, Canva, Suno สร้างผลงานได้เลย</p>
                 </div>
-            </div>
-
-
-            <!-- ==================== UNIT 5 ==================== -->
-            <div class="unit-card" data-unit="5">
-                <div class="unit-header">
-                    <div class="unit-number">5</div>
-                    <h3>สร้างสรรค์ผลงานด้วย AI (AI Creative Project)</h3>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>ใช้ AI อย่างปลอดภัย</h3>
+                    <p>เรียนรู้จริยธรรม รู้เท่าทัน Deepfake และปกป้องข้อมูลส่วนตัว</p>
                 </div>
-                <div class="unit-body">
-                    <p class="unit-objective"><strong>สาระสำคัญ:</strong> เรียนรู้กระบวนการสร้างโครงงานจริงด้วย AI ตั้งแต่การเลือกหัวข้อ วางแผน ลงมือสร้างผลงาน ไปจนถึงการนำเสนออย่างมืออาชีพ</p>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 5.1 ทำไมต้องทำโครงงาน AI?</h4>
-                        <p>การทำโครงงาน AI เป็นวิธีที่ดีที่สุดในการเรียนรู้ เพราะได้ลงมือปฏิบัติจริง ไม่ใช่แค่ท่องจำทฤษฎี ประโยชน์ของการทำโครงงาน:</p>
-                        <ul class="detail-list">
-                            <li><strong>ฝึกคิดอย่างเป็นระบบ:</strong> ต้องวางแผน แบ่งงาน จัดลำดับขั้นตอน</li>
-                            <li><strong>ฝึกแก้ปัญหา:</strong> เจอปัญหาจริงและต้องหาทางแก้ไข</li>
-                            <li><strong>ฝึกใช้เครื่องมือ AI:</strong> ได้ลองใช้เครื่องมือหลายตัวจนชำนาญ</li>
-                            <li><strong>ฝึกความคิดสร้างสรรค์:</strong> ต้องคิดว่าจะทำอะไรที่แตกต่างและน่าสนใจ</li>
-                            <li><strong>ฝึกการทำงานเป็นทีม:</strong> เรียนรู้การแบ่งงาน ประสานงาน และรับผิดชอบ</li>
-                            <li><strong>ฝึกการนำเสนอ:</strong> สื่อสารไอเดียและผลงานให้คนอื่นเข้าใจ</li>
-                            <li><strong>สร้าง Portfolio:</strong> มีผลงานจริงไว้แสดงความสามารถในอนาคต</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 5.2 ขั้นตอนการทำโครงงาน AI</h4>
-                        <p>กระบวนการทำโครงงาน AI แบ่งเป็น 5 ระยะ (Phase) หลัก:</p>
-
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year">ระยะ 1</div>
-                                <div class="timeline-content">
-                                    <h5>ระบุปัญหาและเลือกหัวข้อ (Ideation)</h5>
-                                    <p>เริ่มจากคำถาม: "ปัญหาอะไรที่อยากแก้ไข?" หรือ "อยากสร้างอะไรที่มีประโยชน์?"</p>
-                                    <ul>
-                                        <li>สำรวจปัญหารอบตัว ในโรงเรียน ชุมชน หรือชีวิตประจำวัน</li>
-                                        <li>ระดมความคิด (Brainstorm) กับเพื่อนหรือใช้ AI ช่วย</li>
-                                        <li>เลือกหัวข้อที่สนใจจริงๆ และเป็นไปได้ภายในเวลาที่มี</li>
-                                        <li>ตั้งเป้าหมายที่ชัดเจน: ผลงานสุดท้ายจะเป็นอะไร? ใครคือกลุ่มเป้าหมาย?</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ระยะ 2</div>
-                                <div class="timeline-content">
-                                    <h5>วางแผนและออกแบบ (Planning & Design)</h5>
-                                    <p>วางแผนรายละเอียดก่อนลงมือทำจริง:</p>
-                                    <ul>
-                                        <li>เลือกเครื่องมือ AI ที่จะใช้ (ChatGPT, Canva, Suno, CapCut ฯลฯ)</li>
-                                        <li>วาง Storyboard หรือ Wireframe ของผลงาน</li>
-                                        <li>กำหนดตารางเวลา (Timeline) แบ่งงานเป็นช่วงๆ</li>
-                                        <li>แบ่งหน้าที่ถ้าทำงานเป็นทีม</li>
-                                        <li>เตรียม Prompt ที่จะใช้กับ AI ล่วงหน้า</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ระยะ 3</div>
-                                <div class="timeline-content">
-                                    <h5>ลงมือสร้าง (Production)</h5>
-                                    <p>ขั้นตอนการผลิตผลงานจริง:</p>
-                                    <ul>
-                                        <li>ใช้เครื่องมือ AI สร้างเนื้อหาตามแผนที่วางไว้</li>
-                                        <li>ทดลองหลายๆ Prompt เลือกผลลัพธ์ที่ดีที่สุด</li>
-                                        <li>แก้ไขและปรับปรุงผลงานจาก AI ให้ดีขึ้น (ไม่ใช้ผลดิบจาก AI ทั้งหมด)</li>
-                                        <li>เก็บบันทึกขั้นตอนการทำงาน (Process Documentation)</li>
-                                        <li>ทดสอบผลงานกับกลุ่มเป้าหมายจริง</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ระยะ 4</div>
-                                <div class="timeline-content">
-                                    <h5>ปรับปรุงและแก้ไข (Iteration)</h5>
-                                    <p>นำ Feedback มาปรับปรุงผลงาน:</p>
-                                    <ul>
-                                        <li>ขอความเห็นจากเพื่อน ครู หรือกลุ่มเป้าหมาย</li>
-                                        <li>แก้ไขจุดบกพร่องที่พบ</li>
-                                        <li>เพิ่มรายละเอียดหรือคุณภาพของผลงาน</li>
-                                        <li>ตรวจสอบความถูกต้องของข้อมูลที่ AI สร้าง</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ระยะ 5</div>
-                                <div class="timeline-content">
-                                    <h5>นำเสนอผลงาน (Presentation)</h5>
-                                    <p>แสดงผลงานและสิ่งที่ได้เรียนรู้:</p>
-                                    <ul>
-                                        <li>เตรียมสไลด์นำเสนอ (ใช้ Gamma หรือ Canva ช่วย)</li>
-                                        <li>อธิบายปัญหา วิธีแก้ไข เครื่องมือที่ใช้ และผลลัพธ์</li>
-                                        <li>สาธิตผลงานจริง (Demo)</li>
-                                        <li>บอกข้อจำกัดและสิ่งที่อยากปรับปรุงต่อ</li>
-                                        <li>ตอบคำถามจากผู้ฟัง</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 5.3 ตัวอย่างโครงงาน AI ที่น่าสนใจ</h4>
-                        <p>ไอเดียโครงงานที่สามารถทำได้จริง จัดกลุ่มตามระดับความยาก:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-star" style="color: #34d399;"></i> ระดับเริ่มต้น</h5>
-                                <ul>
-                                    <li><strong>หนังสือนิทาน AI:</strong> ใช้ ChatGPT เขียนเรื่อง + Recraft/DALL-E วาดภาพประกอบ รวมเป็นหนังสือ E-book</li>
-                                    <li><strong>โปสเตอร์รณรงค์:</strong> ใช้ Canva Magic ออกแบบโปสเตอร์รณรงค์เรื่องสิ่งแวดล้อม/สุขภาพ</li>
-                                    <li><strong>เพลงประจำห้อง:</strong> ใช้ Suno แต่งเพลงเชียร์ประจำห้องเรียน เขียนเนื้อเพลงเอง</li>
-                                    <li><strong>แปลบทกวี:</strong> ใช้ AI แปลบทกวีไทยเป็นภาษาอังกฤษ แล้ววิเคราะห์ว่า AI แปลได้ดีแค่ไหน</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-star" style="color: #f59e0b;"></i> ระดับกลาง</h5>
-                                <ul>
-                                    <li><strong>สารคดีสั้น AI:</strong> ใช้ ChatGPT เขียนบท + ElevenLabs พากย์เสียง + CapCut ตัดต่อ เป็นสารคดี 3-5 นาที</li>
-                                    <li><strong>แอปแนะนำอาหาร:</strong> สร้าง Chatbot ด้วย ChatGPT API ที่แนะนำเมนูอาหารตามวัตถุดิบที่มี</li>
-                                    <li><strong>คู่มือท่องเที่ยว AI:</strong> ใช้ AI สร้างเนื้อหา+ภาพ สำหรับแนะนำสถานที่ท่องเที่ยวในชุมชน</li>
-                                    <li><strong>นิตยสารดิจิทัล:</strong> ใช้ AI สร้างบทความ ภาพประกอบ และจัดหน้านิตยสารออนไลน์</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-star" style="color: #ef4444;"></i> ระดับท้าทาย</h5>
-                                <ul>
-                                    <li><strong>หนังสั้น AI:</strong> ใช้ AI สร้างบท + Storyboard + ภาพ/วิดีโอ + เพลงประกอบ ตัดต่อเป็นหนังสั้น 5-10 นาที</li>
-                                    <li><strong>เว็บไซต์ AI Tutor:</strong> สร้างเว็บไซต์ที่มี AI ช่วยสอน ตอบคำถาม และทดสอบความรู้</li>
-                                    <li><strong>แบรนด์สินค้า AI:</strong> ออกแบบแบรนด์ทั้งหมดด้วย AI ตั้งแต่ชื่อ โลโก้ แพคเกจ ไปจนถึงโฆษณา</li>
-                                    <li><strong>วิเคราะห์ความรู้สึก:</strong> ใช้ AI วิเคราะห์ความคิดเห็นเกี่ยวกับประเด็นสังคมจาก Social Media</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 5.4 เทคนิคการสร้างผลงานให้น่าสนใจ</h4>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> เคล็ดลับสำคัญ</h5>
-                            <ul>
-                                <li><strong>อย่าใช้ผลงาน AI ดิบๆ:</strong> ปรับแต่ง แก้ไข ใส่ความคิดของตัวเองลงไป AI เป็นจุดเริ่มต้น ไม่ใช่จุดจบ</li>
-                                <li><strong>ผสมหลายเครื่องมือ:</strong> ใช้ ChatGPT เขียน + Canva ออกแบบ + Suno แต่งเพลง = ผลงานที่หลากหลาย</li>
-                                <li><strong>เล่าเรื่อง (Storytelling):</strong> ผลงานที่มีเรื่องราวจะน่าสนใจกว่าการแสดงข้อมูลเฉยๆ</li>
-                                <li><strong>ใส่ใจรายละเอียด:</strong> ตรวจทานความถูกต้อง สะกดคำ ความสวยงาม</li>
-                                <li><strong>คิดถึงผู้ใช้:</strong> ผลงานนี้ทำเพื่อใคร? พวกเขาต้องการอะไร?</li>
-                                <li><strong>บันทึกกระบวนการ:</strong> ถ่ายรูป/บันทึกทุกขั้นตอน เพราะ "กระบวนการ" สำคัญไม่แพ้ "ผลลัพธ์"</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 5.5 การนำเสนอผลงานอย่างมืออาชีพ</h4>
-                        <p>โครงสร้างการนำเสนอที่ดีควรประกอบด้วย:</p>
-
-                        <div class="algorithm-box">
-                            <p><strong>โครงสร้างการนำเสนอ (8-10 สไลด์):</strong></p>
-                            <ol>
-                                <li><strong>หน้าปก:</strong> ชื่อโครงงาน ชื่อผู้จัดทำ</li>
-                                <li><strong>ปัญหา/ที่มา:</strong> ทำไมถึงเลือกหัวข้อนี้? ปัญหาคืออะไร?</li>
-                                <li><strong>เป้าหมาย:</strong> ต้องการบรรลุอะไร? ผลงานสุดท้ายเป็นอย่างไร?</li>
-                                <li><strong>เครื่องมือที่ใช้:</strong> ใช้ AI ตัวไหนบ้าง? เพราะอะไร?</li>
-                                <li><strong>กระบวนการ:</strong> ทำอย่างไรทีละขั้นตอน (แสดงภาพประกอบ)</li>
-                                <li><strong>ผลงาน:</strong> แสดงผลงานจริง (Demo)</li>
-                                <li><strong>สิ่งที่ได้เรียนรู้:</strong> ได้ความรู้อะไรใหม่? เจอปัญหาอะไร? แก้อย่างไร?</li>
-                                <li><strong>ข้อจำกัดและแนวทางพัฒนา:</strong> มีอะไรที่อยากปรับปรุงต่อ?</li>
-                                <li><strong>ถาม-ตอบ:</strong> เปิดให้ผู้ฟังถามคำถาม</li>
-                            </ol>
-                        </div>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> เทคนิคการนำเสนอ</h5>
-                            <ul>
-                                <li><strong>กฎ 10-20-30:</strong> ไม่เกิน 10 สไลด์, ไม่เกิน 20 นาที, ตัวหนังสือไม่เล็กกว่า 30pt</li>
-                                <li><strong>เล่าเหมือนเรื่อง:</strong> เริ่มจากปัญหา → ความท้าทาย → วิธีแก้ → ผลลัพธ์</li>
-                                <li><strong>แสดง ไม่ใช่บอก:</strong> โชว์ผลงานจริง ดีกว่าแค่พูดบรรยาย</li>
-                                <li><strong>เตรียมตอบคำถาม:</strong> คิดล่วงหน้าว่าคนอาจถามอะไร</li>
-                                <li><strong>ซ้อมก่อนจริง:</strong> ซ้อมนำเสนออย่างน้อย 2-3 รอบ จับเวลาด้วย</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 5.6 เกณฑ์การประเมินโครงงาน</h4>
-                        <p>โครงงาน AI ที่ดีควรมีคุณสมบัติเหล่านี้:</p>
-
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-lightbulb"></i>
-                                <h5>ความคิดสร้างสรรค์ (25%)</h5>
-                                <p>หัวข้อน่าสนใจ มีมุมมองใหม่ ไม่ซ้ำใคร ผลงานมีความแปลกใหม่</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-tools"></i>
-                                <h5>การใช้เครื่องมือ AI (25%)</h5>
-                                <p>ใช้ AI ได้อย่างเหมาะสม เขียน Prompt ดี รู้จักเลือกเครื่องมือที่เหมาะกับงาน</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-gem"></i>
-                                <h5>คุณภาพผลงาน (25%)</h5>
-                                <p>ผลงานสมบูรณ์ ละเอียด สวยงาม ข้อมูลถูกต้อง มีการตรวจทาน</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <h5>การนำเสนอ (25%)</h5>
-                                <p>อธิบายได้ชัดเจน เล่ากระบวนการได้ ตอบคำถามได้ มีความมั่นใจ</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="knowledge-box">
-                        <h4><i class="fas fa-lightbulb"></i> สรุปความรู้หน่วยที่ 5</h4>
-                        <p>การทำโครงงาน AI มี 5 ระยะ: ระบุปัญหา → วางแผน → ลงมือสร้าง → ปรับปรุง → นำเสนอ สิ่งสำคัญคืออย่าใช้ผลงาน AI ดิบๆ ต้องปรับแต่งใส่ความคิดของตัวเอง บันทึกกระบวนการทุกขั้นตอน และฝึกนำเสนอให้ดี เพราะ "กระบวนการเรียนรู้" สำคัญไม่แพ้ "ผลงานสุดท้าย" เลือกหัวข้อที่สนใจจริงๆ แล้วใช้ AI เป็นเครื่องมือช่วย ไม่ใช่ให้ AI ทำทุกอย่างแทน</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- ==================== UNIT 6 ==================== -->
-            <div class="unit-card" data-unit="6">
-                <div class="unit-header">
-                    <div class="unit-number">6</div>
-                    <h3>สรุปความรู้และอาชีพด้าน AI</h3>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
-                </div>
-                <div class="unit-body">
-                    <p class="unit-objective"><strong>สาระสำคัญ:</strong> ทบทวนความรู้ทั้งหมดที่เรียนมา สำรวจอาชีพด้าน AI ที่หลากหลาย และเตรียมทักษะสำคัญสำหรับอนาคตในยุคที่ AI เปลี่ยนแปลงโลก</p>
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 6.1 สรุปภาพรวมความรู้ทั้งหมด</h4>
-                        <p>ตลอดหลักสูตรนี้ เราได้เรียนรู้เกี่ยวกับ AI อย่างครบถ้วน:</p>
-
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-globe"></i>
-                                <h5>หน่วย 1: รู้จัก AI</h5>
-                                <p>AI คือปัญญาประดิษฐ์ มี 3 ระดับ (Narrow/General/Super) มีวิวัฒนาการตั้งแต่ 1950 จนถึงยุค Generative AI</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-tools"></i>
-                                <h5>หน่วย 2: เครื่องมือ AI</h5>
-                                <p>ChatGPT, Gemini, Canva Magic, Recraft, Suno และอื่นๆ กุญแจสำคัญคือการเขียน Prompt ด้วยสูตร RACE</p>
-                            </div>
-
-                            <div class="example-item">
-                                <i class="fas fa-cogs"></i>
-                                <h5>หน่วย 3: ตรรกะ AI</h5>
-                                <p>Computational Thinking, Algorithm, Machine Learning 3 ประเภท, Neural Network และ Deep Learning</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <h5>หน่วย 4: จริยธรรม AI</h5>
-                                <p>Deepfake, AI Bias, ลิขสิทธิ์, ความเป็นส่วนตัว, หลัก SIFT ตรวจข่าวปลอม</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-rocket"></i>
-                                <h5>หน่วย 5: โครงงาน AI</h5>
-                                <p>5 ระยะการทำโครงงาน: Ideation → Planning → Production → Iteration → Presentation</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-briefcase"></i>
-                                <h5>หน่วย 6: อาชีพ AI</h5>
-                                <p>อาชีพที่หลากหลาย ทักษะที่จำเป็น และการเตรียมตัวสู่อนาคต</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 6.2 AI กำลังเปลี่ยนโลกการทำงานอย่างไร?</h4>
-                        <p>AI กำลังเปลี่ยนแปลงทุกอุตสาหกรรม บางอาชีพจะหายไป บางอาชีพจะเปลี่ยนรูปแบบ และจะมีอาชีพใหม่เกิดขึ้นมากมาย:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-exclamation-triangle" style="color: #f87171;"></i> อาชีพที่อาจได้รับผลกระทบ</h5>
-                                <ul>
-                                    <li><strong>พนักงานป้อนข้อมูล:</strong> AI ทำได้เร็วกว่าและแม่นยำกว่า</li>
-                                    <li><strong>พนักงานแปลเอกสารทั่วไป:</strong> AI แปลได้ดีมากขึ้นเรื่อยๆ</li>
-                                    <li><strong>เจ้าหน้าที่ Call Center ทั่วไป:</strong> Chatbot ทำงานแทนได้มาก</li>
-                                    <li><strong>เจ้าหน้าที่ตรวจสอบเอกสาร:</strong> AI อ่านและตรวจเอกสารได้เร็วกว่า</li>
-                                    <li><strong>งานออกแบบกราฟิกพื้นฐาน:</strong> AI สร้างงานง่ายๆ ได้ทันที</li>
-                                </ul>
-                                <p class="tag">แต่ไม่ได้หายไป 100% - จะเปลี่ยนรูปแบบมากกว่า</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-check-circle" style="color: #34d399;"></i> อาชีพที่ AI ทำแทนได้ยาก</h5>
-                                <ul>
-                                    <li><strong>จิตแพทย์/นักจิตวิทยา:</strong> ต้องอาศัยความเข้าอกเข้าใจมนุษย์</li>
-                                    <li><strong>ครู/อาจารย์:</strong> ต้องสร้างแรงบันดาลใจและดูแลเด็ก</li>
-                                    <li><strong>ศิลปินระดับสูง:</strong> ความคิดสร้างสรรค์เฉพาะตัวที่มีเรื่องราว</li>
-                                    <li><strong>พ่อครัวระดับสูง:</strong> ต้องอาศัยประสบการณ์สัมผัสรสจริง</li>
-                                    <li><strong>ช่างซ่อม/ช่างฝีมือ:</strong> ต้องใช้มือทำงานในสถานการณ์จริง</li>
-                                </ul>
-                                <p class="tag">งานที่ต้องใช้ EQ สูง, สัมผัสทางกาย, ความคิดสร้างสรรค์เฉพาะตัว</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 6.3 อาชีพด้าน AI ที่น่าสนใจ</h4>
-                        <p>อาชีพที่เกี่ยวข้องกับ AI โดยตรง มีรายได้สูงและเป็นที่ต้องการมากในตลาดแรงงาน:</p>
-
-                        <div class="career-grid">
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-laptop-code"></i></div>
-                                <h5>AI Engineer / วิศวกร AI</h5>
-                                <p><strong>ทำอะไร:</strong> ออกแบบ พัฒนา และดูแลระบบ AI ตั้งแต่สร้างโมเดล ฝึกสอนด้วยข้อมูล จนถึงนำไปใช้งานจริง</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> Python, TensorFlow/PyTorch, คณิตศาสตร์, สถิติ</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 50,000 - 150,000+ บาท/เดือน</p>
-                            </div>
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-chart-bar"></i></div>
-                                <h5>Data Scientist / นักวิทยาศาสตร์ข้อมูล</h5>
-                                <p><strong>ทำอะไร:</strong> วิเคราะห์ข้อมูลขนาดใหญ่ (Big Data) หาข้อมูลเชิงลึก (Insight) สร้างโมเดลทำนายผล ช่วยองค์กรตัดสินใจด้วยข้อมูล</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> สถิติ, Python/R, SQL, Machine Learning, การนำเสนอข้อมูล</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 45,000 - 120,000+ บาท/เดือน</p>
-                            </div>
-
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-brain"></i></div>
-                                <h5>Machine Learning Engineer</h5>
-                                <p><strong>ทำอะไร:</strong> สร้างและปรับปรุงโมเดล ML ให้ทำงานได้ดีขึ้น เร็วขึ้น แม่นยำขึ้น ดูแลระบบ ML ในการใช้งานจริง (Production)</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> Deep Learning, Python, Cloud Computing, MLOps, คณิตศาสตร์ขั้นสูง</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 55,000 - 150,000+ บาท/เดือน</p>
-                            </div>
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-pen-fancy"></i></div>
-                                <h5>AI Prompt Engineer / นักออกแบบ Prompt</h5>
-                                <p><strong>ทำอะไร:</strong> ออกแบบและปรับปรุง Prompt เพื่อให้ AI ทำงานได้ตรงตามต้องการมากที่สุด เป็นอาชีพใหม่ที่เกิดขึ้นจากยุค Generative AI</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> ภาษาอังกฤษ, การเขียนเชิงสร้างสรรค์, เข้าใจ AI, คิดเชิงตรรกะ</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 35,000 - 100,000+ บาท/เดือน</p>
-                            </div>
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-shield-alt"></i></div>
-                                <h5>AI Ethics Specialist / ผู้เชี่ยวชาญจริยธรรม AI</h5>
-                                <p><strong>ทำอะไร:</strong> กำกับดูแลให้ AI ทำงานอย่างเป็นธรรม ไม่มีอคติ ไม่ละเมิดสิทธิ ปฏิบัติตามกฎหมาย ประเมินความเสี่ยงของระบบ AI</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> กฎหมาย, จริยธรรม, เข้าใจ AI, การวิเคราะห์ความเสี่ยง</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 40,000 - 100,000+ บาท/เดือน</p>
-                            </div>
-
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-robot"></i></div>
-                                <h5>Robotics Engineer / วิศวกรหุ่นยนต์</h5>
-                                <p><strong>ทำอะไร:</strong> ออกแบบและสร้างหุ่นยนต์ที่ใช้ AI ทำงานในโรงงาน โรงพยาบาล สำรวจอวกาศ หรือบริการในร้านอาหาร</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> วิศวกรรม, เขียนโปรแกรม, Computer Vision, ระบบฝังตัว</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 45,000 - 120,000+ บาท/เดือน</p>
-                            </div>
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-comments"></i></div>
-                                <h5>NLP Engineer / วิศวกรประมวลผลภาษา</h5>
-                                <p><strong>ทำอะไร:</strong> พัฒนาระบบ AI ที่เข้าใจและสร้างภาษามนุษย์ เช่น Chatbot, ระบบแปลภาษา, ระบบสรุปข้อความ, Voice Assistant</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> NLP, Deep Learning, Python, ภาษาศาสตร์, Transformer Models</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 50,000 - 130,000+ บาท/เดือน</p>
-                            </div>
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-eye"></i></div>
-                                <h5>Computer Vision Engineer</h5>
-                                <p><strong>ทำอะไร:</strong> สร้างระบบ AI ที่ "มองเห็น" เช่น จดจำใบหน้า ตรวจสอบสินค้าชำรุด ขับรถอัตโนมัติ วิเคราะห์ภาพทางการแพทย์</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> Image Processing, CNN, Python, OpenCV, Deep Learning</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 50,000 - 140,000+ บาท/เดือน</p>
-                            </div>
-                            <div class="career-item">
-                                <div class="career-icon"><i class="fas fa-paint-brush"></i></div>
-                                <h5>AI Content Creator</h5>
-                                <p><strong>ทำอะไร:</strong> ใช้ AI สร้างเนื้อหาสร้างสรรค์ เช่น วิดีโอ ภาพ เพลง บทความ เพื่อการตลาด สื่อ หรือความบันเทิง ผสม AI กับความคิดสร้างสรรค์ของตัวเอง</p>
-                                <p><strong>ทักษะที่ต้องมี:</strong> ใช้เครื่องมือ AI หลายตัว, Prompt Engineering, การเล่าเรื่อง, ความคิดสร้างสรรค์</p>
-                                <p><strong>เงินเดือนเริ่มต้น:</strong> 30,000 - 80,000+ บาท/เดือน (หรือรายได้จากผลงาน)</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 6.4 ทักษะแห่งอนาคต (Future Skills)</h4>
-                        <p>ไม่ว่าจะเลือกอาชีพไหน ทักษะเหล่านี้จะเป็นที่ต้องการมากในยุค AI:</p>
-
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-brain"></i> Hard Skills (ทักษะเฉพาะทาง)</h5>
-                                <ul>
-                                    <li><strong>Digital Literacy:</strong> ใช้เทคโนโลยีดิจิทัลได้คล่อง รู้จักเครื่องมือสมัยใหม่</li>
-                                    <li><strong>Data Literacy:</strong> อ่าน วิเคราะห์ และตีความข้อมูลได้</li>
-                                    <li><strong>AI Literacy:</strong> เข้าใจ AI ใช้ AI เป็น และรู้ข้อจำกัดของ AI</li>
-                                    <li><strong>Coding/Programming:</strong> เขียนโปรแกรมได้ อย่างน้อยรู้พื้นฐาน Python</li>
-                                    <li><strong>Prompt Engineering:</strong> สื่อสารกับ AI ได้อย่างมีประสิทธิภาพ</li>
-                                    <li><strong>Cybersecurity:</strong> รู้วิธีปกป้องตัวเองและข้อมูลในโลกออนไลน์</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h5><i class="fas fa-heart"></i> Soft Skills (ทักษะด้านอารมณ์และสังคม)</h5>
-                                <ul>
-                                    <li><strong>Critical Thinking:</strong> คิดวิเคราะห์ ไม่เชื่ออะไรง่ายๆ ตั้งคำถาม</li>
-                                    <li><strong>Creativity:</strong> คิดสร้างสรรค์ มองในมุมใหม่ คิดนอกกรอบ</li>
-                                    <li><strong>Communication:</strong> สื่อสารได้ชัดเจน ทั้งพูด เขียน และนำเสนอ</li>
-                                    <li><strong>Collaboration:</strong> ทำงานร่วมกับผู้อื่นได้ดี ทั้งมนุษย์และ AI</li>
-                                    <li><strong>Adaptability:</strong> ปรับตัวเร็ว เรียนรู้สิ่งใหม่ได้ตลอดเวลา</li>
-                                    <li><strong>Emotional Intelligence:</strong> เข้าใจอารมณ์ตัวเองและผู้อื่น มีความเห็นอกเห็นใจ</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="info-highlight">
-                            <h5><i class="fas fa-star"></i> กฎทอง: "AI จะไม่มาแทนที่คุณ แต่คนที่ใช้ AI เป็นจะแทนที่คนที่ใช้ไม่เป็น"</h5>
-                            <ul>
-                                <li>AI ไม่ได้มาแย่งงาน แต่จะเปลี่ยนรูปแบบของงาน</li>
-                                <li>คนที่รู้จักใช้ AI เป็นเครื่องมือจะมีข้อได้เปรียบ</li>
-                                <li>ทักษะที่ AI ทำไม่ได้ (ความคิดสร้างสรรค์, อารมณ์, การตัดสินใจทางจริยธรรม) จะมีค่ามากขึ้น</li>
-                                <li>การเรียนรู้ตลอดชีวิต (Lifelong Learning) เป็นสิ่งจำเป็นที่สุด</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 6.5 เส้นทางการเตรียมตัวสู่อาชีพ AI</h4>
-                        <p>ไม่ว่าจะอยู่ระดับไหน สามารถเริ่มเตรียมตัวได้เลย:</p>
-
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year">ตอนนี้</div>
-                                <div class="timeline-content">
-                                    <h5>เริ่มต้นเรียนรู้ (ระดับมัธยม)</h5>
-                                    <ul>
-                                        <li>ฝึกใช้เครื่องมือ AI ทุกวัน (ChatGPT, Canva, Suno)</li>
-                                        <li>เรียนพื้นฐาน Coding (Python) ผ่าน Code.org, Scratch, Codecademy</li>
-                                        <li>ฝึกคิดเชิงคำนวณ (Computational Thinking) ผ่านโจทย์และเกม</li>
-                                        <li>เรียนรู้ภาษาอังกฤษให้ดี (เนื้อหา AI ส่วนใหญ่เป็นภาษาอังกฤษ)</li>
-                                        <li>ทำโครงงาน AI จนมี Portfolio</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">ม.ปลาย</div>
-                                <div class="timeline-content">
-                                    <h5>ต่อยอดความรู้</h5>
-                                    <ul>
-                                        <li>เรียนคณิตศาสตร์ให้แข็ง (พีชคณิต, สถิติ, แคลคูลัส)</li>
-                                        <li>เข้าร่วมค่าย/แข่งขันด้าน AI และ Data Science</li>
-                                        <li>ลองเรียน Machine Learning เบื้องต้น (Coursera, edX)</li>
-                                        <li>สร้างโปรเจกต์ AI จริงๆ แล้วเผยแพร่ลง GitHub</li>
-                                        <li>ฝึก Prompt Engineering ให้เก่ง</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">มหาวิทยาลัย</div>
-                                <div class="timeline-content">
-                                    <h5>เรียนเฉพาะทาง</h5>
-                                    <ul>
-                                        <li>สาขาที่เกี่ยวข้อง: วิทยาการคอมพิวเตอร์, วิศวกรรมคอมพิวเตอร์, สถิติ, Data Science, AI</li>
-                                        <li>ทำวิจัย/โปรเจกต์ที่เกี่ยวกับ AI</li>
-                                        <li>ฝึกงานกับบริษัทเทคโนโลยี</li>
-                                        <li>เข้าร่วมชุมชน AI (Meetup, Hackathon, Conference)</li>
-                                        <li>สร้าง Portfolio ที่แข็งแรง</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="content-section">
-                        <h4><i class="fas fa-book"></i> 6.6 แหล่งเรียนรู้ AI ที่แนะนำ</h4>
-                        <p>แหล่งเรียนรู้ฟรีและมีคุณภาพสำหรับผู้เริ่มต้น:</p>
-
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <h5>คอร์สออนไลน์ฟรี</h5>
-                                <p>Google AI for Everyone, Coursera Machine Learning (Andrew Ng), Fast.ai, Khan Academy, Elements of AI (Finland)</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-code"></i>
-                                <h5>ฝึก Coding</h5>
-                                <p>Codecademy, freeCodeCamp, Code.org, Scratch (สำหรับเริ่มต้น), Kaggle Learn (สำหรับ Data Science)</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-play-circle"></i>
-                                <h5>YouTube Channels</h5>
-                                <p>3Blue1Brown (คณิตศาสตร์), Two Minute Papers (AI ใหม่ๆ), Sentdex (Python/ML), BorntoDev (ภาษาไทย)</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-flask"></i>
-                                <h5>ทดลอง AI</h5>
-                                <p>Google Teachable Machine, ML Playground, TensorFlow Playground, Hugging Face (ทดลองโมเดล AI)</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-book-open"></i>
-                                <h5>อ่านเพิ่มเติม</h5>
-                                <p>MIT Technology Review, The Verge AI, Towards Data Science (Medium), AI Thailand (ภาษาไทย)</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-users"></i>
-                                <h5>ชุมชน AI ไทย</h5>
-                                <p>AI Thailand, Thai AI Community, สมาคม AI แห่งประเทศไทย, Facebook Group: AI & ML Thailand</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="knowledge-box">
-                        <h4><i class="fas fa-lightbulb"></i> สรุปความรู้หน่วยที่ 6</h4>
-                        <p>AI กำลังเปลี่ยนแปลงโลกการทำงาน แต่ไม่ใช่เรื่องน่ากลัว ถ้าเราเตรียมตัวให้พร้อม อาชีพด้าน AI มีหลากหลาย ตั้งแต่ AI Engineer, Data Scientist, Prompt Engineer ไปจนถึง AI Content Creator ทักษะที่สำคัญที่สุดคือ "การเรียนรู้ตลอดชีวิต" เพราะเทคโนโลยีเปลี่ยนแปลงเร็วมาก สิ่งที่ AI ทำไม่ได้คือ ความคิดสร้างสรรค์แท้จริง ความเข้าอกเข้าใจ และการตัดสินใจทางจริยธรรม จงพัฒนาทักษะเหล่านี้ควบคู่กับการใช้ AI เป็นเครื่องมือ</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>พร้อมสู่อนาคต</h3>
+                    <p>เตรียมทักษะที่จำเป็นสำหรับโลกการทำงานในยุค AI</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- ==================== REVIEW SECTION ==================== -->
-    <section id="review" class="review-section">
-        <h2 class="section-title"><i class="fas fa-clipboard-check"></i> ทบทวนเนื้อหา</h2>
-        <p class="section-desc">ทดสอบความเข้าใจของคุณในแต่ละหน่วยการเรียนรู้ คลิก "ดูคำตอบ" เพื่อตรวจสอบ</p>
-
-        <div class="review-cards">
-            <!-- Review Unit 1 -->
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-globe"></i></div>
-                <h3>หน่วยที่ 1: รู้จักโลกของ AI</h3>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> AI ย่อมาจากอะไร และมีความหมายว่าอย่างไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>AI ย่อมาจาก Artificial Intelligence แปลว่า ปัญญาประดิษฐ์ คือสาขาของวิทยาการคอมพิวเตอร์ที่มุ่งสร้างระบบที่สามารถเรียนรู้ คิด วิเคราะห์ และตัดสินใจได้คล้ายกับมนุษย์</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> AI แบ่งออกเป็นกี่ประเภท อะไรบ้าง? และแบบไหนที่มีอยู่จริงในปัจจุบัน?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>AI แบ่งเป็น 3 ประเภท: 1) <strong>Narrow AI</strong> (AI เฉพาะทาง) - ทำงานเฉพาะอย่างเดียวได้ดีมาก เช่น จดจำใบหน้า แนะนำหนัง (มีอยู่จริงในปัจจุบัน) 2) <strong>General AI (AGI)</strong> - ฉลาดเท่ามนุษย์ทำได้หลายอย่าง (ยังไม่มีจริง) 3) <strong>Super AI (ASI)</strong> - ฉลาดเหนือมนุษย์ (เป็นทฤษฎี)</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ใครเป็นคนบัญญัติคำว่า "Artificial Intelligence" ขึ้นเป็นครั้งแรก และเมื่อปีใด?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>John McCarthy</strong> บัญญัติคำว่า "Artificial Intelligence" ในปี <strong>1956</strong> ในการประชุมที่ Dartmouth College ประเทศสหรัฐอเมริกา ถือเป็นจุดเริ่มต้นอย่างเป็นทางการของสาขา AI</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ยกตัวอย่าง AI ที่ใช้ในชีวิตประจำวันมา 5 ตัวอย่าง พร้อมบอกว่าอยู่ในวงการอะไร</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>Face ID</strong> (สมาร์ทโฟน) - ปลดล็อกด้วยใบหน้า 2) <strong>Netflix แนะนำหนัง</strong> (ความบันเทิง) 3) <strong>Google Maps</strong> (การเดินทาง) - แนะนำเส้นทาง 4) <strong>Shopee แนะนำสินค้า</strong> (ซื้อของออนไลน์) 5) <strong>Duolingo</strong> (การศึกษา) - ปรับบทเรียนตามผู้เรียน</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> "Turing Test" คืออะไร และใครเป็นคนเสนอ?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>Turing Test เสนอโดย <strong>Alan Turing</strong> ในปี 1950 เป็นการทดสอบว่า AI สามารถ "หลอก" มนุษย์ให้คิดว่ากำลังสนทนากับมนุษย์ด้วยกันได้หรือไม่ ถ้า AI ผ่านการทดสอบนี้ แสดงว่ามีความฉลาดเทียบเท่ามนุษย์ในด้านการสนทนา</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Review Unit 2 -->
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-tools"></i></div>
-                <h3>หน่วยที่ 2: เครื่องมือ AI</h3>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Generative AI คืออะไร? ต่างจาก AI ทั่วไปอย่างไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>Generative AI</strong> คือ AI ที่สามารถ "สร้าง" เนื้อหาใหม่ได้ เช่น ข้อความ รูปภาพ เสียง เพลง วิดีโอ ต่างจาก AI ทั่วไปที่มักจะ "วิเคราะห์" หรือ "จำแนก" ข้อมูลเท่านั้น Generative AI สร้างสิ่งใหม่ที่ไม่เคยมีมาก่อนได้</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> สูตร RACE สำหรับเขียน Prompt ที่ดี ประกอบด้วยอะไรบ้าง?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>R - Role:</strong> กำหนดบทบาทให้ AI (เช่น "คุณเป็นครูสอนวิทย์") | <strong>A - Action:</strong> บอกให้ทำอะไร (เช่น "อธิบาย" "เขียน" "สรุป") | <strong>C - Context:</strong> ให้บริบทเพิ่มเติม (เช่น "สำหรับเด็ก ม.3" "ความยาว 200 คำ") | <strong>E - Example:</strong> ให้ตัวอย่างผลลัพธ์ที่ต้องการ</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ChatGPT และ Gemini แตกต่างกันอย่างไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>ChatGPT</strong> (OpenAI): เด่นเรื่องการเขียนเนื้อหาคุณภาพสูง สร้างสรรค์ มีหลายเวอร์ชัน | <strong>Gemini</strong> (Google): เด่นเรื่องเชื่อมต่อกับ Google Search ได้ข้อมูลอัปเดต วิเคราะห์รูปภาพได้ ทำงานร่วมกับ Google Workspace ได้ดี</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Canva Magic Studio มีฟีเจอร์ AI อะไรบ้าง? ยกมาอย่างน้อย 4 อย่าง</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>Magic Design:</strong> AI สร้างดีไซน์ทั้งชิ้นจาก Prompt 2) <strong>Magic Write:</strong> AI เขียนข้อความ 3) <strong>Magic Eraser:</strong> ลบวัตถุในรูป 4) <strong>Magic Expand:</strong> ขยายพื้นที่ภาพ 5) <strong>Background Remover:</strong> ลบพื้นหลัง 6) <strong>Text to Image:</strong> สร้างรูปจากคำอธิบาย</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Suno AI ทำอะไรได้บ้าง?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>Suno AI สร้างเพลงเต็มเพลงจากข้อความสั้นๆ ได้ โดยเลือกแนวเพลงได้ (Pop, Rock, Jazz, ลูกทุ่ง ฯลฯ) มีเสียงร้องเป็นธรรมชาติทั้งไทยและอังกฤษ เราสามารถเขียนเนื้อเพลงเองแล้วให้ AI แต่งทำนอง หรือให้ AI ทำทั้งหมดก็ได้ สร้างเพลงได้ยาว 2-4 นาที</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Review Unit 3 -->
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-cogs"></i></div>
-                <h3>หน่วยที่ 3: การคิดเชิงคำนวณและตรรกะของ AI</h3>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Computational Thinking ประกอบด้วย 4 ขั้นตอนอะไรบ้าง? อธิบายแต่ละขั้นตอนสั้นๆ</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>Decomposition:</strong> แบ่งปัญหาใหญ่ออกเป็นปัญหาเล็กๆ 2) <strong>Pattern Recognition:</strong> หารูปแบบหรือความเหมือนที่ซ้ำกัน 3) <strong>Abstraction:</strong> คัดเลือกเฉพาะข้อมูลที่สำคัญ ตัดสิ่งไม่จำเป็นออก 4) <strong>Algorithm Design:</strong> ออกแบบขั้นตอนที่ชัดเจนในการแก้ปัญหา</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> อัลกอริทึมที่ดีต้องมีคุณสมบัติอะไรบ้าง?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>ชัดเจน (Precise):</strong> ทุกขั้นตอนไม่คลุมเครือ 2) <strong>มีจุดสิ้นสุด (Finite):</strong> ไม่วนลูปไม่รู้จบ 3) <strong>มีผลลัพธ์ (Output):</strong> ได้คำตอบเมื่อทำเสร็จ 4) <strong>มีประสิทธิภาพ (Effective):</strong> ทำงานได้จริง 5) <strong>รับข้อมูลเข้า (Input):</strong> รับข้อมูลตั้งต้นได้</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Machine Learning มีกี่ประเภท? อธิบายแต่ละประเภทพร้อมยกตัวอย่าง</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>3 ประเภท: 1) <strong>Supervised Learning:</strong> เรียนจากข้อมูลที่มีคำตอบ เช่น ให้รูปแมว/หมาพร้อมป้ายกำกับ AI เรียนรู้แยกได้ 2) <strong>Unsupervised Learning:</strong> เรียนจากข้อมูลไม่มีคำตอบ หารูปแบบเอง เช่น จัดกลุ่มลูกค้า 3) <strong>Reinforcement Learning:</strong> เรียนจากรางวัล/บทลงโทษ เช่น AI เล่นเกมหมากรุก ชนะ=+1 แพ้=-1</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Neural Network มีโครงสร้างอย่างไร? แต่ละชั้นทำหน้าที่อะไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>Neural Network มี 3 ชั้น: 1) <strong>Input Layer:</strong> รับข้อมูลเข้ามา เช่น pixel ของรูปภาพ 2) <strong>Hidden Layer:</strong> ประมวลผล หารูปแบบ ยิ่งมีหลายชั้นยิ่งเรียนรู้ได้ซับซ้อน 3) <strong>Output Layer:</strong> ให้คำตอบออกมา เช่น "แมว" หรือ "หมา" | Deep Learning คือ Neural Network ที่มี Hidden Layer หลายชั้น</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Overfitting และ Underfitting คืออะไร? ต่างกันอย่างไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>Overfitting:</strong> โมเดลจำข้อมูลฝึกได้ดีมากแต่ทำนายข้อมูลใหม่ไม่ได้ (เหมือนท่องจำเฉลยแต่ทำข้อสอบใหม่ไม่ได้) | <strong>Underfitting:</strong> โมเดลเรียนรู้ไม่เพียงพอ ทำนายไม่ดีทั้งข้อมูลเก่าและใหม่ (เหมือนไม่ตั้งใจเรียน ทำอะไรไม่ได้เลย) | แก้ Overfitting: เพิ่มข้อมูล, ลดความซับซ้อน | แก้ Underfitting: ฝึกนานขึ้น, เพิ่มความซับซ้อน</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Review Unit 4 -->
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>หน่วยที่ 4: การใช้ AI อย่างปลอดภัยและมีจริยธรรม</h3>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> หลักจริยธรรม AI ที่สำคัญมีอะไรบ้าง? ยกมาอย่างน้อย 4 ข้อ</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>ความโปร่งใส (Transparency):</strong> ผู้ใช้ควรรู้ว่ากำลังโต้ตอบกับ AI 2) <strong>ความเป็นธรรม (Fairness):</strong> ไม่เลือกปฏิบัติ 3) <strong>ความรับผิดชอบ (Accountability):</strong> มีผู้รับผิดชอบเมื่อ AI ทำผิด 4) <strong>ความเป็นส่วนตัว (Privacy):</strong> เคารพข้อมูลส่วนบุคคล 5) <strong>ความปลอดภัย (Safety):</strong> ไม่เป็นอันตราย 6) <strong>ไม่ทำร้าย (Non-maleficence):</strong> ไม่ถูกใช้เพื่อทำร้ายผู้อื่น</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> Deepfake คืออะไร? มีกี่ประเภท? วิธีสังเกตมีอะไรบ้าง?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>Deepfake</strong> = Deep Learning + Fake คือเทคโนโลยี AI สร้างภาพ/เสียง/วิดีโอปลอมที่ดูเหมือนจริง | <strong>ประเภท:</strong> Face Swap, Face Reenactment, Voice Cloning, Full Body, Text Deepfake | <strong>วิธีสังเกต:</strong> ดูการกระพริบตาผิดปกติ, ขอบใบหน้าเบลอ, แสงเงาไม่สัมพันธ์กับฉาก, เครื่องประดับบิดเบี้ยว, เสียงไม่ตรงปาก, ตรวจสอบแหล่งที่มา</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> หลัก SIFT สำหรับตรวจสอบข่าวปลอมคืออะไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>S - Stop:</strong> หยุด อย่ารีบเชื่อหรือแชร์ทันที | <strong>I - Investigate:</strong> ตรวจสอบว่าแหล่งข่าวน่าเชื่อถือไหม ใครเป็นคนสร้าง | <strong>F - Find:</strong> ค้นหาข่าวเดียวกันจากแหล่งอื่น มีสำนักข่าวอื่นรายงานไหม | <strong>T - Trace:</strong> สืบค้นต้นตอของข้อมูล หาว่ามาจากไหนกันแน่</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> เราควรปกป้องความเป็นส่วนตัวจาก AI อย่างไร? ยกมา 5 วิธี</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) อ่านนโยบายความเป็นส่วนตัวก่อนใช้งาน 2) ไม่ให้ข้อมูลส่วนตัว (รหัสผ่าน, เลขบัตร) กับ AI Chatbot 3) ตั้งค่าความเป็นส่วนตัว ปิดการเข้าถึงที่ไม่จำเป็น 4) ใช้โหมดไม่บันทึกเมื่อพูดเรื่องส่วนตัว 5) ระวังการแชร์รูป/ข้อมูลออนไลน์ 6) ใช้รหัสผ่านแข็งแรงและเปิด 2FA 7) อัปเดตซอฟต์แวร์เสมอ</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> การใช้ AI ในการเรียนอย่าง "เหมาะสม" คืออย่างไร? และอย่าง "ไม่เหมาะสม" คืออย่างไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>เหมาะสม:</strong> ใช้ AI อธิบายเนื้อหาที่ไม่เข้าใจ, ระดมความคิด, เป็นติวเตอร์ถาม-ตอบ, สรุปเนื้อหา, ระบุว่าใช้ AI ช่วยส่วนไหน | <strong>ไม่เหมาะสม:</strong> ให้ AI ทำการบ้านทั้งหมดแล้วส่งเป็นผลงานตัวเอง, คัดลอกคำตอบโดยไม่ทำความเข้าใจ, ไม่ตรวจสอบความถูกต้อง, ปกปิดว่าใช้ AI</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Review Unit 5 -->
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-rocket"></i></div>
-                <h3>หน่วยที่ 5: สร้างสรรค์ผลงานด้วย AI</h3>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> กระบวนการทำโครงงาน AI มี 5 ระยะ (Phase) อะไรบ้าง?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>Ideation:</strong> ระบุปัญหาและเลือกหัวข้อ 2) <strong>Planning & Design:</strong> วางแผนเครื่องมือ ตารางเวลา แบ่งหน้าที่ 3) <strong>Production:</strong> ลงมือสร้างผลงานจริง ทดลอง Prompt หลายๆ แบบ 4) <strong>Iteration:</strong> ปรับปรุงจาก Feedback แก้ไขข้อบกพร่อง 5) <strong>Presentation:</strong> นำเสนอผลงานและสิ่งที่ได้เรียนรู้</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ทำไมจึงไม่ควรใช้ผลงาน AI ดิบๆ โดยไม่แก้ไข?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>เพราะ: 1) ผลงาน AI อาจมีข้อผิดพลาดหรือข้อมูลไม่ถูกต้อง 2) ไม่ได้แสดงความคิดสร้างสรรค์ของตัวเอง 3) AI เป็น "เครื่องมือช่วย" ไม่ใช่ "ตัวแทน" 4) การปรับแต่งทำให้ผลงานมีเอกลักษณ์และคุณภาพดีขึ้น 5) กระบวนการแก้ไขทำให้เราเรียนรู้ด้วย 6) อาจมีปัญหาเรื่องลิขสิทธิ์และจริยธรรม</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> กฎ 10-20-30 ในการนำเสนอคืออะไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>กฎ 10-20-30 คือแนวทางการนำเสนอที่ดี: <strong>10</strong> = ไม่เกิน 10 สไลด์ (กระชับ ไม่ยืดยาว) | <strong>20</strong> = ไม่เกิน 20 นาที (รักษาความสนใจของผู้ฟัง) | <strong>30</strong> = ตัวหนังสือไม่เล็กกว่า 30pt (อ่านง่าย เห็นชัดจากระยะไกล)</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> เกณฑ์การประเมินโครงงาน AI มี 4 ด้านอะไรบ้าง?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>ความคิดสร้างสรรค์ (25%):</strong> หัวข้อน่าสนใจ มีมุมมองใหม่ 2) <strong>การใช้เครื่องมือ AI (25%):</strong> ใช้ได้เหมาะสม เขียน Prompt ดี 3) <strong>คุณภาพผลงาน (25%):</strong> สมบูรณ์ ข้อมูลถูกต้อง สวยงาม 4) <strong>การนำเสนอ (25%):</strong> อธิบายชัดเจน เล่ากระบวนการได้ ตอบคำถามได้</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ยกตัวอย่างโครงงาน AI ระดับเริ่มต้นที่ทำได้จริงมา 3 ตัวอย่าง</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>หนังสือนิทาน AI:</strong> ใช้ ChatGPT เขียนเรื่อง + Recraft/DALL-E วาดภาพประกอบ 2) <strong>โปสเตอร์รณรงค์:</strong> ใช้ Canva Magic ออกแบบโปสเตอร์รณรงค์เรื่องสิ่งแวดล้อม 3) <strong>เพลงประจำห้อง:</strong> เขียนเนื้อเพลงเองแล้วใช้ Suno แต่งเพลง 4) <strong>แปลบทกวี:</strong> ใช้ AI แปลบทกวีไทยเป็นอังกฤษ แล้ววิเคราะห์คุณภาพ</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Review Unit 6 -->
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-briefcase"></i></div>
-                <h3>หน่วยที่ 6: สรุปความรู้และอาชีพด้าน AI</h3>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ยกตัวอย่างอาชีพด้าน AI มา 5 อาชีพ พร้อมบอกว่าแต่ละอาชีพทำอะไร</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) <strong>AI Engineer:</strong> สร้างและดูแลระบบ AI 2) <strong>Data Scientist:</strong> วิเคราะห์ข้อมูลขนาดใหญ่ หา Insight 3) <strong>ML Engineer:</strong> สร้างและปรับปรุงโมเดล Machine Learning 4) <strong>Prompt Engineer:</strong> ออกแบบ Prompt ให้ AI ทำงานได้ดี 5) <strong>AI Ethics Specialist:</strong> กำกับให้ AI เป็นธรรม ไม่มีอคติ 6) <strong>Computer Vision Engineer:</strong> สร้างระบบ AI ที่ "มองเห็น"</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ทำไม AI จึงทำแทนอาชีพบางอย่างได้ยาก? ยกตัวอย่าง</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>AI ทำแทนได้ยากในงานที่ต้องใช้: <strong>EQ สูง</strong> (จิตแพทย์ - ต้องเข้าอกเข้าใจมนุษย์), <strong>สัมผัสทางกาย</strong> (ช่างซ่อม - ต้องใช้มือทำงานจริง), <strong>ความคิดสร้างสรรค์เฉพาะตัว</strong> (ศิลปินระดับสูง - มีเรื่องราวและตัวตน), <strong>การสร้างแรงบันดาลใจ</strong> (ครู - ต้องดูแลและจูงใจเด็ก), <strong>ประสบการณ์สัมผัสจริง</strong> (พ่อครัวระดับสูง - ต้องชิมรสจริง)</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> "กฎทอง" เกี่ยวกับ AI กับการทำงานคืออะไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>"<strong>AI จะไม่มาแทนที่คุณ แต่คนที่ใช้ AI เป็นจะแทนที่คนที่ใช้ไม่เป็น</strong>" หมายความว่า AI ไม่ได้มาแย่งงานทั้งหมด แต่จะเปลี่ยนรูปแบบของงาน คนที่รู้จักใช้ AI เป็นเครื่องมือจะมีข้อได้เปรียบ ดังนั้นต้องเรียนรู้การใช้ AI ควบคู่กับพัฒนาทักษะที่ AI ทำไม่ได้</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> ทักษะแห่งอนาคตแบ่งเป็น 2 กลุ่ม ยกตัวอย่างกลุ่มละ 3 ทักษะ</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p><strong>Hard Skills:</strong> 1) Digital Literacy - ใช้เทคโนโลยีคล่อง 2) AI Literacy - เข้าใจและใช้ AI เป็น 3) Coding - เขียนโปรแกรมได้ | <strong>Soft Skills:</strong> 1) Critical Thinking - คิดวิเคราะห์ ตั้งคำถาม 2) Creativity - คิดสร้างสรรค์ คิดนอกกรอบ 3) Adaptability - ปรับตัวเร็ว เรียนรู้สิ่งใหม่ตลอดเวลา</p>
-                    </div>
-                </div>
-
-                <div class="review-question">
-                    <p><strong>คำถาม:</strong> นักเรียนระดับมัธยมสามารถเตรียมตัวสู่อาชีพ AI ได้อย่างไร?</p>
-                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
-                    <div class="answer hidden">
-                        <p>1) ฝึกใช้เครื่องมือ AI ทุกวัน (ChatGPT, Canva, Suno) 2) เรียนพื้นฐาน Coding เช่น Python ผ่าน Code.org, Codecademy 3) ฝึก Computational Thinking ผ่านโจทย์และเกม 4) เรียนรู้ภาษาอังกฤษให้ดี 5) ทำโครงงาน AI จนมี Portfolio ที่แสดงความสามารถ</p>
-                    </div>
-                </div>
-            </div>
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container cta-content">
+            <h2>พร้อมเริ่มต้นการเรียนรู้แล้วหรือยัง?</h2>
+            <p>เริ่มต้นจากหน่วยที่ 1 หรือเลือกหัวข้อที่สนใจได้เลย</p>
+            <a href="pages/unit1.html" class="btn btn-primary btn-lg"><i class="fas fa-play"></i> เริ่มเรียนหน่วยที่ 1</a>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p><i class="fas fa-robot"></i> ปอเนาะ Intertech - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
-            <p class="footer-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="pages/unit1.html">หน่วย 1</a>
+                <a href="pages/unit2.html">หน่วย 2</a>
+                <a href="pages/unit3.html">หน่วย 3</a>
+                <a href="pages/unit4.html">หน่วย 4</a>
+                <a href="pages/unit5.html">หน่วย 5</a>
+                <a href="pages/unit6.html">หน่วย 6</a>
+                <a href="pages/review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
         </div>
     </footer>
 

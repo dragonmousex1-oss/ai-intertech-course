@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน่วยที่ 6: สรุปความรู้และอาชีพด้าน AI - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html">หน่วย 1</a></li>
+                <li><a href="unit2.html">หน่วย 2</a></li>
+                <li><a href="unit3.html">หน่วย 3</a></li>
+                <li><a href="unit4.html">หน่วย 4</a></li>
+                <li><a href="unit5.html">หน่วย 5</a></li>
+                <li><a href="unit6.html" class="active">หน่วย 6</a></li>
+                <li><a href="review.html">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">หน่วยที่ 6: สรุปความรู้และอาชีพด้าน AI</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">หน่วยที่ 6</span>
+                <h1 class="page-title">สรุปความรู้และอาชีพด้าน AI</h1>
+                <p class="page-subtitle">ทบทวนความรู้ทั้งหมดที่เรียนมา สำรวจอาชีพและทักษะแห่งอนาคตที่เกี่ยวข้องกับ AI พร้อมเตรียมตัวก้าวสู่โลกการทำงานยุคใหม่</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Briefcase -->
+                    <rect x="100" y="120" width="100" height="70" rx="10" stroke="url(#heroGrad6a)" stroke-width="2.5" fill="url(#heroGrad6b)" opacity="0.15"/>
+                    <path d="M130 120v-15a15 15 0 0130 0v15" stroke="url(#heroGrad6a)" stroke-width="2.5" fill="none"/>
+                    <rect x="140" y="145" width="20" height="15" rx="3" fill="#6366f1" opacity="0.4"/>
+                    <!-- Graduation cap -->
+                    <path d="M150 60l-50 25 50 25 50-25-50-25z" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="1.5"/>
+                    <line x1="150" y1="85" x2="150" y2="105" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
+                    <path d="M130 72v20c0 10 20 15 20 15s20-5 20-15V72" stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.4"/>
+                    <!-- Rocket -->
+                    <path d="M220 80c0-20-10-40-10-40s-10 20-10 40c0 10 5 18 10 22 5-4 10-12 10-22z" fill="#34d399" opacity="0.3" stroke="#34d399" stroke-width="1.5"/>
+                    <path d="M205 95l-5 10h20l-5-10" fill="#f59e0b" opacity="0.4"/>
+                    <circle cx="210" cy="70" r="4" fill="#34d399" opacity="0.5"/>
+                    <!-- Stars -->
+                    <circle cx="80" cy="80" r="3" fill="#f59e0b" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="250" cy="130" r="3" fill="#06b6d4" opacity="0.6">
+                        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="70" cy="180" r="2.5" fill="#ec4899" opacity="0.5">
+                        <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Orbiting ring -->
+                    <circle cx="150" cy="150" r="100" stroke="#6366f1" stroke-width="1" opacity="0.15">
+                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.15;0.05;0.15" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Growth chart -->
+                    <path d="M70 240 L100 225 L130 230 L160 210 L190 200 L220 180 L250 160" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                    <circle cx="250" cy="160" r="4" fill="#34d399" opacity="0.5"/>
+                    <!-- Data nodes -->
+                    <circle cx="90" cy="260" r="5" fill="#818cf8" opacity="0.4"/>
+                    <circle cx="130" cy="270" r="4" fill="#06b6d4" opacity="0.4"/>
+                    <circle cx="170" cy="265" r="5" fill="#f59e0b" opacity="0.4"/>
+                    <circle cx="210" cy="255" r="4" fill="#ec4899" opacity="0.4"/>
+                    <defs>
+                        <linearGradient id="heroGrad6a" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="heroGrad6b" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#34d399"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Section 6.1: สรุปภาพรวม -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">6.1</span> สรุปภาพรวม (Course Overview)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>ตลอดการเรียนรู้ทั้ง 6 หน่วย เราได้เดินทางจากพื้นฐานของ AI ไปจนถึงการประยุกต์ใช้และเตรียมตัวสู่อนาคต มาทบทวนสิ่งที่เราได้เรียนรู้กันในแต่ละหน่วย:</p>
+                </div>
+            </div>
+
+            <!-- 6 Unit Summary Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <!-- Unit 1 -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15); border-top: 4px solid #6366f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #6366f1; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">1</span>
+                        <h4 style="color: #6366f1; margin: 0;">รู้จัก AI เบื้องต้น</h4>
+                    </div>
+                    <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>ความหมายและประวัติศาสตร์ของ AI</li>
+                        <li>ประเภทของ AI: Narrow AI, General AI, Super AI</li>
+                        <li>AI ในชีวิตประจำวัน: แนะนำวิดีโอ, ผู้ช่วยเสียง, แปลภาษา</li>
+                        <li>ความแตกต่างระหว่าง AI, ML, Deep Learning</li>
+                    </ul>
+                </div>
+
+                <!-- Unit 2 -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); border-top: 4px solid #8b5cf6;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #8b5cf6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">2</span>
+                        <h4 style="color: #8b5cf6; margin: 0;">เครื่องมือ AI ในปัจจุบัน</h4>
+                    </div>
+                    <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>ChatGPT, Claude, Gemini และ AI Chatbots</li>
+                        <li>AI สร้างภาพ: DALL-E, Midjourney, Stable Diffusion</li>
+                        <li>เทคนิค Prompt Engineering</li>
+                        <li>เครื่องมือ AI สำหรับการเรียนและทำงาน</li>
+                    </ul>
+                </div>
+
+                <!-- Unit 3 -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15); border-top: 4px solid #06b6d4;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #06b6d4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">3</span>
+                        <h4 style="color: #06b6d4; margin: 0;">การคิดเชิงคำนวณและตรรกะของ AI</h4>
+                    </div>
+                    <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>Computational Thinking 4 ขั้นตอน</li>
+                        <li>อัลกอริทึม: Bubble Sort, Binary Search</li>
+                        <li>Machine Learning 3 ประเภท: Supervised, Unsupervised, Reinforcement</li>
+                        <li>Neural Network และ Deep Learning</li>
+                    </ul>
+                </div>
+
+                <!-- Unit 4 -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15); border-top: 4px solid #f59e0b;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #f59e0b; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">4</span>
+                        <h4 style="color: #f59e0b; margin: 0;">จริยธรรมและความปลอดภัย AI</h4>
+                    </div>
+                    <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>หลักจริยธรรม AI 6 ประการ</li>
+                        <li>Deepfake และวิธีตรวจจับ</li>
+                        <li>ลิขสิทธิ์ผลงาน AI และกฎหมายที่เกี่ยวข้อง</li>
+                        <li>การปกป้องความเป็นส่วนตัว, SIFT Method</li>
+                    </ul>
+                </div>
+
+                <!-- Unit 5 -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.15); border-top: 4px solid #ec4899;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #ec4899; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">5</span>
+                        <h4 style="color: #ec4899; margin: 0;">AI กับสังคมและอนาคต</h4>
+                    </div>
+                    <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>ผลกระทบของ AI ต่อสังคมและเศรษฐกิจ</li>
+                        <li>AI ในอุตสาหกรรมต่างๆ: การแพทย์ การศึกษา เกษตร</li>
+                        <li>โอกาสและความท้าทายของ AI ในประเทศไทย</li>
+                        <li>แนวโน้ม AI ในอนาคต: AGI, Quantum AI</li>
+                    </ul>
+                </div>
+
+                <!-- Unit 6 -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15); border-top: 4px solid #34d399;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #34d399; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold;">6</span>
+                        <h4 style="color: #34d399; margin: 0;">สรุปความรู้และอาชีพด้าน AI</h4>
+                    </div>
+                    <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>ภาพรวมความรู้ทั้งหมดที่เรียนมา</li>
+                        <li>อาชีพด้าน AI ที่น่าสนใจ 9 อาชีพ</li>
+                        <li>ทักษะแห่งอนาคต: Hard Skills + Soft Skills</li>
+                        <li>เส้นทางเตรียมตัวและแหล่งเรียนรู้เพิ่มเติม</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 6.2: AI เปลี่ยนโลกการทำงาน -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">6.2</span> AI เปลี่ยนโลกการทำงาน</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>AI กำลังเปลี่ยนแปลงโลกการทำงานอย่างรวดเร็ว บางอาชีพอาจถูกทดแทนด้วย AI แต่หลายอาชีพก็ยังคงต้องการมนุษย์ มาดูกันว่าอาชีพแบบไหนที่ได้รับผลกระทบ และแบบไหนที่ AI ยังทดแทนได้ยาก</p>
+                </div>
+            </div>
+
+            <!-- AI Impact SVG Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 700 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                    <!-- Left: High Impact -->
+                    <rect x="30" y="30" width="280" height="150" rx="16" fill="#ef4444" opacity="0.05" stroke="#ef4444" stroke-width="1.5"/>
+                    <text x="170" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#ef4444">งานที่ AI ทำแทนได้มาก</text>
+                    <text x="170" y="75" text-anchor="middle" font-size="9" fill="#94a3b8">งานซ้ำๆ ใช้กฎชัดเจน ข้อมูลเยอะ</text>
+                    <text x="170" y="100" text-anchor="middle" font-size="10" fill="#64748b">📊 พนักงานกรอกข้อมูล</text>
+                    <text x="170" y="118" text-anchor="middle" font-size="10" fill="#64748b">🏦 เจ้าหน้าที่ธนาคาร (ธุรกรรมพื้นฐาน)</text>
+                    <text x="170" y="136" text-anchor="middle" font-size="10" fill="#64748b">📞 Call Center (คำถามทั่วไป)</text>
+                    <text x="170" y="154" text-anchor="middle" font-size="10" fill="#64748b">🚗 พนักงานขับรถ (อนาคต)</text>
+                    <text x="170" y="172" text-anchor="middle" font-size="10" fill="#64748b">📝 งานแปลเอกสารพื้นฐาน</text>
+                    <!-- Arrow -->
+                    <text x="350" y="110" text-anchor="middle" font-size="24" fill="#94a3b8">⚡</text>
+                    <!-- Right: Low Impact -->
+                    <rect x="390" y="30" width="280" height="150" rx="16" fill="#34d399" opacity="0.05" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="530" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#34d399">งานที่ AI ทดแทนยาก</text>
+                    <text x="530" y="75" text-anchor="middle" font-size="9" fill="#94a3b8">ต้องใช้ความคิดสร้างสรรค์ อารมณ์ สัมผัส</text>
+                    <text x="530" y="100" text-anchor="middle" font-size="10" fill="#64748b">🎨 ศิลปินที่มีเอกลักษณ์เฉพาะตัว</text>
+                    <text x="530" y="118" text-anchor="middle" font-size="10" fill="#64748b">👨‍⚕️ แพทย์/พยาบาล (ดูแลผู้ป่วย)</text>
+                    <text x="530" y="136" text-anchor="middle" font-size="10" fill="#64748b">👨‍🏫 ครู/อาจารย์ (สอนและให้กำลังใจ)</text>
+                    <text x="530" y="154" text-anchor="middle" font-size="10" fill="#64748b">🤝 นักจิตวิทยา/นักสังคมสงเคราะห์</text>
+                    <text x="530" y="172" text-anchor="middle" font-size="10" fill="#64748b">🔧 ช่างเทคนิคเฉพาะทาง</text>
+                </svg>
+            </div>
+
+            <!-- Comparison Grid -->
+            <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="comparison-card" style="border-top: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; text-align: center;"><i class="fas fa-robot"></i> งานที่ AI มีผลกระทบสูง</h3>
+                    <div style="margin-top: 1rem;">
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">พนักงานกรอกข้อมูล / Data Entry</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: AI อ่านและป้อนข้อมูลได้เร็วกว่า แม่นยำกว่า และทำงาน 24 ชม.</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">เจ้าหน้าที่ธนาคาร (ธุรกรรมพื้นฐาน)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: Mobile Banking และ AI Chatbot ทำธุรกรรมได้โดยไม่ต้องไปธนาคาร</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">Call Center (คำถามทั่วไป)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: AI Chatbot ตอบคำถามซ้ำๆ ได้ทันที ไม่ต้องรอคิว</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">นักแปลเอกสารพื้นฐาน</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: AI แปลภาษาได้เร็วและแม่นยำมากขึ้นเรื่อยๆ สำหรับเอกสารทั่วไป</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px;">
+                            <strong style="font-size: 0.9rem;">พนักงานตรวจสอบคุณภาพ (QC ซ้ำๆ)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: Computer Vision ตรวจจับข้อบกพร่องได้แม่นยำกว่าตามนุษย์</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card" style="border-top: 4px solid #34d399;">
+                    <h3 style="color: #34d399; text-align: center;"><i class="fas fa-user-shield"></i> งานที่ AI ทดแทนได้ยาก</h3>
+                    <div style="margin-top: 1rem;">
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">แพทย์/พยาบาล (การดูแลผู้ป่วย)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: ต้องใช้ความเห็นอกเห็นใจ การตัดสินใจทางจริยธรรม และสัมผัสทางกาย</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">ครู/อาจารย์ (สร้างแรงบันดาลใจ)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: การสอนที่ดีต้องเข้าใจอารมณ์นักเรียน ปรับวิธีสอน และให้กำลังใจ</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">นักจิตวิทยา/ที่ปรึกษา</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: การรับฟัง เข้าใจ และเชื่อมต่อทางอารมณ์กับมนุษย์ AI ทำไม่ได้จริง</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem;">ช่างเทคนิคเฉพาะทาง (ซ่อมบำรุง)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: ต้องใช้ทักษะมือ แก้ปัญหาเฉพาะหน้า ปรับตัวตามสถานการณ์จริง</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                            <strong style="font-size: 0.9rem;">ผู้นำ/ผู้บริหารองค์กร</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">เหตุผล: ต้องตัดสินใจเชิงกลยุทธ์ สร้างวิสัยทัศน์ และบริหารคนด้วยความเข้าใจ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" style="margin-top: 2rem;">
+                <div class="info-box" style="border-left: 4px solid #6366f1;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-lightbulb" style="color: #6366f1;"></i> <strong>ข้อสรุปสำคัญ:</strong> AI ไม่ได้ "แทนที่" อาชีพทั้งหมด แต่จะ "เปลี่ยนแปลง" วิธีทำงานในทุกอาชีพ คนที่ใช้ AI เป็นเครื่องมือจะทำงานได้ดีกว่าคนที่ไม่ใช้ และดีกว่า AI ที่ทำงานเพียงลำพัง <strong>"มนุษย์ + AI > มนุษย์อย่างเดียว > AI อย่างเดียว"</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 6.3: อาชีพด้าน AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">6.3</span> อาชีพด้าน AI (AI Careers)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>อาชีพด้าน AI เป็นหนึ่งในอาชีพที่เติบโตเร็วที่สุดในโลก มีความต้องการสูงและรายได้ดี มาทำความรู้จัก 9 อาชีพด้าน AI ที่น่าสนใจ พร้อมทักษะที่ต้องมีและช่วงเงินเดือน:</p>
+                </div>
+            </div>
+
+            <!-- 9 Career Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <!-- 1. AI Engineer -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(99, 102, 241, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-brain" style="font-size: 1.3rem; color: #6366f1;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #6366f1; margin: 0;">AI Engineer</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">วิศวกร AI</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">ออกแบบ พัฒนา และติดตั้งระบบ AI ให้ทำงานได้จริงในองค์กร รวมถึงการ Deploy โมเดลและดูแลระบบ AI ในระดับ Production</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #6366f1;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Python, TensorFlow/PyTorch, Cloud Computing (AWS/GCP/Azure), Docker, MLOps, Mathematics</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(99, 102, 241, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #6366f1; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 50,000 - 200,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 2. Data Scientist -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(139, 92, 246, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chart-bar" style="font-size: 1.3rem; color: #8b5cf6;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #8b5cf6; margin: 0;">Data Scientist</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">นักวิทยาศาสตร์ข้อมูล</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">วิเคราะห์ข้อมูลขนาดใหญ่เพื่อค้นหา Insight ที่มีคุณค่าทางธุรกิจ สร้างโมเดลทำนาย และนำเสนอผลลัพธ์ให้ผู้บริหารตัดสินใจ</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #8b5cf6;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Python/R, SQL, Statistics, Data Visualization (Tableau/PowerBI), Machine Learning, Communication</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(139, 92, 246, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #8b5cf6; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 45,000 - 180,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 3. ML Engineer -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(6, 182, 212, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-cogs" style="font-size: 1.3rem; color: #06b6d4;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #06b6d4; margin: 0;">ML Engineer</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">วิศวกรการเรียนรู้ของเครื่อง</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">ออกแบบ ฝึกสอน และปรับปรุงโมเดล Machine Learning ให้มีประสิทธิภาพสูงสุด รวมถึงการ Optimize โมเดลสำหรับ Production</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #06b6d4;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Python, Deep Learning Frameworks, Linear Algebra, Probability, Feature Engineering, Model Optimization</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(6, 182, 212, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #06b6d4; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 55,000 - 200,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 4. Prompt Engineer -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(245, 158, 11, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-keyboard" style="font-size: 1.3rem; color: #f59e0b;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #f59e0b; margin: 0;">Prompt Engineer</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">วิศวกรพรอมต์</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">ออกแบบคำสั่ง (Prompt) ที่มีประสิทธิภาพสำหรับ AI เพื่อให้ได้ผลลัพธ์ที่ดีที่สุด เป็นอาชีพใหม่ที่เกิดจาก Generative AI</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #f59e0b;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">ทักษะภาษา, Logical Thinking, ความเข้าใจ LLMs, Creative Writing, Testing & Iteration</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(245, 158, 11, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #f59e0b; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 40,000 - 150,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 5. AI Ethics Specialist -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(236, 72, 153, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-balance-scale" style="font-size: 1.3rem; color: #ec4899;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #ec4899; margin: 0;">AI Ethics Specialist</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">ผู้เชี่ยวชาญจริยธรรม AI</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">ดูแลให้ AI ถูกพัฒนาและใช้งานอย่างมีจริยธรรม ตรวจสอบ Bias ประเมินผลกระทบ และกำหนดแนวปฏิบัติด้านจริยธรรม AI ขององค์กร</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #ec4899;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">ปรัชญา/จริยศาสตร์, กฎหมาย, สังคมศาสตร์, ความเข้าใจ AI, Critical Thinking, Policy Writing</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(236, 72, 153, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #ec4899; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 45,000 - 160,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 6. NLP Engineer -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(52, 211, 153, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-language" style="font-size: 1.3rem; color: #34d399;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #34d399; margin: 0;">NLP Engineer</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">วิศวกรประมวลผลภาษาธรรมชาติ</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">พัฒนาระบบ AI ที่เข้าใจและประมวลผลภาษามนุษย์ เช่น Chatbot, ระบบแปลภาษา, การวิเคราะห์ความรู้สึก, สรุปข้อความอัตโนมัติ</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #34d399;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Python, NLP Libraries (spaCy, NLTK, HuggingFace), Transformer Models, Linguistics, Text Processing</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(52, 211, 153, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #34d399; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 50,000 - 180,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 7. Computer Vision Engineer -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(99, 102, 241, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-eye" style="font-size: 1.3rem; color: #6366f1;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #6366f1; margin: 0;">Computer Vision Engineer</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">วิศวกรการมองเห็นด้วยคอมพิวเตอร์</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">พัฒนาระบบ AI ที่ "มองเห็น" และเข้าใจภาพ/วิดีโอ เช่น จดจำใบหน้า ตรวจจับวัตถุ วิเคราะห์ภาพทางการแพทย์ ระบบรถยนต์อัตโนมัติ</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #6366f1;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Python, OpenCV, CNN/YOLO, Image Processing, 3D Vision, Linear Algebra</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(99, 102, 241, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #6366f1; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 50,000 - 190,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 8. Robotics Engineer -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(139, 92, 246, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-robot" style="font-size: 1.3rem; color: #8b5cf6;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #8b5cf6; margin: 0;">Robotics Engineer</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">วิศวกรหุ่นยนต์</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">ออกแบบและพัฒนาหุ่นยนต์ที่ใช้ AI ในการทำงาน ตั้งแต่หุ่นยนต์อุตสาหกรรม หุ่นยนต์บริการ ไปจนถึง Drone และรถยนต์อัตโนมัติ</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #8b5cf6;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Python/C++, ROS, Sensor Integration, Control Systems, Mechanical Design, Reinforcement Learning</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(139, 92, 246, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #8b5cf6; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 45,000 - 170,000 บาท/เดือน</p>
+                    </div>
+                </div>
+
+                <!-- 9. AI Content Creator -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(245, 158, 11, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-wand-magic-sparkles" style="font-size: 1.3rem; color: #f59e0b;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #f59e0b; margin: 0;">AI Content Creator</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">นักสร้างเนื้อหาด้วย AI</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">ใช้เครื่องมือ AI สร้างเนื้อหาคุณภาพสูง ทั้งข้อความ ภาพ วิดีโอ เสียง สำหรับการตลาด โฆษณา สื่อสาร และ Entertainment</p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <p style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fas fa-tools" style="color: #f59e0b;"></i> ทักษะที่ต้องมี:</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Prompt Engineering, เครื่องมือ AI (Midjourney, Runway, ElevenLabs), Creative Direction, Storytelling</p>
+                    </div>
+                    <div style="padding: 0.5rem 0.75rem; background: rgba(245, 158, 11, 0.08); border-radius: 8px;">
+                        <p style="font-size: 0.82rem; color: #f59e0b; font-weight: 600;"><i class="fas fa-coins"></i> เงินเดือน: 30,000 - 120,000 บาท/เดือน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 6.4: ทักษะแห่งอนาคต -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">6.4</span> ทักษะแห่งอนาคต (Future Skills)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>ในโลกที่ AI เปลี่ยนแปลงอย่างรวดเร็ว ทักษะที่จำเป็นสำหรับการทำงานในอนาคตแบ่งออกเป็น 2 กลุ่มใหญ่: <strong>Hard Skills</strong> (ทักษะทางเทคนิค) และ <strong>Soft Skills</strong> (ทักษะทางสังคมและอารมณ์) ทั้งสองอย่างสำคัญเท่ากันและต้องพัฒนาควบคู่กันไป</p>
+                </div>
+            </div>
+
+            <!-- Skills SVG Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 700 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                    <!-- Left: Hard Skills -->
+                    <rect x="30" y="20" width="290" height="180" rx="16" fill="#6366f1" opacity="0.05" stroke="#6366f1" stroke-width="2"/>
+                    <text x="175" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#6366f1">Hard Skills (ทักษะทางเทคนิค)</text>
+                    <text x="175" y="65" text-anchor="middle" font-size="9" fill="#94a3b8">ทักษะที่วัดได้ เรียนรู้ได้จากการฝึกฝน</text>
+                    <text x="175" y="90" text-anchor="middle" font-size="10" fill="#64748b">💻 Digital Literacy</text>
+                    <text x="175" y="110" text-anchor="middle" font-size="10" fill="#64748b">📊 Data Literacy</text>
+                    <text x="175" y="130" text-anchor="middle" font-size="10" fill="#64748b">🤖 AI Literacy</text>
+                    <text x="175" y="150" text-anchor="middle" font-size="10" fill="#64748b">👨‍💻 Coding</text>
+                    <text x="175" y="170" text-anchor="middle" font-size="10" fill="#64748b">✍️ Prompt Engineering</text>
+                    <text x="175" y="190" text-anchor="middle" font-size="10" fill="#64748b">🔐 Cybersecurity</text>
+                    <!-- Center connector -->
+                    <text x="350" y="115" text-anchor="middle" font-size="28" fill="#f59e0b">+</text>
+                    <!-- Right: Soft Skills -->
+                    <rect x="380" y="20" width="290" height="180" rx="16" fill="#34d399" opacity="0.05" stroke="#34d399" stroke-width="2"/>
+                    <text x="525" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">Soft Skills (ทักษะทางอารมณ์)</text>
+                    <text x="525" y="65" text-anchor="middle" font-size="9" fill="#94a3b8">ทักษะที่ AI ทำแทนยาก ต้องพัฒนาจากประสบการณ์</text>
+                    <text x="525" y="90" text-anchor="middle" font-size="10" fill="#64748b">🧠 Critical Thinking</text>
+                    <text x="525" y="110" text-anchor="middle" font-size="10" fill="#64748b">🎨 Creativity</text>
+                    <text x="525" y="130" text-anchor="middle" font-size="10" fill="#64748b">🗣️ Communication</text>
+                    <text x="525" y="150" text-anchor="middle" font-size="10" fill="#64748b">🤝 Collaboration</text>
+                    <text x="525" y="170" text-anchor="middle" font-size="10" fill="#64748b">🔄 Adaptability</text>
+                    <text x="525" y="190" text-anchor="middle" font-size="10" fill="#64748b">❤️ Emotional Intelligence</text>
+                </svg>
+            </div>
+
+            <!-- Hard Skills Grid -->
+            <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="comparison-card" style="border-top: 4px solid #6366f1;">
+                    <h3 style="color: #6366f1; text-align: center;"><i class="fas fa-laptop-code"></i> Hard Skills (6 ทักษะ)</h3>
+                    <div style="margin-top: 1rem;">
+                        <div style="padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #6366f1;">1. Digital Literacy (ทักษะดิจิทัล)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความสามารถในการใช้เทคโนโลยีดิจิทัลอย่างมีประสิทธิภาพ ตั้งแต่ใช้คอมพิวเตอร์ อินเทอร์เน็ต แอป จนถึง Cloud Services</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #6366f1;">2. Data Literacy (ทักษะข้อมูล)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความสามารถในการอ่าน เข้าใจ วิเคราะห์ และใช้ข้อมูลในการตัดสินใจ รู้จักแยกแยะข้อมูลที่ดีจากข้อมูลที่ไม่น่าเชื่อถือ</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #6366f1;">3. AI Literacy (ทักษะ AI)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความเข้าใจพื้นฐานว่า AI ทำงานอย่างไร ข้อจำกัดคืออะไร และจะใช้เครื่องมือ AI ให้เกิดประโยชน์สูงสุดได้อย่างไร</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #6366f1;">4. Coding (การเขียนโค้ด)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ทักษะการเขียนโปรแกรม ไม่จำเป็นต้องเป็นโปรแกรมเมอร์ แต่เข้าใจตรรกะและสามารถเขียน Script อย่างง่ายได้</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #6366f1;">5. Prompt Engineering (วิศวกรรมพรอมต์)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ทักษะการสื่อสารกับ AI ให้ได้ผลลัพธ์ที่ต้องการ เป็นทักษะใหม่ที่สำคัญมากในยุค Generative AI</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                            <strong style="font-size: 0.9rem; color: #6366f1;">6. Cybersecurity (ความปลอดภัยไซเบอร์)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความรู้ในการปกป้องข้อมูลและระบบจากภัยคุกคามทางไซเบอร์ ซึ่งสำคัญมากขึ้นเมื่อ AI ถูกใช้ทั้งในฝั่งป้องกันและโจมตี</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card" style="border-top: 4px solid #34d399;">
+                    <h3 style="color: #34d399; text-align: center;"><i class="fas fa-heart"></i> Soft Skills (6 ทักษะ)</h3>
+                    <div style="margin-top: 1rem;">
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #34d399;">1. Critical Thinking (การคิดวิเคราะห์)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความสามารถในการวิเคราะห์ ประเมิน และตั้งคำถามกับข้อมูลอย่างมีเหตุผล ไม่เชื่ออะไรง่ายๆ รวมถึงตรวจสอบคำตอบจาก AI</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #34d399;">2. Creativity (ความคิดสร้างสรรค์)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">การคิดนอกกรอบ สร้างสิ่งใหม่ที่ไม่เคยมีมาก่อน AI เก่งเรื่องรูปแบบเดิมๆ แต่นวัตกรรมที่แท้จริงยังต้องมาจากมนุษย์</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #34d399;">3. Communication (การสื่อสาร)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ทักษะการสื่อสารที่ชัดเจน ทั้งพูด เขียน ฟัง และนำเสนอ ทำให้คนอื่นเข้าใจและทำงานร่วมกันได้อย่างมีประสิทธิภาพ</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #34d399;">4. Collaboration (การทำงานร่วมกัน)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความสามารถในการทำงานเป็นทีม ทั้งกับมนุษย์และกับ AI เข้าใจจุดแข็งของแต่ละคนและใช้ให้เกิดประโยชน์สูงสุด</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px; margin-bottom: 0.75rem;">
+                            <strong style="font-size: 0.9rem; color: #34d399;">5. Adaptability (การปรับตัว)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">ความยืดหยุ่นในการเรียนรู้สิ่งใหม่ พร้อมเปลี่ยนแปลง ไม่ยึดติดกับวิธีเดิมๆ เพราะเทคโนโลยีเปลี่ยนเร็วมาก</p>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                            <strong style="font-size: 0.9rem; color: #34d399;">6. Emotional Intelligence (ความฉลาดทางอารมณ์)</strong>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.3rem;">การเข้าใจและจัดการอารมณ์ของตัวเองและผู้อื่น สร้างความสัมพันธ์ที่ดี ซึ่งเป็นสิ่งที่ AI ทำไม่ได้อย่างแท้จริง</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Golden Rule Quote -->
+            <div class="content-block" style="margin-top: 2rem;">
+                <div class="info-box" style="border-left: 4px solid #f59e0b; background: rgba(245, 158, 11, 0.03);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <i class="fas fa-crown" style="font-size: 2rem; color: #f59e0b;"></i>
+                    </div>
+                    <p style="font-size: 1.1rem; text-align: center; color: var(--text-primary); font-weight: 600; line-height: 1.8;"><i class="fas fa-quote-left" style="color: #f59e0b; font-size: 0.8rem;"></i> กฎทอง (Golden Rule) เกี่ยวกับ AI กับงาน: <i class="fas fa-quote-right" style="color: #f59e0b; font-size: 0.8rem;"></i></p>
+                    <p style="font-size: 1.2rem; text-align: center; color: #6366f1; font-weight: 700; margin-top: 0.5rem;">"AI จะไม่แทนที่คุณ แต่คนที่ใช้ AI เป็นจะแทนที่คุณ"</p>
+                    <p style="font-size: 0.9rem; text-align: center; color: var(--text-secondary); margin-top: 0.75rem;">"AI won't replace you. A person using AI will."</p>
+                    <p style="font-size: 0.85rem; text-align: center; color: var(--text-muted); margin-top: 1rem;">ดังนั้น สิ่งที่สำคัญที่สุดไม่ใช่การกลัว AI แต่คือการเรียนรู้ที่จะใช้ AI เป็นเครื่องมือเพิ่มศักยภาพของตัวเอง ผสมผสานกับทักษะที่ AI ทำแทนไม่ได้ นั่นคือ ความคิดสร้างสรรค์ ความเห็นอกเห็นใจ และการตัดสินใจที่ซับซ้อน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 6.5: เส้นทางเตรียมตัว -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">6.5</span> เส้นทางเตรียมตัว (Preparation Roadmap)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การเตรียมตัวสู่อาชีพด้าน AI ไม่จำเป็นต้องรอจนเข้ามหาวิทยาลัย คุณสามารถเริ่มเตรียมตัวได้ตั้งแต่ตอนนี้! มาดูเส้นทางที่แนะนำในแต่ละช่วงเวลา:</p>
+                </div>
+            </div>
+
+            <!-- Timeline SVG Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 750 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 750px; width: 100%;">
+                    <!-- Timeline line -->
+                    <line x1="80" y1="70" x2="670" y2="70" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+                    <!-- Stage 1: Now -->
+                    <circle cx="150" cy="70" r="20" fill="#34d399" stroke="#34d399" stroke-width="3"/>
+                    <text x="150" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">1</text>
+                    <text x="150" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="#34d399">ตอนนี้เลย!</text>
+                    <text x="150" y="105" text-anchor="middle" font-size="9" fill="#64748b">ม.ต้น - ม.ปลาย</text>
+                    <!-- Stage 2: High School -->
+                    <circle cx="400" cy="70" r="20" fill="#6366f1" stroke="#6366f1" stroke-width="3"/>
+                    <text x="400" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">2</text>
+                    <text x="400" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">มัธยมปลาย</text>
+                    <text x="400" y="105" text-anchor="middle" font-size="9" fill="#64748b">เตรียมสอบ + ทำ Portfolio</text>
+                    <!-- Stage 3: University -->
+                    <circle cx="600" cy="70" r="20" fill="#8b5cf6" stroke="#8b5cf6" stroke-width="3"/>
+                    <text x="600" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">3</text>
+                    <text x="600" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">มหาวิทยาลัย</text>
+                    <text x="600" y="105" text-anchor="middle" font-size="9" fill="#64748b">เรียนเฉพาะทาง + ฝึกงาน</text>
+                    <!-- Progress arrows -->
+                    <path d="M180 70 L370 70" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M430 70 L570 70" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Timeline Details -->
+            <div class="timeline">
+                <!-- Stage 1: Now -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #34d399;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #34d399; font-weight: 700;">ช่วงที่ 1: ตอนนี้เลย! (เริ่มต้นได้ทันที)</span>
+                        <h4>สร้างพื้นฐานและค้นหาความสนใจ</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-code"></i> เรียนเขียนโค้ดพื้นฐาน</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>เริ่มจาก Python (ภาษายอดนิยมด้าน AI)</li>
+                                    <li>ลอง Scratch หรือ Block Coding ถ้ายังไม่เคยเขียนโค้ด</li>
+                                    <li>ทำโปรเจกต์เล็กๆ เช่น เกมง่ายๆ, เครื่องคิดเลข</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-robot"></i> ใช้เครื่องมือ AI ให้เป็น</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>ฝึก Prompt Engineering กับ ChatGPT/Claude</li>
+                                    <li>ลองสร้างภาพด้วย AI (Midjourney, DALL-E)</li>
+                                    <li>ใช้ AI ช่วยเรียนอย่างมีประสิทธิภาพ</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-calculator"></i> เสริมคณิตศาสตร์</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>ตั้งใจเรียนคณิตศาสตร์ (พีชคณิต สถิติ)</li>
+                                    <li>ฝึกคิดเชิงตรรกะ (Logic Puzzle, หมากรุก)</li>
+                                    <li>เรียนภาษาอังกฤษให้แข็งแรง</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2: High School -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #6366f1;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #6366f1; font-weight: 700;">ช่วงที่ 2: มัธยมปลาย (เตรียมตัวอย่างจริงจัง)</span>
+                        <h4>สร้าง Portfolio และเตรียมสอบ</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-project-diagram"></i> ทำโปรเจกต์ AI จริง</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>สร้าง Chatbot สำหรับโรงเรียน</li>
+                                    <li>ทำ Image Classifier ด้วย Teachable Machine</li>
+                                    <li>เข้าร่วมแข่งขัน AI/Coding ระดับนักเรียน</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-graduation-cap"></i> เตรียมสอบเข้ามหาวิทยาลัย</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>สาขาที่เกี่ยวข้อง: วิทยาการคอมพิวเตอร์, วิศวกรรมคอมพิวเตอร์, AI/Data Science</li>
+                                    <li>เตรียมสอบ GAT/PAT, TGAT/TPAT, A-Level</li>
+                                    <li>สร้าง Portfolio ผลงานที่น่าสนใจ</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-certificate"></i> เก็บ Certificate</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>เรียนคอร์ส AI/ML ออนไลน์ (Coursera, edX)</li>
+                                    <li>สอบ Google AI Essentials Certificate</li>
+                                    <li>ทำ GitHub Portfolio เก็บผลงานโค้ด</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3: University -->
+                <div class="timeline-item">
+                    <div class="timeline-marker" style="background: #8b5cf6;"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year" style="color: #8b5cf6; font-weight: 700;">ช่วงที่ 3: มหาวิทยาลัย (เชี่ยวชาญเฉพาะทาง)</span>
+                        <h4>เรียนลึก ฝึกงาน และสร้างเครือข่าย</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #8b5cf6; margin-bottom: 0.5rem;"><i class="fas fa-brain"></i> เรียนเฉพาะทาง</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>เลือกสาขาเฉพาะ: NLP, Computer Vision, Robotics</li>
+                                    <li>ทำวิจัย/Thesis ด้าน AI</li>
+                                    <li>เรียนรู้ Deep Learning อย่างลึกซึ้ง</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #8b5cf6; margin-bottom: 0.5rem;"><i class="fas fa-building"></i> ฝึกงานกับบริษัทจริง</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>สมัครฝึกงานที่บริษัท Tech (Google, LINE, SCB)</li>
+                                    <li>เข้าร่วมโปรแกรม AI Bootcamp</li>
+                                    <li>ทำ Kaggle Competition สร้างชื่อเสียง</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: #8b5cf6; margin-bottom: 0.5rem;"><i class="fas fa-users"></i> สร้างเครือข่าย</p>
+                                <ul style="font-size: 0.82rem; color: var(--text-secondary); padding-left: 1.2rem;">
+                                    <li>เข้าร่วม AI Community ในประเทศไทย</li>
+                                    <li>ไปงาน AI Conference/Meetup</li>
+                                    <li>Contribute ใน Open Source Projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 6.6: แหล่งเรียนรู้ -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">6.6</span> แหล่งเรียนรู้ (Learning Resources)</h2>
+
+            <div class="content-block">
+                <div class="content-text">
+                    <p>การเรียนรู้ AI ไม่จำกัดอยู่แค่ในห้องเรียน มีแหล่งเรียนรู้มากมายทั้งออนไลน์และออฟไลน์ที่เข้าถึงได้ฟรีหรือราคาไม่แพง มาดู 6 แหล่งเรียนรู้ที่แนะนำ:</p>
+                </div>
+            </div>
+
+            <!-- 6 Resource Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <!-- 1. Online Courses -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="width: 55px; height: 55px; border-radius: 14px; background: rgba(99, 102, 241, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-graduation-cap" style="font-size: 1.5rem; color: #6366f1;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: #6366f1; text-align: center; margin-bottom: 0.75rem;">คอร์สออนไลน์ (Online Courses)</h4>
+                    <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.9;">
+                        <li><strong>Coursera</strong> - คอร์ส AI/ML จากมหาวิทยาลัยชั้นนำ (Stanford, MIT)</li>
+                        <li><strong>edX</strong> - คอร์ส CS50 AI จาก Harvard</li>
+                        <li><strong>fast.ai</strong> - คอร์ส Deep Learning ฟรี สอนแบบ Top-Down</li>
+                        <li><strong>Google AI</strong> - คอร์สจาก Google ฟรี มี Certificate</li>
+                        <li><strong>Thai MOOC</strong> - คอร์สภาษาไทยจากมหาวิทยาลัยไทย</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Coding Platforms -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="width: 55px; height: 55px; border-radius: 14px; background: rgba(139, 92, 246, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-code" style="font-size: 1.5rem; color: #8b5cf6;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: #8b5cf6; text-align: center; margin-bottom: 0.75rem;">แพลตฟอร์มฝึกเขียนโค้ด</h4>
+                    <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.9;">
+                        <li><strong>Kaggle</strong> - แข่งขัน Data Science + คอร์สฟรี + Dataset</li>
+                        <li><strong>LeetCode</strong> - ฝึกแก้โจทย์ Algorithm (สำคัญมากสำหรับสัมภาษณ์งาน)</li>
+                        <li><strong>Codecademy</strong> - เรียน Python แบบ Interactive</li>
+                        <li><strong>freeCodeCamp</strong> - เรียน Web Dev + Data Science ฟรี 100%</li>
+                        <li><strong>Google Colab</strong> - เขียน Python + ML บน Cloud ฟรี</li>
+                    </ul>
+                </div>
+
+                <!-- 3. YouTube -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="width: 55px; height: 55px; border-radius: 14px; background: rgba(239, 68, 68, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fab fa-youtube" style="font-size: 1.5rem; color: #ef4444;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: #ef4444; text-align: center; margin-bottom: 0.75rem;">YouTube Channels</h4>
+                    <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.9;">
+                        <li><strong>3Blue1Brown</strong> - อธิบาย Neural Network ด้วย Animation สวยๆ</li>
+                        <li><strong>Sentdex</strong> - สอน Python + ML แบบ Hands-on</li>
+                        <li><strong>Two Minute Papers</strong> - สรุปงานวิจัย AI ล่าสุดใน 2 นาที</li>
+                        <li><strong>BorntoDev</strong> - สอนเขียนโค้ดภาษาไทย</li>
+                        <li><strong>AI Builder Thailand</strong> - เนื้อหา AI ภาษาไทย</li>
+                    </ul>
+                </div>
+
+                <!-- 4. AI Experiments -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.15);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="width: 55px; height: 55px; border-radius: 14px; background: rgba(52, 211, 153, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-flask" style="font-size: 1.5rem; color: #34d399;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: #34d399; text-align: center; margin-bottom: 0.75rem;">ทดลอง AI (AI Experiments)</h4>
+                    <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.9;">
+                        <li><strong>Teachable Machine</strong> - สร้าง ML Model โดยไม่ต้องเขียนโค้ด</li>
+                        <li><strong>AI Experiments (Google)</strong> - ทดลอง AI ผ่านเว็บ</li>
+                        <li><strong>Playground AI</strong> - ทดลองสร้างภาพด้วย AI</li>
+                        <li><strong>Hugging Face</strong> - ทดลองโมเดล AI สำเร็จรูป</li>
+                        <li><strong>OpenAI Playground</strong> - ทดลองใช้ GPT แบบละเอียด</li>
+                    </ul>
+                </div>
+
+                <!-- 5. Reading -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="width: 55px; height: 55px; border-radius: 14px; background: rgba(245, 158, 11, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-book" style="font-size: 1.5rem; color: #f59e0b;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: #f59e0b; text-align: center; margin-bottom: 0.75rem;">หนังสือและบทความ (Reading)</h4>
+                    <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.9;">
+                        <li><strong>"AI 2041"</strong> โดย Kai-Fu Lee - อนาคตของ AI ในรูปแบบเรื่องสั้น</li>
+                        <li><strong>"คิดแบบ AI"</strong> - หนังสือ AI ภาษาไทยเข้าใจง่าย</li>
+                        <li><strong>Medium / Towards Data Science</strong> - บทความ AI/ML คุณภาพ</li>
+                        <li><strong>arXiv Papers</strong> - งานวิจัย AI ล่าสุดจากทั่วโลก</li>
+                        <li><strong>The Batch (Andrew Ng)</strong> - จดหมายข่าว AI รายสัปดาห์</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Thai AI Community -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="width: 55px; height: 55px; border-radius: 14px; background: rgba(6, 182, 212, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-users" style="font-size: 1.5rem; color: #06b6d4;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: #06b6d4; text-align: center; margin-bottom: 0.75rem;">ชุมชน AI ไทย (Thai AI Community)</h4>
+                    <ul style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.9;">
+                        <li><strong>AI Builders</strong> - โปรแกรมสอน AI สำหรับนักเรียนไทย</li>
+                        <li><strong>Thai AI (Facebook Group)</strong> - ชุมชน AI ที่ใหญ่ที่สุดในไทย</li>
+                        <li><strong>Super AI Engineer</strong> - โปรแกรมพัฒนาวิศวกร AI ไทย</li>
+                        <li><strong>NSTDA/NECTEC</strong> - งานวิจัย AI จากหน่วยงานรัฐ</li>
+                        <li><strong>PyThaiNLP</strong> - ชุมชน NLP ภาษาไทย Open Source</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Knowledge Summary -->
+    <section class="content-section">
+        <div class="container">
+            <div class="knowledge-summary">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f59e0b;"></i>
+                    <h2 style="margin-top: 0.5rem; color: var(--text-primary);">สรุปความรู้ประจำหน่วย</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> สิ่งที่ควรจำ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>AI เปลี่ยนแปลงโลกการทำงาน แต่ไม่ได้แทนที่ทุกอาชีพ</li>
+                            <li>งานที่ซ้ำๆ ใช้กฎชัดเจน จะถูก AI ทำแทนได้มากที่สุด</li>
+                            <li>งานที่ต้องใช้ความคิดสร้างสรรค์ อารมณ์ และสัมผัส AI ทำแทนยาก</li>
+                            <li>อาชีพด้าน AI มีความหลากหลาย ไม่จำเป็นต้องเป็นโปรแกรมเมอร์เท่านั้น</li>
+                            <li>ทักษะแห่งอนาคตต้องมีทั้ง Hard Skills และ Soft Skills</li>
+                            <li>เริ่มเตรียมตัวได้ตั้งแต่ตอนนี้ ไม่ต้องรอเข้ามหาวิทยาลัย</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> ประเด็นสำคัญ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>"มนุษย์ + AI > มนุษย์อย่างเดียว > AI อย่างเดียว"</li>
+                            <li>"AI จะไม่แทนที่คุณ แต่คนที่ใช้ AI เป็นจะแทนที่คุณ"</li>
+                            <li>Prompt Engineer เป็นอาชีพใหม่ที่ไม่ต้องเขียนโค้ดก็ทำได้</li>
+                            <li>AI Ethics Specialist สำคัญมากเพื่อดูแลไม่ให้ AI ถูกใช้ผิดทาง</li>
+                            <li>ชุมชน AI ไทยมีหลายกลุ่มที่พร้อมช่วยเหลือผู้เริ่มต้น</li>
+                            <li>Python คือภาษาที่สำคัญที่สุดสำหรับสาย AI/Data Science</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 12px; border-left: 4px solid #6366f1;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-quote-left" style="color: #6366f1;"></i> <strong>คำถามชวนคิด:</strong> จากอาชีพด้าน AI ทั้ง 9 อาชีพที่เรียนรู้ คุณสนใจอาชีพไหนมากที่สุด? ทำไม? และจะเริ่มเตรียมตัวอย่างไรตั้งแต่วันนี้? ลองเขียนแผนเตรียมตัว 3 ขั้นตอนของตัวเองดู!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Navigation -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="page-nav">
+                <a href="unit5.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> หน่วยที่ 5: AI กับสังคม
+                </a>
+                <a href="review.html" class="btn btn-primary">
+                    ทบทวนบทเรียน <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน่วยที่ 2: เครื่องมือ AI เพื่อการเรียนรู้และการทำงาน - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html">หน่วย 1</a></li>
+                <li><a href="unit2.html" class="active">หน่วย 2</a></li>
+                <li><a href="unit3.html">หน่วย 3</a></li>
+                <li><a href="unit4.html">หน่วย 4</a></li>
+                <li><a href="unit5.html">หน่วย 5</a></li>
+                <li><a href="unit6.html">หน่วย 6</a></li>
+                <li><a href="review.html">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">หน่วยที่ 2: เครื่องมือ AI เพื่อการเรียนรู้และการทำงาน</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">หน่วยที่ 2</span>
+                <h1 class="page-title">เครื่องมือ AI เพื่อการเรียนรู้และการทำงาน</h1>
+                <p class="page-subtitle">รู้จักเครื่องมือ AI ที่ทรงพลังและใช้งานได้จริง ตั้งแต่ ChatGPT, Gemini, Canva AI ไปจนถึงเทคนิคการเขียน Prompt ที่ดี เพื่อใช้ AI อย่างมีประสิทธิภาพสูงสุด</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tools constellation -->
+                    <circle cx="150" cy="150" r="100" stroke="url(#heroGrad1)" stroke-width="2" opacity="0.3"/>
+                    <circle cx="150" cy="150" r="65" stroke="url(#heroGrad1)" stroke-width="1.5" opacity="0.2"/>
+                    <!-- Central gear/tool icon -->
+                    <path d="M150 120c-16.6 0-30 13.4-30 30s13.4 30 30 30 30-13.4 30-30-13.4-30-30-30zm0 48c-9.9 0-18-8.1-18-18s8.1-18 18-18 18 8.1 18 18-8.1 18-18 18z" fill="url(#heroGrad2)" opacity="0.6"/>
+                    <path d="M172 150h12m-68 0h-12m54-34l8-8m-52 52l-8 8m52 0l8 8m-52-52l-8-8" stroke="#818cf8" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                    <!-- Floating tool icons -->
+                    <rect x="70" y="80" width="28" height="28" rx="6" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="1.5"/>
+                    <text x="84" y="99" text-anchor="middle" font-size="14">💬</text>
+                    <rect x="200" y="80" width="28" height="28" rx="6" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="214" y="99" text-anchor="middle" font-size="14">🎨</text>
+                    <rect x="60" y="190" width="28" height="28" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+                    <text x="74" y="209" text-anchor="middle" font-size="14">🎵</text>
+                    <rect x="210" y="190" width="28" height="28" rx="6" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="1.5"/>
+                    <text x="224" y="209" text-anchor="middle" font-size="14">✨</text>
+                    <!-- Connection lines -->
+                    <line x1="98" y1="94" x2="130" y2="135" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
+                    <line x1="200" y1="94" x2="170" y2="135" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+                    <line x1="88" y1="190" x2="130" y2="165" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+                    <line x1="210" y1="204" x2="170" y2="165" stroke="#ec4899" stroke-width="1" opacity="0.3"/>
+                    <!-- Pulsing ring -->
+                    <circle cx="150" cy="150" r="35" stroke="#818cf8" stroke-width="1" opacity="0.3">
+                        <animate attributeName="r" values="35;45;35" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#34d399"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Section 2.1: Generative AI คืออะไร? -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.1</span> Generative AI คืออะไร?</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Generative AI (AI เชิงสร้างสรรค์)</strong> คือ ปัญญาประดิษฐ์ที่สามารถ "สร้าง" เนื้อหาใหม่ๆ ได้ด้วยตัวเอง ไม่ว่าจะเป็นข้อความ รูปภาพ เสียง วิดีโอ หรือแม้แต่โค้ดโปรแกรม โดยเรียนรู้จากข้อมูลจำนวนมหาศาลที่ถูกป้อนให้ในกระบวนการฝึกฝน (Training)</p>
+                    
+                    <p>ก่อนหน้านี้ AI ทำได้เพียง "วิเคราะห์" หรือ "จำแนก" ข้อมูลที่มีอยู่แล้ว แต่ Generative AI สามารถ "สร้างสิ่งใหม่" ที่ไม่เคยมีมาก่อนได้ นับเป็นการปฏิวัติครั้งสำคัญของวงการเทคโนโลยี</p>
+                </div>
+            </div>
+
+            <!-- How Generative AI Works Diagram -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <svg viewBox="0 0 700 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                    <!-- Training Data -->
+                    <rect x="20" y="40" width="160" height="120" rx="12" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="2"/>
+                    <text x="100" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#6366f1">ข้อมูลฝึกฝน</text>
+                    <text x="100" y="90" text-anchor="middle" font-size="10" fill="#64748b">📚 หนังสือ บทความ</text>
+                    <text x="100" y="108" text-anchor="middle" font-size="10" fill="#64748b">🖼️ รูปภาพล้านรูป</text>
+                    <text x="100" y="126" text-anchor="middle" font-size="10" fill="#64748b">🎵 เสียง ดนตรี</text>
+                    <text x="100" y="144" text-anchor="middle" font-size="10" fill="#64748b">💻 โค้ดโปรแกรม</text>
+                    <!-- Arrow -->
+                    <path d="M190 100 L240 100" stroke="#6366f1" stroke-width="2" marker-end="url(#arr1)"/>
+                    <!-- AI Model -->
+                    <rect x="250" y="40" width="180" height="120" rx="12" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="2"/>
+                    <text x="340" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#8b5cf6">โมเดล AI (LLM)</text>
+                    <text x="340" y="92" text-anchor="middle" font-size="10" fill="#64748b">🧠 เรียนรู้รูปแบบ</text>
+                    <text x="340" y="110" text-anchor="middle" font-size="10" fill="#64748b">⚡ พารามิเตอร์หลายพันล้าน</text>
+                    <text x="340" y="128" text-anchor="middle" font-size="10" fill="#64748b">🔄 ทำนายคำถัดไป</text>
+                    <text x="340" y="146" text-anchor="middle" font-size="10" fill="#64748b">📐 Transformer Architecture</text>
+                    <!-- Arrow -->
+                    <path d="M440 100 L490 100" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arr2)"/>
+                    <!-- Output -->
+                    <rect x="500" y="40" width="170" height="120" rx="12" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="2"/>
+                    <text x="585" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#34d399">ผลลัพธ์ใหม่</text>
+                    <text x="585" y="92" text-anchor="middle" font-size="10" fill="#64748b">📝 บทความ เรียงความ</text>
+                    <text x="585" y="110" text-anchor="middle" font-size="10" fill="#64748b">🎨 ภาพวาดใหม่</text>
+                    <text x="585" y="128" text-anchor="middle" font-size="10" fill="#64748b">🎶 เพลงต้นฉบับ</text>
+                    <text x="585" y="146" text-anchor="middle" font-size="10" fill="#64748b">🎬 วิดีโอ แอนิเมชัน</text>
+                    <defs>
+                        <marker id="arr1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+                        </marker>
+                        <marker id="arr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="content-block">
+                <h3>ประเภทของ Generative AI</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.1); text-align: center;">
+                        <i class="fas fa-file-alt" style="color: #6366f1; font-size: 1.8rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Text Generation</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">สร้างข้อความ บทความ สรุป แปลภาษา ตอบคำถาม</p>
+                        <span style="font-size: 0.75rem; color: #6366f1;">ChatGPT, Gemini, Claude</span>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.1); text-align: center;">
+                        <i class="fas fa-image" style="color: #8b5cf6; font-size: 1.8rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Image Generation</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">สร้างภาพจากข้อความ แก้ไขภาพ เปลี่ยนสไตล์</p>
+                        <span style="font-size: 0.75rem; color: #8b5cf6;">DALL-E, Midjourney, Recraft</span>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1); text-align: center;">
+                        <i class="fas fa-music" style="color: #34d399; font-size: 1.8rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Audio Generation</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">สร้างเพลง เสียงพูด พากย์เสียง เอฟเฟกต์เสียง</p>
+                        <span style="font-size: 0.75rem; color: #34d399;">Suno AI, ElevenLabs, Udio</span>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.1); text-align: center;">
+                        <i class="fas fa-video" style="color: #f59e0b; font-size: 1.8rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Video Generation</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">สร้างวิดีโอจากข้อความ แอนิเมชัน ตัดต่ออัตโนมัติ</p>
+                        <span style="font-size: 0.75rem; color: #f59e0b;">Runway, Sora, Pika</span>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.1); text-align: center;">
+                        <i class="fas fa-code" style="color: #ec4899; font-size: 1.8rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>Code Generation</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">เขียนโค้ด แก้บัก อธิบายโค้ด สร้างเว็บไซต์</p>
+                        <span style="font-size: 0.75rem; color: #ec4899;">GitHub Copilot, Cursor</span>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.1); text-align: center;">
+                        <i class="fas fa-cube" style="color: #06b6d4; font-size: 1.8rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <strong>3D/Design Generation</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.3rem; color: var(--text-secondary);">สร้างโมเดล 3D ออกแบบโลโก้ งานกราฟิก</p>
+                        <span style="font-size: 0.75rem; color: #06b6d4;">Canva AI, Figma AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>LLM (Large Language Model) คืออะไร?</h3>
+                <div class="info-box">
+                    <p><strong>LLM (Large Language Model)</strong> หรือ "โมเดลภาษาขนาดใหญ่" คือหัวใจสำคัญของ Generative AI ด้านข้อความ เป็นโมเดล AI ที่ถูกฝึกฝนด้วยข้อมูลข้อความมหาศาล (หนังสือ เว็บไซต์ บทความ ทั้งหมดบนอินเทอร์เน็ต) ทำให้สามารถ:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.75rem;">
+                        <li>เข้าใจภาษามนุษย์ได้อย่างลึกซึ้ง ทั้งภาษาไทย อังกฤษ และอีกหลายร้อยภาษา</li>
+                        <li>สร้างข้อความที่สมเหตุสมผลและเป็นธรรมชาติ</li>
+                        <li>ตอบคำถาม สรุปข้อมูล แปลภาษา เขียนโค้ด และอื่นๆ อีกมากมาย</li>
+                        <li>เรียนรู้จากบริบท (Context) ที่ผู้ใช้ให้มาในแต่ละบทสนทนา</li>
+                    </ul>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted);"><em>ตัวอย่าง LLM ที่มีชื่อเสียง: GPT-4 (OpenAI), Gemini (Google), Claude (Anthropic), LLaMA (Meta)</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.2: ChatGPT และ Gemini -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.2</span> ChatGPT และ Gemini</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>ChatGPT</strong> (โดย OpenAI) และ <strong>Gemini</strong> (โดย Google) คือ AI Chatbot ที่ได้รับความนิยมสูงสุดในปัจจุบัน ทั้งสองสามารถสนทนาเป็นภาษาธรรมชาติ ตอบคำถาม ช่วยเขียนงาน วิเคราะห์ข้อมูล และอื่นๆ อีกมากมาย มาเปรียบเทียบกันว่าแต่ละตัวมีจุดเด่นอะไรบ้าง</p>
+                </div>
+            </div>
+
+            <!-- ChatGPT & Gemini Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <!-- ChatGPT Card -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 2px solid rgba(99, 102, 241, 0.2); box-shadow: 0 4px 15px rgba(99, 102, 241, 0.08);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(99, 102, 241, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-comment-dots" style="color: #6366f1; font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0; color: #6366f1;">ChatGPT</h3>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">โดย OpenAI</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">AI Chatbot ตัวแรกที่ได้รับความนิยมทั่วโลก เปิดตัวเดือน พ.ย. 2022 มีผู้ใช้มากกว่า 100 ล้านคนภายใน 2 เดือน</p>
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem;">ความสามารถหลัก:</h4>
+                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>สนทนาเป็นธรรมชาติ เข้าใจบริบทยาว</li>
+                        <li>เขียนบทความ รายงาน อีเมล จดหมาย</li>
+                        <li>สรุปเอกสาร วิเคราะห์ข้อมูล</li>
+                        <li>เขียนโค้ด แก้บัก อธิบายโปรแกรม</li>
+                        <li>สร้างรูปภาพด้วย DALL-E (รุ่น Plus)</li>
+                        <li>วิเคราะห์ไฟล์ PDF, Excel, รูปภาพ</li>
+                        <li>ใช้ Voice Mode สนทนาด้วยเสียง</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(99, 102, 241, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.8rem;"><strong>ฟรี:</strong> GPT-4o mini (จำกัดการใช้งาน)</p>
+                        <p style="font-size: 0.8rem;"><strong>Plus ($20/เดือน):</strong> GPT-4o, DALL-E, Code Interpreter</p>
+                    </div>
+                </div>
+
+                <!-- Gemini Card -->
+                <div style="padding: 1.5rem; border-radius: 16px; background: white; border: 2px solid rgba(52, 211, 153, 0.2); box-shadow: 0 4px 15px rgba(52, 211, 153, 0.08);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(52, 211, 153, 0.1); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-stars" style="color: #34d399; font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0; color: #34d399;">Gemini</h3>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">โดย Google</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">AI ของ Google ที่เชื่อมต่อกับบริการ Google ทั้งหมด เดิมชื่อ Bard เปลี่ยนชื่อเป็น Gemini ในปี 2024</p>
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem;">ความสามารถหลัก:</h4>
+                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li>เข้าถึงข้อมูลอินเทอร์เน็ตแบบเรียลไทม์</li>
+                        <li>เชื่อมต่อ Google Workspace (Docs, Gmail, Drive)</li>
+                        <li>วิเคราะห์รูปภาพ แผนที่ YouTube</li>
+                        <li>สร้างรูปภาพด้วย Imagen</li>
+                        <li>รองรับ Multimodal (ข้อความ+ภาพ+เสียง)</li>
+                        <li>แปลภาษาแม่นยำ รองรับภาษาไทย</li>
+                        <li>Extensions เชื่อมต่อบริการภายนอก</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(52, 211, 153, 0.05); border-radius: 8px;">
+                        <p style="font-size: 0.8rem;"><strong>ฟรี:</strong> Gemini 1.5 Flash (ใช้ได้เต็มที่)</p>
+                        <p style="font-size: 0.8rem;"><strong>Advanced ($20/เดือน):</strong> Gemini 1.5 Pro, 2TB Drive</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="content-block">
+                <h3><i class="fas fa-table" style="color: #8b5cf6;"></i> ตารางเปรียบเทียบ ChatGPT vs Gemini</h3>
+                <div style="overflow-x: auto; margin-top: 1rem;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: rgba(99, 102, 241, 0.08);">
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid #e2e8f0;">คุณสมบัติ</th>
+                                <th style="padding: 0.75rem 1rem; text-align: center; border-bottom: 2px solid #e2e8f0;">ChatGPT</th>
+                                <th style="padding: 0.75rem 1rem; text-align: center; border-bottom: 2px solid #e2e8f0;">Gemini</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>บริษัท</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">OpenAI</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">Google</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>ข้อมูลเรียลไทม์</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ มี (Browse)</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ มี (Google Search)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>สร้างรูปภาพ</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ DALL-E 3</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ Imagen 3</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>วิเคราะห์ไฟล์</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ PDF, Excel, Code</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ Google Drive</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>ภาษาไทย</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">⭐⭐⭐⭐ ดีมาก</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">⭐⭐⭐⭐ ดีมาก</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>เขียนโค้ด</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">⭐⭐⭐⭐⭐ เยี่ยม</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">⭐⭐⭐⭐ ดีมาก</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>เชื่อมต่อบริการ</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">Plugins, GPTs</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">Google Workspace</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9;"><strong>แอปมือถือ</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ iOS & Android</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center; border-bottom: 1px solid #f1f5f9;">✅ iOS & Android</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 1rem;"><strong>ราคา (Pro)</strong></td>
+                                <td style="padding: 0.75rem 1rem; text-align: center;">$20/เดือน</td>
+                                <td style="padding: 0.75rem 1rem; text-align: center;">$20/เดือน</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>กรณีการใช้งานที่เหมาะสม</h3>
+                <div class="info-box">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <p style="font-weight: 600; color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> ใช้ ChatGPT เมื่อ:</p>
+                            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>ต้องการเขียนโค้ดหรือดีบั๊กโปรแกรม</li>
+                                <li>ต้องการเขียนบทความยาวๆ ที่มีคุณภาพ</li>
+                                <li>ต้องการวิเคราะห์ไฟล์ข้อมูลซับซ้อน</li>
+                                <li>ต้องการใช้ Custom GPTs สำหรับงานเฉพาะ</li>
+                                <li>ต้องการสร้างรูปภาพด้วย DALL-E</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> ใช้ Gemini เมื่อ:</p>
+                            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>ต้องการข้อมูลล่าสุดจากอินเทอร์เน็ต</li>
+                                <li>ต้องการเชื่อมต่อกับ Gmail, Drive, Docs</li>
+                                <li>ต้องการสรุปวิดีโอ YouTube</li>
+                                <li>ต้องการใช้ AI ฟรีแบบเต็มความสามารถ</li>
+                                <li>ต้องการวิเคราะห์ภาพด้วย Google Lens</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.3: Canva Magic Studio -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.3</span> Canva Magic Studio</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Canva Magic Studio</strong> คือชุดเครื่องมือ AI ที่ถูกรวมอยู่ใน Canva แพลตฟอร์มออกแบบกราฟิกยอดนิยม ช่วยให้ทุกคนสามารถสร้างงานออกแบบระดับมืออาชีพได้ง่ายๆ โดยไม่ต้องมีทักษะด้านกราฟิกดีไซน์ เพียงแค่บอก AI ว่าต้องการอะไร</p>
+                </div>
+
+                <!-- Canva SVG Illustration -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 600 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; width: 100%;">
+                        <!-- Magic wand -->
+                        <path d="M280 30l10 10 10-10-10-10z" fill="#f59e0b"/>
+                        <path d="M295 45l100 100" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Stars around -->
+                        <circle cx="260" cy="25" r="3" fill="#6366f1" opacity="0.6"/>
+                        <circle cx="310" cy="20" r="2" fill="#ec4899" opacity="0.6"/>
+                        <circle cx="270" cy="50" r="2.5" fill="#34d399" opacity="0.6"/>
+                        <!-- Design elements -->
+                        <rect x="50" y="50" width="80" height="80" rx="8" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="1.5"/>
+                        <rect x="60" y="60" width="60" height="40" rx="4" fill="#6366f1" opacity="0.2"/>
+                        <rect x="60" y="108" width="40" height="6" rx="3" fill="#6366f1" opacity="0.3"/>
+                        <rect x="60" y="118" width="60" height="4" rx="2" fill="#6366f1" opacity="0.15"/>
+                        <!-- Arrow -->
+                        <path d="M145 90 L175 90" stroke="#94a3b8" stroke-width="2" marker-end="url(#canvaArr)"/>
+                        <!-- Result -->
+                        <rect x="190" y="50" width="80" height="80" rx="8" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-width="1.5"/>
+                        <rect x="200" y="60" width="60" height="40" rx="4" fill="#34d399" opacity="0.3"/>
+                        <circle cx="230" cy="80" r="12" fill="#34d399" opacity="0.2"/>
+                        <rect x="200" y="108" width="40" height="6" rx="3" fill="#34d399" opacity="0.4"/>
+                        <rect x="200" y="118" width="60" height="4" rx="2" fill="#34d399" opacity="0.2"/>
+                        <!-- Text labels -->
+                        <text x="90" y="145" text-anchor="middle" font-size="10" fill="#64748b">ก่อน AI</text>
+                        <text x="230" y="145" text-anchor="middle" font-size="10" fill="#64748b">หลัง AI ✨</text>
+                        <defs>
+                            <marker id="canvaArr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>ฟีเจอร์ AI ใน Canva Magic Studio</h3>
+                <div class="comparison-grid">
+                    <!-- Magic Design -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-wand-magic-sparkles" style="font-size: 2rem; color: #6366f1;"></i>
+                        </div>
+                        <h4 style="color: #6366f1;">Magic Design</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">อัปโหลดรูปหรือพิมพ์คำอธิบาย แล้ว AI จะสร้างดีไซน์สำเร็จรูปให้เลือกหลายแบบ ไม่ว่าจะเป็นโปสเตอร์ การ์ด โฆษณา หรือ Presentation ทั้งหมดทำได้ภายในไม่กี่วินาที</p>
+                        <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(99, 102, 241, 0.05); border-radius: 6px; font-size: 0.8rem;">
+                            <strong>ตัวอย่าง:</strong> อัปโหลดรูปอาหาร → ได้เมนูร้านอาหารสวยๆ ทันที
+                        </div>
+                    </div>
+
+                    <!-- Magic Write -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-pen-fancy" style="font-size: 2rem; color: #8b5cf6;"></i>
+                        </div>
+                        <h4 style="color: #8b5cf6;">Magic Write</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">AI ช่วยเขียนข้อความสำหรับงานออกแบบ ไม่ว่าจะเป็นหัวข้อ คำโปรย คำอธิบายสินค้า หรือเนื้อหาสำหรับ Presentation แค่บอกหัวข้อ AI จะเขียนให้ทันที</p>
+                        <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(139, 92, 246, 0.05); border-radius: 6px; font-size: 0.8rem;">
+                            <strong>ตัวอย่าง:</strong> พิมพ์ "แคปชันขายเสื้อผ้า" → ได้แคปชันน่าสนใจ 5 แบบ
+                        </div>
+                    </div>
+
+                    <!-- Magic Eraser -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-eraser" style="font-size: 2rem; color: #34d399;"></i>
+                        </div>
+                        <h4 style="color: #34d399;">Magic Eraser</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ลบวัตถุที่ไม่ต้องการออกจากรูปภาพ เพียงแค่ระบายสีทับส่วนที่ต้องการลบ AI จะเติมพื้นหลังให้เนียนสนิทราวกับไม่เคยมีสิ่งนั้นอยู่</p>
+                        <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(52, 211, 153, 0.05); border-radius: 6px; font-size: 0.8rem;">
+                            <strong>ตัวอย่าง:</strong> ลบคนที่เดินผ่านในรูปทิวทัศน์ → ได้รูปสะอาดตา
+                        </div>
+                    </div>
+
+                    <!-- Magic Expand -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-expand" style="font-size: 2rem; color: #f59e0b;"></i>
+                        </div>
+                        <h4 style="color: #f59e0b;">Magic Expand</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ขยายขอบเขตรูปภาพออกไปด้านข้างหรือด้านบน/ล่าง AI จะสร้างพื้นหลังใหม่ที่กลมกลืนกับรูปเดิมอย่างสมจริง เหมาะสำหรับปรับขนาดรูปให้พอดีกับงานดีไซน์</p>
+                        <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(245, 158, 11, 0.05); border-radius: 6px; font-size: 0.8rem;">
+                            <strong>ตัวอย่าง:</strong> รูปแนวตั้ง → ขยายเป็นแนวนอนสำหรับ Banner
+                        </div>
+                    </div>
+
+                    <!-- Background Remover -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-object-ungroup" style="font-size: 2rem; color: #ec4899;"></i>
+                        </div>
+                        <h4 style="color: #ec4899;">Background Remover</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">ลบพื้นหลังออกจากรูปภาพด้วยคลิกเดียว AI จะแยกตัวแบบหรือวัตถุหลักออกมาอย่างเนียน แม้มีรายละเอียดซับซ้อนเช่น เส้นผม ขนสัตว์ หรือขอบไม่เรียบ</p>
+                        <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(236, 72, 153, 0.05); border-radius: 6px; font-size: 0.8rem;">
+                            <strong>ตัวอย่าง:</strong> รูปสินค้าพื้นหลังรก → ได้สินค้าพื้นหลังขาวสะอาด
+                        </div>
+                    </div>
+
+                    <!-- Text to Image -->
+                    <div class="comparison-card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <i class="fas fa-image" style="font-size: 2rem; color: #06b6d4;"></i>
+                        </div>
+                        <h4 style="color: #06b6d4;">Text to Image</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">พิมพ์คำอธิบายเป็นข้อความ แล้ว AI จะสร้างรูปภาพตามที่ต้องการ เลือกสไตล์ได้หลากหลาย ทั้งแบบสมจริง, การ์ตูน, สีน้ำ, Anime และอื่นๆ</p>
+                        <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(6, 182, 212, 0.05); border-radius: 6px; font-size: 0.8rem;">
+                            <strong>ตัวอย่าง:</strong> "แมวนั่งบนเก้าอี้อ่านหนังสือ สไตล์การ์ตูน" → ได้รูปสวยๆ
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 1.5rem;">
+                <p><i class="fas fa-lightbulb" style="color: #f59e0b;"></i> <strong>เคล็ดลับ:</strong> ฟีเจอร์ AI ส่วนใหญ่ใน Canva สามารถใช้งานได้ฟรี (จำกัดจำนวนครั้ง) สำหรับ Canva Pro จะได้ใช้ไม่จำกัดและมีฟีเจอร์เพิ่มเติม เช่น Magic Expand, Brand Kit AI และอื่นๆ</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.4: Recraft -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.4</span> Recraft</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Recraft</strong> คือเครื่องมือ AI สำหรับสร้างภาพระดับมืออาชีพ โดดเด่นเรื่องการสร้าง Vector Graphics, ภาพประกอบ (Illustration), ไอคอน และงานออกแบบที่ต้องการความแม่นยำสูง เหมาะสำหรับนักออกแบบ นักการตลาด และผู้ที่ต้องการภาพคุณภาพสูงสำหรับงานจริง</p>
+                </div>
+
+                <!-- Recraft SVG -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 500 150" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%;">
+                        <!-- Vector shapes -->
+                        <circle cx="80" cy="75" r="35" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,4"/>
+                        <rect x="55" y="50" width="50" height="50" rx="8" fill="#6366f1" opacity="0.1"/>
+                        <polygon points="80,45 100,85 60,85" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="1.5"/>
+                        <!-- Arrow -->
+                        <path d="M130 75 L180 75" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="180,70 190,75 180,80" fill="#94a3b8"/>
+                        <!-- Realistic output -->
+                        <rect x="200" y="35" width="100" height="80" rx="12" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="2"/>
+                        <circle cx="230" cy="60" r="12" fill="#f59e0b" opacity="0.3"/>
+                        <path d="M210 95l20-25 15 15 25-30 20 40H210z" fill="#34d399" opacity="0.3"/>
+                        <!-- Brand elements -->
+                        <rect x="330" y="35" width="100" height="80" rx="12" fill="#ec4899" opacity="0.08" stroke="#ec4899" stroke-width="2"/>
+                        <circle cx="380" cy="60" r="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="1.5"/>
+                        <text x="380" y="64" text-anchor="middle" font-size="10" fill="#ec4899" font-weight="bold">LOGO</text>
+                        <rect x="350" y="85" width="60" height="8" rx="4" fill="#ec4899" opacity="0.3"/>
+                        <rect x="355" y="98" width="50" height="6" rx="3" fill="#ec4899" opacity="0.15"/>
+                        <!-- Labels -->
+                        <text x="80" y="130" text-anchor="middle" font-size="9" fill="#64748b">Vector Input</text>
+                        <text x="250" y="130" text-anchor="middle" font-size="9" fill="#64748b">Realistic Image</text>
+                        <text x="380" y="130" text-anchor="middle" font-size="9" fill="#64748b">Brand Design</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>ความสามารถเด่นของ Recraft</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(99, 102, 241, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <i class="fas fa-vector-square" style="color: #6366f1; font-size: 1.5rem; margin-bottom: 0.75rem; display: block;"></i>
+                        <h4 style="font-size: 0.95rem;">Vector & Illustration AI</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">สร้างภาพ Vector (SVG) คุณภาพสูงที่ขยายได้ไม่แตก เหมาะสำหรับโลโก้ ไอคอน Infographic และงานพิมพ์ขนาดใหญ่ เลือกสไตล์ได้หลากหลายทั้ง Flat, Outline, Gradient</p>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(52, 211, 153, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <i class="fas fa-camera" style="color: #34d399; font-size: 1.5rem; margin-bottom: 0.75rem; display: block;"></i>
+                        <h4 style="font-size: 0.95rem;">Realistic Image Generation</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">สร้างภาพถ่ายสมจริงระดับ Photorealistic ที่แยกไม่ออกจากรูปจริง เหมาะสำหรับ Mockup สินค้า ภาพโฆษณา และ Stock Photo คุณภาพสูง</p>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(245, 158, 11, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <i class="fas fa-palette" style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 0.75rem; display: block;"></i>
+                        <h4 style="font-size: 0.95rem;">Brand Consistency</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">กำหนดสีแบรนด์ สไตล์ และโทนภาพได้ เพื่อให้ทุกภาพที่สร้างมีความเป็นเอกภาพ สอดคล้องกับ Brand Identity ขององค์กร</p>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(236, 72, 153, 0.15); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <i class="fas fa-mobile-alt" style="color: #ec4899; font-size: 1.5rem; margin-bottom: 0.75rem; display: block;"></i>
+                        <h4 style="font-size: 0.95rem;">Mockup Generation</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">สร้าง Mockup สินค้าบนบรรจุภัณฑ์ เสื้อผ้า อุปกรณ์อิเล็กทรอนิกส์ และอื่นๆ ดูสมจริงราวกับถ่ายจริง ช่วยประหยัดค่าถ่ายภาพสินค้า</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 1.5rem;">
+                <p><i class="fas fa-star" style="color: #f59e0b;"></i> <strong>จุดเด่นของ Recraft เทียบกับ AI อื่น:</strong> Recraft เป็น AI ที่เน้นคุณภาพระดับ Commercial Use โดยเฉพาะ ภาพที่สร้างสามารถนำไปใช้เชิงพาณิชย์ได้ทันที มีการควบคุมสี ขนาด และสไตล์ได้ละเอียดกว่าเครื่องมืออื่น เหมาะสำหรับนักออกแบบมืออาชีพ</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.5: Suno AI -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.5</span> Suno AI</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Suno AI</strong> คือเครื่องมือ AI สำหรับสร้างเพลงแบบครบวงจร ตั้งแต่ทำนอง เนื้อร้อง ไปจนถึงเสียงร้องและดนตรีประกอบ เพียงแค่พิมพ์คำอธิบายหรือใส่เนื้อเพลงที่ต้องการ AI จะสร้างเพลงคุณภาพสูงที่ฟังดูเหมือนศิลปินจริงๆ ภายในไม่ถึง 1 นาที</p>
+                </div>
+
+                <!-- Music SVG Illustration -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 500 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%;">
+                        <!-- Musical notes and waveform -->
+                        <path d="M50 70 Q80 30 110 70 Q140 110 170 70 Q200 30 230 70 Q260 110 290 70 Q320 30 350 70 Q380 110 410 70 Q440 30 470 70" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.4"/>
+                        <path d="M50 70 Q80 45 110 70 Q140 95 170 70 Q200 45 230 70 Q260 95 290 70 Q320 45 350 70 Q380 95 410 70 Q440 45 470 70" stroke="#6366f1" stroke-width="2.5" fill="none"/>
+                        <!-- Musical notes -->
+                        <text x="70" y="40" font-size="20" fill="#ec4899" opacity="0.7">♪</text>
+                        <text x="150" y="120" font-size="16" fill="#f59e0b" opacity="0.6">♫</text>
+                        <text x="250" y="35" font-size="18" fill="#34d399" opacity="0.7">♪</text>
+                        <text x="350" y="115" font-size="20" fill="#6366f1" opacity="0.6">♫</text>
+                        <text x="430" y="40" font-size="16" fill="#8b5cf6" opacity="0.7">♪</text>
+                        <!-- AI chip -->
+                        <rect x="220" y="55" width="30" height="30" rx="6" fill="white" stroke="#6366f1" stroke-width="1.5"/>
+                        <text x="235" y="74" text-anchor="middle" font-size="12" fill="#6366f1">AI</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>วิธีใช้งาน Suno AI</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.1);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #6366f1; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem;">1</span>
+                            <strong>เลือกโหมดสร้างเพลง</strong>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">เลือก "Simple Mode" สำหรับมือใหม่ (แค่บอกว่าต้องการเพลงแบบไหน) หรือ "Custom Mode" สำหรับคนที่ต้องการควบคุมรายละเอียด</p>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.1);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #8b5cf6; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem;">2</span>
+                            <strong>ใส่คำอธิบายหรือเนื้อเพลง</strong>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">พิมพ์ Prompt เช่น "เพลงป๊อปสนุกๆ เกี่ยวกับวันหยุดฤดูร้อน" หรือวางเนื้อเพลงที่เขียนเอง พร้อมระบุแนวเพลงที่ต้องการ</p>
+                    </div>
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.1);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #34d399; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem;">3</span>
+                            <strong>รอ AI สร้างเพลง</strong>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">AI จะสร้างเพลง 2 เวอร์ชันให้เลือก ใช้เวลาประมาณ 30 วินาที ถึง 1 นาที เสร็จแล้วสามารถฟัง แชร์ หรือดาวน์โหลดได้ทันที</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>แนวเพลงที่สร้างได้</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: #6366f1;">Pop</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">Rock</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(52, 211, 153, 0.1); color: #059669;">Hip-Hop/Rap</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(245, 158, 11, 0.1); color: #d97706;">R&B/Soul</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(236, 72, 153, 0.1); color: #db2777;">Electronic/EDM</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(6, 182, 212, 0.1); color: #0891b2;">Jazz</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: #6366f1;">Country</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">Classical</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(52, 211, 153, 0.1); color: #059669;">Reggae</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(245, 158, 11, 0.1); color: #d97706;">Folk/Acoustic</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(236, 72, 153, 0.1); color: #db2777;">ลูกทุ่ง/หมอลำ</span>
+                    <span style="padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; background: rgba(6, 182, 212, 0.1); color: #0891b2;">เพลงไทยสากล</span>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 1.5rem;">
+                <p><i class="fas fa-globe" style="color: #6366f1;"></i> <strong>รองรับภาษาไทย:</strong> Suno AI สามารถสร้างเพลงภาษาไทยได้! ทั้งเนื้อร้องภาษาไทยและแนวเพลงไทย เช่น ลูกทุ่ง หมอลำ เพลงไทยสากล เพียงแค่ใส่เนื้อเพลงภาษาไทยหรือระบุว่าต้องการเพลงภาษาไทย AI จะร้องเป็นภาษาไทยให้เลย ถือว่าเป็น AI สร้างเพลงที่รองรับภาษาไทยได้ดีที่สุดในตอนนี้</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.6: Meta AI -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.6</span> Meta AI</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Meta AI</strong> คือผู้ช่วย AI ของ Meta (บริษัทแม่ของ Facebook, Instagram, WhatsApp) ที่ถูกฝังอยู่ในแอปโซเชียลมีเดียที่เราใช้กันทุกวัน สามารถเรียกใช้ได้ในแชทโดยตรง ไม่ต้องเปิดแอปแยก ทำให้การใช้ AI เป็นเรื่องง่ายและเข้าถึงได้ทุกที่</p>
+                </div>
+
+                <!-- Meta platforms SVG -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 500 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%;">
+                        <!-- Central Meta AI -->
+                        <circle cx="250" cy="70" r="30" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2"/>
+                        <text x="250" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366f1">Meta</text>
+                        <text x="250" y="80" text-anchor="middle" font-size="10" fill="#6366f1">AI</text>
+                        <!-- Facebook -->
+                        <circle cx="100" cy="70" r="25" fill="#1877f2" opacity="0.1" stroke="#1877f2" stroke-width="1.5"/>
+                        <text x="100" y="75" text-anchor="middle" font-size="11" fill="#1877f2" font-weight="bold">f</text>
+                        <line x1="125" y1="70" x2="220" y2="70" stroke="#1877f2" stroke-width="1" opacity="0.4" stroke-dasharray="4,4"/>
+                        <!-- Instagram -->
+                        <circle cx="250" cy="130" r="25" fill="#e4405f" opacity="0.1" stroke="#e4405f" stroke-width="1.5"/>
+                        <rect x="239" y="119" width="22" height="22" rx="5" fill="none" stroke="#e4405f" stroke-width="1.5"/>
+                        <circle cx="250" cy="130" r="5" fill="none" stroke="#e4405f" stroke-width="1.5"/>
+                        <line x1="250" y1="100" x2="250" y2="105" stroke="#e4405f" stroke-width="1" opacity="0.4" stroke-dasharray="4,4"/>
+                        <!-- WhatsApp -->
+                        <circle cx="400" cy="70" r="25" fill="#25d366" opacity="0.1" stroke="#25d366" stroke-width="1.5"/>
+                        <text x="400" y="76" text-anchor="middle" font-size="14" fill="#25d366">📱</text>
+                        <line x1="280" y1="70" x2="375" y2="70" stroke="#25d366" stroke-width="1" opacity="0.4" stroke-dasharray="4,4"/>
+                        <!-- Labels -->
+                        <text x="100" y="108" text-anchor="middle" font-size="9" fill="#64748b">Facebook</text>
+                        <text x="250" y="130" text-anchor="middle" font-size="9" fill="#64748b"></text>
+                        <text x="400" y="108" text-anchor="middle" font-size="9" fill="#64748b">WhatsApp</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>ฟีเจอร์ Meta AI บนแต่ละแพลตฟอร์ม</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                    <!-- Facebook -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(24, 119, 242, 0.2); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fab fa-facebook" style="color: #1877f2; font-size: 1.5rem;"></i>
+                            <h4 style="margin: 0;">Facebook</h4>
+                        </div>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>ถามคำถามในช่อง Search</li>
+                            <li>สร้างภาพ AI ในโพสต์</li>
+                            <li>สรุปความคิดเห็นในกลุ่ม</li>
+                            <li>แนะนำเนื้อหาที่น่าสนใจ</li>
+                            <li>ช่วยเขียนแคปชัน</li>
+                        </ul>
+                    </div>
+                    <!-- Instagram -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(228, 64, 95, 0.2); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fab fa-instagram" style="color: #e4405f; font-size: 1.5rem;"></i>
+                            <h4 style="margin: 0;">Instagram</h4>
+                        </div>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>สร้าง Sticker AI ใน Stories</li>
+                            <li>แก้ไขรูปด้วย AI (Backdrop)</li>
+                            <li>สนทนากับ AI ใน DM</li>
+                            <li>แนะนำ Reel ที่เหมาะ</li>
+                            <li>สร้างฟิลเตอร์ AI</li>
+                        </ul>
+                    </div>
+                    <!-- WhatsApp -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: white; border: 1px solid rgba(37, 211, 102, 0.2); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.5rem;"></i>
+                            <h4 style="margin: 0;">WhatsApp</h4>
+                        </div>
+                        <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>ถาม AI ในแชทส่วนตัว/กลุ่ม</li>
+                            <li>สร้างรูปภาพ AI ในแชท</li>
+                            <li>แปลภาษาข้อความ</li>
+                            <li>สรุปข้อความยาวๆ</li>
+                            <li>ช่วยวางแผน ให้คำแนะนำ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 1.5rem;">
+                <p><i class="fas fa-info-circle" style="color: #6366f1;"></i> <strong>หมายเหตุ:</strong> Meta AI ใช้โมเดล LLaMA (Large Language Model Meta AI) ที่ Meta พัฒนาเอง ซึ่งเป็น Open Source ทำให้นักพัฒนาทั่วโลกสามารถนำไปต่อยอดได้ ฟีเจอร์บางอย่างอาจยังไม่เปิดให้ใช้ในทุกประเทศ รวมถึงประเทศไทย ให้ติดตามการอัปเดตจาก Meta</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.7: ศิลปะการเขียน Prompt -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.7</span> ศิลปะการเขียน Prompt</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p><strong>Prompt</strong> คือข้อความหรือคำสั่งที่เราพิมพ์ส่งให้ AI เพื่อบอกว่าต้องการให้ทำอะไร คุณภาพของ Prompt มีผลโดยตรงต่อคุณภาพของคำตอบ หาก Prompt ดี = คำตอบดี, Prompt แย่ = คำตอบแย่ การเขียน Prompt ที่ดีจึงเป็นทักษะสำคัญที่ทุกคนควรเรียนรู้</p>
+                    <p style="margin-top: 1rem;"><strong>"Prompt Engineering"</strong> คือศาสตร์และศิลป์ของการออกแบบ Prompt ให้ได้ผลลัพธ์ตรงตามต้องการมากที่สุด ถือเป็นทักษะแห่งอนาคตที่เปรียบเสมือนการ "สื่อสารกับ AI" อย่างมีประสิทธิภาพ</p>
+                </div>
+            </div>
+
+            <!-- RACE Formula -->
+            <div class="content-block">
+                <h3><i class="fas fa-trophy" style="color: #f59e0b;"></i> สูตร RACE สำหรับเขียน Prompt</h3>
+                <div class="content-text">
+                    <p>สูตร RACE เป็นเทคนิคง่ายๆ ที่ช่วยให้เขียน Prompt ได้ดีและได้ผลลัพธ์ที่ต้องการ ประกอบด้วย 4 องค์ประกอบ:</p>
+                </div>
+
+                <!-- RACE SVG Diagram -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <svg viewBox="0 0 700 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 700px; width: 100%;">
+                        <!-- R -->
+                        <rect x="20" y="30" width="150" height="120" rx="12" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="2"/>
+                        <circle cx="95" cy="60" r="18" fill="#6366f1" opacity="0.15"/>
+                        <text x="95" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#6366f1">R</text>
+                        <text x="95" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#6366f1">Role</text>
+                        <text x="95" y="108" text-anchor="middle" font-size="9" fill="#64748b">กำหนดบทบาท</text>
+                        <text x="95" y="122" text-anchor="middle" font-size="9" fill="#64748b">ให้ AI เป็นใคร</text>
+                        <text x="95" y="140" text-anchor="middle" font-size="8" fill="#94a3b8">"คุณเป็นครูสอนวิทย์"</text>
+                        <!-- A -->
+                        <rect x="190" y="30" width="150" height="120" rx="12" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="2"/>
+                        <circle cx="265" cy="60" r="18" fill="#8b5cf6" opacity="0.15"/>
+                        <text x="265" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#8b5cf6">A</text>
+                        <text x="265" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">Action</text>
+                        <text x="265" y="108" text-anchor="middle" font-size="9" fill="#64748b">บอกสิ่งที่ต้องการ</text>
+                        <text x="265" y="122" text-anchor="middle" font-size="9" fill="#64748b">ให้ AI ทำอะไร</text>
+                        <text x="265" y="140" text-anchor="middle" font-size="8" fill="#94a3b8">"อธิบายเรื่อง...ให้หน่อย"</text>
+                        <!-- C -->
+                        <rect x="360" y="30" width="150" height="120" rx="12" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="2"/>
+                        <circle cx="435" cy="60" r="18" fill="#34d399" opacity="0.15"/>
+                        <text x="435" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#34d399">C</text>
+                        <text x="435" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#34d399">Context</text>
+                        <text x="435" y="108" text-anchor="middle" font-size="9" fill="#64748b">ให้บริบท/ข้อมูลเพิ่ม</text>
+                        <text x="435" y="122" text-anchor="middle" font-size="9" fill="#64748b">สถานการณ์ เงื่อนไข</text>
+                        <text x="435" y="140" text-anchor="middle" font-size="8" fill="#94a3b8">"สำหรับ นร.ม.3..."</text>
+                        <!-- E -->
+                        <rect x="530" y="30" width="150" height="120" rx="12" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="2"/>
+                        <circle cx="605" cy="60" r="18" fill="#f59e0b" opacity="0.15"/>
+                        <text x="605" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#f59e0b">E</text>
+                        <text x="605" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#f59e0b">Example</text>
+                        <text x="605" y="108" text-anchor="middle" font-size="9" fill="#64748b">ให้ตัวอย่างผลลัพธ์</text>
+                        <text x="605" y="122" text-anchor="middle" font-size="9" fill="#64748b">ที่ต้องการ</text>
+                        <text x="605" y="140" text-anchor="middle" font-size="8" fill="#94a3b8">"ตัวอย่างเช่น..."</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Good vs Bad Prompts -->
+            <div class="content-block">
+                <h3><i class="fas fa-balance-scale" style="color: #8b5cf6;"></i> เปรียบเทียบ Prompt ที่ดี vs ไม่ดี</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <!-- Bad Prompt Example 1 -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(239, 68, 68, 0.04); border: 2px solid rgba(239, 68, 68, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-times-circle" style="color: #ef4444; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; color: #ef4444;">Prompt ไม่ดี</span>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px; font-size: 0.9rem; font-style: italic; color: var(--text-secondary);">
+                            "เขียนเรียงความ"
+                        </div>
+                        <p style="font-size: 0.8rem; color: #ef4444; margin-top: 0.5rem;"><i class="fas fa-exclamation-triangle"></i> ไม่ระบุหัวข้อ ความยาว กลุ่มเป้าหมาย หรือรูปแบบ</p>
+                    </div>
+                    
+                    <!-- Good Prompt Example 1 -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(34, 197, 94, 0.04); border: 2px solid rgba(34, 197, 94, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #22c55e; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; color: #22c55e;">Prompt ดี (ใช้ RACE)</span>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(34, 197, 94, 0.05); border-radius: 8px; font-size: 0.9rem; font-style: italic; color: var(--text-secondary);">
+                            "[R] คุณเป็นครูสอนภาษาไทยระดับ ม.ปลาย [A] เขียนเรียงความเรื่อง 'ประโยชน์ของ AI ต่อการศึกษา' [C] สำหรับนักเรียน ม.5 ความยาว 1 หน้า A4 [E] ใช้ภาษาที่เข้าใจง่าย มีตัวอย่างประกอบ"
+                        </div>
+                        <p style="font-size: 0.8rem; color: #22c55e; margin-top: 0.5rem;"><i class="fas fa-star"></i> ชัดเจน ครบถ้วน ได้ผลลัพธ์ตรงใจ</p>
+                    </div>
+
+                    <!-- Bad Prompt Example 2 -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(239, 68, 68, 0.04); border: 2px solid rgba(239, 68, 68, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-times-circle" style="color: #ef4444; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; color: #ef4444;">Prompt ไม่ดี</span>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(239, 68, 68, 0.05); border-radius: 8px; font-size: 0.9rem; font-style: italic; color: var(--text-secondary);">
+                            "สร้างรูป"
+                        </div>
+                        <p style="font-size: 0.8rem; color: #ef4444; margin-top: 0.5rem;"><i class="fas fa-exclamation-triangle"></i> ไม่บอกรายละเอียด สี สไตล์ หรือเนื้อหาในภาพ</p>
+                    </div>
+
+                    <!-- Good Prompt Example 2 -->
+                    <div style="padding: 1.25rem; border-radius: 12px; background: rgba(34, 197, 94, 0.04); border: 2px solid rgba(34, 197, 94, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #22c55e; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; color: #22c55e;">Prompt ดี (ใช้ RACE)</span>
+                        </div>
+                        <div style="padding: 0.75rem; background: rgba(34, 197, 94, 0.05); border-radius: 8px; font-size: 0.9rem; font-style: italic; color: var(--text-secondary);">
+                            "[R] คุณเป็นนักวาดภาพดิจิทัล [A] สร้างภาพแมวสีส้มนั่งอ่านหนังสือบนเก้าอี้ [C] สไตล์การ์ตูน Ghibli สีพาสเทล [E] คล้ายกับสไตล์ใน Totoro"
+                        </div>
+                        <p style="font-size: 0.8rem; color: #22c55e; margin-top: 0.5rem;"><i class="fas fa-star"></i> ระบุรายละเอียดครบ ได้ภาพตามจินตนาการ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips for better prompts -->
+            <div class="content-block">
+                <h3><i class="fas fa-magic" style="color: #6366f1;"></i> เทคนิคเขียน Prompt ให้ดียิ่งขึ้น</h3>
+                <div class="info-box">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <ol style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                                <li><strong>เจาะจงให้มากที่สุด</strong> - บอกรายละเอียดให้ชัดเจน</li>
+                                <li><strong>ระบุรูปแบบผลลัพธ์</strong> - ต้องการเป็นตาราง? bullet? ย่อหน้า?</li>
+                                <li><strong>กำหนดความยาว</strong> - "ตอบสั้นๆ 3 บรรทัด" หรือ "อธิบายละเอียด"</li>
+                                <li><strong>ระบุกลุ่มเป้าหมาย</strong> - "อธิบายให้เด็ก 10 ขวบเข้าใจ"</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <ol start="5" style="padding-left: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                                <li><strong>ให้ตัวอย่าง</strong> - แนบตัวอย่างสิ่งที่ต้องการให้ AI ดู</li>
+                                <li><strong>แบ่งงานซับซ้อนเป็นขั้นตอน</strong> - ทีละขั้น ทีละส่วน</li>
+                                <li><strong>บอกสิ่งที่ไม่ต้องการ</strong> - "ห้ามใช้ศัพท์เทคนิค"</li>
+                                <li><strong>ลองปรับแก้ถ้าไม่พอใจ</strong> - ค่อยๆ ปรับ Prompt ทีละนิด</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2.8: เครื่องมือ AI อื่นๆ -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">2.8</span> เครื่องมือ AI อื่นๆ ที่น่าสนใจ</h2>
+            
+            <div class="content-block">
+                <div class="content-text">
+                    <p>นอกจากเครื่องมือหลักที่กล่าวมาแล้ว ยังมี AI อีกมากมายที่สามารถช่วยเราในชีวิตประจำวันและการทำงาน มาทำความรู้จักเครื่องมือ AI ยอดนิยมเพิ่มเติมกัน</p>
+                </div>
+            </div>
+
+            <div class="example-grid">
+                <!-- Google Translate -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-language" style="font-size: 2rem; color: #6366f1;"></i>
+                    </div>
+                    <h4>Google Translate</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">แปลภาษาด้วย AI รองรับกว่า 130 ภาษา สามารถแปลข้อความ เสียง รูปภาพ และเว็บไซต์ได้ทันที มีฟีเจอร์แปลแบบเรียลไทม์ผ่านกล้อง</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(99, 102, 241, 0.1); color: #6366f1;">ฟรี | แปลภาษา</span>
+                </div>
+
+                <!-- DeepL -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-globe-americas" style="font-size: 2rem; color: #8b5cf6;"></i>
+                    </div>
+                    <h4>DeepL</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">AI แปลภาษาที่แม่นยำกว่า Google Translate ในหลายคู่ภาษา เน้นคุณภาพการแปลที่เป็นธรรมชาติ เหมือนมนุษย์แปล เหมาะสำหรับงานเอกสารทางการ</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">ฟรี/Pro | แปลภาษาคุณภาพ</span>
+                </div>
+
+                <!-- Google Lens -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-search" style="font-size: 2rem; color: #34d399;"></i>
+                    </div>
+                    <h4>Google Lens</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">ค้นหาข้อมูลจากรูปภาพ ถ่ายรูปสิ่งของเพื่อค้นหาข้อมูล แปลข้อความในรูป สแกนโจทย์คณิตศาสตร์พร้อมวิธีทำ หรือค้นหาสินค้าที่คล้ายกัน</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(52, 211, 153, 0.1); color: #059669;">ฟรี | ค้นหาด้วยภาพ</span>
+                </div>
+
+                <!-- Grammarly -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-spell-check" style="font-size: 2rem; color: #f59e0b;"></i>
+                    </div>
+                    <h4>Grammarly</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">AI ตรวจสอบไวยากรณ์ภาษาอังกฤษ แก้ไขการสะกด แนะนำการเขียนที่ดีขึ้น ปรับโทนเสียง ตรวจ Plagiarism ใช้ได้ทั้งบนเว็บ Word และ Gmail</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(245, 158, 11, 0.1); color: #d97706;">ฟรี/Premium | ตรวจภาษา</span>
+                </div>
+
+                <!-- CapCut AI -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-film" style="font-size: 2rem; color: #ec4899;"></i>
+                    </div>
+                    <h4>CapCut AI</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">แอปตัดต่อวิดีโอที่มี AI ช่วย ใส่คำบรรยายอัตโนมัติ ลบพื้นหลังวิดีโอ สร้างเอฟเฟกต์ AI เปลี่ยนเสียง และแนะนำเพลงประกอบที่เหมาะ</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(236, 72, 153, 0.1); color: #db2777;">ฟรี | ตัดต่อวิดีโอ AI</span>
+                </div>
+
+                <!-- Gamma -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-presentation" style="font-size: 2rem; color: #06b6d4;"></i>
+                    </div>
+                    <h4>Gamma</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">AI สร้าง Presentation สวยๆ จากข้อความ เพียงพิมพ์หัวข้อ AI จะสร้างสไลด์พร้อมดีไซน์ เนื้อหา และรูปประกอบให้ทั้งหมด ประหยัดเวลาทำสไลด์หลายชั่วโมง</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(6, 182, 212, 0.1); color: #0891b2;">ฟรี/Pro | สร้าง Presentation</span>
+                </div>
+
+                <!-- ElevenLabs -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-microphone" style="font-size: 2rem; color: #6366f1;"></i>
+                    </div>
+                    <h4>ElevenLabs</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">AI สร้างเสียงพูดที่เหมือนมนุษย์จริง เลือกเสียงได้หลากหลาย Clone เสียงตัวเองได้ รองรับหลายภาษารวมถึงภาษาไทย เหมาะสำหรับทำ Podcast, Voiceover</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(99, 102, 241, 0.1); color: #6366f1;">ฟรี/Pro | สร้างเสียง AI</span>
+                </div>
+
+                <!-- Runway -->
+                <div class="example-card">
+                    <div class="example-icon">
+                        <i class="fas fa-video" style="font-size: 2rem; color: #8b5cf6;"></i>
+                    </div>
+                    <h4>Runway</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">AI สร้างวิดีโอจากข้อความหรือรูปภาพ (Text/Image to Video) ลบพื้นหลังวิดีโอ Inpainting ซ่อมวิดีโอ และ Motion Brush ควบคุมการเคลื่อนไหว</p>
+                    <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">ฟรี/Pro | สร้างวิดีโอ AI</span>
+                </div>
+            </div>
+
+            <!-- Summary diagram -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <svg viewBox="0 0 600 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; width: 100%;">
+                    <text x="300" y="20" text-anchor="middle" font-size="11" fill="#64748b" font-weight="bold">เลือกเครื่องมือ AI ตามประเภทงาน</text>
+                    <!-- Categories -->
+                    <rect x="20" y="35" width="110" height="50" rx="8" fill="#6366f1" opacity="0.08" stroke="#6366f1" stroke-width="1.5"/>
+                    <text x="75" y="55" text-anchor="middle" font-size="9" font-weight="bold" fill="#6366f1">แปลภาษา</text>
+                    <text x="75" y="70" text-anchor="middle" font-size="8" fill="#64748b">Google Translate</text>
+                    <text x="75" y="80" text-anchor="middle" font-size="8" fill="#64748b">DeepL</text>
+                    
+                    <rect x="140" y="35" width="110" height="50" rx="8" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="195" y="55" text-anchor="middle" font-size="9" font-weight="bold" fill="#34d399">เขียน/ตรวจ</text>
+                    <text x="195" y="70" text-anchor="middle" font-size="8" fill="#64748b">Grammarly</text>
+                    <text x="195" y="80" text-anchor="middle" font-size="8" fill="#64748b">ChatGPT</text>
+                    
+                    <rect x="260" y="35" width="110" height="50" rx="8" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="1.5"/>
+                    <text x="315" y="55" text-anchor="middle" font-size="9" font-weight="bold" fill="#f59e0b">วิดีโอ/เสียง</text>
+                    <text x="315" y="70" text-anchor="middle" font-size="8" fill="#64748b">CapCut, Runway</text>
+                    <text x="315" y="80" text-anchor="middle" font-size="8" fill="#64748b">ElevenLabs</text>
+                    
+                    <rect x="380" y="35" width="110" height="50" rx="8" fill="#ec4899" opacity="0.08" stroke="#ec4899" stroke-width="1.5"/>
+                    <text x="435" y="55" text-anchor="middle" font-size="9" font-weight="bold" fill="#ec4899">นำเสนอ</text>
+                    <text x="435" y="70" text-anchor="middle" font-size="8" fill="#64748b">Gamma</text>
+                    <text x="435" y="80" text-anchor="middle" font-size="8" fill="#64748b">Canva AI</text>
+                    
+                    <rect x="500" y="35" width="90" height="50" rx="8" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1.5"/>
+                    <text x="545" y="55" text-anchor="middle" font-size="9" font-weight="bold" fill="#8b5cf6">ค้นหา</text>
+                    <text x="545" y="70" text-anchor="middle" font-size="8" fill="#64748b">Google Lens</text>
+                    <text x="545" y="80" text-anchor="middle" font-size="8" fill="#64748b">Gemini</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Knowledge Summary -->
+    <section class="content-section">
+        <div class="container">
+            <div class="knowledge-summary">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f59e0b;"></i>
+                    <h2 style="margin-top: 0.5rem; color: var(--text-primary);">สรุปความรู้ประจำหน่วย</h2>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> สิ่งที่ควรจำ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>Generative AI = AI ที่สร้างเนื้อหาใหม่ได้ (ข้อความ ภาพ เสียง วิดีโอ โค้ด)</li>
+                            <li>LLM (Large Language Model) เป็นหัวใจหลักของ AI ด้านภาษา</li>
+                            <li>ChatGPT เด่นเรื่องเขียนโค้ดและวิเคราะห์ข้อมูล</li>
+                            <li>Gemini เด่นเรื่องข้อมูลเรียลไทม์และเชื่อมต่อ Google</li>
+                            <li>Canva Magic Studio ช่วยออกแบบกราฟิกด้วย AI</li>
+                            <li>Suno AI สร้างเพลงได้ทั้งภาษาไทยและภาษาอื่น</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> ทักษะสำคัญ</h4>
+                        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>Prompt Engineering = ทักษะการสื่อสารกับ AI</li>
+                            <li>สูตร RACE: Role + Action + Context + Example</li>
+                            <li>Prompt ที่ดี = ชัดเจน เจาะจง มีบริบท มีตัวอย่าง</li>
+                            <li>เลือกเครื่องมือ AI ให้เหมาะกับงาน</li>
+                            <li>AI เป็นผู้ช่วย ไม่ใช่ผู้ทำแทน ต้องตรวจสอบผลลัพธ์เสมอ</li>
+                            <li>ฝึกใช้ AI บ่อยๆ จะเก่งขึ้นเรื่อยๆ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(99, 102, 241, 0.05); border-radius: 12px; border-left: 4px solid #6366f1;">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-quote-left" style="color: #6366f1;"></i> <strong>กิจกรรมท้ายบท:</strong> ลองเปิด ChatGPT หรือ Gemini แล้วฝึกเขียน Prompt โดยใช้สูตร RACE ลองถามคำถามเดียวกันแบบ Prompt ไม่ดี และ Prompt ที่ดี แล้วเปรียบเทียบคำตอบที่ได้ จะเห็นความแตกต่างอย่างชัดเจน!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Navigation -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="page-nav">
+                <a href="unit1.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> หน่วยก่อนหน้า
+                </a>
+                <a href="unit3.html" class="btn btn-primary">
+                    หน่วยถัดไป <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

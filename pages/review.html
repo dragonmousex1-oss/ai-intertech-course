@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทบทวนเนื้อหา - ปอเนาะ Intertech</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div class="brand-text">
+                    <span class="brand-name">Intertech</span>
+                    <span class="brand-sub">AI Academy</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="unit1.html">หน่วย 1</a></li>
+                <li><a href="unit2.html">หน่วย 2</a></li>
+                <li><a href="unit3.html">หน่วย 3</a></li>
+                <li><a href="unit4.html">หน่วย 4</a></li>
+                <li><a href="unit5.html">หน่วย 5</a></li>
+                <li><a href="unit6.html">หน่วย 6</a></li>
+                <li><a href="review.html" class="active">ทบทวน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb" style="padding: 1rem 0; font-size: 0.9rem;">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;"><i class="fas fa-home"></i> หน้าแรก</a>
+            <span style="margin: 0 0.5rem; color: var(--text-muted);">/</span>
+            <span style="color: var(--text-secondary);">ทบทวนเนื้อหา</span>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <div style="flex: 1;">
+                <span class="unit-badge" style="display: inline-block; margin-bottom: 1rem;">ทบทวนเนื้อหา</span>
+                <h1 class="page-title">ทบทวนเนื้อหา</h1>
+                <p class="page-subtitle">รวมคำถามทบทวนทั้ง 6 หน่วยการเรียนรู้ 30 คำถาม เพื่อทดสอบความเข้าใจและเตรียมพร้อมสำหรับการสอบ</p>
+            </div>
+            <div class="page-hero-illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Clipboard background -->
+                    <rect x="80" y="50" width="140" height="200" rx="12" stroke="url(#reviewGrad1)" stroke-width="2.5" opacity="0.8"/>
+                    <rect x="110" y="40" width="80" height="24" rx="12" fill="url(#reviewGrad2)" opacity="0.6"/>
+                    <!-- Checklist lines -->
+                    <rect x="100" y="90" width="100" height="8" rx="4" fill="#818cf8" opacity="0.3"/>
+                    <rect x="100" y="110" width="80" height="8" rx="4" fill="#818cf8" opacity="0.2"/>
+                    <rect x="100" y="130" width="90" height="8" rx="4" fill="#34d399" opacity="0.3"/>
+                    <rect x="100" y="150" width="70" height="8" rx="4" fill="#34d399" opacity="0.2"/>
+                    <rect x="100" y="170" width="100" height="8" rx="4" fill="#f59e0b" opacity="0.3"/>
+                    <rect x="100" y="190" width="60" height="8" rx="4" fill="#f59e0b" opacity="0.2"/>
+                    <rect x="100" y="210" width="85" height="8" rx="4" fill="#ec4899" opacity="0.3"/>
+                    <!-- Check marks -->
+                    <circle cx="90" cy="94" r="5" fill="#34d399" opacity="0.8"/>
+                    <circle cx="90" cy="134" r="5" fill="#34d399" opacity="0.8"/>
+                    <circle cx="90" cy="174" r="5" fill="#6366f1" opacity="0.5"/>
+                    <circle cx="90" cy="214" r="5" fill="#6366f1" opacity="0.5"/>
+                    <!-- Question mark decoration -->
+                    <text x="220" y="80" font-size="40" fill="#8b5cf6" opacity="0.2">?</text>
+                    <text x="70" y="260" font-size="30" fill="#34d399" opacity="0.2">?</text>
+                    <!-- Pulsing ring -->
+                    <circle cx="150" cy="150" r="120" stroke="#818cf8" stroke-width="1" opacity="0.2">
+                        <animate attributeName="r" values="120;130;120" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.2;0.05;0.2" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="reviewGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="reviewGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#34d399"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Unit 1 Review -->
+    <section class="content-section">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-icon"><i class="fas fa-globe"></i></div>
+                <h3>หน่วยที่ 1: รู้จักโลกของ AI</h3>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> AI (Artificial Intelligence) คืออะไร? จงอธิบายความหมายอย่างละเอียด</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>AI (Artificial Intelligence) หรือ ปัญญาประดิษฐ์</strong> คือสาขาหนึ่งของวิทยาการคอมพิวเตอร์ที่มุ่งเน้นการพัฒนาระบบคอมพิวเตอร์ให้สามารถทำงานที่ปกติต้องอาศัย<strong>สติปัญญาของมนุษย์</strong> เช่น การเรียนรู้ (Learning), การตัดสินใจ (Decision Making), การแก้ปัญหา (Problem Solving), การเข้าใจภาษา (Language Understanding) และการรับรู้สิ่งต่างๆ (Perception) คำว่า "Artificial" หมายถึง "สิ่งที่สร้างขึ้น" และ "Intelligence" หมายถึง "ความฉลาด" รวมกันจึงหมายถึง <strong>"ความฉลาดที่ถูกสร้างขึ้นโดยมนุษย์ผ่านระบบคอมพิวเตอร์"</strong></p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> AI แบ่งออกเป็นกี่ประเภท? อะไรบ้าง? และแต่ละประเภทต่างกันอย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>AI แบ่งออกเป็น <strong>3 ประเภท</strong> ตามระดับความสามารถ ได้แก่: <strong>1) Narrow AI (AI แบบแคบ)</strong> - เก่งเฉพาะงานใดงานหนึ่ง เป็น AI ที่มีอยู่จริงในปัจจุบัน เช่น ChatGPT, Face ID, Google Translate <strong>2) General AI หรือ AGI (AI ทั่วไป)</strong> - มีความฉลาดเทียบเท่ามนุษย์ สามารถทำงานได้หลากหลายเหมือนคน ยังอยู่ในขั้นวิจัยพัฒนา <strong>3) Super AI หรือ ASI (AI เหนือมนุษย์)</strong> - มีความฉลาดเหนือมนุษย์ในทุกด้าน ยังเป็นเพียงทฤษฎี</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> ใครเป็นผู้บัญญัติคำว่า "Artificial Intelligence" เป็นครั้งแรก และเกิดขึ้นเมื่อใด?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>John McCarthy</strong> เป็นผู้บัญญัติคำว่า "Artificial Intelligence" เป็นครั้งแรก ในปี <strong>ค.ศ. 1956</strong> ในการประชุมที่ <strong>Dartmouth College</strong> ประเทศสหรัฐอเมริกา ซึ่งถือเป็นจุดกำเนิดอย่างเป็นทางการของสาขา AI อย่างไรก็ตาม แนวคิดเรื่องเครื่องจักรที่คิดได้เริ่มต้นมาก่อนหน้านั้นโดย <strong>Alan Turing</strong> ในปี 1950 ที่เสนอ "Turing Test"</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> จงยกตัวอย่าง AI ที่ใช้ในชีวิตประจำวันมาอย่างน้อย 5 ตัวอย่าง พร้อมอธิบายการทำงาน</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>ตัวอย่าง AI ในชีวิตประจำวัน: <strong>1) Face ID</strong> - ใช้ AI จดจำใบหน้าเพื่อปลดล็อคโทรศัพท์ <strong>2) YouTube/Netflix</strong> - ใช้ AI วิเคราะห์พฤติกรรมการดูเพื่อแนะนำวิดีโอที่เราน่าจะชอบ <strong>3) Google Maps</strong> - ใช้ AI วิเคราะห์สภาพจราจรเพื่อคำนวณเส้นทางที่เร็วที่สุด <strong>4) Siri / Google Assistant</strong> - ผู้ช่วยเสียงที่ใช้ AI เข้าใจคำพูดและตอบคำถาม <strong>5) Shopee / Lazada</strong> - ใช้ AI แนะนำสินค้าจากประวัติการดูและซื้อ นอกจากนี้ยังมี คีย์บอร์ดทำนายคำ, ฟิลเตอร์หน้าใน TikTok, Spotify แนะนำเพลง เป็นต้น</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Turing Test คืออะไร? และมีหลักการทำงานอย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>Turing Test</strong> คือการทดสอบที่เสนอโดย <strong>Alan Turing</strong> ในปี 1950 เพื่อตอบคำถามว่า "เครื่องจักรสามารถคิดได้หรือไม่?" หลักการคือ: ให้มนุษย์ผู้ทดสอบ (Interrogator) สนทนากับ 2 ฝ่าย คือมนุษย์จริงและเครื่องจักร โดย<strong>ไม่รู้ว่าฝ่ายไหนเป็นใคร</strong> (สื่อสารผ่านข้อความเท่านั้น) ถ้าผู้ทดสอบ<strong>ไม่สามารถแยกได้</strong>ว่ากำลังคุยกับคนหรือเครื่อง แสดงว่าเครื่องนั้น<strong>ผ่านการทดสอบ</strong> และถือว่ามีความฉลาดเทียบเท่ามนุษย์ในด้านการสนทนา</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unit 2 Review -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-icon"><i class="fas fa-tools"></i></div>
+                <h3>หน่วยที่ 2: เครื่องมือ AI</h3>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Generative AI คืออะไร? ต่างจาก AI ทั่วไปอย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>Generative AI (AI เชิงสร้างสรรค์)</strong> คือ AI ที่สามารถ<strong>สร้างเนื้อหาใหม่</strong>ได้ด้วยตัวเอง เช่น ข้อความ รูปภาพ เสียง เพลง วิดีโอ และโค้ด โดยเรียนรู้จากข้อมูลจำนวนมหาศาล ต่างจาก AI ทั่วไป (Analytical AI) ที่ทำได้เพียง<strong>วิเคราะห์หรือจำแนก</strong>ข้อมูลที่มีอยู่ ตัวอย่างเช่น ChatGPT สร้างข้อความ, DALL-E สร้างรูปภาพ, Suno สร้างเพลง เป็นต้น Generative AI ใช้โมเดลภาษาขนาดใหญ่ (<strong>Large Language Model - LLM</strong>) ในการทำงาน</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> สูตร RACE ในการเขียน Prompt คืออะไร? แต่ละตัวอักษรย่อมาจากอะไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>สูตร <strong>RACE</strong> เป็นเทคนิคการเขียน Prompt ให้ได้ผลลัพธ์ที่ดี ประกอบด้วย: <strong>R = Role (บทบาท)</strong> - กำหนดบทบาทให้ AI เช่น "คุณเป็นครูสอนวิทยาศาสตร์" <strong>A = Action (การกระทำ)</strong> - บอก AI ว่าต้องทำอะไร เช่น "อธิบายเรื่อง..." <strong>C = Context (บริบท)</strong> - ให้ข้อมูลเพิ่มเติม เช่น "สำหรับนักเรียนม.ปลาย" <strong>E = Expectation (ความคาดหวัง)</strong> - กำหนดรูปแบบผลลัพธ์ที่ต้องการ เช่น "อธิบายเป็นข้อๆ ไม่เกิน 5 ข้อ" การใช้สูตร RACE จะช่วยให้ได้คำตอบที่<strong>ตรงประเด็นและมีคุณภาพ</strong>มากขึ้น</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> ChatGPT และ Gemini มีข้อแตกต่างกันอย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>ข้อแตกต่างหลักระหว่าง ChatGPT และ Gemini: <strong>ChatGPT</strong> พัฒนาโดย <strong>OpenAI</strong> มีจุดเด่นด้านการเขียนเชิงสร้างสรรค์ การแต่งเรื่อง บทความ โค้ด มีความสามารถในการสนทนาต่อเนื่องที่ดี และมีระบบ Plugin/GPTs ที่หลากหลาย ส่วน <strong>Gemini</strong> พัฒนาโดย <strong>Google</strong> มีจุดเด่นด้านการค้นหาข้อมูลที่เป็นปัจจุบัน (เชื่อมต่อกับ Google Search) การวิเคราะห์รูปภาพและวิดีโอ และการทำงานร่วมกับ Google Workspace เช่น Docs, Sheets, Gmail ได้ดี ทั้งสองมีเวอร์ชันฟรีและเสียเงิน</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Canva Magic มีฟีเจอร์ AI อะไรบ้าง? จงยกตัวอย่างมาอย่างน้อย 4 ฟีเจอร์</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>ฟีเจอร์ AI ใน Canva Magic ที่สำคัญ: <strong>1) Magic Write</strong> - AI ช่วยเขียนข้อความ สร้างเนื้อหา แคปชั่น บทความ <strong>2) Magic Design</strong> - AI ออกแบบเทมเพลตอัตโนมัติจากคำอธิบายหรือรูปภาพที่อัปโหลด <strong>3) Magic Eraser</strong> - ลบวัตถุหรือคนที่ไม่ต้องการออกจากรูปภาพ <strong>4) Magic Edit</strong> - แก้ไขรูปภาพด้วยการพิมพ์คำสั่ง เช่น เปลี่ยนสีท้องฟ้า เพิ่มวัตถุ <strong>5) Background Remover</strong> - ลบพื้นหลังอัตโนมัติ <strong>6) Text to Image</strong> - สร้างรูปภาพจากคำอธิบาย <strong>7) Magic Animate</strong> - เพิ่มแอนิเมชันให้งานออกแบบอัตโนมัติ</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Suno AI คืออะไร? มีความสามารถอะไรบ้าง?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>Suno AI</strong> คือเครื่องมือ AI สำหรับ<strong>สร้างเพลงและดนตรี</strong>จากคำอธิบายข้อความ (Text-to-Music) ความสามารถหลักได้แก่: <strong>1)</strong> สร้างเพลงทั้งเพลงพร้อม<strong>เนื้อร้องและทำนอง</strong>จากคำอธิบายง่ายๆ <strong>2)</strong> เลือก<strong>แนวเพลง</strong>ได้หลากหลาย เช่น Pop, Rock, Jazz, R&B, Hip-hop, Thai <strong>3)</strong> สร้างเพลง<strong>ภาษาไทย</strong>ได้ <strong>4)</strong> กำหนด<strong>อารมณ์เพลง</strong> (mood) ได้ เช่น สดใส เศร้า มีพลัง <strong>5)</strong> สามารถใส่<strong>เนื้อเพลงของตัวเอง</strong>ให้ AI ใส่ทำนองได้ (Custom Lyrics) ทำให้ทุกคนสามารถสร้างเพลงได้โดย<strong>ไม่ต้องมีความรู้ด้านดนตรี</strong></p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unit 3 Review -->
+    <section class="content-section">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-icon"><i class="fas fa-cogs"></i></div>
+                <h3>หน่วยที่ 3: ตรรกะของ AI</h3>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Computational Thinking มี 4 ขั้นตอนอะไรบ้าง? จงอธิบายแต่ละขั้นตอน</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>Computational Thinking (การคิดเชิงคำนวณ)</strong> มี 4 ขั้นตอน: <strong>1) Decomposition (การแบ่งย่อย)</strong> - แบ่งปัญหาใหญ่ออกเป็นปัญหาย่อยๆ ที่จัดการได้ง่ายขึ้น เช่น แบ่งการทำเว็บไซต์เป็น ส่วนหัว เนื้อหา ส่วนท้าย <strong>2) Pattern Recognition (การหารูปแบบ)</strong> - มองหาความซ้ำหรือรูปแบบที่คล้ายกันในปัญหา เพื่อนำวิธีแก้มาประยุกต์ใช้ <strong>3) Abstraction (การคิดเชิงนามธรรม)</strong> - ตัดรายละเอียดที่ไม่จำเป็นออก เน้นเฉพาะสิ่งสำคัญ เช่น แผนที่รถไฟฟ้าไม่ต้องแสดงถนนทุกสาย <strong>4) Algorithm Design (การออกแบบอัลกอริทึม)</strong> - เขียนขั้นตอนวิธีแก้ปัญหาอย่างเป็นระบบ ชัดเจน ทำซ้ำได้</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> อัลกอริทึม (Algorithm) ที่ดีควรมีคุณสมบัติอะไรบ้าง?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>อัลกอริทึมที่ดีควรมีคุณสมบัติสำคัญดังนี้: <strong>1) มีขั้นตอนชัดเจน (Definiteness)</strong> - แต่ละขั้นตอนต้องไม่คลุมเครือ เข้าใจได้ตรงกัน <strong>2) มีจุดเริ่มต้นและจุดสิ้นสุด (Finiteness)</strong> - ต้องจบได้ ไม่ทำงานวนไปไม่สิ้นสุด <strong>3) มีข้อมูลนำเข้าและผลลัพธ์ (Input/Output)</strong> - รับค่าเข้าและให้ผลลัพธ์ที่ต้องการ <strong>4) มีประสิทธิภาพ (Effectiveness)</strong> - ทำงานได้จริงด้วยทรัพยากรที่มี ไม่ซับซ้อนเกินไป <strong>5) ถูกต้อง (Correctness)</strong> - ให้ผลลัพธ์ที่ถูกต้องสำหรับทุกกรณีที่เป็นไปได้ <strong>6) ทำซ้ำได้ (Reproducibility)</strong> - ทำกี่ครั้งก็ได้ผลเหมือนเดิม ถ้าข้อมูลนำเข้าเหมือนกัน</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Machine Learning มีกี่ประเภท? อะไรบ้าง? พร้อมยกตัวอย่างแต่ละประเภท</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>Machine Learning แบ่งเป็น <strong>3 ประเภทหลัก</strong>: <strong>1) Supervised Learning (การเรียนรู้แบบมีผู้สอน)</strong> - ป้อนข้อมูลพร้อมคำตอบที่ถูกต้อง ให้ AI เรียนรู้ความสัมพันธ์ ตัวอย่าง: สอนให้ AI แยกอีเมลสแปมกับอีเมลปกติ, จำแนกรูปแมวกับสุนัข <strong>2) Unsupervised Learning (การเรียนรู้แบบไม่มีผู้สอน)</strong> - ป้อนข้อมูลโดยไม่บอกคำตอบ ให้ AI หารูปแบบเอง ตัวอย่าง: จัดกลุ่มลูกค้าตามพฤติกรรมการซื้อ, ค้นหาเพลงที่มีลักษณะคล้ายกัน <strong>3) Reinforcement Learning (การเรียนรู้แบบเสริมแรง)</strong> - AI ลองทำแล้วได้รางวัลหรือบทลงโทษ เรียนรู้จากผลลัพธ์ ตัวอย่าง: AI เล่นเกม AlphaGo, หุ่นยนต์เรียนรู้การเดิน</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Neural Network (โครงข่ายประสาทเทียม) มีกี่ชั้น? แต่ละชั้นทำหน้าที่อะไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>Neural Network มี <strong>3 ชั้นหลัก</strong>: <strong>1) Input Layer (ชั้นนำเข้า)</strong> - รับข้อมูลดิบเข้าสู่ระบบ เช่น ค่าพิกเซลของรูปภาพ ข้อความ เสียง จำนวน Neuron ขึ้นอยู่กับขนาดข้อมูลนำเข้า <strong>2) Hidden Layer (ชั้นซ่อน)</strong> - ประมวลผลข้อมูล ค้นหาลักษณะสำคัญ (Features) และรูปแบบ อาจมีหลายชั้น (ถ้ามีหลายชั้นเรียกว่า <strong>Deep Learning</strong>) ยิ่งลึกยิ่งเรียนรู้ลักษณะที่ซับซ้อนได้ <strong>3) Output Layer (ชั้นผลลัพธ์)</strong> - แสดงผลลัพธ์สุดท้าย เช่น บอกว่ารูปนี้เป็นแมวหรือสุนัข ให้ค่าความน่าจะเป็น หรือทำนายตัวเลข</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Overfitting และ Underfitting คืออะไร? ต่างกันอย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>Overfitting (การเรียนรู้มากเกินไป)</strong> คือปัญหาที่โมเดล AI <strong>จำข้อมูลฝึกได้แม่นมาก</strong>จนจำรายละเอียดปลีกย่อยและ Noise ด้วย ทำให้เมื่อเจอข้อมูลใหม่ที่ไม่เคยเห็นกลับ<strong>ทำนายผิดพลาด</strong> เปรียบเหมือนนักเรียนที่ท่องจำเฉลยโดยไม่เข้าใจ พอเจอโจทย์ใหม่ก็ทำไม่ได้ ส่วน <strong>Underfitting (การเรียนรู้น้อยเกินไป)</strong> คือปัญหาที่โมเดล AI <strong>เรียนรู้ไม่เพียงพอ</strong> ไม่สามารถจับรูปแบบสำคัญในข้อมูลได้ ทำให้ทำนาย<strong>ผิดพลาดทั้งข้อมูลฝึกและข้อมูลใหม่</strong> เปรียบเหมือนนักเรียนที่ไม่ตั้งใจเรียน อ่านหนังสือผ่านๆ ทำข้อสอบไม่ได้เลย โมเดลที่ดีต้อง<strong>สมดุล</strong>ระหว่างสองสิ่งนี้</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unit 4 Review -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>หน่วยที่ 4: จริยธรรม AI</h3>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> หลักจริยธรรม AI มีกี่ข้อ? อะไรบ้าง? จงอธิบายแต่ละข้อ</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>หลักจริยธรรม AI มี <strong>6 ข้อสำคัญ</strong>: <strong>1) ความโปร่งใส (Transparency)</strong> - ต้องอธิบายได้ว่า AI ตัดสินใจอย่างไรและทำไม <strong>2) ความยุติธรรม (Fairness)</strong> - AI ต้องไม่เลือกปฏิบัติ ไม่มีอคติต่อเพศ เชื้อชาติ ศาสนา <strong>3) ความเป็นส่วนตัว (Privacy)</strong> - ต้องปกป้องข้อมูลส่วนบุคคลของผู้ใช้งาน <strong>4) ความปลอดภัย (Safety)</strong> - AI ต้องไม่ก่อให้เกิดอันตรายต่อผู้ใช้หรือสังคม <strong>5) ความรับผิดชอบ (Accountability)</strong> - ต้องมีผู้รับผิดชอบเมื่อ AI ทำงานผิดพลาดหรือสร้างความเสียหาย <strong>6) ประโยชน์ต่อมนุษย์ (Beneficence)</strong> - AI ควรถูกพัฒนาเพื่อประโยชน์ของมนุษย์และสังคมเป็นหลัก</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Deepfake คืออะไร? มีกี่ประเภท? และเราจะตรวจจับ Deepfake ได้อย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>Deepfake</strong> คือสื่อปลอมที่สร้างด้วยเทคโนโลยี AI โดยเฉพาะ Deep Learning เพื่อ<strong>ปลอมแปลงใบหน้า เสียง หรือวิดีโอ</strong>ให้ดูสมจริง ประเภทของ Deepfake: <strong>1) Face Swap</strong> - สลับใบหน้าคนหนึ่งไปใส่อีกคน <strong>2) Voice Cloning</strong> - เลียนเสียงพูดของคนอื่น <strong>3) Full Body Puppet</strong> - ควบคุมร่างกายทั้งตัว <strong>4) Lip Sync</strong> - ปลอมปากให้ขยับตรงกับเสียงใหม่ วิธีตรวจจับ: สังเกต<strong>ความผิดปกติ</strong>เช่น การกะพริบตาไม่เป็นธรรมชาติ, ขอบใบหน้าเบลอหรือสั่นไหว, แสงเงาไม่สอดคล้อง, เสียงไม่ตรงปาก, พื้นหลังบิดเบี้ยว และใช้เครื่องมือตรวจจับ Deepfake เช่น Deepware Scanner</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> SIFT Method คืออะไร? ใช้ตรวจสอบข้อมูลอย่างไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>SIFT</strong> เป็นวิธีการตรวจสอบความน่าเชื่อถือของข้อมูลบนอินเทอร์เน็ต ประกอบด้วย 4 ขั้นตอน: <strong>S = Stop (หยุด)</strong> - หยุดคิดก่อนเชื่อหรือแชร์ อย่ารีบตอบสนองทางอารมณ์ <strong>I = Investigate the source (ตรวจสอบแหล่งที่มา)</strong> - ดูว่าใครเป็นคนเผยแพร่ เว็บไซต์น่าเชื่อถือหรือไม่ ผู้เขียนเป็นใคร มีความเชี่ยวชาญจริงหรือไม่ <strong>F = Find better coverage (หาแหล่งอื่นเปรียบเทียบ)</strong> - ค้นหาข่าวเดียวกันจากแหล่งอื่นอย่างน้อย 2-3 แหล่ง ถ้ามีแหล่งเดียวรายงานอาจเป็นข่าวปลอม <strong>T = Trace claims (สืบค้นต้นตอ)</strong> - ตามหาต้นทางของข้อมูล ข้อมูลถูกดัดแปลงมาจากไหน บริบทเดิมคืออะไร</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> เราจะปกป้องความเป็นส่วนตัวของตัวเองจาก AI ได้อย่างไรบ้าง?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>วิธีปกป้องความเป็นส่วนตัวจาก AI: <strong>1) จำกัดข้อมูลที่แชร์</strong> - ไม่โพสต์ข้อมูลส่วนตัวมากเกินไปบนโซเชียลมีเดีย เช่น ที่อยู่ เบอร์โทร รูปบัตรประชาชน <strong>2) ตรวจสอบการตั้งค่าความเป็นส่วนตัว</strong> - ปรับ Privacy Settings ในแอปและเว็บไซต์ ปิดการติดตามตำแหน่งที่ไม่จำเป็น <strong>3) อ่านเงื่อนไขการใช้งาน</strong> - ตรวจสอบว่าแอปจะนำข้อมูลเราไปทำอะไร ก่อนกดยินยอม <strong>4) ใช้รหัสผ่านที่ปลอดภัย</strong> - ใช้รหัสผ่านยาว ซับซ้อน ไม่ซ้ำกัน และเปิดการยืนยันตัวตน 2 ชั้น (2FA) <strong>5) ระวังข้อมูลที่ป้อนให้ AI</strong> - ไม่ใส่ข้อมูลลับ ข้อมูลส่วนตัว หรือข้อมูลสำคัญในแชทบอท AI <strong>6) อัพเดทซอฟต์แวร์สม่ำเสมอ</strong> - เพื่อปิดช่องโหว่ด้านความปลอดภัย</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> จงยกตัวอย่างการใช้ AI ในห้องเรียนที่เหมาะสมและไม่เหมาะสม</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p><strong>การใช้ AI ที่เหมาะสม:</strong> ใช้ AI เป็น<strong>เครื่องมือช่วยเรียนรู้</strong> เช่น ให้ ChatGPT อธิบายเนื้อหาที่ไม่เข้าใจ, ใช้ AI ตรวจสอบไวยากรณ์หลังเขียนงานเสร็จ, ใช้เป็นแหล่งไอเดียเริ่มต้น, ใช้สรุปบทความยาวๆ, ใช้ช่วยฝึกภาษา, ใช้หาข้อมูลเพิ่มเติมเพื่อต่อยอดความรู้ <strong>การใช้ AI ที่ไม่เหมาะสม:</strong> <strong>ก็อปปี้งาน</strong>จาก AI ทั้งหมดโดยไม่ได้คิดเอง, ส่ง<strong>การบ้านที่ AI ทำให้</strong>โดยอ้างว่าเป็นผลงานตัวเอง, ใช้ AI <strong>สอบหรือทดสอบ</strong>โดยไม่ได้รับอนุญาต, ใช้ AI สร้างข้อมูลเท็จหรือ<strong>แอบอ้าง</strong>ผลงาน, ใช้โดย<strong>ไม่ตรวจสอบความถูกต้อง</strong>ของคำตอบ หลักสำคัญคือ: AI เป็น<strong>ผู้ช่วย</strong>ไม่ใช่<strong>ผู้ทำแทน</strong></p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unit 5 Review -->
+    <section class="content-section">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-icon"><i class="fas fa-rocket"></i></div>
+                <h3>หน่วยที่ 5: โครงงาน AI</h3>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> การทำโครงงาน AI มีกี่ขั้นตอน? อะไรบ้าง?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>การทำโครงงาน AI มี <strong>5 ขั้นตอนหลัก</strong>: <strong>1) เลือกหัวข้อ (Topic Selection)</strong> - เลือกปัญหาหรือหัวข้อที่สนใจ ที่ AI สามารถช่วยแก้ปัญหาได้ ควรเป็นเรื่องใกล้ตัวและมีความเป็นไปได้ <strong>2) วางแผน (Planning)</strong> - กำหนดเป้าหมาย ขอบเขต ระยะเวลา แบ่งงาน เลือกเครื่องมือ AI ที่จะใช้ <strong>3) สร้างผลงาน (Creation)</strong> - ลงมือทำจริง ใช้เครื่องมือ AI สร้างชิ้นงาน ปรับแก้ไข พัฒนาให้สมบูรณ์ <strong>4) ทดสอบและปรับปรุง (Testing & Refinement)</strong> - ตรวจสอบผลงาน ทดลองใช้ ขอ Feedback ปรับแก้จุดบกพร่อง <strong>5) นำเสนอ (Presentation)</strong> - จัดทำสื่อนำเสนอ อธิบายกระบวนการทำงาน แสดงผลลัพธ์ ตอบคำถาม</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> ทำไมเราไม่ควรนำผลลัพธ์จาก AI มาใช้โดยตรง (Raw Output)?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>เหตุผลที่ไม่ควรใช้ผลลัพธ์จาก AI โดยตรง: <strong>1) AI อาจให้ข้อมูลผิด (Hallucination)</strong> - AI สามารถสร้างข้อมูลที่ดูน่าเชื่อถือแต่ไม่เป็นความจริง ต้องตรวจสอบข้อเท็จจริงเสมอ <strong>2) ขาดความเป็นตัวตน</strong> - ผลงานที่ดีควรสะท้อนความคิดและมุมมองของผู้สร้าง ไม่ใช่สำเนาจาก AI <strong>3) ไม่ตรงบริบท</strong> - AI อาจไม่เข้าใจบริบทเฉพาะ เช่น กลุ่มเป้าหมาย วัฒนธรรม สถานการณ์เฉพาะ <strong>4) ปัญหาลิขสิทธิ์และจริยธรรม</strong> - การอ้างว่าผลงาน AI เป็นของตัวเองถือเป็นการไม่ซื่อสัตย์ <strong>5) ไม่เกิดการเรียนรู้</strong> - ถ้าใช้ AI ทำทุกอย่าง ตัวเราจะไม่ได้พัฒนาทักษะใดๆ เลย วิธีที่ถูกต้องคือใช้ AI เป็น<strong>จุดเริ่มต้น</strong>แล้ว<strong>ปรับแต่ง เพิ่มเติม ตรวจสอบ</strong>ด้วยตัวเอง</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> กฎ 10-20-30 ในการนำเสนอคืออะไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>กฎ <strong>10-20-30</strong> เป็นหลักการนำเสนอที่มีประสิทธิภาพ โดย Guy Kawasaki: <strong>10 = ไม่เกิน 10 สไลด์</strong> - จำกัดจำนวนสไลด์ไม่ให้มากเกินไป เน้นเฉพาะสาระสำคัญ ป้องกันผู้ฟังเบื่อ ตัวอย่างโครงสร้าง: ปก, ปัญหา, วิธีแก้, เครื่องมือที่ใช้, ผลลัพธ์, บทเรียน, สรุป <strong>20 = ไม่เกิน 20 นาที</strong> - จำกัดเวลานำเสนอ ฝึกให้กระชับ ตรงประเด็น เหลือเวลาสำหรับคำถาม <strong>30 = ตัวอักษรไม่เล็กกว่า 30 pt</strong> - ใช้ตัวอักษรขนาดใหญ่ ทำให้อ่านง่าย ป้องกันการใส่ข้อความมากเกินไปในสไลด์ บังคับให้สรุปเนื้อหาเป็นประเด็นสั้นๆ</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> เกณฑ์การให้คะแนนโครงงาน AI มีกี่ด้าน? อะไรบ้าง?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>เกณฑ์การให้คะแนนโครงงาน AI มี <strong>4 ด้านหลัก</strong>: <strong>1) ความคิดสร้างสรรค์ (Creativity)</strong> - หัวข้อมีความน่าสนใจหรือไม่ มีมุมมองใหม่ๆ ไม่ซ้ำใคร แก้ปัญหาได้อย่างสร้างสรรค์ <strong>2) การใช้เครื่องมือ AI (AI Tool Usage)</strong> - เลือกใช้เครื่องมือ AI ได้เหมาะสม ใช้ได้อย่างมีประสิทธิภาพ เขียน Prompt ได้ดี ไม่ใช่แค่ก็อปปี้ผลลัพธ์มาตรงๆ <strong>3) คุณภาพผลงาน (Quality)</strong> - ผลงานสมบูรณ์ เนื้อหาถูกต้อง ข้อมูลน่าเชื่อถือ สวยงาม เรียบร้อย มีการปรับแต่งจนดี <strong>4) การนำเสนอ (Presentation)</strong> - อธิบายกระบวนการทำงานได้ชัดเจน พูดจาน่าสนใจ สื่อนำเสนอดี ตอบคำถามได้ มีความมั่นใจ</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> จงยกตัวอย่างโครงงาน AI สำหรับผู้เริ่มต้น มา 3-5 ตัวอย่าง</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>ตัวอย่างโครงงาน AI สำหรับผู้เริ่มต้น: <strong>1) สร้างนิทานภาพ</strong> - ใช้ ChatGPT แต่งเรื่อง + Canva/DALL-E สร้างภาพประกอบ รวมเป็น E-book <strong>2) คลิปให้ความรู้</strong> - ใช้ AI ช่วยเขียนสคริปต์ สร้างภาพประกอบ ตัดต่อวิดีโอสั้น ลง TikTok/YouTube <strong>3) เว็บไซต์ท่องเที่ยวชุมชน</strong> - ใช้ AI ช่วยเขียนเนื้อหาแนะนำสถานที่ แปลภาษา สร้างรูปประกอบ <strong>4) แชทบอทให้คำปรึกษา</strong> - สร้าง AI Chatbot ตอบคำถามเกี่ยวกับการเรียน การสอบ ทุนการศึกษา <strong>5) แต่งเพลงประจำโรงเรียน</strong> - ใช้ Suno AI สร้างเพลงพร้อมเนื้อร้อง ออกแบบปก Album ด้วย Canva ทุกโครงงานควร<strong>แก้ปัญหาจริง</strong>และ<strong>สร้างคุณค่า</strong>ให้ชุมชนหรือโรงเรียน</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unit 6 Review -->
+    <section class="content-section" style="background: var(--bg-secondary, #f8fafc);">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>หน่วยที่ 6: อาชีพด้าน AI</h3>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> จงยกตัวอย่างอาชีพด้าน AI มา 5 อาชีพ พร้อมอธิบายหน้าที่ของแต่ละอาชีพ</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>อาชีพด้าน AI ที่สำคัญ 5 อาชีพ: <strong>1) AI Engineer (วิศวกร AI)</strong> - ออกแบบ พัฒนา และปรับปรุงระบบ AI ให้ทำงานได้จริง สร้างโมเดล Machine Learning และนำไปใช้งานในผลิตภัณฑ์ <strong>2) Data Scientist (นักวิทยาศาสตร์ข้อมูล)</strong> - วิเคราะห์ข้อมูลขนาดใหญ่ หาข้อมูลเชิงลึก (Insights) สร้างโมเดลทำนาย ช่วยธุรกิจตัดสินใจ <strong>3) Prompt Engineer (วิศวกร Prompt)</strong> - ออกแบบคำสั่ง (Prompt) ที่มีประสิทธิภาพเพื่อให้ได้ผลลัพธ์ที่ดีที่สุดจาก AI อาชีพใหม่ที่เกิดจากยุค Generative AI <strong>4) AI Ethics Officer (เจ้าหน้าที่จริยธรรม AI)</strong> - ดูแลให้การพัฒนาและใช้งาน AI เป็นไปอย่างมีจริยธรรม ไม่สร้างอคติหรือความเสียหาย <strong>5) Robotics Engineer (วิศวกรหุ่นยนต์)</strong> - ออกแบบและสร้างหุ่นยนต์ที่ใช้ AI ทั้งหุ่นยนต์อุตสาหกรรม หุ่นยนต์บริการ และหุ่นยนต์ทางการแพทย์</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> AI ไม่สามารถแทนที่งานประเภทใดได้? เพราะเหตุใด?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>AI ไม่สามารถแทนที่งานที่ต้องใช้: <strong>1) ความเห็นอกเห็นใจ (Empathy)</strong> - เช่น นักจิตวิทยา พยาบาล นักสังคมสงเคราะห์ เพราะ AI ไม่มีอารมณ์และไม่เข้าใจความรู้สึกมนุษย์อย่างแท้จริง <strong>2) ความคิดสร้างสรรค์ขั้นสูง (Creative Thinking)</strong> - เช่น ศิลปิน นักเขียน ผู้กำกับภาพยนตร์ ที่ต้องสร้างสิ่งใหม่จากจินตนาการ <strong>3) การตัดสินใจทางจริยธรรม (Ethical Judgment)</strong> - เช่น ผู้พิพากษา แพทย์ ครู ที่ต้องชั่งน้ำหนักคุณค่าทางศีลธรรม <strong>4) ทักษะทางกายภาพที่ซับซ้อน</strong> - เช่น ช่างซ่อมในสถานการณ์ไม่คาดคิด ศัลยแพทย์กรณีซับซ้อน <strong>5) ความสัมพันธ์ระหว่างมนุษย์</strong> - เช่น ครู โค้ช ผู้นำ ที่ต้องสร้างแรงบันดาลใจและความไว้วางใจ เหตุผลหลักคือ AI ขาด<strong>ความเป็นมนุษย์ จิตสำนึก และประสบการณ์ชีวิต</strong></p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> "กฎทอง" เกี่ยวกับ AI กับการทำงานคืออะไร?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>กฎทองเกี่ยวกับ AI กับการทำงานคือ: <strong>"AI จะไม่มาแทนที่คุณ แต่คนที่ใช้ AI เป็นจะมาแทนที่คนที่ใช้ไม่เป็น"</strong> (AI won't replace you, but a person using AI will.) หมายความว่า AI ไม่ได้ทำให้มนุษย์ตกงานโดยตรง แต่คนที่<strong>รู้จักใช้ AI เป็นเครื่องมือ</strong>เพิ่มประสิทธิภาพจะได้เปรียบกว่าคนที่ปฏิเสธหรือไม่ยอมเรียนรู้ AI ดังนั้นสิ่งสำคัญคือ<strong>ต้องเรียนรู้และปรับตัว</strong>ให้ใช้ AI เป็นเครื่องมือที่ช่วยทำงานให้เร็วขึ้น ดีขึ้น และมีประสิทธิภาพมากขึ้น ไม่ใช่กลัวว่าจะถูกแทนที่</p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> Future Skills (ทักษะแห่งอนาคต) แบ่งเป็นกี่ประเภท? อะไรบ้าง? จงยกตัวอย่าง</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>Future Skills แบ่งเป็น <strong>2 ประเภทหลัก</strong>: <strong>Hard Skills (ทักษะทางเทคนิค)</strong> - ทักษะเฉพาะทางที่วัดได้ เรียนรู้จากหลักสูตร ตัวอย่าง: การเขียนโค้ด (Python, JavaScript), การใช้เครื่องมือ AI, การวิเคราะห์ข้อมูล (Data Analytics), การออกแบบ UX/UI, Digital Marketing, Cybersecurity <strong>Soft Skills (ทักษะทางสังคม)</strong> - ทักษะด้านบุคลิกภาพและความสัมพันธ์ ตัวอย่าง: <strong>Critical Thinking</strong> (คิดวิเคราะห์), <strong>Creativity</strong> (ความคิดสร้างสรรค์), <strong>Communication</strong> (การสื่อสาร), <strong>Collaboration</strong> (การทำงานร่วมกัน), <strong>Adaptability</strong> (การปรับตัว), <strong>Emotional Intelligence</strong> (ความฉลาดทางอารมณ์) ในยุค AI ทั้ง Hard Skills และ Soft Skills มีความสำคัญเท่าๆ กัน เพราะ AI ทำ Hard Skills ได้ดี แต่ <strong>Soft Skills คือสิ่งที่ทำให้มนุษย์แตกต่างจาก AI</strong></p></div>
+                </div>
+                <div class="review-question">
+                    <p><strong>คำถาม:</strong> นักเรียนควรเตรียมตัวอย่างไรเพื่อพร้อมสำหรับโลกยุค AI?</p>
+                    <button class="btn-reveal" onclick="toggleAnswer(this)">ดูคำตอบ</button>
+                    <div class="answer hidden"><p>การเตรียมตัวสำหรับโลกยุค AI: <strong>1) เรียนรู้การใช้เครื่องมือ AI</strong> - ฝึกใช้ ChatGPT, Gemini, Canva, Suno และเครื่องมืออื่นๆ ให้คล่อง เรียนรู้การเขียน Prompt ที่ดี <strong>2) พัฒนา Critical Thinking</strong> - ฝึกคิดวิเคราะห์ ไม่เชื่อทุกอย่างที่ AI บอก ตรวจสอบข้อมูลเสมอ <strong>3) สร้างความคิดสร้างสรรค์</strong> - ฝึกคิดนอกกรอบ ทำโครงงาน สร้างผลงาน ทดลองสิ่งใหม่ๆ <strong>4) พัฒนาทักษะการสื่อสาร</strong> - ฝึกพูด เขียน นำเสนอ ทำงานเป็นทีม เพราะ AI ยังทำสิ่งนี้แทนมนุษย์ไม่ได้ <strong>5) เรียนรู้ตลอดชีวิต (Lifelong Learning)</strong> - เทคโนโลยีเปลี่ยนเร็ว ต้องพร้อมเรียนรู้สิ่งใหม่เสมอ <strong>6) มีจริยธรรมดิจิทัล</strong> - ใช้ AI อย่างรับผิดชอบ เข้าใจผลกระทบ ไม่ทำร้ายผู้อื่น สิ่งสำคัญที่สุดคือ<strong>มองว่า AI เป็นเพื่อนร่วมงาน ไม่ใช่ศัตรู</strong></p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Page Navigation -->
+    <section class="content-section">
+        <div class="container">
+            <div class="page-nav">
+                <a href="../index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i> หน้าแรก
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="brand-name">Intertech AI Academy</div>
+                    <div class="brand-sub">เรียนรู้ สร้างสรรค์ พัฒนา สู่อนาคตที่ดีกว่า</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="unit1.html">หน่วย 1</a>
+                <a href="unit2.html">หน่วย 2</a>
+                <a href="unit3.html">หน่วย 3</a>
+                <a href="unit4.html">หน่วย 4</a>
+                <a href="unit5.html">หน่วย 5</a>
+                <a href="unit6.html">หน่วย 6</a>
+                <a href="review.html">ทบทวน</a>
+            </div>
+            <div class="footer-copy">
+                <p>ปอเนาะ Intertech &copy; 2025 - วิชา AI และเทคโนโลยีอัจฉริยะ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
